@@ -32,20 +32,30 @@ docs/chapter10/figures
 
 docs/mzxml_ms1_data
 docs/mzxml_ms1_data/
+
 docs/data_cleaning
 docs/data_cleaning/
+
 docs/figures
 docs/figures/
+
 docs/metabolite_annotation
 docs/metabolite_annotation/
+
 docs/mgf_ms2_data
 docs/mgf_ms2_data/
+
 docs/statistical_analysis
 docs/statistical_analysis/
+
 docs/pathway_enrichment
 docs/pathway_enrichment/
+
 docs/sample_info
 docs/sample_info/
+
+docs/metabolite_annotation
+docs/metabolite_annotation/
 
 
 
