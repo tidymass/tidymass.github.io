@@ -274,14 +274,13 @@
 
   
 
-<meta name="description" content="Update R version tidymass require R version &gt; 4.1.
-You can check your R version in your console:
-version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## system x86_64, darwin20 ## status ## major 4 ## minor 3." />
+<meta name="description" content="If you have in-house standards which have been acquired with MS2 spectra data, then you can construct the in-house MS2 spectra databases using the metid package.
+There are no specific requirements on how to run the LC/MS data for users." />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter1/1-tidymass.org/" />
-<link rel="canonical" href="https://www.tidymass.org/docs/chapter1/1-tidymass.org/" />
+<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter7/1-in_house_database/" />
+<link rel="canonical" href="https://www.tidymass.org/docs/chapter7/1-in_house_database/" />
 
 
 
@@ -317,11 +316,10 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
   <meta property="twitter:creator" content="@wowchemy" />
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
-<meta property="og:url" content="https://www.tidymass.org/docs/chapter1/1-tidymass.org/" />
-<meta property="og:title" content="tidymass.org | TidyMass" />
-<meta property="og:description" content="Update R version tidymass require R version &gt; 4.1.
-You can check your R version in your console:
-version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## system x86_64, darwin20 ## status ## major 4 ## minor 3." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://www.tidymass.org/docs/chapter7/1-in_house_database/" />
+<meta property="og:title" content="Construct in-house MS2 datbase | TidyMass" />
+<meta property="og:description" content="If you have in-house standards which have been acquired with MS2 spectra data, then you can construct the in-house MS2 spectra databases using the metid package.
+There are no specific requirements on how to run the LC/MS data for users." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
@@ -355,7 +353,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 
 
   
-  <title>tidymass.org | TidyMass</title>
+  <title>Construct in-house MS2 datbase | TidyMass</title>
 
   
   
@@ -375,7 +373,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="341c9b98e9ad5b4d30164e30e74d9b5a" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="bf43e4b3f11602de7fc8ffbe87d77d8e" >
 
   
   
@@ -737,7 +735,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
         
-          Chapter 1 Installation
+          Chapter 7 Metabolite annotation
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -805,7 +803,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
       
 
 
-  <li class="active"><a href="/docs/chapter1/1-tidymass.org/">tidymass.org</a></li>
+  <li class=""><a href="/docs/chapter1/1-tidymass.org/">tidymass.org</a></li>
 
 
 
@@ -1015,7 +1013,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
       
 
 
-  <li class=""><a href="/docs/chapter7/1-in_house_database/">Construct in-house MS2 datbase</a></li>
+  <li class="active"><a href="/docs/chapter7/1-in_house_database/">Construct in-house MS2 datbase</a></li>
 
 
 
@@ -1157,8 +1155,11 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#update-r-version">Update R version</a></li>
-    <li><a href="#install-tidymass">Install <code>tidymass</code></a></li>
+    <li><a href="#data-preparation"><strong>Data preparation</strong></a></li>
+    <li><a href="#data-organization"><strong>Data organization</strong></a></li>
+    <li><a href="#run-construct_database-function"><strong>Run <code>construct_database()</code> function</strong></a></li>
+    <li><a href="#ms1-database"><strong>MS1 database</strong></a></li>
+    <li><a href="#session-information"><strong>Session information</strong></a></li>
   </ul>
 </nav>
 
@@ -1212,16 +1213,16 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
   
 
     <li class="breadcrumb-item">
-      <a href="/docs/chapter1/">
+      <a href="/docs/chapter7/">
         
-          Chapter 1 Installation
+          Chapter 7 Metabolite annotation
         
       </a>
     </li>
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        tidymass.org
+        Construct in-house MS2 datbase
       </li>
     </ol>
   </nav>
@@ -1238,37 +1239,169 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 
       <div class="docs-article-container">
         
-        <h1>tidymass.org</h1>
+        <h1>Construct in-house MS2 datbase</h1>
 
         <article class="article-style">
 
           
           
 
-          <h2 id="update-r-version">Update R version</h2>
-<p><code>tidymass</code> require R version &gt; 4.1.</p>
-<p>You can check your R version in your console:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">version</span>
-</span></span><span class="line"><span class="cl"><span class="c1">##                _                           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## platform       x86_64-apple-darwin20       </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## arch           x86_64                      </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## os             darwin20                    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## system         x86_64, darwin20            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## status                                     </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## major          4                           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## minor          3.0                         </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## year           2023                        </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## month          04                          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## day            21                          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## svn rev        84292                       </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## language       R                           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## version.string R version 4.3.0 (2023-04-21)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## nickname       Already Tomorrow</span>
-</span></span></code></pre></div><p>If your R version is &lt; 4.1, please download and install the <a href="https://cran.r-project.org/mirrors.html" target="_blank" rel="noopener">latest version of R</a>, and then restart your R.</p>
-<h2 id="install-tidymass">Install <code>tidymass</code></h2>
-<p>Copy and paste the below code in your console.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">source</span><span class="p">(</span><span class="s">&#34;https://www.tidymass.org/tidymass-packages/install_tidymass.txt&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">install_tidymass</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="s">&#34;tidymass.org&#34;</span><span class="p">)</span>
+          <p>If you have in-house standards which have been acquired with MS2 spectra data, then you can construct the in-house MS2 spectra databases using the <code>metid</code> package.</p>
+<p>There are no specific requirements on how to run the LC/MS data for users. As the in-house database construction in metid is used for users to get the in-house databases for themselves (including m/z, retention time and MS/MS spectra of metabolites, for level 1 annotation (Sumner et al., 2007)), so the users just need to run the standards using the same column, LC-gradient, and MS settings with  their real samples in the lab</p>
+<h2 id="data-preparation"><strong>Data preparation</strong></h2>
+<p>Firstly, please transform your raw standard MS data (positive and negative modes) to mzXML format using <a href="http://proteowizard.sourceforge.net/" target="_blank" rel="noopener">ProteoWizard</a>. The parameter setting is shown in the figure below:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter7/figures/parameter_setting_MS_conventer.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="data-organization"><strong>Data organization</strong></h2>
+<p>Secondly, please organize your standard information as a table, and output it in a csv or xlsx format. The format of standard information can refer to our demo data in <code>demoData</code> package.</p>
+<p>From column 1 to 11, the columns are &ldquo;Lab.ID&rdquo;, &ldquo;Compound.name&rdquo;, &ldquo;mz&rdquo;, &ldquo;RT&rdquo;, &ldquo;CAS.ID&rdquo;, &ldquo;HMDB.ID&rdquo;, &ldquo;KEGG.ID&rdquo;, &ldquo;Formula&rdquo;, &ldquo;mz.pos&rdquo;, &ldquo;mz.neg&rdquo;, &ldquo;Submitter&rdquo;, respectively. It is OK if you have other information for the standards. As the demo data show, there are other additional information, namely &ldquo;Family&rdquo;, &ldquo;Sub.pathway&rdquo; and &ldquo;Note&rdquo;.</p>
+<ul>
+<li>
+<p>Lab.ID: No duplicated.</p>
+</li>
+<li>
+<p>mz: Accurate mass of compounds.</p>
+</li>
+<li>
+<p>RT: Retention time, unit is second.</p>
+</li>
+<li>
+<p>mz.pos: Mass to change ratio of compound in positive mode, for example, M+H. <strong>You can set it as NA</strong>.</p>
+</li>
+<li>
+<p>mz.neg: Mass to change ratio of compound in negative mode, for example, M-H. <strong>You can set it as NA</strong>.</p>
+</li>
+<li>
+<p>Submitter: The name of person or organization. <strong>You can set it as NA</strong>.</p>
+</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter7/figures/compound_information.PNG" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Then create a folder and put your mzXML format datasets (positive mode in &lsquo;POS&rsquo; folder and negative mode in &lsquo;NEG&rsquo; folder) and compound information in it. The mzXML file should have the collision energy in the name of each file. For example, <code>test_NCE25.mzXML</code>.</p>
+<p>The names of the mzXML files should be like this: <code>xxx_NCE25.mzXML</code>.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter7/figures/database_construction.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="run-construct_database-function"><strong>Run <code>construct_database()</code> function</strong></h2>
+<p>Here we use the demo data from <code>demoData</code> package to show how to use the <code>construct_database()</code> function
+to construct database.</p>
+<p>We first prepare dataset.</p>
+<p>Download the data <a href="https://github.com/jaspershen/demoData/tree/master/inst/database_construction" target="_blank" rel="noopener">here</a>. and then put all of them in the &ldquo;database_construction&rdquo; folder.</p>
+<p>Then there will be a folder named as <code>database_construction</code> in your work directory like below figure shows:</p>
+<p>![](/docs/chapter7/figures/Screen Shot 2021-02-26 at 9.22.52 PM.png)
+Then we run <code>construct_database()</code> function and then we can get the database.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">metid</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">new.path</span> <span class="o">&lt;-</span> <span class="nf">file.path</span><span class="p">(</span><span class="s">&#34;./database_construction&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">test.database</span> <span class="o">&lt;-</span> <span class="nf">construct_database</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">path</span> <span class="o">=</span> <span class="n">new.path</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">version</span> <span class="o">=</span> <span class="s">&#34;0.0.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">metabolite.info.name</span> <span class="o">=</span> <span class="s">&#34;metabolite.info_RPLC.csv&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">source</span> <span class="o">=</span> <span class="s">&#34;Michael Snyder lab&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">link</span> <span class="o">=</span> <span class="s">&#34;http://snyderlab.stanford.edu/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">creater</span> <span class="o">=</span> <span class="s">&#34;Xiaotao Shen&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">email</span> <span class="o">=</span> <span class="s">&#34;shenxt1990@163.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">rt</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">mz.tol</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">rt.tol</span> <span class="o">=</span> <span class="m">30</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">threads</span> <span class="o">=</span> <span class="m">3</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>The arguments of <code>construct_database()</code> can be found by <code>?construct_database()</code>.</p>
+<p>test.database is a <code>databaseClass</code> object, you can print it to see its information.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">test.database</span>
+</span></span></code></pre></div><blockquote>
+<p>Note:
+<code>test.database</code> is only a demo database (metIdentifyClass object). We will don&rsquo;t use it for next metabolite identification. Then please save this database in you local folder, please note that the saved file name and database name must be same. For example:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">test.database</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;test.database&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><blockquote>
+<p>If you save the <code>test.database</code> as a different name, it will be a error when you use it.</p>
+</blockquote>
+<h2 id="ms1-database"><strong>MS1 database</strong></h2>
+<p>If you do not have MS2 data, you can also use <code>construct_database()</code> function to construct MS1 database.</p>
+<h2 id="session-information"><strong>Session information</strong></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS Ventura 13.5.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Matrix products: default</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; locale:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: America/Los_Angeles</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; tzcode source: internal</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] digest_0.6.31   R6_2.5.1        bookdown_0.34   fastmap_1.1.1  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] xfun_0.39       blogdown_1.18.1 cachem_1.0.8    knitr_1.43     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] htmltools_0.5.5 rmarkdown_2.22  cli_3.6.1       sass_0.4.6     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] jquerylib_0.1.4 compiler_4.3.0  rprojroot_2.0.3 here_1.0.1     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] rstudioapi_0.14 tools_4.3.0     evaluate_0.21   bslib_0.5.0    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] yaml_2.3.7      jsonlite_1.8.5  rlang_1.1.1</span>
 </span></span></code></pre></div>
 
         </article>
@@ -1293,7 +1426,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/docs/chapter1/2-github/" rel="prev">GitHub</a>
+    <a href="/docs/chapter7/1-metabolite_annotation/" rel="prev">Metabolite annotation</a>
   </div>
   
 </div>
@@ -1315,7 +1448,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
   
 
 <p class="edit-page">
-  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter1/1-tidymass.org.md">
+  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter7/1-in_house_database.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
