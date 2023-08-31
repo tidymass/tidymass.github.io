@@ -274,14 +274,13 @@
 
   
 
-<meta name="description" content="Update R version tidymass require R version &gt; 4.1.
-You can check your R version in your console:
-version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## system x86_64, darwin20 ## status ## major 4 ## minor 3." />
+<meta name="description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34; Data preparation Please place the raw data in one folder according to MS1 and MS2. Then you can convert them using Proteowizard or massconverter package.
+Proteowizard Convert MS1 data to mzXML format data Just convert data into mzXML format data according to the parameters below:" />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter1/1-tidymass.org/" />
-<link rel="canonical" href="https://www.tidymass.org/docs/chapter1/1-tidymass.org/" />
+<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter3/1-data_convert/" />
+<link rel="canonical" href="https://www.tidymass.org/docs/chapter3/1-data_convert/" />
 
 
 
@@ -317,11 +316,10 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
   <meta property="twitter:creator" content="@wowchemy" />
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_hu9f34ec9ef518f99da94c07e709b9b3f3_87999_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
-<meta property="og:url" content="https://www.tidymass.org/docs/chapter1/1-tidymass.org/" />
-<meta property="og:title" content="tidymass.org | TidyMass" />
-<meta property="og:description" content="Update R version tidymass require R version &gt; 4.1.
-You can check your R version in your console:
-version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## system x86_64, darwin20 ## status ## major 4 ## minor 3." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu9f34ec9ef518f99da94c07e709b9b3f3_87999_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://www.tidymass.org/docs/chapter3/1-data_convert/" />
+<meta property="og:title" content="Convert raw data to mzXML/mgf | TidyMass" />
+<meta property="og:description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34; Data preparation Please place the raw data in one folder according to MS1 and MS2. Then you can convert them using Proteowizard or massconverter package.
+Proteowizard Convert MS1 data to mzXML format data Just convert data into mzXML format data according to the parameters below:" /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu9f34ec9ef518f99da94c07e709b9b3f3_87999_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
@@ -355,7 +353,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 
 
   
-  <title>tidymass.org | TidyMass</title>
+  <title>Convert raw data to mzXML/mgf | TidyMass</title>
 
   
   
@@ -375,7 +373,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="341c9b98e9ad5b4d30164e30e74d9b5a" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="e9d60f22028ae695d18f45bd76a5c907" >
 
   
   
@@ -737,7 +735,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
         
-          Chapter 1 Installation
+          Chapter 3 Data format converter
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -805,7 +803,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
       
 
 
-  <li class="active"><a href="/docs/chapter1/1-tidymass.org/">tidymass.org</a></li>
+  <li class=""><a href="/docs/chapter1/1-tidymass.org/">tidymass.org</a></li>
 
 
 
@@ -891,7 +889,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
       
 
 
-  <li class=""><a href="/docs/chapter3/1-data_convert/">Convert raw data to mzXML/mgf</a></li>
+  <li class="active"><a href="/docs/chapter3/1-data_convert/">Convert raw data to mzXML/mgf</a></li>
 
       
         </ul>
@@ -1029,8 +1027,15 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#update-r-version">Update R version</a></li>
-    <li><a href="#install-tidymass">Install <code>tidymass</code></a></li>
+    <li><a href="#data-preparation">Data preparation</a></li>
+    <li><a href="#proteowizard">Proteowizard</a>
+      <ul>
+        <li><a href="#convert-ms1-data-to-mzxml-format-data">Convert MS1 data to <code>mzXML</code> format data</a></li>
+        <li><a href="#convert-ms2-data-to-mzxml-or-mgf-format-data">Convert MS2 data to <code>mzXML</code> or <code>mgf</code> format data</a></li>
+      </ul>
+    </li>
+    <li><a href="#convert-data-using-massconverter">Convert data using <code>massconverter</code></a></li>
+    <li><a href="#session-information">Session information</a></li>
   </ul>
 </nav>
 
@@ -1084,16 +1089,16 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
   
 
     <li class="breadcrumb-item">
-      <a href="/docs/chapter1/">
+      <a href="/docs/chapter3/">
         
-          Chapter 1 Installation
+          Chapter 3 Data format converter
         
       </a>
     </li>
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        tidymass.org
+        Convert raw data to mzXML/mgf
       </li>
     </ol>
   </nav>
@@ -1110,37 +1115,93 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 
       <div class="docs-article-container">
         
-        <h1>tidymass.org</h1>
+        <h1>Convert raw data to mzXML/mgf</h1>
 
         <article class="article-style">
 
           
           
 
-          <h2 id="update-r-version">Update R version</h2>
-<p><code>tidymass</code> require R version &gt; 4.1.</p>
-<p>You can check your R version in your console:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">version</span>
-</span></span><span class="line"><span class="cl"><span class="c1">##                _                           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## platform       x86_64-apple-darwin20       </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## arch           x86_64                      </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## os             darwin20                    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## system         x86_64, darwin20            </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## status                                     </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## major          4                           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## minor          3.0                         </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## year           2023                        </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## month          04                          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## day            21                          </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## svn rev        84292                       </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## language       R                           </span>
-</span></span><span class="line"><span class="cl"><span class="c1">## version.string R version 4.3.0 (2023-04-21)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## nickname       Already Tomorrow</span>
-</span></span></code></pre></div><p>If your R version is &lt; 4.1, please download and install the <a href="https://cran.r-project.org/mirrors.html" target="_blank" rel="noopener">latest version of R</a>, and then restart your R.</p>
-<h2 id="install-tidymass">Install <code>tidymass</code></h2>
-<p>Copy and paste the below code in your console.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">source</span><span class="p">(</span><span class="s">&#34;https://www.tidymass.org/tidymass-packages/install_tidymass.txt&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">install_tidymass</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="s">&#34;tidymass.org&#34;</span><span class="p">)</span>
+          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">getwd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34;</span>
+</span></span></code></pre></div><h2 id="data-preparation">Data preparation</h2>
+<p>Please place the raw data in one folder according to MS1 and MS2. Then you can convert them using <code>Proteowizard</code> or <code>massconverter</code> package.</p>
+<h2 id="proteowizard">Proteowizard</h2>
+<h3 id="convert-ms1-data-to-mzxml-format-data">Convert MS1 data to <code>mzXML</code> format data</h3>
+<p>Just convert data into <code>mzXML</code> format data according to the parameters below:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter3/figures/fig1.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h3 id="convert-ms2-data-to-mzxml-or-mgf-format-data">Convert MS2 data to <code>mzXML</code> or <code>mgf</code> format data</h3>
+<p>Just convert data into <code>mzXML</code> or <code>mgf</code> format data according to the parameters below:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter3/figures/fig2.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="convert-data-using-massconverter">Convert data using <code>massconverter</code></h2>
+<p><code>massconverter</code> is a package in <code>tidymass</code> project which can be used to convert mass spectrometry raw data based on docker image of <a href="https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses" target="_blank" rel="noopener"><code>pwid</code></a>. See more information <a href="https://massconverter.tidymass.org/" target="_blank" rel="noopener">here</a>.</p>
+<p>More information can be found <a href="https://massconverter.tidymass.org/articles/convert_data" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="session-information">Session information</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS Ventura 13.5.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Matrix products: default</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; locale:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: America/Los_Angeles</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; tzcode source: internal</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] digest_0.6.31    R6_2.5.1         codetools_0.2-19 bookdown_0.34   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] fastmap_1.1.1    xfun_0.39        blogdown_1.18.1  cachem_1.0.8    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] knitr_1.43       htmltools_0.5.5  rmarkdown_2.22   cli_3.6.1       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] sass_0.4.6       jquerylib_0.1.4  compiler_4.3.0   rprojroot_2.0.3 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] here_1.0.1       rstudioapi_0.14  tools_4.3.0      evaluate_0.21   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] bslib_0.5.0      yaml_2.3.7       jsonlite_1.8.5   rlang_1.1.1</span>
 </span></span></code></pre></div>
 
         </article>
@@ -1162,12 +1223,6 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
 <div class="post-nav">
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/docs/chapter1/2-github/" rel="prev">GitHub</a>
-  </div>
-  
 </div>
 
         </div>
@@ -1187,7 +1242,7 @@ version ## _ ## platform x86_64-apple-darwin20 ## arch x86_64 ## os darwin20 ## 
   
 
 <p class="edit-page">
-  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter1/1-tidymass.org.md">
+  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter3/1-data_convert.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
