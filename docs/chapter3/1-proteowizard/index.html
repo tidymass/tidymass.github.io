@@ -274,12 +274,14 @@
 
   
 
-<meta name="description" content="Pathway enrichment" />
+<meta name="description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34; Install Proteowizard Proteowizard only supports Windows OS. So if you don&rsquo;t use Windows OS, consider massconverter.
+Download Proteowizard and install it.
+Data preparation Please place the raw data in one folder according to MS1 and MS2." />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter9/" />
-<link rel="canonical" href="https://www.tidymass.org/docs/chapter9/" />
+<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter3/1-proteowizard/" />
+<link rel="canonical" href="https://www.tidymass.org/docs/chapter3/1-proteowizard/" />
 
 
 
@@ -315,12 +317,20 @@
   <meta property="twitter:creator" content="@wowchemy" />
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
-<meta property="og:url" content="https://www.tidymass.org/docs/chapter9/" />
-<meta property="og:title" content="Pathway enrichment | TidyMass" />
-<meta property="og:description" content="Pathway enrichment" /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://www.tidymass.org/docs/chapter3/1-proteowizard/" />
+<meta property="og:title" content="Convert data using proteowizard | TidyMass" />
+<meta property="og:description" content="getwd() #&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34; Install Proteowizard Proteowizard only supports Windows OS. So if you don&rsquo;t use Windows OS, consider massconverter.
+Download Proteowizard and install it.
+Data preparation Please place the raw data in one folder according to MS1 and MS2." /><meta property="og:image" content="https://www.tidymass.org/media/icon_hu4d1c6974e93401aca48b51d7b264237d_155408_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
-    <meta property="og:updated_time" content="2018-09-09T00:00:00&#43;00:00" />
+    <meta
+      property="article:published_time"
+      content="2019-05-05T00:00:00&#43;01:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2019-05-05T00:00:00&#43;01:00">
   
 
 
@@ -328,24 +338,24 @@
 
 
 
-
-
-
-
-  
-  
-  
-
-  
-  
-    <link rel="alternate" href="/docs/chapter9/index.xml" type="application/rss+xml" title="TidyMass" />
-  
 
   
 
 
+
+
   
-  <title>Pathway enrichment | TidyMass</title>
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Convert data using proteowizard | TidyMass</title>
 
   
   
@@ -365,7 +375,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="7963765b8b3409c4fa6858b91b029e4a" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0562319301706b6ddfba2f69be19cf03" >
 
   
   
@@ -720,7 +730,7 @@
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
         
-          Preface
+          Chapter 3 Data format converter
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -878,7 +888,7 @@
       
 
 
-  <li class=""><a href="/docs/chapter3/1-proteowizard/">1 proteowizard</a></li>
+  <li class="active"><a href="/docs/chapter3/1-proteowizard/">1 proteowizard</a></li>
 
 
 
@@ -1077,7 +1087,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/docs/chapter9/"><i class="fas fa-book-reader pr-1"></i>Chapter 9 Pathway enrichment</a>
+        <a class="docs-toc-link " href="/docs/chapter9/"><i class="fas fa-book-reader pr-1"></i>Chapter 9 Pathway enrichment</a>
     
       
         <ul class="nav docs-sidenav">
@@ -1160,7 +1170,11 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#about">About</a></li>
+    <li><a href="#install-proteowizard">Install <code>Proteowizard</code></a></li>
+    <li><a href="#data-preparation">Data preparation</a></li>
+    <li><a href="#convert-ms1-data-to-mzxml-format-data">Convert MS1 data to <code>mzXML</code> format data</a></li>
+    <li><a href="#convert-ms2-data-to-mzxml-or-mgf-format-data">Convert MS2 data to <code>mzXML</code> or <code>mgf</code> format data</a></li>
+    <li><a href="#session-information">Session information</a></li>
   </ul>
 </nav>
 
@@ -1192,6 +1206,8 @@
   
     
   
+    
+  
 
     <li class="breadcrumb-item">
       <a href="/">
@@ -1211,8 +1227,17 @@
     </li>
   
 
+    <li class="breadcrumb-item">
+      <a href="/docs/chapter3/">
+        
+          Chapter 3 Data format converter
+        
+      </a>
+    </li>
+  
+
       <li class="breadcrumb-item active" aria-current="page">
-        Chapter 9 Pathway enrichment
+        1 proteowizard
       </li>
     </ol>
   </nav>
@@ -1229,15 +1254,93 @@
 
       <div class="docs-article-container">
         
-        <h1>Pathway enrichment</h1>
+        <h1>Convert data using proteowizard</h1>
 
         <article class="article-style">
 
           
           
 
-          <h2 id="about">About</h2>
+          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">getwd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] &#34;/Users/xiaotaoshen/tidymass/tidymass-website/content/docs/chapter3&#34;</span>
+</span></span></code></pre></div><h2 id="install-proteowizard">Install <code>Proteowizard</code></h2>
+<p><code>Proteowizard</code> only supports Windows OS. So if you don&rsquo;t use Windows OS, consider <a href="../2-data_convert">massconverter</a>.</p>
+<p>Download <a href="https://proteowizard.sourceforge.io/" target="_blank" rel="noopener">Proteowizard</a> and install it.</p>
+<h2 id="data-preparation">Data preparation</h2>
+<p>Please place the raw data in one folder according to MS1 and MS2. Then you can convert them using <code>Proteowizard</code> package.</p>
+<h2 id="convert-ms1-data-to-mzxml-format-data">Convert MS1 data to <code>mzXML</code> format data</h2>
+<p>Just convert data into <code>mzXML</code> format data according to the parameters below:</p>
+<p>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter3/figures/fig1.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="convert-ms2-data-to-mzxml-or-mgf-format-data">Convert MS2 data to <code>mzXML</code> or <code>mgf</code> format data</h2>
+<p>Just convert data into <code>mzXML</code> or <code>mgf</code> format data according to the parameters below:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/docs/chapter3/figures/fig2.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="session-information">Session information</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.3.0 (2023-04-21)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS Ventura 13.5.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Matrix products: default</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; locale:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: America/Los_Angeles</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; tzcode source: internal</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] digest_0.6.31    R6_2.5.1         codetools_0.2-19 bookdown_0.34   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] fastmap_1.1.1    xfun_0.39        blogdown_1.18.1  cachem_1.0.8    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] knitr_1.43       htmltools_0.5.5  rmarkdown_2.22   cli_3.6.1       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] sass_0.4.6       jquerylib_0.1.4  compiler_4.3.0   rprojroot_2.0.3 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] here_1.0.1       rstudioapi_0.14  tools_4.3.0      evaluate_0.21   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] bslib_0.5.0      yaml_2.3.7       jsonlite_1.8.5   rlang_1.1.1</span>
+</span></span></code></pre></div>
 
         </article>
 
@@ -1258,6 +1361,12 @@
 <div class="post-nav">
   
   
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/docs/chapter3/2-data_convert/" rel="prev">Convert data using massconverter</a>
+  </div>
+  
 </div>
 
         </div>
@@ -1265,7 +1374,7 @@
       </div>
 
       <div class="body-footer">
-        <p>Last updated on Sep 9, 2018</p>
+        <p>Last updated on May 5, 2019</p>
 
         
 
@@ -1277,7 +1386,7 @@
   
 
 <p class="edit-page">
-  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter9/_index.md">
+  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter3/1-proteowizard.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
