@@ -274,12 +274,12 @@
 
   
 
-<meta name="description" content="" />
+<meta name="description" content="Chapter 11 Some function in tidymass" />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/packages/massstat/" />
-<link rel="canonical" href="https://www.tidymass.org/packages/massstat/" />
+<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter11/" />
+<link rel="canonical" href="https://www.tidymass.org/docs/chapter11/" />
 
 
 
@@ -302,30 +302,25 @@
 
 
   
+  
 
 
 
 
 
 
-<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:card" content="summary" />
 
   <meta property="twitter:site" content="@wowchemy" />
   <meta property="twitter:creator" content="@wowchemy" />
-<meta property="twitter:image" content="https://www.tidymass.org/packages/massstat/featured.png" />
+<meta property="twitter:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
-<meta property="og:url" content="https://www.tidymass.org/packages/massstat/" />
-<meta property="og:title" content="massStat | TidyMass" />
-<meta property="og:description" content="" /><meta property="og:image" content="https://www.tidymass.org/packages/massstat/featured.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://www.tidymass.org/docs/chapter11/" />
+<meta property="og:title" content="11 Some function in tidymass | TidyMass" />
+<meta property="og:description" content="Chapter 11 Some function in tidymass" /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
-    <meta
-      property="article:published_time"
-      content="2020-01-20T00:00:00&#43;00:00"
-    />
-  
-  
-    <meta property="article:modified_time" content="2020-01-20T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2023-09-29T00:00:00&#43;00:00" />
   
 
 
@@ -333,8 +328,6 @@
 
 
 
-
-  
 
 
 
@@ -345,12 +338,14 @@
 
   
   
+    <link rel="alternate" href="/docs/chapter11/index.xml" type="application/rss+xml" title="TidyMass" />
+  
 
   
 
 
   
-  <title>massStat | TidyMass</title>
+  <title>11 Some function in tidymass | TidyMass</title>
 
   
   
@@ -370,7 +365,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="96482c89e091d49fba35dad657606732" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="b3f3b4be4647e0777482865034ec50d1" >
 
   
   
@@ -683,7 +678,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/docs/"><span>Tutorials</span></a>
+            <a class="nav-link  active" href="/docs/"><span>Tutorials</span></a>
           </li>
 
           
@@ -748,282 +743,462 @@
     
     
 
-    <article class="article">
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+        
+          Preface
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
 
   
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<nav class="collapse docs-links" id="docs-nav">
   
   
-
-
-<div class="article-container pt-3">
-  <h1>massStat</h1>
-
   
-
   
-
-
-<div class="article-metadata">
-
   
   
 
   
-  <span class="article-date">
+  
+    
+
+    
+      
+
+      
+
+
+  
+    
+    
     
     
       
     
-    Jan 20, 2020
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-  
-
-
-
-
-<div class="btn-links mb-3">
-  
-  <a class="btn btn-outline-primary my-1" href="https://massstat.tidymass.org/" target="_blank" rel="noopener">Go to Project Site</a>
-  
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
     
-  
-  
-  
-  
-  
+
     
-  
-  <a class="btn btn-outline-primary btn-page-header" href="https://massstat.tidymass.org/" target="_blank" rel="noopener">
-    <i class="fas fa-house mr-1"></i>Link</a>
-
-  
-  
-  
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/docs/"><i class="fas fa-house pr-1"></i>Preface</a></li>
     
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header" href="https://github.com/tidymass/massstat/" target="_blank" rel="noopener">
-    <i class="fab fa-github mr-1"></i>Code</a>
-
-
-</div>
-
-
-</div>
-
-
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 831px;">
-  <div style="position: relative">
-    <img src="/packages/massstat/featured_hue5f1e192006aa60b1bdeb359487631a4_106833_720x2500_fit_q75_h2_lanczos_3.webp" width="720" height="831" alt="" class="featured-image">
-    <span class="article-header-caption">Photo by rawpixel on Unsplash</span>
-  </div>
-</div>
-
-
-
-  <div class="article-container">
-
-    <div class="article-style">
       
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter1/"><i class="fas fa-book pr-1"></i>Chapter 1 Installation</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter1/1-installation/">1 Install tidymass</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter1/2-update/">2 Update tidymass</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter1/3-docker_tidymass/">3 Docker version of tidymass</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter1/4-build_own_docker/">4 Build your own docker</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter2/"><i class="fas fa-book-reader pr-1"></i>Chapter 2 massDataset package</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter2/1-create_mass_dataset/">1 Create mass_dataset class</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter2/2-add_ms2/">2 Add MS2 spectra</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter2/3-mass_dataset_other_tools/">3 Create mass_dataset class from other tools</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter2/4-extract/">4 Extract data</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter2/5-processing_information/">5 Processing information</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter3/"><i class="fas fa-book-reader pr-1"></i>Chapter 3 Data format converter</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter3/1-proteowizard/">1 proteowizard</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter3/2-data_convert/">2 massconverter</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter4/"><i class="fas fa-book-reader pr-1"></i>Chapter 4 Raw data processing</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter4/1-raw_data_processing/">Raw data processing</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter5/"><i class="fas fa-book-reader pr-1"></i>Chapter 5 Explore data</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter5/1-data_explore/">Explore data</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter6/"><i class="fas fa-book-reader pr-1"></i>Chapter 6 Data cleaning</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter6/1-data_cleaning/">Data cleaning</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter7/"><i class="fas fa-book-reader pr-1"></i>Chapter 7 Metabolite annotation</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter7/1-metid_database_structure/">1 Databases for metID</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/2-in_house_database/">2 In-house MS2 database</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/3-construct_public_databases/">3 Public databases</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/4-metabolite_annotation/">4 Metabolite annotation: An example</a></li>
+
+
+
+  <li class=""><a href="/docs/chapter7/5-identify_single_peak/">5 Identify single peak</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter8/"><i class="fas fa-book-reader pr-1"></i>Chapter 8 Statistical analysis</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter8/1-statistical_analysis/">Statistical analysis</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter9/"><i class="fas fa-book-reader pr-1"></i>Chapter 9 Pathway enrichment</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter9/1-pahtway_enrichment/">Pathway enrichment</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/docs/chapter10/"><i class="fas fa-book-reader pr-1"></i>Chapter 10 Whole workflow using tidymass</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/docs/chapter10/1-whole_workflow/">Whole workflow using tidymass</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link  active" href="/docs/chapter11/"><i class="fas fa-book-reader pr-1"></i>Chapter 11 Some function in tidymass</a>
+    
+
+    
+      </div>
+    
+
+      
+    
+
+    
+      </ul>
+    
+
+  
+</nav>
+
     </div>
 
     
-
-
-
-
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tag/metabolomics/">Metabolomics</a>
-  
-</div>
-
-
-
-<div class="share-box">
-  <ul class="share">
     
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
       
-      
-      
-        
-      
-      
-      
-      
-      
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.tidymass.org%2Fpackages%2Fmassstat%2F&amp;text=massStat" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      
-      
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.tidymass.org%2Fpackages%2Fmassstat%2F&amp;t=massStat" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      
-      
-      
-      
-        
-      
-      <li>
-        <a href="mailto:?subject=massStat&amp;body=https%3A%2F%2Fwww.tidymass.org%2Fpackages%2Fmassstat%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      
-      
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.tidymass.org%2Fpackages%2Fmassstat%2F&amp;title=massStat" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      
-      
-      
-      
-      <li>
-        <a href="whatsapp://send?text=massStat%20https%3A%2F%2Fwww.tidymass.org%2Fpackages%2Fmassstat%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fwww.tidymass.org%2Fpackages%2Fmassstat%2F&amp;title=massStat" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
-          <i class="fab fa-weibo"></i>
-        </a>
-      </li>
-    
-  </ul>
-</div>
 
 
 
@@ -1035,124 +1210,134 @@
 
 
 
-  
-  
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents"></nav>
+
+      
 
 
 
-  
-  
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <a href="/author/xiaotao-shen/"><img class="avatar mr-3 avatar-circle" src="/author/xiaotao-shen/avatar_hu86242519a21313948ac7dc77e0a27da6_1568301_270x270_fill_q75_lanczos_center.jpg" alt="Xiaotao Shen"></a>
-    
 
-    <div class="media-body">
-      <h5 class="card-title"><a href="/author/xiaotao-shen/">Xiaotao Shen</a></h5>
-      <h6 class="card-subtitle">Postdoctoral Research Fellow</h6>
-      <p class="card-text">Metabolomics, Multi-omics, Bioinformatics, Systems Biology.</p>
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://jaspershen.github.io" target="_blank" rel="noopener">
-        <i class="fas fa-home"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="/#contact" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/tidymass" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/shenxt/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://jaspershen.github.io/image/wechat_QR.jpg" target="_blank" rel="noopener">
-        <i class="fab fa-weixin"></i>
-      </a>
-    </li>
-  
-</ul>
+
+
+
+
+
+
 
     </div>
-  </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <div class="docs-article-container">
+        
+          
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/docs/">
+        
+          Preface
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Chapter 11 Some function in tidymass
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+        
+      </div>
+
+      
+      
+      
+
+      <div class="docs-article-container">
+        
+        <h1>11 Some function in tidymass</h1>
+
+        <article class="article-style">
+
+          
+          
+
+          <p>There are some usefull tools in <code>tidymass</code>, you will learn how to use them in this chapter.</p>
+
+
+        </article>
+
+        
+
+
+
+
+
+        
+
+
+
+        
+        
+        <div class="article-widget">
+          
+<div class="post-nav">
+  
+  
+</div>
+
+        </div>
+        
+      </div>
+
+      <div class="body-footer">
+        <p>Last updated on Sep 29, 2023</p>
+
+        
 
 
 
 
 
 
+  
 
+<p class="edit-page">
+  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter11/_index.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+        
 
 
   
@@ -1162,24 +1347,40 @@
   
 
   
-
-
-
-
-
-
-
-
-
-
-  </div>
-</article>
-  </div>
-
-  <div class="page-footer">
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
     
     
-    <div class="container">
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "blog-at8qrhng8b" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+        
+
+
+      </div>
+
       <footer class="site-footer">
   <hr>
 
@@ -1268,7 +1469,15 @@
   
   
 </footer>
-    </div>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
     
   </div>
 
@@ -1294,6 +1503,11 @@
 
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js" integrity="sha256-aQmOEF2ZD4NM/xt4hthzREIo/2PFkOX/g01WjxEV7Ys=" crossorigin="anonymous"></script>
+<script>
+  anchors.add();
+</script>
 
 
 
@@ -1353,10 +1567,9 @@
 
 
 
-<script id="page-data" type="application/json">{"use_headroom":true}</script>
+<script id="page-data" type="application/json">{"use_headroom":false}</script>
 
 
-  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
 
