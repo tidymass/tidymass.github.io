@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: September 25, 2024 --><html lang="en-us" >
+<!-- Last Published: 2024年9月25日 --><html lang="zh-Hans" >
 
 
 <head>
@@ -274,19 +274,19 @@
 
   
 
-<meta name="description" content="Some times we only want to match one peak. We can use identify_single_peak() function to identify single peak.
-Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data = readr::read_csv(file.path( system.file(&#34;ms1_peak&#34;, package = &#34;metid&#34;), &#34;ms1." />
+<meta name="description" content="有时我们只需要匹配一个峰值。可以使用 identify_single_peak() 函数来识别单个峰。
+数据准备 library(massdataset) library(tidyverse) library(metid) ms1_data = readr::read_csv(file.path( system.file(&#34;ms1_peak&#34;, package = &#34;metid&#34;), &#34;ms1.peak.table.csv&#34; )) ms1_data = data.frame(ms1_data, sample1 = 1, sample2 = 2) expression_data = ms1_data %&gt;% dplyr::select(-c(name:rt)) variable_info = ms1_data %&gt;% dplyr::select(name:rt) %&gt;% dplyr::rename(variable_id = name) sample_info = data." />
 
 
 
-  <link rel="alternate" hreflang="zh" href="https://www.tidymass.org/zh/docs/chapter7/6-identify_single_peak/" />
+  <link rel="alternate" hreflang="en" href="https://www.tidymass.org/docs/chapter7/6-identify_single_peak/" />
 
-<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter7/6-identify_single_peak/" />
-<link rel="canonical" href="https://www.tidymass.org/docs/chapter7/6-identify_single_peak/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://www.tidymass.org/zh/docs/chapter7/6-identify_single_peak/" />
+<link rel="canonical" href="https://www.tidymass.org/zh/docs/chapter7/6-identify_single_peak/" />
 
 
 
-  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="manifest" href="/zh/manifest.webmanifest" />
 
 
 
@@ -318,10 +318,10 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
   <meta property="twitter:creator" content="@wowchemy" />
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
-<meta property="og:url" content="https://www.tidymass.org/docs/chapter7/6-identify_single_peak/" />
-<meta property="og:title" content="Identify single peak with metid | TidyMass" />
-<meta property="og:description" content="Some times we only want to match one peak. We can use identify_single_peak() function to identify single peak.
-Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data = readr::read_csv(file.path( system.file(&#34;ms1_peak&#34;, package = &#34;metid&#34;), &#34;ms1." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://www.tidymass.org/zh/docs/chapter7/6-identify_single_peak/" />
+<meta property="og:title" content="使用 metid 识别单个峰 | TidyMass" />
+<meta property="og:description" content="有时我们只需要匹配一个峰值。可以使用 identify_single_peak() 函数来识别单个峰。
+数据准备 library(massdataset) library(tidyverse) library(metid) ms1_data = readr::read_csv(file.path( system.file(&#34;ms1_peak&#34;, package = &#34;metid&#34;), &#34;ms1.peak.table.csv&#34; )) ms1_data = data.frame(ms1_data, sample1 = 1, sample2 = 2) expression_data = ms1_data %&gt;% dplyr::select(-c(name:rt)) variable_info = ms1_data %&gt;% dplyr::select(name:rt) %&gt;% dplyr::rename(variable_id = name) sample_info = data." /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
 
   
     <meta
@@ -355,7 +355,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
 
   
-  <title>Identify single peak with metid | TidyMass</title>
+  <title>使用 metid 识别单个峰 | TidyMass</title>
 
   
   
@@ -397,7 +397,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
       <div class="row no-gutters justify-content-between mb-3">
         <div class="col-6">
-          <h1>Search</h1>
+          <h1>搜索</h1>
         </div>
         <div class="col-6 col-search-close">
           <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
@@ -406,9 +406,9 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
       <div id="search-box">
         
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
         autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
-        aria-label="Search...">
+        aria-label="搜索...">
         
       </div>
 
@@ -454,20 +454,20 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
       
       <div class="d-none d-lg-inline-flex">
-        <a class="navbar-brand" href="/">TidyMass</a>
+        <a class="navbar-brand" href="/zh/">TidyMass</a>
       </div>
       
 
       
       <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="切换导航">
       <span><i class="fas fa-bars"></i></span>
       </button>
       
 
       
       <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-        <a class="navbar-brand" href="/">TidyMass</a>
+        <a class="navbar-brand" href="/zh/">TidyMass</a>
       </div>
       
 
@@ -510,7 +510,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#hero"><span>Home</span></a>
+            <a class="nav-link " href="/zh/#hero"><span>主页</span></a>
           </li>
 
           
@@ -547,7 +547,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#packages"><span>Packages</span></a>
+            <a class="nav-link " href="/zh/#packages"><span>R包</span></a>
           </li>
 
           
@@ -584,7 +584,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#team"><span>Team</span></a>
+            <a class="nav-link " href="/zh/#team"><span>团队</span></a>
           </li>
 
           
@@ -621,7 +621,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+            <a class="nav-link " href="/zh/#contact"><span>联系</span></a>
           </li>
 
           
@@ -658,7 +658,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#contribution"><span>Contribution</span></a>
+            <a class="nav-link " href="/zh/#contribution"><span>贡献</span></a>
           </li>
 
           
@@ -688,7 +688,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
           
 
           <li class="nav-item">
-            <a class="nav-link  active" href="/docs/"><span>Tutorials</span></a>
+            <a class="nav-link  active" href="/zh/docs/"><span>文档</span></a>
           </li>
 
           
@@ -711,7 +711,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
         
         
         <li class="nav-item">
-          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+          <a class="nav-link js-search" href="#" aria-label="搜索"><i class="fas fa-search" aria-hidden="true"></i></a>
         </li>
         
 
@@ -724,13 +724,13 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
           </a>
           <div class="dropdown-menu">
             <a href="#" class="dropdown-item js-set-theme-light">
-              <span>Light</span>
+              <span>浅色</span>
             </a>
             <a href="#" class="dropdown-item js-set-theme-dark">
-              <span>Dark</span>
+              <span>深色</span>
             </a>
             <a href="#" class="dropdown-item js-set-theme-auto">
-              <span>Automatic</span>
+              <span>自动</span>
             </a>
           </div>
         </li>
@@ -740,15 +740,15 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
         
         <li class="nav-item dropdown i18n-dropdown">
           <a href="#" class="nav-link " data-toggle="dropdown"
-             aria-haspopup="true" aria-label="Languages">
+             aria-haspopup="true" aria-label="语言">
             <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
           <div class="dropdown-menu">
             <div class="dropdown-item dropdown-item-active">
-              <span>English</span>
+              <span>中文 (简体)</span>
             </div>
             
-            <a class="dropdown-item" href="https://www.tidymass.org/zh/docs/chapter7/6-identify_single_peak/">
-              <span>中文 (简体)</span>
+            <a class="dropdown-item" href="https://www.tidymass.org/docs/chapter7/6-identify_single_peak/">
+              <span>English</span>
             </a>
             
           </div>
@@ -793,7 +793,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
   
   <button class="form-control sidebar-search js-search d-none d-md-flex">
     <i class="fas fa-search pr-2"></i>
-    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-text">搜索...</span>
     <span class="sidebar-search-shortcut">/</span>
   </button>
   
@@ -828,7 +828,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <ul class="nav docs-sidenav">
-        <li class=""><a href="/docs/"><i class="fas fa-house pr-1"></i>Preface</a></li>
+        <li class=""><a href="/zh/docs/"><i class="fas fa-house pr-1"></i>Preface</a></li>
     
       
 
@@ -844,26 +844,26 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter1/"><i class="fas fa-book pr-1"></i>Chapter 1 Installation</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter1/"><i class="fas fa-book pr-1"></i>Chapter 1 Installation</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter1/1-installation/">1 Install tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/1-installation/">1 Install tidymass</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/2-update/">2 Update tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/2-update/">2 更新 tidymass</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/3-docker_tidymass/">3 Docker version of tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter1/3-docker_tidymass/">3 Docker 版本的 tidymass</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter1/4-build_own_docker/">4 Build your own docker</a></li>
+  <li class=""><a href="/zh/docs/chapter1/4-build_own_docker/">4 构建你自己的 docker</a></li>
 
       
         </ul>
@@ -887,30 +887,30 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter2/"><i class="fas fa-book-reader pr-1"></i>Chapter 2 massDataset package</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter2/"><i class="fas fa-book-reader pr-1"></i>Chapter 2 massDataset package</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter2/1-create_mass_dataset/">1 Create mass_dataset class</a></li>
+  <li class=""><a href="/zh/docs/chapter2/1-create_mass_dataset/">1 Create mass_dataset class</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter2/2-add_ms2/">2 Add MS2 spectra</a></li>
+  <li class=""><a href="/zh/docs/chapter2/2-add_ms2/">2 Add MS2 spectra</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter2/3-mass_dataset_other_tools/">3 Create mass_dataset class from other tools</a></li>
+  <li class=""><a href="/zh/docs/chapter2/3-mass_dataset_other_tools/">3 Create mass_dataset class from other tools</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter2/4-extract/">4 Extract data</a></li>
+  <li class=""><a href="/zh/docs/chapter2/4-extract/">4 Extract data</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter2/5-processing_information/">5 Processing information</a></li>
+  <li class=""><a href="/zh/docs/chapter2/5-processing_information/">5 Processing information</a></li>
 
       
         </ul>
@@ -934,18 +934,18 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter3/"><i class="fas fa-book-reader pr-1"></i>Chapter 3 Data format converter</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter3/"><i class="fas fa-book-reader pr-1"></i>Chapter 3 Data format converter</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter3/1-proteowizard/">1 proteowizard</a></li>
+  <li class=""><a href="/zh/docs/chapter3/1-proteowizard/">1 proteowizard</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter3/2-data_convert/">2 massconverter</a></li>
+  <li class=""><a href="/zh/docs/chapter3/2-data_convert/">2 massconverter</a></li>
 
       
         </ul>
@@ -969,14 +969,14 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter4/"><i class="fas fa-book-reader pr-1"></i>Chapter 4 Raw data processing</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter4/"><i class="fas fa-book-reader pr-1"></i>Chapter 4 Raw data processing</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter4/1-raw_data_processing/">Raw data processing</a></li>
+  <li class=""><a href="/zh/docs/chapter4/1-raw_data_processing/">Raw data processing</a></li>
 
       
         </ul>
@@ -1000,14 +1000,14 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter5/"><i class="fas fa-book-reader pr-1"></i>Chapter 5 Explore data</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter5/"><i class="fas fa-book-reader pr-1"></i>Chapter 5 Explore data</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter5/1-data_explore/">Explore data</a></li>
+  <li class=""><a href="/zh/docs/chapter5/1-data_explore/">Explore data</a></li>
 
       
         </ul>
@@ -1031,14 +1031,14 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter6/"><i class="fas fa-book-reader pr-1"></i>Chapter 6 Data cleaning</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter6/"><i class="fas fa-book-reader pr-1"></i>Chapter 6 Data cleaning</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter6/1-data_cleaning/">Data cleaning</a></li>
+  <li class=""><a href="/zh/docs/chapter6/1-data_cleaning/">Data cleaning</a></li>
 
       
         </ul>
@@ -1062,34 +1062,34 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter7/"><i class="fas fa-book-reader pr-1"></i>Chapter 7 Metabolite annotation</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter7/"><i class="fas fa-book-reader pr-1"></i>Chapter 7 Metabolite annotation</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter7/1-metid_database_structure/">1 Databases for metID</a></li>
+  <li class=""><a href="/zh/docs/chapter7/1-metid_database_structure/">1 Databases for metID</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/2-in_house_database/">2 In-house MS2 database</a></li>
+  <li class=""><a href="/zh/docs/chapter7/2-in_house_database/">2 内部MS2数据库</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/3-construct_public_databases/">3 Public databases</a></li>
+  <li class=""><a href="/zh/docs/chapter7/3-construct_public_databases/">3 公共数据库</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/4-public_databases/">4 Public databases download</a></li>
+  <li class=""><a href="/zh/docs/chapter7/4-public_databases/">4 公共数据库下载</a></li>
 
 
 
-  <li class=""><a href="/docs/chapter7/5-metabolite_annotation/">5 Metabolite annotation: An example</a></li>
+  <li class=""><a href="/zh/docs/chapter7/5-metabolite_annotation/">5 代谢物注释示例</a></li>
 
 
 
-  <li class="active"><a href="/docs/chapter7/6-identify_single_peak/">6 Identify single peak</a></li>
+  <li class="active"><a href="/zh/docs/chapter7/6-identify_single_peak/">6 识别单个峰</a></li>
 
       
         </ul>
@@ -1113,14 +1113,14 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter8/"><i class="fas fa-book-reader pr-1"></i>Chapter 8 Statistical analysis</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter8/"><i class="fas fa-book-reader pr-1"></i>Chapter 8 Statistical analysis</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter8/1-statistical_analysis/">Statistical analysis</a></li>
+  <li class=""><a href="/zh/docs/chapter8/1-statistical_analysis/">Statistical analysis</a></li>
 
       
         </ul>
@@ -1144,14 +1144,14 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter9/"><i class="fas fa-book-reader pr-1"></i>Chapter 9 Pathway enrichment</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter9/"><i class="fas fa-book-reader pr-1"></i>Chapter 9 Pathway enrichment</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter9/1-pahtway_enrichment/">Pathway enrichment</a></li>
+  <li class=""><a href="/zh/docs/chapter9/1-pahtway_enrichment/">Pathway enrichment</a></li>
 
       
         </ul>
@@ -1175,14 +1175,14 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter10/"><i class="fas fa-book-reader pr-1"></i>Chapter 10 Whole workflow using tidymass</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter10/"><i class="fas fa-book-reader pr-1"></i>Chapter 10 Whole workflow using tidymass</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter10/1-whole_workflow/">Whole workflow using tidymass</a></li>
+  <li class=""><a href="/zh/docs/chapter10/1-whole_workflow/">Whole workflow using tidymass</a></li>
 
       
         </ul>
@@ -1206,14 +1206,14 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/docs/chapter11/"><i class="fas fa-book-reader pr-1"></i>Chapter 11 Some function in tidymass</a>
+        <a class="docs-toc-link " href="/zh/docs/chapter11/"><i class="fas fa-book-reader pr-1"></i>Chapter 11 Some function in tidymass</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/docs/chapter11/1-formula/">Formula function</a></li>
+  <li class=""><a href="/zh/docs/chapter11/1-formula/">Formula function</a></li>
 
       
         </ul>
@@ -1253,16 +1253,16 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
 
       <ul class="nav toc-top">
-        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+        <li><a href="#" id="back_to_top" class="docs-toc-title">在本页</a></li>
       </ul>
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#data-preparation">Data preparation</a></li>
-    <li><a href="#add-ms2-to-mass_dataset-object">Add MS2 to <code>mass_dataset</code> object</a></li>
-    <li><a href="#annotate-single-peaks">Annotate single peaks</a></li>
-    <li><a href="#add-annotation-result-to-object">Add annotation result to object</a></li>
-    <li><a href="#session-information">Session information</a></li>
+    <li><a href="#数据准备">数据准备</a></li>
+    <li><a href="#将-ms2-数据添加到-mass_dataset-对象">将 MS2 数据添加到 <code>mass_dataset</code> 对象</a></li>
+    <li><a href="#注释单个峰值">注释单个峰值</a></li>
+    <li><a href="#将注释结果添加到对象">将注释结果添加到对象</a></li>
+    <li><a href="#会话信息">会话信息</a></li>
   </ul>
 </nav>
 
@@ -1298,7 +1298,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
   
 
     <li class="breadcrumb-item">
-      <a href="/">
+      <a href="/zh/">
         
           Home
         
@@ -1307,7 +1307,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
   
 
     <li class="breadcrumb-item">
-      <a href="/docs/">
+      <a href="/zh/docs/">
         
           Preface
         
@@ -1316,7 +1316,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
   
 
     <li class="breadcrumb-item">
-      <a href="/docs/chapter7/">
+      <a href="/zh/docs/chapter7/">
         
           Chapter 7 Metabolite annotation
         
@@ -1325,7 +1325,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
   
 
       <li class="breadcrumb-item active" aria-current="page">
-        6 Identify single peak
+        6 识别单个峰
       </li>
     </ol>
   </nav>
@@ -1342,15 +1342,15 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
       <div class="docs-article-container">
         
-        <h1>Identify single peak with metid</h1>
+        <h1>使用 metid 识别单个峰</h1>
 
         <article class="article-style">
 
           
           
 
-          <p>Some times we only want to match one peak. We can use <code>identify_single_peak()</code> function to identify single peak.</p>
-<h2 id="data-preparation">Data preparation</h2>
+          <p>有时我们只需要匹配一个峰值。可以使用 <code>identify_single_peak()</code> 函数来识别单个峰。</p>
+<h2 id="数据准备">数据准备</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">massdataset</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">metid</span><span class="p">)</span>
@@ -1403,8 +1403,8 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 processings in total</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; create_mass_dataset ---------- </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package         Function.used                Time</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset create_mass_dataset() 2024-09-25 20:57:23</span>
-</span></span></code></pre></div><h2 id="add-ms2-to-mass_dataset-object">Add MS2 to <code>mass_dataset</code> object</h2>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset create_mass_dataset() 2024-09-25 21:40:38</span>
+</span></span></code></pre></div><h2 id="将-ms2-数据添加到-mass_dataset-对象">将 MS2 数据添加到 <code>mass_dataset</code> 对象</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">path</span> <span class="o">=</span> <span class="s">&#34;./metabolite_annotation&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nf">dir.create</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
@@ -1444,10 +1444,10 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2 processings in total</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; create_mass_dataset ---------- </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package         Function.used                Time</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset create_mass_dataset() 2024-09-25 20:57:23</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset create_mass_dataset() 2024-09-25 21:40:38</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; mutate_ms2 ---------- </span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt;       Package Function.used                Time</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset  mutate_ms2() 2024-09-25 20:57:25</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 massdataset  mutate_ms2() 2024-09-25 22:08:30</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">object</span><span class="o">@</span><span class="n">ms2_data</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; $QC1_MSMS_NCE25.mgf</span>
@@ -1461,7 +1461,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; pRPLC_603 pRPLC_1112 pRPLC_1307 pRPLC_1860 pRPLC_3927...</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 16 MS2 spectra.</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; mz162.112344859731rt35.281947 mz209.092013478675rt62.786886 mz314.232098215226rt415.887162 mz249.184679448673rt585.115404 mz232.154251098633rt84.328626...</span>
-</span></span></code></pre></div><h2 id="annotate-single-peaks">Annotate single peaks</h2>
+</span></span></code></pre></div><h2 id="注释单个峰值">注释单个峰值</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">data</span><span class="p">(</span><span class="s">&#34;snyder_database_rplc0.0.3&#34;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s">&#34;metid&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nf">annotate_single_peak_mass_dataset</span><span class="p">(</span>
@@ -1547,7 +1547,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1 541-15-1 HMDB00062  C00318 RPLC_406 (M+H)+ 1.424649      0.9983776 0.718053</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt;   RT.match.score    CE        SS Total.score Database Level</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1      0.9997136 NCE25 0.5995589   0.7993023 MS_0.0.2     1</span>
-</span></span></code></pre></div><h2 id="add-annotation-result-to-object">Add annotation result to object</h2>
+</span></span></code></pre></div><h2 id="将注释结果添加到对象">将注释结果添加到对象</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">object</span><span class="o">@</span><span class="n">annotation_table</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; data frame with 0 columns and 0 rows</span>
@@ -1615,7 +1615,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt;   Total.score Database Level</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 1   0.9998443 MS_0.0.2     2</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; 2   0.9971995 MS_0.0.2     2</span>
-</span></span></code></pre></div><h2 id="session-information">Session information</h2>
+</span></span></code></pre></div><h2 id="会话信息">会话信息</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.4.1 (2024-06-14)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: aarch64-apple-darwin20</span>
@@ -1729,8 +1729,8 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/docs/chapter7/5-metabolite_annotation/" rel="next">Metabolite annotation: An example</a>
+    <div class="meta-nav">上一页</div>
+    <a href="/zh/docs/chapter7/5-metabolite_annotation/" rel="next">代谢物注释示例</a>
   </div>
   
   
@@ -1741,7 +1741,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
       </div>
 
       <div class="body-footer">
-        <p>Last updated on May 5, 2019</p>
+        <p>最近更新于 5月 5, 2019</p>
 
         
 
@@ -1754,7 +1754,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
 
 <p class="edit-page">
   <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter7/6-identify_single_peak.md">
-    <i class="fas fa-pen pr-2"></i>Edit this page
+    <i class="fas fa-pen pr-2"></i>编辑本页
   </a>
 </p>
 
@@ -2006,7 +2006,7 @@ Data preparation library(massdataset) library(tidyverse) library(metid) ms1_data
   
 
 
-<script src="/en/js/wowchemy.min.85070d5fe00d43eaedff44310b81dc2c.js"></script>
+<script src="/zh/js/wowchemy.min.a019a8d0a4e912d4764e429825411dad.js"></script>
 
 
 
