@@ -274,14 +274,14 @@
 
   
 
-<meta name="description" content="Raw data processing" />
+<meta name="description" content="If you haven&rsquo;t installed TidyMass yet, please install it according to the installation instructions.
+Install the necessary packages:
+if (!require(&#39;remotes&#39;)) install.packages(&#39;remotes&#39;); if (!require(&#39;tidyverse&#39;)) install.packages(&#39;tidyverse&#39;); if (!require(&#39;writexl&#39;)) install.packages(&#34;writexl&#34;); if (!require(&#39;hexbin&#39;)) install.packages(&#39;hexbin&#39;) if (!" />
 
 
 
-  <link rel="alternate" hreflang="zh" href="https://www.tidymass.org/zh/docs/chapter4/" />
-
-<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter4/" />
-<link rel="canonical" href="https://www.tidymass.org/docs/chapter4/" />
+<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/docs/chapter12/tidymasshiny/" />
+<link rel="canonical" href="https://www.tidymass.org/docs/chapter12/tidymasshiny/" />
 
 
 
@@ -317,12 +317,20 @@
   <meta property="twitter:creator" content="@wowchemy" />
 <meta property="twitter:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="TidyMass" />
-<meta property="og:url" content="https://www.tidymass.org/docs/chapter4/" />
-<meta property="og:title" content="Raw data processing | TidyMass" />
-<meta property="og:description" content="Raw data processing" /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://www.tidymass.org/docs/chapter12/tidymasshiny/" />
+<meta property="og:title" content="TidyMass Shiny Application | TidyMass" />
+<meta property="og:description" content="If you haven&rsquo;t installed TidyMass yet, please install it according to the installation instructions.
+Install the necessary packages:
+if (!require(&#39;remotes&#39;)) install.packages(&#39;remotes&#39;); if (!require(&#39;tidyverse&#39;)) install.packages(&#39;tidyverse&#39;); if (!require(&#39;writexl&#39;)) install.packages(&#34;writexl&#34;); if (!require(&#39;hexbin&#39;)) install.packages(&#39;hexbin&#39;) if (!" /><meta property="og:image" content="https://www.tidymass.org/media/icon_huf8b049b8318691de0a515d87795ef728_130772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
-    <meta property="og:updated_time" content="2018-09-09T00:00:00&#43;00:00" />
+    <meta
+      property="article:published_time"
+      content="2025-05-06T00:00:00&#43;01:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2025-05-06T00:00:00&#43;01:00">
   
 
 
@@ -330,24 +338,24 @@
 
 
 
-
-
-
-
-  
-  
-  
-
-  
-  
-    <link rel="alternate" href="/docs/chapter4/index.xml" type="application/rss+xml" title="TidyMass" />
-  
 
   
 
 
+
+
   
-  <title>Raw data processing | TidyMass</title>
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>TidyMass Shiny Application | TidyMass</title>
 
   
   
@@ -367,7 +375,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="25679eb65c0e8dfb7e8ace4c60fe07cc" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="02ee6c8882d80596aa84b546d7b8af7b" >
 
   
   
@@ -790,22 +798,6 @@
 
         
         
-        <li class="nav-item dropdown i18n-dropdown">
-          <a href="#" class="nav-link " data-toggle="dropdown"
-             aria-haspopup="true" aria-label="Languages">
-            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
-          <div class="dropdown-menu">
-            <div class="dropdown-item dropdown-item-active">
-              <span>English</span>
-            </div>
-            
-            <a class="dropdown-item" href="https://www.tidymass.org/zh/docs/chapter4/">
-              <span>中文 (简体)</span>
-            </a>
-            
-          </div>
-        </li>
-        
 
       </ul>
 
@@ -835,7 +827,7 @@
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
         
-          Preface
+          Chapter 12 TidyMass Shiny Application
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -1021,7 +1013,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/docs/chapter4/"><i class="fas fa-book-reader pr-1"></i>Chapter 4 Raw data processing</a>
+        <a class="docs-toc-link " href="/docs/chapter4/"><i class="fas fa-book-reader pr-1"></i>Chapter 4 Raw data processing</a>
     
       
         <ul class="nav docs-sidenav">
@@ -1296,7 +1288,7 @@
       
 
 
-  <li class=""><a href="/docs/chapter12/tidymasshiny/">TidyMass Shiny Application</a></li>
+  <li class="active"><a href="/docs/chapter12/tidymasshiny/">TidyMass Shiny Application</a></li>
 
       
         </ul>
@@ -1341,7 +1333,7 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#about">About</a></li>
+    <li><a href="#session-information">Session information</a></li>
   </ul>
 </nav>
 
@@ -1373,6 +1365,8 @@
   
     
   
+    
+  
 
     <li class="breadcrumb-item">
       <a href="/">
@@ -1392,8 +1386,17 @@
     </li>
   
 
+    <li class="breadcrumb-item">
+      <a href="/docs/chapter12/">
+        
+          Chapter 12 TidyMass Shiny Application
+        
+      </a>
+    </li>
+  
+
       <li class="breadcrumb-item active" aria-current="page">
-        Chapter 4 Raw data processing
+        TidyMass Shiny Application
       </li>
     </ol>
   </nav>
@@ -1410,16 +1413,64 @@
 
       <div class="docs-article-container">
         
-        <h1>Raw data processing</h1>
+        <h1>TidyMass Shiny Application</h1>
 
         <article class="article-style">
 
           
           
 
-          <h2 id="about">About</h2>
-<p>massprocesser is a R package which is used for untargeted metabolomics raw data processing and analysis.</p>
-
+          <p>If you haven&rsquo;t installed <code>TidyMass</code> yet, please install it according to <a href="https://www.tidymass.org/docs/chapter1/1-installation/" target="_blank" rel="noopener">the installation instructions</a>.</p>
+<p>Install the necessary packages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;remotes&#39;</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;remotes&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;tidyverse&#39;</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;tidyverse&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;writexl&#39;</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;writexl&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;hexbin&#39;</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;hexbin&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;ComplexUpset&#39;</span><span class="p">))</span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;ComplexUpset&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;shinyalert&#39;</span><span class="p">))</span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;shinyalert&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;shinyFiles&#39;</span><span class="p">))</span> <span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#39;thomasp85/shinyFiles&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;shinyWidgets&#39;</span><span class="p">))</span> <span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#34;dreamRs/shinyWidgets&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;shiny&#39;</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;shiny&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;bsicons&#39;</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;bsicons&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;bslib&#39;</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;bslib&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;plotly&#39;</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;plotly&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;colourpicker&#39;</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;colourpicker&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#39;massdbbuildin&#39;</span><span class="p">))</span> <span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#39;tidymass/massdbbuildin&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Then install Tidymass shinyapp with the code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#39;tidymass/tidymass_shiny&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>To start the Tidymass shinyapp:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidymass</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidymassshiny</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">run_tidymass_shiny</span><span class="p">()</span>
+</span></span></code></pre></div><p>The completerd tutorials of TidyMassShiny can be found here: <a href="https://www.tidymass.org/tidymassshiny-tutorial/" target="_blank" rel="noopener">https://www.tidymass.org/tidymassshiny-tutorial/</a></p>
+<h2 id="session-information">Session information</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; R version 4.4.1 (2024-06-14)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Platform: aarch64-apple-darwin20</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Running under: macOS 15.4.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; Matrix products: default</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; locale:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; time zone: Asia/Singapore</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; tzcode source: internal</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; attached base packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; loaded via a namespace (and not attached):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [1] digest_0.6.37     R6_2.5.1          bookdown_0.41     fastmap_1.2.0    </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [5] xfun_0.49         blogdown_1.21     cachem_1.1.0      knitr_1.49       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt;  [9] htmltools_0.5.8.1 rmarkdown_2.29    lifecycle_1.0.4   cli_3.6.3        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [13] sass_0.4.9        jquerylib_0.1.4   compiler_4.4.1    rprojroot_2.0.4  </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [17] here_1.0.1        rstudioapi_0.17.1 tools_4.4.1       evaluate_1.0.1   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&gt; [21] bslib_0.8.0       yaml_2.3.10       jsonlite_1.8.9    rlang_1.1.4</span>
+</span></span></code></pre></div>
 
         </article>
 
@@ -1447,7 +1498,7 @@
       </div>
 
       <div class="body-footer">
-        <p>Last updated on Sep 9, 2018</p>
+        <p>Last updated on May 6, 2025</p>
 
         
 
@@ -1459,7 +1510,7 @@
   
 
 <p class="edit-page">
-  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter4/_index.md">
+  <a href="https://github.com/tidymass/tidymass-website/edit/main/content/docs/chapter12/tidymasshiny.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
