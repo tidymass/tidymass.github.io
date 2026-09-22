@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: 2026年9月23日 --><html lang="zh-Hans" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
+
+
+
+
+
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/wowchemy.4b7280f12f476311af2218ec632c93a2.css" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="author" content="Xiaotao Shen" />
+
+
+
+
+
+
+
+<meta name="description" content="返回教程目录 · 适用版本：0.1.63
+原始数据 非靶向工作流和 Raw chromatograms 使用 mzML / mzXML。本版本这些入口不直接处理厂商专有 RAW 文件；请先使用适合仪器和采集方式的转换工具。
+正、负离子模式建议分别建立项目。文件名去掉扩展名后必须唯一，即使文件在不同子文件夹中也不能重名。不要只用大小写区分样品名。
+导入会登记文件位置，后续需要检查 EIC 或质谱时仍可能使用原始文件。因此不要在分析过程中移动、替换或重命名它们。
+sample information 原始数据导入支持 CSV、TSV、Excel 样品信息。示例：
+sample_id,group,class,batch,injection.order,subject_id S001,Control,Subject,B1,1,P01 S002,Treatment,Subject,B1,2,P02 QC001,QC,QC,B1,3, Blank001,Blank,Blank,B1,4, 列 含义与要求 sample_id 与原始文件名去掉扩展名后完全一致。例如 S001." />
+
+
+
+  <link rel="alternate" hreflang="en" href="https://www.tidymass.org/windows/input-data/" />
+
+<link rel="alternate" hreflang="zh-Hans" href="https://www.tidymass.org/zh/windows/input-data/" />
+<link rel="canonical" href="https://www.tidymass.org/zh/windows/input-data/" />
+
+
+
+  <link rel="manifest" href="/zh/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huf8b049b8318691de0a515d87795ef728_130772_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huf8b049b8318691de0a515d87795ef728_130772_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#EF525B" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@wowchemy" />
+  <meta property="twitter:creator" content="@wowchemy" />
+<meta property="twitter:image" content="https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png" />
+<meta property="og:site_name" content="TidyMass" />
+<meta property="og:url" content="https://www.tidymass.org/zh/windows/input-data/" />
+<meta property="og:title" content="输入数据与样品信息 | TidyMass" />
+<meta property="og:description" content="返回教程目录 · 适用版本：0.1.63
+原始数据 非靶向工作流和 Raw chromatograms 使用 mzML / mzXML。本版本这些入口不直接处理厂商专有 RAW 文件；请先使用适合仪器和采集方式的转换工具。
+正、负离子模式建议分别建立项目。文件名去掉扩展名后必须唯一，即使文件在不同子文件夹中也不能重名。不要只用大小写区分样品名。
+导入会登记文件位置，后续需要检查 EIC 或质谱时仍可能使用原始文件。因此不要在分析过程中移动、替换或重命名它们。
+sample information 原始数据导入支持 CSV、TSV、Excel 样品信息。示例：
+sample_id,group,class,batch,injection.order,subject_id S001,Control,Subject,B1,1,P01 S002,Treatment,Subject,B1,2,P02 QC001,QC,QC,B1,3, Blank001,Blank,Blank,B1,4, 列 含义与要求 sample_id 与原始文件名去掉扩展名后完全一致。例如 S001." /><meta property="og:image" content="https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png" /><meta property="og:locale" content="zh-Hans" />
+
+
+    <meta
+      property="article:published_time"
+      content="2026-09-23T00:00:00&#43;08:00"
+    />
+
+
+    <meta property="article:modified_time" content="2026-09-23T00:00:00&#43;08:00">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <title>输入数据与样品信息 | TidyMass</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="5c35fb27cdc27903dbc4e3ec196e431f" >
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/wowchemy-init.min.bc584d8639f6412fc553d13c23e02e8a.js"></script>
+
+
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>搜索</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+
+        <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="搜索...">
+
+      </div>
+
+
+
+
+
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/zh/"><img src="/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_0x70_resize_lanczos_3.png" alt="TidyMass"
+
+            ></a>
+      </div>
+
+
+
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="切换导航">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+
+
+
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/zh/"><img src="/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_0x70_resize_lanczos_3.png" alt="TidyMass"
+
+          ></a>
+      </div>
+
+
+
+
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+
+        <ul class="navbar-nav d-md-inline-flex">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#hero"><span>主页</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#packages"><span>R包</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#team"><span>团队</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#contact"><span>联系</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#contribution"><span>贡献</span></a>
+          </li>
+
+
+
+
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>教程</span><span class="caret"></span>
+            </a>
+            <div class="dropdown-menu">
+
+                <a class="dropdown-item" href="/zh/r-package/"><span>R package</span></a>
+
+                <a class="dropdown-item" href="/zh/macos/"><span>MacOS</span></a>
+
+                <a class="dropdown-item" href="/zh/windows/"><span>Windows</span></a>
+
+                <a class="dropdown-item" href="/zh/r-shiny/"><span>R shiny</span></a>
+
+            </div>
+          </li>
+
+
+
+
+
+
+
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+
+
+
+
+
+
+
+
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="搜索"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+
+
+
+
+
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>浅色</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>深色</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>自动</span>
+            </a>
+          </div>
+        </li>
+
+
+
+
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="语言">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>中文 (简体)</span>
+            </div>
+
+            <a class="dropdown-item" href="https://www.tidymass.org/windows/input-data/">
+              <span>English</span>
+            </a>
+
+          </div>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+
+
+
+
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+
+
+          Windows 使用说明
+
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">搜索...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/zh/windows/">Windows 使用说明</a></li>
+
+
+
+
+  <li class=""><a href="/zh/windows/getting-started/">安装与快速开始</a></li>
+
+
+
+  <li class="active"><a href="/zh/windows/input-data/">输入数据与样品信息</a></li>
+
+
+
+  <li class=""><a href="/zh/windows/workflow/">完整非靶向代谢组学工作流</a></li>
+
+
+
+  <li class=""><a href="/zh/windows/tasks-and-reruns/">任务、重跑与版本差异</a></li>
+
+
+
+  <li class=""><a href="/zh/windows/feature-review/">Feature 审查与交互图</a></li>
+
+
+
+  <li class=""><a href="/zh/windows/analysis-tools/">Analysis tools：独立分析工具</a></li>
+
+
+
+  <li class=""><a href="/zh/windows/shiny-and-packages/">Shiny tools 与 R environment</a></li>
+
+
+
+  <li class=""><a href="/zh/windows/export-and-recovery/">导出、项目保存与恢复</a></li>
+
+
+
+  <li class=""><a href="/zh/windows/troubleshooting/">常见问题</a></li>
+
+
+
+
+
+      </ul>
+
+
+
+</nav>
+
+    </div>
+
+
+
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">在本页</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#原始数据">原始数据</a></li>
+    <li><a href="#sample-information">sample information</a></li>
+    <li><a href="#已有峰表">已有峰表</a></li>
+    <li><a href="#ms2-数据">MS2 数据</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <div class="docs-article-container">
+
+      </div>
+
+
+
+
+
+      <div class="docs-article-container">
+
+        <h1>输入数据与样品信息</h1>
+
+        <article class="article-style">
+
+
+
+
+          <p><a href="/zh/windows/">返回教程目录</a> · 适用版本：0.1.63</p>
+<h2 id="原始数据">原始数据</h2>
+<p>非靶向工作流和 Raw chromatograms 使用 <strong>mzML / mzXML</strong>。本版本这些入口不直接处理厂商专有 RAW 文件；请先使用适合仪器和采集方式的转换工具。</p>
+<p>正、负离子模式建议分别建立项目。文件名去掉扩展名后必须唯一，即使文件在不同子文件夹中也不能重名。不要只用大小写区分样品名。</p>
+<p>导入会登记文件位置，后续需要检查 EIC 或质谱时仍可能使用原始文件。因此不要在分析过程中移动、替换或重命名它们。</p>
+<h2 id="sample-information">sample information</h2>
+<p>原始数据导入支持 CSV、TSV、Excel 样品信息。示例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sample_id,group,class,batch,injection.order,subject_id
+</span></span><span class="line"><span class="cl">S001,Control,Subject,B1,1,P01
+</span></span><span class="line"><span class="cl">S002,Treatment,Subject,B1,2,P02
+</span></span><span class="line"><span class="cl">QC001,QC,QC,B1,3,
+</span></span><span class="line"><span class="cl">Blank001,Blank,Blank,B1,4,
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>列</th>
+<th>含义与要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample_id</code></td>
+<td>与原始文件名去掉扩展名后完全一致。例如 <code>S001.mzXML</code> 对应 <code>S001</code></td>
+</tr>
+<tr>
+<td><code>group</code></td>
+<td>生物学分组；如果列名不同，在 <strong>Group column</strong> 中指定实际列名</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>样品用途，例如 <code>Subject</code>、<code>QC</code>、<code>Blank</code></td>
+</tr>
+<tr>
+<td><code>batch</code></td>
+<td>分析批次，用于检查批次效应等</td>
+</tr>
+<tr>
+<td><code>injection.order</code></td>
+<td>进样顺序，用于漂移检查及需要顺序信息的方法</td>
+</tr>
+<tr>
+<td><code>subject_id</code></td>
+<td>配对分析中的个体标识，不配对时可以不提供</td>
+</tr>
+</tbody>
+</table>
+<p>导入原始文件时，样品信息必须覆盖所有选中的文件，每个 sample ID 只能出现一次。不要用表格行号代替样品名。前导零应保留为文本，例如 <code>001</code> 不能变成 <code>1</code>。</p>
+<p>建议明确填写 <code>class</code>，不要依赖自动推断。用于收集 MS2 的 pooled QC 不是自动等同于用于定量质量评价的 QC；只有符合定量实验设计的 QC 才应进入相应 QC 计算。</p>
+<h2 id="已有峰表">已有峰表</h2>
+<p>通过 <strong>Dataset builder &amp; converter</strong> 将峰表构建为 <code>mass_dataset</code>，再用于独立分析模块。宽表格式示例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">variable_id</span><span class="p">,</span><span class="n">mz</span><span class="p">,</span><span class="n">rt</span><span class="p">,</span><span class="n">S001</span><span class="p">,</span><span class="n">S002</span>
+</span></span><span class="line"><span class="cl"><span class="n">F001</span><span class="p">,</span><span class="mf">100.1234</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1200</span>
+</span></span><span class="line"><span class="cl"><span class="n">F002</span><span class="p">,</span><span class="mf">200.2345</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="n">NA</span>
+</span></span></code></pre></div><ul>
+<li><code>variable_id</code> 唯一。</li>
+<li><code>mz</code> 为离子质荷比，<code>rt</code> 的单位与所选导入选项一致；上例为秒。</li>
+<li>强度列名与样品信息的 <code>sample_id</code> 对应。</li>
+<li><code>NA</code> 表示缺失。零是实际数值，不会自动当作缺失值。</li>
+<li>元数据中的注释名称不应被当作已确认鉴定，需保留其证据来源。</li>
+</ul>
+<h2 id="ms2-数据">MS2 数据</h2>
+<p>MS2 可在支持的导入、数据构建或注释入口附加。MS2 与 feature 的关联依赖前体 m/z 和 RT 等条件；有匹配的 MS2 不代表已确认化合物身份。</p>
+<p>开始前用 <a href="/zh/windows/analysis-tools/">Sample &amp; file checker</a> 排查重复、缺失和未预期的文件，尤其适合多批次项目。</p>
+
+
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="article-widget">
+
+<div class="post-nav">
+
+
+
+  <div class="post-nav-item">
+    <div class="meta-nav">上一页</div>
+    <a href="/zh/windows/getting-started/" rel="next">安装与快速开始</a>
+  </div>
+
+
+
+  <div class="post-nav-item">
+    <div class="meta-nav">下一页</div>
+    <a href="/zh/windows/workflow/" rel="prev">完整非靶向代谢组学工作流</a>
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+      <div class="body-footer">
+        <p>最近更新于 9月 23, 2026</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <footer class="site-footer">
+  <hr>
+
+    <div style="display: flex; justify-content: space-between; padding: 20px;">
+
+ <div style="flex: 2;">
+
+   <p style="text-align:left; font-weight: bold">
+   Developed by Shen lab @ NTU Singapore
+    </p>
+
+
+    <a href="https://www.ntu.edu.sg/" target="_blank"><img src="https://jaspershen-lab.github.io/image/ntu_logo.png" alt="logo" class="center" width="50%" height="100"></a>
+    <hr style="margin: 10px 0; width: 50%; border-top: 1px solid #ddd;">
+    <a href="https://www.ntu.edu.sg/medicine" target="_blank"><img src="https://jaspershen-lab.github.io/image/lkcmedicine.png" alt="logo" class="center" width="50%" height="100"></a>
+    <hr style="margin: 10px 0; width: 50%; border-top: 1px solid #ddd;">
+    <a href="https://www.shen-lab.org/" target="_blank"><img src="https://jaspershen-lab.github.io/image/shen_lab_logo8.png" alt="logo" class="center" width="50%" height="100"></a>
+
+            </div>
+
+
+            <div style="flex: 2;">
+  <p style="text-align:left; font-weight: bold">
+    Find us here:
+    <br>
+    <i class="fa-brands fa-github"></i> <a href="https://github.com/tidymass" target="_blank" rel="noopener">GitHub</a>
+<br>
+        <i class="fa-brands fa-weixin"></i> <a href="https://jaspershen.github.io/image/wechat_QR.jpg" target="_blank" rel="noopener">WeChat</a>
+
+    <br>
+        <i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/xiaotaoshen1990" target="_blank" rel="noopener">Twitter</a>
+
+   <br>
+        <i class="fa-solid fa-envelope"></i> <a href="https://jaspershen.github.io/#contact" target="_blank" rel="noopener">Email</a>
+
+        <br>
+<i class="fa-solid fa-location-dot"></i> Address: <a href="https://maps.app.goo.gl/hfCpoqgzX7zmuh3h6" target="_blank" rel="noopener">59 Nanyang Dr, Singapore 636921</a>
+
+    </p>
+            </div>
+
+
+            <div style="flex: 1;">
+            </div>
+
+
+            <div style="flex: 1;">
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=e43qUF1sR8y0B12BqEm-gDwkYxSmbro-n8KEiBINpdY"></script>
+            </div>
+
+
+            <div style="flex: 1;">
+            </div>
+
+        </div>
+
+      <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <p class="powered-by copyright-license-text">
+    © 2022-2025 Shen Lab
+  </p>
+
+
+
+
+
+
+
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+
+
+  </div>
+
+
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js" integrity="sha256-aQmOEF2ZD4NM/xt4hthzREIo/2PFkOX/g01WjxEV7Ys=" crossorigin="anonymous"></script>
+<script>
+  anchors.add();
+</script>
+
+
+
+
+
+
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://blog-at8qrhng8b.disqus.com/count.js" async></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/zh/js/wowchemy.min.a019a8d0a4e912d4764e429825411dad.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

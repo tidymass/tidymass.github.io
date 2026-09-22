@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R shiny user guide | TidyMass</title>
+    <link>https://www.tidymass.org/r-shiny/</link>
+      <atom:link href="https://www.tidymass.org/r-shiny/index.xml" rel="self" type="application/rss+xml" />
+    <description>R shiny user guide</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0800</lastBuildDate>
+    <image>
+      <url>https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png</url>
+      <title>R shiny user guide</title>
+      <link>https://www.tidymass.org/r-shiny/</link>
+    </image>
+
+    <item>
+      <title>Install or access R Shiny</title>
+      <link>https://www.tidymass.org/r-shiny/installation/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/r-shiny/installation/</guid>
+      <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;choose-where-to-run&#34;&gt;Choose where to run&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;https://tidymassshiny.jaspershenlab.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hosted application&lt;/a&gt; runs on a remote server. The published guide describes a 512 MB upload limit and deletion of results after 24 hours; these are service settings and can change. Follow the notices shown by the running service, save the &lt;strong&gt;JOB ID&lt;/strong&gt;, and download results with &lt;strong&gt;Download All Data&lt;/strong&gt; before leaving.&lt;/p&gt;
+&lt;p&gt;A local installation runs R on your computer and provides access to your local files. Docker runs the app in a container; only mounted host folders are visible there. Choose a local or appropriately managed server installation for data that should not be uploaded to the public service.&lt;/p&gt;
+&lt;h2 id=&#34;install-the-r-package&#34;&gt;Install the R package&lt;/h2&gt;
+&lt;p&gt;Use an R version compatible with all dependencies. Although the app declares R ≥ 4.1, current companion packages can require R ≥ 4.5. Run the following in a writable R library. Repository dependencies can also require GitLab, CRAN and Bioconductor access.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;requireNamespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;remotes&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;quietly&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;install.packages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;remotes&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;requireNamespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BiocManager&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;quietly&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;install.packages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BiocManager&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;install.packages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tidyverse&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;writexl&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;hexbin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;ComplexUpset&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                   &lt;span class=&#34;s&#34;&gt;&amp;#34;shinyalert&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;colourpicker&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;remotes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;install_github&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tidymass/tidymass&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;remotes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;install_github&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tidymass/massdatabase&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;remotes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;install_github&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tidymass/massdbbuildin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;remotes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;install_github&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tidymass/tidymass_shiny&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tidyverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tidymass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tidymassshiny&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;run_tidymass_shiny&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Wait for the listening address and open the application in your browser. Keep the R process running. Check &lt;code&gt;packageVersion(&amp;quot;tidymassshiny&amp;quot;)&lt;/code&gt; and retain &lt;code&gt;sessionInfo()&lt;/code&gt; when reporting a problem. Install missing optional module dependencies from their correct source rather than assuming every toolkit ships with the core app.&lt;/p&gt;
+&lt;p&gt;On macOS, a Cairo/X11 error can require &lt;a href=&#34;https://www.xquartz.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;XQuartz&lt;/a&gt; and the appropriate Cairo setup. Follow the actual error; a failure compiling a system library is not repaired by repeatedly reinstalling unrelated R packages.&lt;/p&gt;
+&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;
+&lt;p&gt;Install and start Docker. Replace the host directory below with your own existing data folder:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull tidymass/tidymassshiny:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run --rm -p 127.0.0.1:3838:3838   -v &lt;span class=&#34;s2&#34;&gt;&amp;#34;/absolute/path/to/data:/home&amp;#34;&lt;/span&gt; tidymass/tidymassshiny:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open &lt;code&gt;http://localhost:3838&lt;/code&gt; after startup. Inside the app, select the mounted &lt;code&gt;/home&lt;/code&gt; path. On Windows, use the actual drive path and Docker&amp;rsquo;s supported volume syntax. Verify Docker has access to the directory. Record the resolved image digest for reproducibility because the &lt;code&gt;latest&lt;/code&gt; tag can move.&lt;/p&gt;
+&lt;h2 id=&#34;managed-server&#34;&gt;Managed server&lt;/h2&gt;
+&lt;p&gt;For a shared server, use a supported R/Shiny Server environment, an application service account, persistent working directories and the required R/system dependencies. Configure authorized users&amp;rsquo; file access, resource limits and the public endpoint with the administrator. A &lt;code&gt;shinyFiles&lt;/code&gt; picker sees the filesystem of the R server, not arbitrary folders on a remote browser user&amp;rsquo;s computer. Upload controls are the route for transferring browser-side files.&lt;/p&gt;
+&lt;p&gt;The older tutorial includes Ubuntu-specific deployment examples. Check their suitability for your server instead of copying obsolete OS repository keys or version-pinned installer URLs blindly.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Create a project and import data</title>
+      <link>https://www.tidymass.org/r-shiny/inputs-and-processing/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/r-shiny/inputs-and-processing/</guid>
+      <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;initialize-a-project&#34;&gt;Initialize a project&lt;/h2&gt;
+&lt;p&gt;Choose a working directory, upload &lt;code&gt;sample_info.csv&lt;/code&gt;, map its columns when necessary, then click &lt;strong&gt;Initialize Project&lt;/strong&gt;. Inspect the resulting sample information. IDs must match the intensity columns or raw filenames exactly; distinguish biological &lt;strong&gt;group&lt;/strong&gt;, sample &lt;strong&gt;class&lt;/strong&gt;, batch and acquisition order.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sample_id,group,class,injection.order,batch
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;S001,Control,Subject,1,B1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;S002,Treatment,Subject,2,B1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;QC001,QC,QC,3,B1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is a format example, not sufficient replication for an experiment. Keep positive and negative measurements distinguishable and preserve leading zeros in IDs.&lt;/p&gt;
+&lt;h2 id=&#34;start-with-ms-files&#34;&gt;Start with MS files&lt;/h2&gt;
+&lt;p&gt;Convert vendor files to suitable mzML/mzXML first. Vendor reader availability depends on the converter and platform. Organize MS1 files into the documented sample-type folders, such as QC and Subject.&lt;/p&gt;
+&lt;p&gt;Open &lt;strong&gt;Data import → Start with MS file&lt;/strong&gt;, choose &lt;strong&gt;SELECT MS1 FOLDER&lt;/strong&gt;, and click &lt;strong&gt;CHECK INPUT FILE&lt;/strong&gt;. Review ppm, peakwidth, snthresh, noise and threads. A parameter optimization option is an aid; inspect resulting EICs and alignment to judge suitability. Start peak picking once inputs and parameters are correct, and wait for completion without launching the same operation repeatedly.&lt;/p&gt;
+&lt;p&gt;For the hosted version, use its upload workflow, package MS files as the required ZIP, then &lt;strong&gt;Process MS1 Files&lt;/strong&gt; to unpack/process the upload. A local-directory picker is not a substitute for uploading to a remote server.&lt;/p&gt;
+&lt;h2 id=&#34;start-with-a-peak-table&#34;&gt;Start with a peak table&lt;/h2&gt;
+&lt;p&gt;Open &lt;strong&gt;Start with table file&lt;/strong&gt; and choose the CSV. The current source allows mapping the feature ID, m/z, RT and ion columns; the initial mapping uses the first four columns. A compatible template is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;variable_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mz&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S001&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S002&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QC001&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;F001&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;100.1234&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;F002&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;200.2345&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;120&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;neg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;600&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;550&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use &lt;code&gt;pos&lt;/code&gt;/&lt;code&gt;neg&lt;/code&gt; or the supported polarity labels. Set &lt;strong&gt;Retention time in&lt;/strong&gt; correctly: minutes are converted to seconds. Map the four metadata columns explicitly if your names/order differ. Keep all remaining columns as numeric sample intensities and ensure they match the initialized sample sheet.&lt;/p&gt;
+&lt;p&gt;Click &lt;strong&gt;Input file summary&lt;/strong&gt; and check matching, polarity, sample counts and feature counts before &lt;strong&gt;Generate massdataset object&lt;/strong&gt;. Inspect the separate positive/negative outputs. An extra text annotation column can be mistaken for intensity input, so remove or import it through the appropriate annotation route.&lt;/p&gt;
+&lt;h2 id=&#34;start-with-an-existing-object&#34;&gt;Start with an existing object&lt;/h2&gt;
+&lt;p&gt;Choose &lt;strong&gt;Start with mass_dataset file&lt;/strong&gt;, load the positive and negative objects into their respective controls, and use &lt;strong&gt;Check input&lt;/strong&gt;. A CSV is not an R object merely because its extension is changed. Keep the original object and its package-version record.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/project_initiate.png&#34; alt=&#34;Project initialization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;The screenshot is from the existing published Shiny tutorial; minor visual details can differ across deployments.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/upstream-data-processing.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Assess quality and clean data</title>
+      <link>https://www.tidymass.org/r-shiny/quality-and-cleaning/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/r-shiny/quality-and-cleaning/</guid>
+      <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;generate-an-overview&#34;&gt;Generate an overview&lt;/h2&gt;
+&lt;p&gt;Open &lt;strong&gt;Overview&lt;/strong&gt; and click &lt;strong&gt;START&lt;/strong&gt;. Review m/z–RT distribution, missingness by sample/feature, QC RSD, intensity distributions, PCA and sample correlations. Select the relevant group, batch or injection-order coloring and download plots with their settings.&lt;/p&gt;
+&lt;p&gt;QC RSD describes technical repeatability where suitable quantitative QCs exist. Matrix intensity totals are not automatically raw TIC. Investigate suspicious samples against acquisition records before excluding them.&lt;/p&gt;
+&lt;h2 id=&#34;remove-noisy-features&#34;&gt;Remove noisy features&lt;/h2&gt;
+&lt;p&gt;Choose QC and biological-group missingness cutoffs, run the filtering step and inspect its retained feature count and missingness plots. The existing tutorial&amp;rsquo;s 20% QC / 50% group examples are adjustable choices, not universal cutoffs. Do not activate a QC-dependent condition when quantitative QCs are absent. Confirm how group criteria are combined in the installed module.&lt;/p&gt;
+&lt;h2 id=&#34;review-outlier-samples&#34;&gt;Review outlier samples&lt;/h2&gt;
+&lt;p&gt;Generate missingness/PCA displays. &lt;strong&gt;By tidymass&lt;/strong&gt; offers the documented missingness, PC SD, PC MAD and distance-based strategies; &lt;strong&gt;By myself&lt;/strong&gt; permits explicit selections. Review candidate IDs and experimental reasons, then run the exclusion operation. Preserve both the original object and your exclusion decisions.&lt;/p&gt;
+&lt;h2 id=&#34;impute-missing-values&#34;&gt;Impute missing values&lt;/h2&gt;
+&lt;p&gt;Choose a method and inspect its parameter panel. kNN uses neighbors and row/column missingness controls; random forest uses iteration/tree controls; PPCA uses component and convergence settings. &lt;code&gt;maxp&lt;/code&gt; in kNN concerns the maximum block size used by the underlying algorithm, not a percentage. Record the seed when provided.&lt;/p&gt;
+&lt;p&gt;Click &lt;strong&gt;START&lt;/strong&gt;, wait for completion and verify that the intended sample subset was processed. Avoid imputing a wholly unobserved feature as if it were supported quantitative evidence.&lt;/p&gt;
+&lt;h2 id=&#34;normalize-and-integrate&#34;&gt;Normalize and integrate&lt;/h2&gt;
+&lt;p&gt;Select a method appropriate to the experiment. SVR and LOESS require suitable QCs and acquisition information; PQN, median, mean and total are sample-wise approaches. Review keep_scale, optimization, reference and thread controls. Click &lt;strong&gt;Start analysis&lt;/strong&gt;, then &lt;strong&gt;Show plot&lt;/strong&gt; to inspect before/after results.&lt;/p&gt;
+&lt;p&gt;Record batch handling separately from normalization. No normalization method can rescue a completely confounded biological-group/batch design. Separately fitted PCAs should not be compared as a single unchanged coordinate system.&lt;/p&gt;
+&lt;p&gt;Save cleaned objects and diagnostic outputs before proceeding to annotation or statistics.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/upstream-data-processing.html#data-cleaning&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Annotation, statistics and enrichment</title>
+      <link>https://www.tidymass.org/r-shiny/annotation-and-statistics/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/r-shiny/annotation-and-statistics/</guid>
+      <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;attach-experimental-ms2&#34;&gt;Attach experimental MS2&lt;/h2&gt;
+&lt;p&gt;Choose &lt;strong&gt;Select MS2 folder&lt;/strong&gt; and the prepared MGF files, separated by polarity. Set chromatography and precursor m/z/RT association tolerances, then click &lt;strong&gt;Start&lt;/strong&gt;. Association tolerance links a spectrum to a feature; it is distinct from matching to a reference library.&lt;/p&gt;
+&lt;h2 id=&#34;annotate-metabolites&#34;&gt;Annotate metabolites&lt;/h2&gt;
+&lt;p&gt;Place compatible reference databases in a dedicated directory and select &lt;strong&gt;Choose folder&lt;/strong&gt;. Set MS1/MS2 tolerances, RT tolerance, candidate count, column and threads, then click &lt;strong&gt;Start annotation&lt;/strong&gt; once. Watch the logs and wait for the task to finish.&lt;/p&gt;
+&lt;p&gt;MoNA, MassBank and HMDB are public resources, not automatically in-house standards. Use reference RT only for comparable chromatography. Inspect candidates and available spectral evidence before accepting a name. Software confidence labels require interpretation in light of the actual measurements; an MS1-only candidate does not become a confirmed structure by receiving a level label.&lt;/p&gt;
+&lt;h2 id=&#34;filter-annotations-and-inspect-origins&#34;&gt;Filter annotations and inspect origins&lt;/h2&gt;
+&lt;p&gt;Choose how to retain multiple candidates, handle redundant adducts and filter supported evidence levels. Use &lt;strong&gt;Adduct for level 3 annotation&lt;/strong&gt; where appropriate and run &lt;strong&gt;START&lt;/strong&gt;. Preserve the unfiltered candidates and the rule used to reduce them.&lt;/p&gt;
+&lt;p&gt;In &lt;strong&gt;Metabolites origin&lt;/strong&gt;, use &lt;strong&gt;Check database&lt;/strong&gt;, then &lt;strong&gt;Start&lt;/strong&gt;. An UpSet view summarizes origin associations and intersections. Select a compound and &lt;strong&gt;Show network plot&lt;/strong&gt; for its database relationships. These are reference associations, not demonstrated biosynthetic origins in your sample.&lt;/p&gt;
+&lt;h2 id=&#34;differential-analysis&#34;&gt;Differential analysis&lt;/h2&gt;
+&lt;p&gt;Use &lt;strong&gt;Wake up object&lt;/strong&gt;, choose the sample attribute and explicitly select the control/reference group. Run the comparison, then inspect PCA and volcano plots. Confirm fold-change direction and distinguish a raw P-value cutoff from FDR/adjusted P-value. Retain the full table, including nonsignificant features.&lt;/p&gt;
+&lt;p&gt;Use only the biological samples intended for the test. Do not infer pairing from row order. If the module cannot represent the study&amp;rsquo;s repeated measures or covariates, export the object and use the appropriate R model.&lt;/p&gt;
+&lt;h2 id=&#34;pathway-enrichment&#34;&gt;Pathway enrichment&lt;/h2&gt;
+&lt;p&gt;Choose KEGG/HMDB or &lt;strong&gt;Upload custom database&lt;/strong&gt;, verify the organism and ID system, and set the adjustment method, cutoff and threads. Inspect the bar/scatter plots and mapping coverage. Review candidate ambiguity, collapse redundant compound IDs and record the background used by the method. Enrichment is a statistical association with a reference set, not direct proof of pathway activation.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/metabolite_annotation.png&#34; alt=&#34;Annotation settings&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Screenshot from the existing published tutorial.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/downstream-data-processing.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>fMSEA, FPA and database toolkits</title>
+      <link>https://www.tidymass.org/r-shiny/toolkits/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/r-shiny/toolkits/</guid>
+      <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;fmsea&#34;&gt;fMSEA&lt;/h2&gt;
+&lt;p&gt;Open &lt;strong&gt;Tidymass shiny toolkits → fMSEA Analysis&lt;/strong&gt;. Load the required R data files: a processed &lt;strong&gt;Feature Table&lt;/strong&gt;, an &lt;strong&gt;MS1 Database&lt;/strong&gt; (KEGG/HMDB as supported) and a &lt;strong&gt;Pathway Database&lt;/strong&gt;. The published module lists KEGG, HMDB, IMETPD, Reactome and WikiPathways resources. Use the module&amp;rsquo;s demo/file schema, not an arbitrary renamed CSV.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Run Step 1&lt;/strong&gt;: configure column, database type, MS1 ppm, RT clustering tolerance and isotope count. Inspect candidate assignment before enrichment. The tutorial examples use 15 ppm, 10 s and three isotopes; adapt them to your data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Run Step 2&lt;/strong&gt;: set threads, minimum/maximum pathway size, permutations, iterations and FDR threshold. The published defaults include 1,000 permutations and pathway sizes of 15–300; these are computational choices, not guaranteed optimal settings.&lt;/li&gt;
+&lt;li&gt;Select a row in &lt;strong&gt;Significant Modules Table&lt;/strong&gt; to display its enrichment-score profile. Save full results and settings, not only a significant plot.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;An existing compatible results object can be loaded for visualization without rerunning Steps 1–2. Feature-based enrichment preserves uncertainty from candidate assignment; it does not identify every contributing compound.&lt;/p&gt;
+&lt;h3 id=&#34;optional-llm-evaluation&#34;&gt;Optional LLM evaluation&lt;/h3&gt;
+&lt;p&gt;The module offers matrix-relevance and literature-relevance evaluation. Configure the sample source or research topic and the selected provider&amp;rsquo;s API settings, then run the requested evaluation. This step is optional: a missing endpoint/key means it has not run. Do not substitute generated scores for statistical validation or verified literature evidence. Check what information is sent to the selected service before using private study details. Download evaluation results separately from the enrichment tables/PNG/PDF plots.&lt;/p&gt;
+&lt;h2 id=&#34;feature-based-pathway-analysis-fpa&#34;&gt;Feature-based pathway analysis (FPA)&lt;/h2&gt;
+&lt;p&gt;Use the toolkit&amp;rsquo;s FPA entry with the required feature data, ion mode and compatible pathway/candidate resources. Review feature grouping, isotope/adduct assumptions, mass tolerance and the null/permutation settings offered by the installed module. Run, inspect contributing features and export the resulting modules with parameters. Consult the &lt;a href=&#34;https://www.tidymass.org/r-package/metpath/&#34;&gt;metpath guide&lt;/a&gt; for the R interfaces and interpretation. FPA and fMSEA are distinct analyses; their output scores are not interchangeable.&lt;/p&gt;
+&lt;h2 id=&#34;construct-an-in-house-metabolite-database&#34;&gt;Construct an in-house metabolite database&lt;/h2&gt;
+&lt;p&gt;Acquire standard compounds under conditions comparable to the study. Prepare metabolite metadata and MS2 according to metid&amp;rsquo;s database schema. In the toolkit, select the CSV with &lt;strong&gt;File Path&lt;/strong&gt;, inspect &lt;strong&gt;Construction Parameters&lt;/strong&gt;, then &lt;strong&gt;Build Database&lt;/strong&gt;. Verify m/z, RT, names and spectra, assign a descriptive database identifier and use &lt;strong&gt;Download Database&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Put the resulting &lt;code&gt;.rda&lt;/code&gt; in a dedicated annotation-database folder and select it during annotation. Saving an object with an in-house label does not replace verification of standards and acquisition conditions.&lt;/p&gt;
+&lt;h2 id=&#34;build-a-species-specific-kegg-database&#34;&gt;Build a species-specific KEGG database&lt;/h2&gt;
+&lt;p&gt;Find the intended organism code, for example hsa or mmu, from KEGG&amp;rsquo;s organism list. Open &lt;strong&gt;KEGG Pathway Database Construction&lt;/strong&gt;, use &lt;strong&gt;Set working directory&lt;/strong&gt;, enter the code and a request interval (the tutorial uses at least one second), then &lt;strong&gt;Download pathway&lt;/strong&gt;. Monitor network errors and resulting file paths. Verify that pathway IDs carry the intended species prefix before enrichment; preserve retrieval date and organism code.&lt;/p&gt;
+&lt;h2 id=&#34;convert-metabolite-ids&#34;&gt;Convert metabolite IDs&lt;/h2&gt;
+&lt;p&gt;Select the provider under &lt;strong&gt;Convert Parameters&lt;/strong&gt;, choose &lt;strong&gt;Source ID Type&lt;/strong&gt; and &lt;strong&gt;Target ID Type&lt;/strong&gt;, enter queries in &lt;strong&gt;Conversion Input&lt;/strong&gt; and click &lt;strong&gt;Convert ID&lt;/strong&gt;. Inspect failed and one-to-many mappings instead of silently dropping them. API-based services require their credentials. The experimental LLM conversion route may produce incorrect identifiers; verify structures/identifiers independently before using them in a database or pathway analysis.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/fmsea_visulization.png&#34; alt=&#34;fMSEA results&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Screenshot from the existing published tutorial.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/tidymass-shiny-toolkits.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Save results and solve problems</title>
+      <link>https://www.tidymass.org/r-shiny/export-and-troubleshooting/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/r-shiny/export-and-troubleshooting/</guid>
+      <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;save-a-complete-analysis&#34;&gt;Save a complete analysis&lt;/h2&gt;
+&lt;p&gt;Keep the initialized sample sheet, raw-file references, intermediate &lt;code&gt;mass_dataset&lt;/code&gt; objects, cleaned and annotated objects, complete statistical/enrichment tables, figures and parameters. For local use, inspect the output directories reported by the app. For hosted use, record the JOB ID and &lt;strong&gt;Download All Data&lt;/strong&gt; before the service retention window expires. Confirm the archive opens and contains the results you intended to keep.&lt;/p&gt;
+&lt;p&gt;When reopening compatible objects or fMSEA results, confirm which steps they represent. Changing a parameter does not retroactively regenerate a saved result. Preserve software/package versions and database provenance alongside the outputs.&lt;/p&gt;
+&lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Problem&lt;/th&gt;
+&lt;th&gt;Action&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Folder picker cannot see my computer&lt;/td&gt;
+&lt;td&gt;A remote R process sees its server filesystem; use upload or run locally&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Docker cannot find data&lt;/td&gt;
+&lt;td&gt;Check host-folder permissions and container mount; select the container path&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Table sample mismatch&lt;/td&gt;
+&lt;td&gt;Compare exact IDs against the initialized sample sheet; remove non-intensity columns&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Incorrect polarity or RT&lt;/td&gt;
+&lt;td&gt;Map the ion column and set minutes/seconds explicitly&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Missing R package&lt;/td&gt;
+&lt;td&gt;Install from the correct source, inspect the first error and restart the app&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Raw processing takes a long time&lt;/td&gt;
+&lt;td&gt;Inspect progress/logs, reduce threads if memory is limiting; avoid repeated Start clicks&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;No MS2 candidates&lt;/td&gt;
+&lt;td&gt;Check polarity, precursor/RT association, database type and matching tolerances&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;No enrichment results&lt;/td&gt;
+&lt;td&gt;Check ID mapping, organism, selection and background; an empty result can be valid&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LLM evaluation fails&lt;/td&gt;
+&lt;td&gt;Verify the optional provider configuration; preserve the statistical results independently&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;A plot looks different after reloading&lt;/td&gt;
+&lt;td&gt;Confirm the saved object, selected sample groups and plotting settings&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For a report, include app/package versions, local/Docker/hosted deployment, module, steps to reproduce, logs and a de-identified input example. Do not share API keys or private sample identifiers.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+  </channel>
+</rss>

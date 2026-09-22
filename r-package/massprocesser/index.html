@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: September 23, 2026 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
+
+
+
+
+
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/wowchemy.4b7280f12f476311af2218ec632c93a2.css" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="author" content="Xiaotao Shen" />
+
+
+
+
+
+
+
+<meta name="description" content="Version checked for this guide: 1.0.11 · 2026-09-23
+Start with converted mzML/mzXML files in a dedicated processing directory, normally grouped into sample-type subdirectories such as QC and Subject. Run positive and negative modes separately." />
+
+
+
+  <link rel="alternate" hreflang="zh" href="https://www.tidymass.org/zh/r-package/massprocesser/" />
+
+<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/r-package/massprocesser/" />
+<link rel="canonical" href="https://www.tidymass.org/r-package/massprocesser/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huf8b049b8318691de0a515d87795ef728_130772_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huf8b049b8318691de0a515d87795ef728_130772_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#EF525B" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@wowchemy" />
+  <meta property="twitter:creator" content="@wowchemy" />
+<meta property="twitter:image" content="https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png" />
+<meta property="og:site_name" content="TidyMass" />
+<meta property="og:url" content="https://www.tidymass.org/r-package/massprocesser/" />
+<meta property="og:title" content="massprocesser — Detect peaks and align samples | TidyMass" />
+<meta property="og:description" content="Version checked for this guide: 1.0.11 · 2026-09-23
+Start with converted mzML/mzXML files in a dedicated processing directory, normally grouped into sample-type subdirectories such as QC and Subject. Run positive and negative modes separately." /><meta property="og:image" content="https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png" /><meta property="og:locale" content="en-us" />
+
+
+    <meta
+      property="article:published_time"
+      content="2026-09-23T00:00:00&#43;08:00"
+    />
+
+
+    <meta property="article:modified_time" content="2026-09-23T00:00:00&#43;08:00">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <title>massprocesser — Detect peaks and align samples | TidyMass</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="fb7e4f616f79cc39c62687109650fa0e" >
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/wowchemy-init.min.bc584d8639f6412fc553d13c23e02e8a.js"></script>
+
+
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+
+      </div>
+
+
+
+
+
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/"><img src="/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_0x70_resize_lanczos_3.png" alt="TidyMass"
+
+            ></a>
+      </div>
+
+
+
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+
+
+
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/"><img src="/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_0x70_resize_lanczos_3.png" alt="TidyMass"
+
+          ></a>
+      </div>
+
+
+
+
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+
+        <ul class="navbar-nav d-md-inline-flex">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#hero"><span>HOME</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#packages"><span>PACKAGES</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#team"><span>TEAM</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>CONTACT</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contribution"><span>CONTRIBUTION</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/databases/"><span>DATABASES</span></a>
+          </li>
+
+
+
+
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>TUTORIALS</span><span class="caret"></span>
+            </a>
+            <div class="dropdown-menu">
+
+                <a class="dropdown-item" href="/r-package/"><span>R package</span></a>
+
+                <a class="dropdown-item" href="/macos/"><span>MacOS</span></a>
+
+                <a class="dropdown-item" href="/windows/"><span>Windows</span></a>
+
+                <a class="dropdown-item" href="/r-shiny/"><span>R shiny</span></a>
+
+            </div>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/news/"><span>NEWS</span></a>
+          </li>
+
+
+
+
+
+
+
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+
+
+
+
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/tidymass" data-toggle="tooltip" data-placement="bottom" title="Follow us on GitHub" target="_blank" rel="noopener" aria-label="Follow us on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+
+
+
+
+
+
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+
+
+
+
+
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+
+
+
+
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="Languages">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>English</span>
+            </div>
+
+            <a class="dropdown-item" href="https://www.tidymass.org/zh/r-package/massprocesser/">
+              <span>中文 (简体)</span>
+            </a>
+
+          </div>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+
+
+
+
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+
+
+          R package user guide
+
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/r-package/">R package user guide</a></li>
+
+
+
+
+  <li class=""><a href="/r-package/installation/">Installation and versions</a></li>
+
+
+
+  <li class=""><a href="/r-package/tidymass/">tidymass</a></li>
+
+
+
+  <li class=""><a href="/r-package/massdataset/">massdataset</a></li>
+
+
+
+  <li class=""><a href="/r-package/massconverter/">massconverter</a></li>
+
+
+
+  <li class="active"><a href="/r-package/massprocesser/">massprocesser</a></li>
+
+
+
+  <li class=""><a href="/r-package/masscleaner/">masscleaner</a></li>
+
+
+
+  <li class=""><a href="/r-package/massqc/">massqc</a></li>
+
+
+
+  <li class=""><a href="/r-package/massdatabase/">massdatabase</a></li>
+
+
+
+  <li class=""><a href="/r-package/metid/">metid</a></li>
+
+
+
+  <li class=""><a href="/r-package/massstat/">massstat</a></li>
+
+
+
+  <li class=""><a href="/r-package/metpath/">metpath</a></li>
+
+
+
+  <li class=""><a href="/r-package/masstools/">masstools</a></li>
+
+
+
+  <li class=""><a href="/r-package/metnormalizer/">MetNormalizer</a></li>
+
+
+
+  <li class=""><a href="/r-package/workflow/">Complete LC-MS analysis workflow</a></li>
+
+
+
+
+
+      </ul>
+
+
+
+</nav>
+
+    </div>
+
+
+
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#functional-scope">Functional scope</a></li>
+    <li><a href="#example">Example</a></li>
+    <li><a href="#find-a-function">Find a function</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <div class="docs-article-container">
+
+      </div>
+
+
+
+
+
+      <div class="docs-article-container">
+
+        <h1>massprocesser — Detect peaks and align samples</h1>
+
+        <article class="article-style">
+
+
+
+
+          <p><strong>Version checked for this guide: 1.0.11</strong> · 2026-09-23</p>
+<p>Start with converted mzML/mzXML files in a dedicated processing directory, normally grouped into sample-type subdirectories such as QC and Subject. Run positive and negative modes separately. <code>process_data()</code> performs raw-data processing and writes outputs under <code>Result</code>.</p>
+<p>Set ppm from instrument performance, peakwidth in seconds from chromatography, and signal/noise, prefilter and noise using representative files. <code>bw</code> and <code>min_fraction</code> affect across-sample grouping. <code>fill_peaks</code> controls chromatographic gap filling, not statistical imputation. Reduce threads when memory is limiting.</p>
+<p>Review TIC/BPC, RT correction, the peak table and extracted EICs. Preserve intermediate files if later inspection requires them. The parameter values below are an example, not a validated method for your instrument. Inspect output files after the call; do not assume its return value is the final dataset.</p>
+<h2 id="functional-scope">Functional scope</h2>
+<p>Raw processing; EIC extraction; chromatogram visualization; adjusted-RT visualization; targeted-table validation.</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Requires your converted files under analysis/MS1/.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># massprocesser::process_data(</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   path = &#34;analysis/MS1&#34;, polarity = &#34;positive&#34;,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   ppm = 15, peakwidth = c(5, 30), snthresh = 10,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   threads = 2, min_fraction = 0.5, fill_peaks = FALSE,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   output_tic = TRUE, output_bpc = TRUE</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># )</span>
+</span></span><span class="line"><span class="cl"><span class="nf">help</span><span class="p">(</span><span class="s">&#34;process_data&#34;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s">&#34;massprocesser&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="find-a-function">Find a function</h2>
+<p>The checked source exports the following APIs, including compatibility interfaces and utilities. Consult the installed version with <code>help(&quot;function_name&quot;, package = &quot;massprocesser&quot;)</code> for argument details.</p>
+<details>
+<summary>Show exported functions</summary>
+<p><code>check_targeted_table</code>, <code>extract_eic</code>, <code>get_massprocesser_version</code>, <code>massprocesser_conflicts</code>, <code>massprocesser_logo</code>, <code>massprocesser_packages</code>, <code>plot_adjusted_rt</code>, <code>plot_chromatogram</code>, <code>process_data</code></p>
+</details>
+<p><a href="https://github.com/tidymass/massprocesser" target="_blank" rel="noopener">Package source and reference documentation</a> · <a href="../workflow/">Complete workflow</a></p>
+
+
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="article-widget">
+
+<div class="post-nav">
+
+
+
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/r-package/massconverter/" rel="next">massconverter — Convert vendor files</a>
+  </div>
+
+
+
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/r-package/masscleaner/" rel="prev">masscleaner — Filter, impute and normalize</a>
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+      <div class="body-footer">
+        <p>Last updated on Sep 23, 2026</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <footer class="site-footer">
+  <hr>
+
+    <div style="display: flex; justify-content: space-between; padding: 20px;">
+
+ <div style="flex: 2;">
+
+   <p style="text-align:left; font-weight: bold">
+   Developed by Shen lab @ NTU Singapore
+    </p>
+
+
+    <a href="https://www.ntu.edu.sg/" target="_blank"><img src="https://jaspershen-lab.github.io/image/ntu_logo.png" alt="logo" class="center" width="50%" height="100"></a>
+    <hr style="margin: 10px 0; width: 50%; border-top: 1px solid #ddd;">
+    <a href="https://www.ntu.edu.sg/medicine" target="_blank"><img src="https://jaspershen-lab.github.io/image/lkcmedicine.png" alt="logo" class="center" width="50%" height="100"></a>
+    <hr style="margin: 10px 0; width: 50%; border-top: 1px solid #ddd;">
+    <a href="https://www.shen-lab.org/" target="_blank"><img src="https://jaspershen-lab.github.io/image/shen_lab_logo8.png" alt="logo" class="center" width="50%" height="100"></a>
+
+            </div>
+
+
+            <div style="flex: 2;">
+  <p style="text-align:left; font-weight: bold">
+    Find us here:
+    <br>
+    <i class="fa-brands fa-github"></i> <a href="https://github.com/tidymass" target="_blank" rel="noopener">GitHub</a>
+<br>
+        <i class="fa-brands fa-weixin"></i> <a href="https://jaspershen.github.io/image/wechat_QR.jpg" target="_blank" rel="noopener">WeChat</a>
+
+    <br>
+        <i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/xiaotaoshen1990" target="_blank" rel="noopener">Twitter</a>
+
+   <br>
+        <i class="fa-solid fa-envelope"></i> <a href="https://jaspershen.github.io/#contact" target="_blank" rel="noopener">Email</a>
+
+        <br>
+<i class="fa-solid fa-location-dot"></i> Address: <a href="https://maps.app.goo.gl/hfCpoqgzX7zmuh3h6" target="_blank" rel="noopener">59 Nanyang Dr, Singapore 636921</a>
+
+    </p>
+            </div>
+
+
+            <div style="flex: 1;">
+            </div>
+
+
+            <div style="flex: 1;">
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=e43qUF1sR8y0B12BqEm-gDwkYxSmbro-n8KEiBINpdY"></script>
+            </div>
+
+
+            <div style="flex: 1;">
+            </div>
+
+        </div>
+
+      <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <p class="powered-by copyright-license-text">
+    © 2022-2025 Shen Lab
+  </p>
+
+
+
+
+
+
+
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+
+
+  </div>
+
+
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js" integrity="sha256-aQmOEF2ZD4NM/xt4hthzREIo/2PFkOX/g01WjxEV7Ys=" crossorigin="anonymous"></script>
+<script>
+  anchors.add();
+</script>
+
+
+
+
+
+
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://blog-at8qrhng8b.disqus.com/count.js" async></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.85070d5fe00d43eaedff44310b81dc2c.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

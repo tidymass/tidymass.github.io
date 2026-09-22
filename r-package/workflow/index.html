@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: September 23, 2026 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
+
+
+
+
+
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/wowchemy.4b7280f12f476311af2218ec632c93a2.css" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="author" content="Xiaotao Shen" />
+
+
+
+
+
+
+
+<meta name="description" content="This template connects raw processing, exploration, cleaning, statistics, annotation and pathway analysis while saving intermediate outputs. Successful execution is not scientific validation. Replace all paths and group labels and review the example thresholds for your study." />
+
+
+
+  <link rel="alternate" hreflang="zh" href="https://www.tidymass.org/zh/r-package/workflow/" />
+
+<link rel="alternate" hreflang="en-us" href="https://www.tidymass.org/r-package/workflow/" />
+<link rel="canonical" href="https://www.tidymass.org/r-package/workflow/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huf8b049b8318691de0a515d87795ef728_130772_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huf8b049b8318691de0a515d87795ef728_130772_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#EF525B" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@wowchemy" />
+  <meta property="twitter:creator" content="@wowchemy" />
+<meta property="twitter:image" content="https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png" />
+<meta property="og:site_name" content="TidyMass" />
+<meta property="og:url" content="https://www.tidymass.org/r-package/workflow/" />
+<meta property="og:title" content="Complete LC-MS analysis workflow | TidyMass" />
+<meta property="og:description" content="This template connects raw processing, exploration, cleaning, statistics, annotation and pathway analysis while saving intermediate outputs. Successful execution is not scientific validation. Replace all paths and group labels and review the example thresholds for your study." /><meta property="og:image" content="https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png" /><meta property="og:locale" content="en-us" />
+
+
+    <meta
+      property="article:published_time"
+      content="2026-09-23T00:00:00&#43;08:00"
+    />
+
+
+    <meta property="article:modified_time" content="2026-09-23T00:00:00&#43;08:00">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <title>Complete LC-MS analysis workflow | TidyMass</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="90620e16680b06ef470911192ec3d4ef" >
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/wowchemy-init.min.bc584d8639f6412fc553d13c23e02e8a.js"></script>
+
+
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+
+      </div>
+
+
+
+
+
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/"><img src="/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_0x70_resize_lanczos_3.png" alt="TidyMass"
+
+            ></a>
+      </div>
+
+
+
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+
+
+
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/"><img src="/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_0x70_resize_lanczos_3.png" alt="TidyMass"
+
+          ></a>
+      </div>
+
+
+
+
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+
+        <ul class="navbar-nav d-md-inline-flex">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#hero"><span>HOME</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#packages"><span>PACKAGES</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#team"><span>TEAM</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>CONTACT</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contribution"><span>CONTRIBUTION</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/databases/"><span>DATABASES</span></a>
+          </li>
+
+
+
+
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>TUTORIALS</span><span class="caret"></span>
+            </a>
+            <div class="dropdown-menu">
+
+                <a class="dropdown-item" href="/r-package/"><span>R package</span></a>
+
+                <a class="dropdown-item" href="/macos/"><span>MacOS</span></a>
+
+                <a class="dropdown-item" href="/windows/"><span>Windows</span></a>
+
+                <a class="dropdown-item" href="/r-shiny/"><span>R shiny</span></a>
+
+            </div>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/news/"><span>NEWS</span></a>
+          </li>
+
+
+
+
+
+
+
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+
+
+
+
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/tidymass" data-toggle="tooltip" data-placement="bottom" title="Follow us on GitHub" target="_blank" rel="noopener" aria-label="Follow us on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+
+
+
+
+
+
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+
+
+
+
+
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+
+
+
+
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="Languages">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>English</span>
+            </div>
+
+            <a class="dropdown-item" href="https://www.tidymass.org/zh/r-package/workflow/">
+              <span>中文 (简体)</span>
+            </a>
+
+          </div>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+
+
+
+
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+
+
+          R package user guide
+
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/r-package/">R package user guide</a></li>
+
+
+
+
+  <li class=""><a href="/r-package/installation/">Installation and versions</a></li>
+
+
+
+  <li class=""><a href="/r-package/tidymass/">tidymass</a></li>
+
+
+
+  <li class=""><a href="/r-package/massdataset/">massdataset</a></li>
+
+
+
+  <li class=""><a href="/r-package/massconverter/">massconverter</a></li>
+
+
+
+  <li class=""><a href="/r-package/massprocesser/">massprocesser</a></li>
+
+
+
+  <li class=""><a href="/r-package/masscleaner/">masscleaner</a></li>
+
+
+
+  <li class=""><a href="/r-package/massqc/">massqc</a></li>
+
+
+
+  <li class=""><a href="/r-package/massdatabase/">massdatabase</a></li>
+
+
+
+  <li class=""><a href="/r-package/metid/">metid</a></li>
+
+
+
+  <li class=""><a href="/r-package/massstat/">massstat</a></li>
+
+
+
+  <li class=""><a href="/r-package/metpath/">metpath</a></li>
+
+
+
+  <li class=""><a href="/r-package/masstools/">masstools</a></li>
+
+
+
+  <li class=""><a href="/r-package/metnormalizer/">MetNormalizer</a></li>
+
+
+
+  <li class="active"><a href="/r-package/workflow/">Complete LC-MS analysis workflow</a></li>
+
+
+
+
+
+      </ul>
+
+
+
+</nav>
+
+    </div>
+
+
+
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-prepare-inputs-and-process-raw-files">1. Prepare inputs and process raw files</a></li>
+    <li><a href="#2-match-metadata-and-explore">2. Match metadata and explore</a></li>
+    <li><a href="#3-filter-impute-and-normalize">3. Filter, impute and normalize</a></li>
+    <li><a href="#4-pca-and-independent-group-statistics">4. PCA and independent-group statistics</a></li>
+    <li><a href="#5-attach-ms2-and-annotate">5. Attach MS2 and annotate</a></li>
+    <li><a href="#6-analyze-pathways-after-candidate-review">6. Analyze pathways after candidate review</a></li>
+    <li><a href="#7-archive-for-reproduction">7. Archive for reproduction</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <div class="docs-article-container">
+
+      </div>
+
+
+
+
+
+      <div class="docs-article-container">
+
+        <h1>Complete LC-MS analysis workflow</h1>
+
+        <article class="article-style">
+
+
+
+
+          <p>This template connects raw processing, exploration, cleaning, statistics, annotation and pathway analysis while saving intermediate outputs. Successful execution is not scientific validation. Replace all paths and group labels and review the example thresholds for your study.</p>
+<p><a href="/tutorial-files/tidymass-workflow.R">Download the complete R script</a>. It is designed for your real inputs and contains no fabricated study results; raw processing and database stages require the indicated files.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># TidyMass LC-MS workflow template. Reviewed 2026-09-23.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Replace paths/groups and review every analysis choice before execution.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># This script does not contain study data or claim validated instrument parameters.</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidymass</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="1-prepare-inputs-and-process-raw-files">1. Prepare inputs and process raw files</h2>
+<p>The example starts with positive-mode mzML/mzXML; analyze negative mode separately. The sample sheet needs sample_id, group and class; use Subject for biological samples and QC only for quantitative QCs. Basenames in the QC/Subject directories must be unique. Validate example processing parameters on representative files first.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># 1. Inputs and raw processing -------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">raw_dir</span> <span class="o">&lt;-</span> <span class="s">&#34;analysis/MS1&#34;</span>                 <span class="c1"># mzML/mzXML in QC/Subject subdirectories</span>
+</span></span><span class="line"><span class="cl"><span class="n">sample_csv</span> <span class="o">&lt;-</span> <span class="s">&#34;analysis/sample_info.csv&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">output_dir</span> <span class="o">&lt;-</span> <span class="s">&#34;analysis/results&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">control_group</span> <span class="o">&lt;-</span> <span class="s">&#34;Control&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">case_group</span> <span class="o">&lt;-</span> <span class="s">&#34;Treatment&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">dir.create</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">recursive</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">showWarnings</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">stopifnot</span><span class="p">(</span><span class="nf">dir.exists</span><span class="p">(</span><span class="n">raw_dir</span><span class="p">),</span> <span class="nf">file.exists</span><span class="p">(</span><span class="n">sample_csv</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nf">writeLines</span><span class="p">(</span><span class="nf">capture.output</span><span class="p">(</span><span class="nf">sessionInfo</span><span class="p">()),</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;sessionInfo.txt&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nf">set.seed</span><span class="p">(</span><span class="m">20260923</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">massprocesser</span><span class="o">::</span><span class="nf">process_data</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">path</span> <span class="o">=</span> <span class="n">raw_dir</span><span class="p">,</span> <span class="n">polarity</span> <span class="o">=</span> <span class="s">&#34;positive&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ppm</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span> <span class="n">peakwidth</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">30</span><span class="p">),</span> <span class="n">snthresh</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">threads</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">min_fraction</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span> <span class="n">fill_peaks</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">output_tic</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">output_bpc</span> <span class="o">=</span> <span class="kc">TRUE</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">result_file</span> <span class="o">&lt;-</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">raw_dir</span><span class="p">,</span> <span class="s">&#34;Result&#34;</span><span class="p">,</span> <span class="s">&#34;object&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">stopifnot</span><span class="p">(</span><span class="nf">file.exists</span><span class="p">(</span><span class="n">result_file</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved</span> <span class="o">&lt;-</span> <span class="nf">new.env</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="n">result_file</span><span class="p">,</span> <span class="n">envir</span> <span class="o">=</span> <span class="n">saved</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">objects</span> <span class="o">&lt;-</span> <span class="nf">mget</span><span class="p">(</span><span class="nf">ls</span><span class="p">(</span><span class="n">saved</span><span class="p">),</span> <span class="n">envir</span> <span class="o">=</span> <span class="n">saved</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">keep</span> <span class="o">&lt;-</span> <span class="nf">vapply</span><span class="p">(</span><span class="n">objects</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="nf">inherits</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s">&#34;mass_dataset&#34;</span><span class="p">),</span> <span class="nf">logical</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nf">stopifnot</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">keep</span><span class="p">)</span> <span class="o">==</span> <span class="m">1L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span> <span class="n">objects[</span><span class="nf">[which</span><span class="p">(</span><span class="n">keep</span><span class="p">)</span><span class="n">]]</span>
+</span></span></code></pre></div><h2 id="2-match-metadata-and-explore">2. Match metadata and explore</h2>
+<p>Align metadata by exact sample ID, not row position. This example reconstructs the object after extracting the raw-processing matrix; retain the original processing directory and object to preserve the original provenance. Inspect sample/feature counts, missingness, RT and QCs.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># 2. Match metadata and inspect ------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">si</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="n">sample_csv</span><span class="p">,</span> <span class="n">check.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">               <span class="n">colClasses</span> <span class="o">=</span> <span class="s">&#34;character&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">stopifnot</span><span class="p">(</span><span class="nf">all</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;sample_id&#34;</span><span class="p">,</span> <span class="s">&#34;group&#34;</span><span class="p">,</span> <span class="s">&#34;class&#34;</span><span class="p">)</span> <span class="o">%in%</span> <span class="nf">names</span><span class="p">(</span><span class="n">si</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">          <span class="o">!</span><span class="nf">anyNA</span><span class="p">(</span><span class="n">si</span><span class="o">$</span><span class="n">sample_id</span><span class="p">),</span> <span class="o">!</span><span class="nf">anyDuplicated</span><span class="p">(</span><span class="n">si</span><span class="o">$</span><span class="n">sample_id</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">ids</span> <span class="o">&lt;-</span> <span class="nf">colnames</span><span class="p">(</span><span class="n">massdataset</span><span class="o">::</span><span class="nf">extract_expression_data</span><span class="p">(</span><span class="n">object</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nf">stopifnot</span><span class="p">(</span><span class="nf">setequal</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">si</span><span class="o">$</span><span class="n">sample_id</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">si</span> <span class="o">&lt;-</span> <span class="n">si</span><span class="nf">[match</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">si</span><span class="o">$</span><span class="n">sample_id</span><span class="p">),</span> <span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="n">]</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="s">&#34;injection.order&#34;</span> <span class="o">%in%</span> <span class="nf">names</span><span class="p">(</span><span class="n">si</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">si</span><span class="o">$</span><span class="n">injection.order</span> <span class="o">&lt;-</span> <span class="nf">as.numeric</span><span class="p">(</span><span class="n">si</span><span class="o">$</span><span class="n">injection.order</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">stopifnot</span><span class="p">(</span><span class="o">!</span><span class="nf">anyNA</span><span class="p">(</span><span class="n">si</span><span class="o">$</span><span class="n">injection.order</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Reconstruct with the matched metadata before attaching MS2/annotations.</span>
+</span></span><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span> <span class="n">massdataset</span><span class="o">::</span><span class="nf">create_mass_dataset</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">expression_data</span> <span class="o">=</span> <span class="n">massdataset</span><span class="o">::</span><span class="nf">extract_expression_data</span><span class="p">(</span><span class="n">object</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="n">sample_info</span> <span class="o">=</span> <span class="n">si</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">variable_info</span> <span class="o">=</span> <span class="n">massdataset</span><span class="o">::</span><span class="nf">extract_variable_info</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">saveRDS</span><span class="p">(</span><span class="n">object</span><span class="p">,</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;01-imported.rds&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">massdataset</span><span class="o">::</span><span class="nf">show_sample_missing_values</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">massdataset</span><span class="o">::</span><span class="nf">show_variable_missing_values</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Optional report, with a working report-rendering environment:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># massqc::massqc_report(object, path = file.path(output_dir, &#34;qc_before&#34;), type = &#34;html&#34;)</span>
+</span></span></code></pre></div><h2 id="3-filter-impute-and-normalize">3. Filter, impute and normalize</h2>
+<p>The explicit example retains a feature if missingness is at most 50% in either comparison group and, when QCs exist, at most 20% in QCs. These are example criteria, not a universal standard. It removes blanks before median imputation and normalization. Decide QC drift correction, outlier exclusions and cross-batch integration from your actual design.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># 3. Filter, impute and normalize ---------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Illustrative criteria; revise and document for your study.</span>
+</span></span><span class="line"><span class="cl"><span class="n">expr</span> <span class="o">&lt;-</span> <span class="n">massdataset</span><span class="o">::</span><span class="nf">extract_expression_data</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ctrl</span> <span class="o">&lt;-</span> <span class="n">si</span><span class="o">$</span><span class="n">sample_id[si</span><span class="o">$</span><span class="n">class</span> <span class="o">==</span> <span class="s">&#34;Subject&#34;</span> <span class="o">&amp;</span> <span class="n">si</span><span class="o">$</span><span class="n">group</span> <span class="o">==</span> <span class="n">control_group]</span>
+</span></span><span class="line"><span class="cl"><span class="n">case</span> <span class="o">&lt;-</span> <span class="n">si</span><span class="o">$</span><span class="n">sample_id[si</span><span class="o">$</span><span class="n">class</span> <span class="o">==</span> <span class="s">&#34;Subject&#34;</span> <span class="o">&amp;</span> <span class="n">si</span><span class="o">$</span><span class="n">group</span> <span class="o">==</span> <span class="n">case_group]</span>
+</span></span><span class="line"><span class="cl"><span class="n">qc</span> <span class="o">&lt;-</span> <span class="n">si</span><span class="o">$</span><span class="n">sample_id[si</span><span class="o">$</span><span class="n">class</span> <span class="o">==</span> <span class="s">&#34;QC&#34;</span><span class="n">]</span>
+</span></span><span class="line"><span class="cl"><span class="nf">stopifnot</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">ctrl</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="m">3L</span><span class="p">,</span> <span class="nf">length</span><span class="p">(</span><span class="n">case</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="m">3L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">keep_feature</span> <span class="o">&lt;-</span> <span class="nf">rowMeans</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">expr[</span><span class="p">,</span> <span class="n">ctrl</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="n">]</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="m">0.5</span> <span class="o">|</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">rowMeans</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">expr[</span><span class="p">,</span> <span class="n">case</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="n">]</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="m">0.5</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">qc</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">0L</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">keep_feature</span> <span class="o">&lt;-</span> <span class="n">keep_feature</span> <span class="o">&amp;</span> <span class="nf">rowMeans</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">expr[</span><span class="p">,</span> <span class="n">qc</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="n">]</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="m">0.2</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nf">write.csv</span><span class="p">(</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">variable_id</span> <span class="o">=</span> <span class="nf">rownames</span><span class="p">(</span><span class="n">expr</span><span class="p">),</span> <span class="n">keep</span> <span class="o">=</span> <span class="n">keep_feature</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;filter_decisions.csv&#34;</span><span class="p">),</span> <span class="n">row.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Exclude blanks from the illustrative normalized matrix.</span>
+</span></span><span class="line"><span class="cl"><span class="nf">stopifnot</span><span class="p">(</span><span class="nf">any</span><span class="p">(</span><span class="n">keep_feature</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">object</span> <span class="o">&lt;-</span> <span class="n">object</span><span class="nf">[which</span><span class="p">(</span><span class="n">keep_feature</span><span class="p">),</span> <span class="n">si</span><span class="o">$</span><span class="n">sample_id[si</span><span class="o">$</span><span class="n">class</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;Subject&#34;</span><span class="p">,</span> <span class="s">&#34;QC&#34;</span><span class="p">)</span><span class="n">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nf">stopifnot</span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">object</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">1L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cleaned</span> <span class="o">&lt;-</span> <span class="n">masscleaner</span><span class="o">::</span><span class="nf">impute_mv</span><span class="p">(</span><span class="n">object</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;median&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">normalized</span> <span class="o">&lt;-</span> <span class="n">masscleaner</span><span class="o">::</span><span class="nf">normalize_data</span><span class="p">(</span><span class="n">cleaned</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;median&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">saveRDS</span><span class="p">(</span><span class="n">normalized</span><span class="p">,</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;02-normalized.rds&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># For QC-based SVR/LOESS, first verify quantitative QC coverage and metadata.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Review outliers/batches with acquisition records; do not remove PCA outliers blindly.</span>
+</span></span></code></pre></div><h2 id="4-pca-and-independent-group-statistics">4. PCA and independent-group statistics</h2>
+<p>PCA uses biological samples, removes nonfinite or zero-variance features, and uses mean centering/unit-variance scaling. Fold changes and tests use unscaled normalized intensities. The code uses an independent-group t test with BH correction; it is not an unadjusted repeated-measures analysis. Align subjects and choose the appropriate paired test or model for paired observations.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># 4. PCA and independent-group statistics ------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Keep scaled values out of fold-change calculation.</span>
+</span></span><span class="line"><span class="cl"><span class="n">expr</span> <span class="o">&lt;-</span> <span class="n">massdataset</span><span class="o">::</span><span class="nf">extract_expression_data</span><span class="p">(</span><span class="n">normalized</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">biological</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">ctrl</span><span class="p">,</span> <span class="n">case</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">expr</span> <span class="o">&lt;-</span> <span class="n">expr[</span><span class="p">,</span> <span class="n">biological</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="n">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">valid</span> <span class="o">&lt;-</span> <span class="nf">apply</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="nf">all</span><span class="p">(</span><span class="nf">is.finite</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="n">stats</span><span class="o">::</span><span class="nf">sd</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">stopifnot</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">valid</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="m">2L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pca</span> <span class="o">&lt;-</span> <span class="n">stats</span><span class="o">::</span><span class="nf">prcomp</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">expr[valid</span><span class="p">,</span> <span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="n">]</span><span class="p">),</span> <span class="n">center</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">scale.</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">write.csv</span><span class="p">(</span><span class="n">pca</span><span class="o">$</span><span class="n">x</span><span class="p">,</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;pca_scores.csv&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">stats_object</span> <span class="o">&lt;-</span> <span class="n">massstat</span><span class="o">::</span><span class="nf">mutate_fc</span><span class="p">(</span><span class="n">normalized</span><span class="p">,</span> <span class="n">ctrl</span><span class="p">,</span> <span class="n">case</span><span class="p">,</span> <span class="n">mean_median</span> <span class="o">=</span> <span class="s">&#34;mean&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">stats_object</span> <span class="o">&lt;-</span> <span class="n">massstat</span><span class="o">::</span><span class="nf">mutate_p_value</span><span class="p">(</span><span class="n">stats_object</span><span class="p">,</span> <span class="n">ctrl</span><span class="p">,</span> <span class="n">case</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;t.test&#34;</span><span class="p">,</span> <span class="n">p_adjust_methods</span> <span class="o">=</span> <span class="s">&#34;BH&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">feature_stats</span> <span class="o">&lt;-</span> <span class="n">massdataset</span><span class="o">::</span><span class="nf">extract_variable_info</span><span class="p">(</span><span class="n">stats_object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">write.csv</span><span class="p">(</span><span class="n">feature_stats</span><span class="p">,</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;feature_statistics.csv&#34;</span><span class="p">),</span> <span class="n">row.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">saveRDS</span><span class="p">(</span><span class="n">stats_object</span><span class="p">,</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;03-statistics.rds&#34;</span><span class="p">))</span>
+</span></span></code></pre></div><h2 id="5-attach-ms2-and-annotate">5. Attach MS2 and annotate</h2>
+<p>Provide experimental MS2 and a metid databaseClass. The example disables incompatible reference RT matching and scoring. Preserve candidates and inspect mirror spectra, mass errors and ambiguity. Missing resources cause an explicit skip, not invented annotations. Statistics and annotation can be performed separately, then combined when preparing pathway inputs.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># 5. Attach MS2 and annotate ---------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Replace these paths and run this block when these resources are available.</span>
+</span></span><span class="line"><span class="cl"><span class="n">ms2_dir</span> <span class="o">&lt;-</span> <span class="s">&#34;analysis/MS2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">reference_rds</span> <span class="o">&lt;-</span> <span class="s">&#34;analysis/reference_database.rds&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="nf">dir.exists</span><span class="p">(</span><span class="n">ms2_dir</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nf">file.exists</span><span class="p">(</span><span class="n">reference_rds</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">with_ms2</span> <span class="o">&lt;-</span> <span class="n">massdataset</span><span class="o">::</span><span class="nf">mutate_ms2</span><span class="p">(</span><span class="n">stats_object</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">ms2_dir</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">column</span> <span class="o">=</span> <span class="s">&#34;rp&#34;</span><span class="p">,</span> <span class="n">polarity</span> <span class="o">=</span> <span class="s">&#34;positive&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ms1.ms2.match.mz.tol</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span> <span class="n">ms1.ms2.match.rt.tol</span> <span class="o">=</span> <span class="m">30</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">database</span> <span class="o">&lt;-</span> <span class="nf">readRDS</span><span class="p">(</span><span class="n">reference_rds</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">stopifnot</span><span class="p">(</span><span class="nf">inherits</span><span class="p">(</span><span class="n">database</span><span class="p">,</span> <span class="s">&#34;databaseClass&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="n">annotated</span> <span class="o">&lt;-</span> <span class="n">metid</span><span class="o">::</span><span class="nf">annotate_metabolites_mass_dataset</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">object</span> <span class="o">=</span> <span class="n">with_ms2</span><span class="p">,</span> <span class="n">database</span> <span class="o">=</span> <span class="n">database</span><span class="p">,</span> <span class="n">polarity</span> <span class="o">=</span> <span class="s">&#34;positive&#34;</span><span class="p">,</span> <span class="n">column</span> <span class="o">=</span> <span class="s">&#34;rp&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ms1.match.ppm</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span> <span class="n">ms2.match.ppm</span> <span class="o">=</span> <span class="m">30</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rt.match.tol</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span> <span class="n">rt.match.weight</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span> <span class="n">candidate.num</span> <span class="o">=</span> <span class="m">3</span><span class="p">,</span> <span class="n">threads</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">saveRDS</span><span class="p">(</span><span class="n">annotated</span><span class="p">,</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;04-annotated.rds&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">write.csv</span><span class="p">(</span><span class="n">massdataset</span><span class="o">::</span><span class="nf">extract_annotation_table</span><span class="p">(</span><span class="n">annotated</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;annotation_candidates.csv&#34;</span><span class="p">),</span> <span class="n">row.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="kr">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">message</span><span class="p">(</span><span class="s">&#34;Annotation not run: provide experimental MS2 and a compatible reference database.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="6-analyze-pathways-after-candidate-review">6. Analyze pathways after candidate review</h2>
+<p>Prepare a de-duplicated kegg_id list using your prespecified statistical selection and reviewed annotations. Multiple adducts are not independent compounds. The example enrichment background is the supplied database coverage, not automatically the compounds measured by your experiment. Construct and verify a suitable restricted database when a measured universe is required. Missing resources cause an explicit skip.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># 6. Pathway analysis after candidate review ----------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Prepare reviewed_kegg_ids.csv with one KEGG ID per row in a kegg_id column.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Select using the prespecified statistical rule and reviewed annotation evidence.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Do not count multiple features/adducts as independent compounds.</span>
+</span></span><span class="line"><span class="cl"><span class="n">query_csv</span> <span class="o">&lt;-</span> <span class="s">&#34;analysis/reviewed_kegg_ids.csv&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">pathway_rds</span> <span class="o">&lt;-</span> <span class="s">&#34;analysis/pathway_database.rds&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="nf">file.exists</span><span class="p">(</span><span class="n">query_csv</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nf">file.exists</span><span class="p">(</span><span class="n">pathway_rds</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">query</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="n">query_csv</span><span class="p">,</span> <span class="n">colClasses</span> <span class="o">=</span> <span class="s">&#34;character&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">stopifnot</span><span class="p">(</span><span class="s">&#34;kegg_id&#34;</span> <span class="o">%in%</span> <span class="nf">names</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="n">query_ids</span> <span class="o">&lt;-</span> <span class="nf">unique</span><span class="p">(</span><span class="n">query</span><span class="o">$</span><span class="n">kegg_id[</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">query</span><span class="o">$</span><span class="n">kegg_id</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nf">nzchar</span><span class="p">(</span><span class="n">query</span><span class="o">$</span><span class="n">kegg_id</span><span class="p">)</span><span class="n">]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">stopifnot</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">query_ids</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">0L</span><span class="p">,</span> <span class="nf">all</span><span class="p">(</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&#34;^C[0-9]{5}$&#34;</span><span class="p">,</span> <span class="n">query_ids</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pathway_database</span> <span class="o">&lt;-</span> <span class="nf">readRDS</span><span class="p">(</span><span class="n">pathway_rds</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">enrichment</span> <span class="o">&lt;-</span> <span class="n">metpath</span><span class="o">::</span><span class="nf">enrich_kegg</span><span class="p">(</span><span class="n">query_id</span> <span class="o">=</span> <span class="n">query_ids</span><span class="p">,</span> <span class="n">query_type</span> <span class="o">=</span> <span class="s">&#34;compound&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id_type</span> <span class="o">=</span> <span class="s">&#34;KEGG&#34;</span><span class="p">,</span> <span class="n">pathway_database</span> <span class="o">=</span> <span class="n">pathway_database</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p_adjust_method</span> <span class="o">=</span> <span class="s">&#34;BH&#34;</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;hypergeometric&#34;</span><span class="p">,</span> <span class="n">p_cutoff</span> <span class="o">=</span> <span class="m">0.05</span><span class="p">,</span> <span class="n">threads</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">saveRDS</span><span class="p">(</span><span class="n">enrichment</span><span class="p">,</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;05-pathway-enrichment.rds&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># Background is defined by the supplied pathway database, not automatically by measured compounds.</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="kr">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">message</span><span class="p">(</span><span class="s">&#34;Pathway analysis not run: provide reviewed compound IDs and a pathway database.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="7-archive-for-reproduction">7. Archive for reproduction</h2>
+<p>Archive the script, parameters, sample sheet, raw files, reference provenance/versions, objects, statistical/candidate tables and sessionInfo. An RDS does not include every external input. Report sample selection, filters, missingness handling, comparison direction, correction, identification evidence and pathway background.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># 7. Archive -----------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="nf">writeLines</span><span class="p">(</span><span class="nf">capture.output</span><span class="p">(</span><span class="nf">sessionInfo</span><span class="p">()),</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#34;sessionInfo.txt&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Back up this script, parameter choices, all inputs/reference versions and all results.</span>
+</span></span></code></pre></div>
+
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="article-widget">
+
+<div class="post-nav">
+
+
+
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/r-package/metnormalizer/" rel="next">MetNormalizer — Use the standalone normalization workflow</a>
+  </div>
+
+
+</div>
+
+        </div>
+
+      </div>
+
+      <div class="body-footer">
+        <p>Last updated on Sep 23, 2026</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <footer class="site-footer">
+  <hr>
+
+    <div style="display: flex; justify-content: space-between; padding: 20px;">
+
+ <div style="flex: 2;">
+
+   <p style="text-align:left; font-weight: bold">
+   Developed by Shen lab @ NTU Singapore
+    </p>
+
+
+    <a href="https://www.ntu.edu.sg/" target="_blank"><img src="https://jaspershen-lab.github.io/image/ntu_logo.png" alt="logo" class="center" width="50%" height="100"></a>
+    <hr style="margin: 10px 0; width: 50%; border-top: 1px solid #ddd;">
+    <a href="https://www.ntu.edu.sg/medicine" target="_blank"><img src="https://jaspershen-lab.github.io/image/lkcmedicine.png" alt="logo" class="center" width="50%" height="100"></a>
+    <hr style="margin: 10px 0; width: 50%; border-top: 1px solid #ddd;">
+    <a href="https://www.shen-lab.org/" target="_blank"><img src="https://jaspershen-lab.github.io/image/shen_lab_logo8.png" alt="logo" class="center" width="50%" height="100"></a>
+
+            </div>
+
+
+            <div style="flex: 2;">
+  <p style="text-align:left; font-weight: bold">
+    Find us here:
+    <br>
+    <i class="fa-brands fa-github"></i> <a href="https://github.com/tidymass" target="_blank" rel="noopener">GitHub</a>
+<br>
+        <i class="fa-brands fa-weixin"></i> <a href="https://jaspershen.github.io/image/wechat_QR.jpg" target="_blank" rel="noopener">WeChat</a>
+
+    <br>
+        <i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/xiaotaoshen1990" target="_blank" rel="noopener">Twitter</a>
+
+   <br>
+        <i class="fa-solid fa-envelope"></i> <a href="https://jaspershen.github.io/#contact" target="_blank" rel="noopener">Email</a>
+
+        <br>
+<i class="fa-solid fa-location-dot"></i> Address: <a href="https://maps.app.goo.gl/hfCpoqgzX7zmuh3h6" target="_blank" rel="noopener">59 Nanyang Dr, Singapore 636921</a>
+
+    </p>
+            </div>
+
+
+            <div style="flex: 1;">
+            </div>
+
+
+            <div style="flex: 1;">
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=e43qUF1sR8y0B12BqEm-gDwkYxSmbro-n8KEiBINpdY"></script>
+            </div>
+
+
+            <div style="flex: 1;">
+            </div>
+
+        </div>
+
+      <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <p class="powered-by copyright-license-text">
+    © 2022-2025 Shen Lab
+  </p>
+
+
+
+
+
+
+
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+
+
+  </div>
+
+
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js" integrity="sha256-aQmOEF2ZD4NM/xt4hthzREIo/2PFkOX/g01WjxEV7Ys=" crossorigin="anonymous"></script>
+<script>
+  anchors.add();
+</script>
+
+
+
+
+
+
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://blog-at8qrhng8b.disqus.com/count.js" async></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.85070d5fe00d43eaedff44310b81dc2c.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

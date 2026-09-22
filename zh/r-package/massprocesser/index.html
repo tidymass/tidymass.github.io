@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: 2026年9月23日 --><html lang="zh-Hans" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
+
+
+
+
+
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/wowchemy.4b7280f12f476311af2218ec632c93a2.css" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="author" content="Xiaotao Shen" />
+
+
+
+
+
+
+
+<meta name="description" content="文档核对版本: 1.0.11 · 2026-09-23
+输入转换后的 mzML/mzXML，使用独立处理目录，通常按 QC、Subject 等样品类型建立子目录。正负离子模式分别处理。process_data() 完成原始数据处理并在 Result 中写入结果。
+ppm 依据仪器表现设置，peakwidth 以秒表示并参考实际色谱；使用代表性文件调整信噪比、prefilter 和 noise。bw、min_fraction 影响跨样品分组；fill_peaks 控制色谱补峰，不是统计填补。内存不足时降低 threads。
+检查 TIC/BPC、RT 校正、峰表和 EIC。需要后续审查时保留中间文件。下例参数仅展示调用形式，并非适用于所有仪器的方法。运行后检查输出文件，不要把函数返回值直接当作最终数据集。
+功能范围 原始数据处理、EIC 提取、色谱可视化、校正 RT 可视化及靶向表格校验。
+使用示例 # Requires your converted files under analysis/MS1/." />
+
+
+
+  <link rel="alternate" hreflang="en" href="https://www.tidymass.org/r-package/massprocesser/" />
+
+<link rel="alternate" hreflang="zh-Hans" href="https://www.tidymass.org/zh/r-package/massprocesser/" />
+<link rel="canonical" href="https://www.tidymass.org/zh/r-package/massprocesser/" />
+
+
+
+  <link rel="manifest" href="/zh/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huf8b049b8318691de0a515d87795ef728_130772_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huf8b049b8318691de0a515d87795ef728_130772_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#EF525B" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@wowchemy" />
+  <meta property="twitter:creator" content="@wowchemy" />
+<meta property="twitter:image" content="https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png" />
+<meta property="og:site_name" content="TidyMass" />
+<meta property="og:url" content="https://www.tidymass.org/zh/r-package/massprocesser/" />
+<meta property="og:title" content="massprocesser — 峰检测与样品对齐 | TidyMass" />
+<meta property="og:description" content="文档核对版本: 1.0.11 · 2026-09-23
+输入转换后的 mzML/mzXML，使用独立处理目录，通常按 QC、Subject 等样品类型建立子目录。正负离子模式分别处理。process_data() 完成原始数据处理并在 Result 中写入结果。
+ppm 依据仪器表现设置，peakwidth 以秒表示并参考实际色谱；使用代表性文件调整信噪比、prefilter 和 noise。bw、min_fraction 影响跨样品分组；fill_peaks 控制色谱补峰，不是统计填补。内存不足时降低 threads。
+检查 TIC/BPC、RT 校正、峰表和 EIC。需要后续审查时保留中间文件。下例参数仅展示调用形式，并非适用于所有仪器的方法。运行后检查输出文件，不要把函数返回值直接当作最终数据集。
+功能范围 原始数据处理、EIC 提取、色谱可视化、校正 RT 可视化及靶向表格校验。
+使用示例 # Requires your converted files under analysis/MS1/." /><meta property="og:image" content="https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png" /><meta property="og:locale" content="zh-Hans" />
+
+
+    <meta
+      property="article:published_time"
+      content="2026-09-23T00:00:00&#43;08:00"
+    />
+
+
+    <meta property="article:modified_time" content="2026-09-23T00:00:00&#43;08:00">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <title>massprocesser — 峰检测与样品对齐 | TidyMass</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="fb7e4f616f79cc39c62687109650fa0e" >
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/wowchemy-init.min.bc584d8639f6412fc553d13c23e02e8a.js"></script>
+
+
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>搜索</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+
+        <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="搜索...">
+
+      </div>
+
+
+
+
+
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/zh/"><img src="/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_0x70_resize_lanczos_3.png" alt="TidyMass"
+
+            ></a>
+      </div>
+
+
+
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="切换导航">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+
+
+
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/zh/"><img src="/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_0x70_resize_lanczos_3.png" alt="TidyMass"
+
+          ></a>
+      </div>
+
+
+
+
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+
+        <ul class="navbar-nav d-md-inline-flex">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#hero"><span>主页</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#packages"><span>R包</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#team"><span>团队</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#contact"><span>联系</span></a>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/#contribution"><span>贡献</span></a>
+          </li>
+
+
+
+
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>教程</span><span class="caret"></span>
+            </a>
+            <div class="dropdown-menu">
+
+                <a class="dropdown-item" href="/zh/r-package/"><span>R package</span></a>
+
+                <a class="dropdown-item" href="/zh/macos/"><span>MacOS</span></a>
+
+                <a class="dropdown-item" href="/zh/windows/"><span>Windows</span></a>
+
+                <a class="dropdown-item" href="/zh/r-shiny/"><span>R shiny</span></a>
+
+            </div>
+          </li>
+
+
+
+
+
+
+
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+
+
+
+
+
+
+
+
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="搜索"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+
+
+
+
+
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>浅色</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>深色</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>自动</span>
+            </a>
+          </div>
+        </li>
+
+
+
+
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="语言">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>中文 (简体)</span>
+            </div>
+
+            <a class="dropdown-item" href="https://www.tidymass.org/r-package/massprocesser/">
+              <span>English</span>
+            </a>
+
+          </div>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+
+
+
+
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+
+
+          R package 使用说明
+
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">搜索...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav docs-sidenav">
+        <li class=""><a href="/zh/r-package/">R package 使用说明</a></li>
+
+
+
+
+  <li class=""><a href="/zh/r-package/installation/">安装与版本管理</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/tidymass/">tidymass</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/massdataset/">massdataset</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/massconverter/">massconverter</a></li>
+
+
+
+  <li class="active"><a href="/zh/r-package/massprocesser/">massprocesser</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/masscleaner/">masscleaner</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/massqc/">massqc</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/massdatabase/">massdatabase</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/metid/">metid</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/massstat/">massstat</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/metpath/">metpath</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/masstools/">masstools</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/metnormalizer/">MetNormalizer</a></li>
+
+
+
+  <li class=""><a href="/zh/r-package/workflow/">完整 LC-MS 分析工作流</a></li>
+
+
+
+
+
+      </ul>
+
+
+
+</nav>
+
+    </div>
+
+
+
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">在本页</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#功能范围">功能范围</a></li>
+    <li><a href="#使用示例">使用示例</a></li>
+    <li><a href="#函数查询">函数查询</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <div class="docs-article-container">
+
+      </div>
+
+
+
+
+
+      <div class="docs-article-container">
+
+        <h1>massprocesser — 峰检测与样品对齐</h1>
+
+        <article class="article-style">
+
+
+
+
+          <p><strong>文档核对版本: 1.0.11</strong> · 2026-09-23</p>
+<p>输入转换后的 mzML/mzXML，使用独立处理目录，通常按 QC、Subject 等样品类型建立子目录。正负离子模式分别处理。<code>process_data()</code> 完成原始数据处理并在 <code>Result</code> 中写入结果。</p>
+<p>ppm 依据仪器表现设置，peakwidth 以秒表示并参考实际色谱；使用代表性文件调整信噪比、prefilter 和 noise。<code>bw</code>、<code>min_fraction</code> 影响跨样品分组；<code>fill_peaks</code> 控制色谱补峰，不是统计填补。内存不足时降低 threads。</p>
+<p>检查 TIC/BPC、RT 校正、峰表和 EIC。需要后续审查时保留中间文件。下例参数仅展示调用形式，并非适用于所有仪器的方法。运行后检查输出文件，不要把函数返回值直接当作最终数据集。</p>
+<h2 id="功能范围">功能范围</h2>
+<p>原始数据处理、EIC 提取、色谱可视化、校正 RT 可视化及靶向表格校验。</p>
+<h2 id="使用示例">使用示例</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Requires your converted files under analysis/MS1/.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># massprocesser::process_data(</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   path = &#34;analysis/MS1&#34;, polarity = &#34;positive&#34;,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   ppm = 15, peakwidth = c(5, 30), snthresh = 10,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   threads = 2, min_fraction = 0.5, fill_peaks = FALSE,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   output_tic = TRUE, output_bpc = TRUE</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># )</span>
+</span></span><span class="line"><span class="cl"><span class="nf">help</span><span class="p">(</span><span class="s">&#34;process_data&#34;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s">&#34;massprocesser&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="函数查询">函数查询</h2>
+<p>下面列出已核对源码中导出的 API，包括兼容接口与辅助函数。具体参数以安装版本的 R 帮助为准；例如运行 <code>help(&quot;函数名&quot;, package = &quot;massprocesser&quot;)</code>。</p>
+<details>
+<summary>展开导出函数列表</summary>
+<p><code>check_targeted_table</code>, <code>extract_eic</code>, <code>get_massprocesser_version</code>, <code>massprocesser_conflicts</code>, <code>massprocesser_logo</code>, <code>massprocesser_packages</code>, <code>plot_adjusted_rt</code>, <code>plot_chromatogram</code>, <code>process_data</code></p>
+</details>
+<p><a href="https://github.com/tidymass/massprocesser" target="_blank" rel="noopener">包源码与参考文档</a> · <a href="../workflow/">完整工作流</a></p>
+
+
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="article-widget">
+
+<div class="post-nav">
+
+
+
+  <div class="post-nav-item">
+    <div class="meta-nav">上一页</div>
+    <a href="/zh/r-package/massconverter/" rel="next">massconverter — 转换厂商原始文件</a>
+  </div>
+
+
+
+  <div class="post-nav-item">
+    <div class="meta-nav">下一页</div>
+    <a href="/zh/r-package/masscleaner/" rel="prev">masscleaner — 过滤、填补与归一化</a>
+  </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+      <div class="body-footer">
+        <p>最近更新于 9月 23, 2026</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <footer class="site-footer">
+  <hr>
+
+    <div style="display: flex; justify-content: space-between; padding: 20px;">
+
+ <div style="flex: 2;">
+
+   <p style="text-align:left; font-weight: bold">
+   Developed by Shen lab @ NTU Singapore
+    </p>
+
+
+    <a href="https://www.ntu.edu.sg/" target="_blank"><img src="https://jaspershen-lab.github.io/image/ntu_logo.png" alt="logo" class="center" width="50%" height="100"></a>
+    <hr style="margin: 10px 0; width: 50%; border-top: 1px solid #ddd;">
+    <a href="https://www.ntu.edu.sg/medicine" target="_blank"><img src="https://jaspershen-lab.github.io/image/lkcmedicine.png" alt="logo" class="center" width="50%" height="100"></a>
+    <hr style="margin: 10px 0; width: 50%; border-top: 1px solid #ddd;">
+    <a href="https://www.shen-lab.org/" target="_blank"><img src="https://jaspershen-lab.github.io/image/shen_lab_logo8.png" alt="logo" class="center" width="50%" height="100"></a>
+
+            </div>
+
+
+            <div style="flex: 2;">
+  <p style="text-align:left; font-weight: bold">
+    Find us here:
+    <br>
+    <i class="fa-brands fa-github"></i> <a href="https://github.com/tidymass" target="_blank" rel="noopener">GitHub</a>
+<br>
+        <i class="fa-brands fa-weixin"></i> <a href="https://jaspershen.github.io/image/wechat_QR.jpg" target="_blank" rel="noopener">WeChat</a>
+
+    <br>
+        <i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/xiaotaoshen1990" target="_blank" rel="noopener">Twitter</a>
+
+   <br>
+        <i class="fa-solid fa-envelope"></i> <a href="https://jaspershen.github.io/#contact" target="_blank" rel="noopener">Email</a>
+
+        <br>
+<i class="fa-solid fa-location-dot"></i> Address: <a href="https://maps.app.goo.gl/hfCpoqgzX7zmuh3h6" target="_blank" rel="noopener">59 Nanyang Dr, Singapore 636921</a>
+
+    </p>
+            </div>
+
+
+            <div style="flex: 1;">
+            </div>
+
+
+            <div style="flex: 1;">
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=e43qUF1sR8y0B12BqEm-gDwkYxSmbro-n8KEiBINpdY"></script>
+            </div>
+
+
+            <div style="flex: 1;">
+            </div>
+
+        </div>
+
+      <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <p class="powered-by copyright-license-text">
+    © 2022-2025 Shen Lab
+  </p>
+
+
+
+
+
+
+
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+
+
+  </div>
+
+
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js" integrity="sha256-aQmOEF2ZD4NM/xt4hthzREIo/2PFkOX/g01WjxEV7Ys=" crossorigin="anonymous"></script>
+<script>
+  anchors.add();
+</script>
+
+
+
+
+
+
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://blog-at8qrhng8b.disqus.com/count.js" async></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/zh/js/wowchemy.min.a019a8d0a4e912d4764e429825411dad.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

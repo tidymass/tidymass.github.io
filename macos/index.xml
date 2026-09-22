@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macOS user guide | TidyMass</title>
+    <link>https://www.tidymass.org/macos/</link>
+      <atom:link href="https://www.tidymass.org/macos/index.xml" rel="self" type="application/rss+xml" />
+    <description>macOS user guide</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0800</lastBuildDate>
+    <image>
+      <url>https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png</url>
+      <title>macOS user guide</title>
+      <link>https://www.tidymass.org/macos/</link>
+    </image>
+
+    <item>
+      <title>Installation and quick start</title>
+      <link>https://www.tidymass.org/macos/getting-started/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/macos/getting-started/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;install-on-macos&#34;&gt;Install on macOS&lt;/h2&gt;
+&lt;p&gt;Open the TidyMass DMG, drag &lt;strong&gt;TidyMass&lt;/strong&gt; to &lt;strong&gt;Applications&lt;/strong&gt;, and open it there. Wait for the &lt;strong&gt;R environment&lt;/strong&gt; check to finish. This guide targets the &lt;strong&gt;0.1.65 Apple Silicon preview&lt;/strong&gt;. A public installer link has not yet been verified; use the preview installer supplied by the project maintainers and check the version shown in the app. An Intel Mac build is not documented here.&lt;/p&gt;
+&lt;p&gt;The app includes R and its core packages. You do not need to install R separately for the core workflow. Optional third-party Shiny tools can require additional packages or system libraries.&lt;/p&gt;
+&lt;p&gt;The preview may be unsigned or unnotarized. If macOS blocks it, verify its source and use the system&amp;rsquo;s &lt;strong&gt;Privacy &amp;amp; Security&lt;/strong&gt; prompt to allow that app. Do not disable system-wide security checks.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-project&#34;&gt;Create a project&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;strong&gt;Workflows&lt;/strong&gt; and choose the untargeted metabolomics workflow.&lt;/li&gt;
+&lt;li&gt;Enter a project name. Click &lt;strong&gt;Choose location &amp;amp; create&lt;/strong&gt; and choose a parent folder.&lt;/li&gt;
+&lt;li&gt;In &lt;strong&gt;Data import&lt;/strong&gt;, select mzML/mzXML files and, preferably, sample information.&lt;/li&gt;
+&lt;li&gt;Check sample IDs and groups, then import the files.&lt;/li&gt;
+&lt;li&gt;Continue to &lt;strong&gt;Raw data processing&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Use a new project folder. Reopen an existing project with &lt;strong&gt;Projects&lt;/strong&gt; or &lt;strong&gt;Open project&lt;/strong&gt;, selecting the folder containing &lt;code&gt;project.json&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;find-your-way-around&#34;&gt;Find your way around&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Entry&lt;/th&gt;
+&lt;th&gt;Purpose&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Workflows&lt;/td&gt;
+&lt;td&gt;Run a complete analysis in order&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Analysis tools&lt;/td&gt;
+&lt;td&gt;Run an individual analysis or preparation tool&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shiny tools&lt;/td&gt;
+&lt;td&gt;Install and open third-party Shiny apps&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;R environment&lt;/td&gt;
+&lt;td&gt;Inspect R and manage additional packages&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Code&lt;/td&gt;
+&lt;td&gt;Read execution code and records&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Task center&lt;/td&gt;
+&lt;td&gt;Inspect the current R task, logs, memory and task history&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Show settings / Hide settings&lt;/td&gt;
+&lt;td&gt;Expand or collapse parameters&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A &lt;strong&gt;project&lt;/strong&gt; holds analysis records; a &lt;strong&gt;run&lt;/strong&gt; is one execution; a &lt;strong&gt;feature&lt;/strong&gt; is a detected signal, not automatically an identified compound. Changing parameters affects a new run. Use &lt;strong&gt;Settings used for this result&lt;/strong&gt; to inspect how a saved result was produced.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TidyMass used&lt;/strong&gt;, &lt;strong&gt;Computer used&lt;/strong&gt; and &lt;strong&gt;Computer total&lt;/strong&gt; report different memory quantities. A high system total is not necessarily caused by this app. After your first run, verify sample counts, missingness, peak shapes and warnings. A completed task confirms execution, not scientific validity.&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Input data and sample information</title>
+      <link>https://www.tidymass.org/macos/input-data/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/macos/input-data/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;raw-files&#34;&gt;Raw files&lt;/h2&gt;
+&lt;p&gt;The untargeted workflow and &lt;strong&gt;Raw chromatograms&lt;/strong&gt; read &lt;strong&gt;mzML / mzXML&lt;/strong&gt;. Convert proprietary vendor files with a suitable instrument-compatible converter first. Process positive and negative ion modes as separate projects. Keep each file&amp;rsquo;s basename unique, including across subfolders; do not distinguish samples only by letter case.&lt;/p&gt;
+&lt;p&gt;The project records the file locations. Keep raw files available and unchanged while analyzing: later EIC and spectrum inspection can need them.&lt;/p&gt;
+&lt;h2 id=&#34;sample-information&#34;&gt;Sample information&lt;/h2&gt;
+&lt;p&gt;Raw import accepts CSV, TSV and Excel sample information. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sample_id,group,class,batch,injection.order,subject_id
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;S001,Control,Subject,B1,1,P01
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;S002,Treatment,Subject,B1,2,P02
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;QC001,QC,QC,B1,3,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Blank001,Blank,Blank,B1,4,
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This example illustrates the format, not an adequate experimental design.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;sample_id&lt;/td&gt;
+&lt;td&gt;Exact filename without extension: S001.mzXML becomes S001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;group&lt;/td&gt;
+&lt;td&gt;Biological comparison group; select its actual name under &lt;strong&gt;Group column&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;class&lt;/td&gt;
+&lt;td&gt;Sample purpose, normally Subject, QC or Blank&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;batch&lt;/td&gt;
+&lt;td&gt;Analytical batch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;injection.order&lt;/td&gt;
+&lt;td&gt;Actual acquisition order for drift assessment&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;subject_id&lt;/td&gt;
+&lt;td&gt;Subject identifier when a paired comparison is needed&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Include every selected raw file exactly once. Preserve case and leading zeros as text. Do not use spreadsheet row numbers as identifiers. Fill in &lt;code&gt;class&lt;/code&gt; explicitly; a pooled sample used only to collect MS2 is not automatically suitable as a quantitative QC.&lt;/p&gt;
+&lt;h2 id=&#34;existing-peak-tables&#34;&gt;Existing peak tables&lt;/h2&gt;
+&lt;p&gt;Use &lt;strong&gt;Dataset builder &amp;amp; converter&lt;/strong&gt; to construct a &lt;code&gt;mass_dataset&lt;/code&gt; for individual analysis tools. A wide peak table can look like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;variable_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mz&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S001&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S002&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;F001&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;100.1234&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1200&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;F002&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;200.2345&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;120&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NA&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Each feature ID must be unique; intensity columns must match the sample information. RT is in seconds in this example: match the import unit selector. &lt;code&gt;NA&lt;/code&gt; is missing; zero remains a numeric observation. Preserve the source and evidence of any annotation columns.&lt;/p&gt;
+&lt;h2 id=&#34;ms2-and-input-checks&#34;&gt;MS2 and input checks&lt;/h2&gt;
+&lt;p&gt;Attach MS2 using a supported import, builder or annotation entry. Association with a feature depends on precursor m/z and RT, and does not establish a unique structure. Use &lt;strong&gt;Sample &amp;amp; file checker&lt;/strong&gt; to detect duplicates, missing files and unexpected files before a large run. RDS/RData imports must contain the supported object type, such as a single &lt;code&gt;mass_dataset&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Complete untargeted workflow</title>
+      <link>https://www.tidymass.org/macos/workflow/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/macos/workflow/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;1-data-import&#34;&gt;1. Data import&lt;/h2&gt;
+&lt;p&gt;Choose mzML/mzXML files and sample information, review the groups and click &lt;strong&gt;Import raw files&lt;/strong&gt;. Import registers files; it does not detect chromatographic peaks. Folder grouping is a convenience, so check it against the biological design.&lt;/p&gt;
+&lt;h2 id=&#34;2-raw-data-processing&#34;&gt;2. Raw data processing&lt;/h2&gt;
+&lt;p&gt;Configure peak detection, RT correction and feature grouping. The software calls massprocesser/XCMS-related functions. Review m/z tolerance against instrument accuracy and the peak-width interval against observed chromatography. Signal/noise, noise and prefilter settings control low-quality signals; grouping bandwidth and minimum fraction control feature correspondence across samples.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fill peaks&lt;/strong&gt; integrates missing chromatographic signals where supported. It differs from later matrix imputation. Set &lt;strong&gt;Worker processes&lt;/strong&gt; to match available memory as well as CPU capacity. In macOS 0.1.65, inspect representative samples with &lt;strong&gt;Parameter trial&lt;/strong&gt;, then click &lt;strong&gt;Process raw data&lt;/strong&gt; for the complete imported set.&lt;/p&gt;
+&lt;p&gt;Inspect the resulting feature table and &lt;code&gt;mass_dataset&lt;/code&gt;. &lt;strong&gt;Project folder&lt;/strong&gt; opens the saved outputs; use the run ID to find the correct execution.&lt;/p&gt;
+&lt;h2 id=&#34;3-data-exploration&#34;&gt;3. Data exploration&lt;/h2&gt;
+&lt;p&gt;Review m/z–RT distributions, sample and feature missingness, batches, peak shapes, spectra and intensities. Select a feature to inspect its evidence. &lt;strong&gt;Feature filters&lt;/strong&gt; change the displayed subset. Manual &lt;strong&gt;Exclude&lt;/strong&gt; is a review label; it does not remove rows from the downstream matrix.&lt;/p&gt;
+&lt;h2 id=&#34;4-data-cleaning&#34;&gt;4. Data cleaning&lt;/h2&gt;
+&lt;p&gt;Choose missingness filtering, investigate potential outlier samples, impute remaining missing values, normalize, and apply batch integration only when appropriate. QC-based filtering and correction require suitable quantitative QCs. A PCA outlier alone does not justify exclusion.&lt;/p&gt;
+&lt;p&gt;Check the dataset size and metrics before and after each operation. Separately fitted before/after PCAs do not share a fixed coordinate system. Retain the unmodified input and document exclusion decisions.&lt;/p&gt;
+&lt;h2 id=&#34;5-metabolite-annotation&#34;&gt;5. Metabolite annotation&lt;/h2&gt;
+&lt;p&gt;Choose a metid-compatible database, polarity, chromatography, adducts and matching tolerances. Use RT matching only when reference and experimental conditions are compatible. Select candidates to inspect experimental/reference MS2 mirrors, mass error and supporting evidence. An MS1-only match is a candidate, not MS2-supported identification.&lt;/p&gt;
+&lt;p&gt;Where available, &lt;strong&gt;Skip annotation for statistics&lt;/strong&gt; lets you continue feature-level analysis. Annotation-dependent pathway analysis requires suitable annotations and updated downstream steps.&lt;/p&gt;
+&lt;h2 id=&#34;6-statistical-analysis&#34;&gt;6. Statistical analysis&lt;/h2&gt;
+&lt;p&gt;Inspect PCA and explicitly choose the comparison groups. Check which input dataset and intensity transformation are used. Paired analysis requires a correct subject column and one matching observation in each group per included subject; sample order cannot establish pairing. Record the test, fold-change direction and multiple-testing correction.&lt;/p&gt;
+&lt;h2 id=&#34;7-pathway-analysis&#34;&gt;7. Pathway analysis&lt;/h2&gt;
+&lt;p&gt;Check compound IDs, candidate ambiguity, input selection, organism, pathway database and background definition. Do not count multiple ion features as independent confirmations of one compound. Empty results can be valid: investigate coverage and mappings before changing thresholds.&lt;/p&gt;
+&lt;h2 id=&#34;8-results--export&#34;&gt;8. Results &amp;amp; export&lt;/h2&gt;
+&lt;p&gt;Export complete tables, objects, parameters, code, logs and session information for the desired run scope. A paginated preview is not the complete table. Keep external raw files and databases with the project backup.&lt;/p&gt;
+&lt;h2 id=&#34;continue-or-rerun&#34;&gt;Continue or rerun&lt;/h2&gt;
+&lt;p&gt;Reopen a saved project to continue at the first unfinished step whose prerequisites are satisfied. A successful upstream rerun makes dependent downstream results &lt;strong&gt;stale&lt;/strong&gt;; rerun the affected steps. Old results remain in &lt;strong&gt;Run history&lt;/strong&gt;. A failed or canceled retry does not replace the previous successful result.&lt;/p&gt;
+&lt;p&gt;Recovery operates between saved steps, not at an arbitrary scan inside interrupted peak detection.&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Parameter trials, tasks and templates</title>
+      <link>https://www.tidymass.org/macos/trials-tasks-templates/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/macos/trials-tasks-templates/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;try-parameters-on-a-small-subset&#34;&gt;Try parameters on a small subset&lt;/h2&gt;
+&lt;p&gt;Open &lt;strong&gt;Workflows → Raw data processing → Analysis settings → Parameter trial&lt;/strong&gt; after importing files.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Select 1–5 samples. The initial selection is up to the first three files, not an automatically representative subset; include relevant QCs, groups and batches yourself.&lt;/li&gt;
+&lt;li&gt;Set peak-detection and other processing parameters in &lt;strong&gt;Analysis settings&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Run parameter trial&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Inspect sample/feature counts, missingness, warnings and saved settings.&lt;/li&gt;
+&lt;li&gt;Select a feature under &lt;strong&gt;Inspect trial peak&lt;/strong&gt; and click &lt;strong&gt;Show peak shape&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The selector uses a saved preview of up to 150 features. Complete tables remain in the run directory. The EIC supports zoom, reset and download.&lt;/p&gt;
+&lt;p&gt;Change parameters and run again to create a separate record. &lt;strong&gt;Compare saved results&lt;/strong&gt; compares two runs and their settings. Keep the sample subset consistent when assessing parameter effects.&lt;/p&gt;
+&lt;p&gt;To apply a successful trial, open its settings snapshot, click &lt;strong&gt;Restore this run’s settings&lt;/strong&gt;, review the parameters and run &lt;strong&gt;Process raw data&lt;/strong&gt;. Formal processing uses the full imported manifest. A trial does not complete the formal step, unlock downstream analysis or replace existing formal results. Retrying a canceled trial starts its computation again.&lt;/p&gt;
+&lt;h2 id=&#34;monitor-work&#34;&gt;Monitor work&lt;/h2&gt;
+&lt;p&gt;Open &lt;strong&gt;Task center&lt;/strong&gt; at the top of the window for the current R operation, elapsed time, logs, memory, cancellation and project task history. Stage-specific progress is not necessarily an overall workflow percentage.&lt;/p&gt;
+&lt;p&gt;You can close the panel and browse saved summaries, history, annotation tables and already-cached exploration results in the same project. New EIC/MS2 extraction or uncached computations must wait for the current R task. Parameter editing and project switching remain locked. Closing the panel does not cancel the task; use &lt;strong&gt;Cancel task&lt;/strong&gt; and wait for its status to update. This interface does not imply multiple simultaneous R analyses.&lt;/p&gt;
+&lt;h2 id=&#34;save-a-workflow-template&#34;&gt;Save a workflow template&lt;/h2&gt;
+&lt;p&gt;Above the analysis panels, expand &lt;strong&gt;Workflow templates&lt;/strong&gt;, enter &lt;strong&gt;New workflow template name&lt;/strong&gt;, then click &lt;strong&gt;Save workflow template&lt;/strong&gt;. A template collects parameters for seven analysis stages. It uses current drafts, saved settings or defaults, and records which stages had current successful results. Defaults saved in a template are not a validated method.&lt;/p&gt;
+&lt;p&gt;In another project, select the &lt;strong&gt;Workflow template&lt;/strong&gt;, inspect &lt;strong&gt;Preview settings&lt;/strong&gt; and its source version, and click &lt;strong&gt;Apply workflow template&lt;/strong&gt;. Configure this project&amp;rsquo;s files, databases, sample choices and comparison groups before running each step.&lt;/p&gt;
+&lt;p&gt;Templates retain reusable parameters, software version and source-stage records. They omit raw/database paths, sample choices, trial subsets and comparison-group IDs. Export choices are separate. Applying a template changes parameter drafts; it does not execute the workflow, change historical results or bypass prerequisites. Templates are local to this computer&amp;rsquo;s TidyMass user-data directory.&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Feature review and interactive plots</title>
+      <link>https://www.tidymass.org/macos/feature-review/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/macos/feature-review/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;browse-features&#34;&gt;Browse features&lt;/h2&gt;
+&lt;p&gt;In &lt;strong&gt;Data exploration&lt;/strong&gt;, open &lt;strong&gt;m/z–RT distribution&lt;/strong&gt;. On macOS 0.1.65, the plot and feature table share a resizable workspace; narrow windows stack them. Selecting a point or row synchronizes the selection and reveals feature details. Use &lt;strong&gt;Find feature by ID&lt;/strong&gt; for an exact lookup.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Previous feature / Next feature&lt;/strong&gt; follow the filtered, sorted feature list. Left/right arrow keys work when the detail area is focused, without intercepting normal text editing.&lt;/p&gt;
+&lt;h2 id=&#34;table-columns&#34;&gt;Table columns&lt;/h2&gt;
+&lt;p&gt;The macOS 0.1.65 &lt;strong&gt;Column view&lt;/strong&gt; selector provides &lt;strong&gt;Basic&lt;/strong&gt; (m/z, RT, mean intensity, missingness), &lt;strong&gt;Quality&lt;/strong&gt; (QC RSD, Sample / Blank, MS2, review state) and &lt;strong&gt;Annotation&lt;/strong&gt; (available candidate fields). Sort with column headers; add up to eight sample-intensity columns. These views display existing data and do not create annotations. Missing metrics are NA, not zero or a pass.&lt;/p&gt;
+&lt;h2 id=&#34;filter-and-review&#34;&gt;Filter and review&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Feature filters&lt;/strong&gt; subset the plot and table using MS2, annotations, m/z, RT, intensity, missingness and available QC/Blank metrics. QC RSD requires at least three valid QC observations. Filters do not change the saved matrix.&lt;/p&gt;
+&lt;p&gt;Assign &lt;strong&gt;Keep&lt;/strong&gt;, &lt;strong&gt;Exclude&lt;/strong&gt;, &lt;strong&gt;Needs confirmation&lt;/strong&gt;, &lt;strong&gt;Favorite&lt;/strong&gt; and notes as appropriate. Click &lt;strong&gt;Save review&lt;/strong&gt; and use &lt;strong&gt;Export reviews CSV&lt;/strong&gt; to save your decisions. &lt;strong&gt;Exclude&lt;/strong&gt; is a label: use &lt;strong&gt;Data cleaning&lt;/strong&gt; for an actual downstream exclusion and create a new result.&lt;/p&gt;
+&lt;h2 id=&#34;inspect-evidence&#34;&gt;Inspect evidence&lt;/h2&gt;
+&lt;p&gt;Depending on the saved input, inspect &lt;strong&gt;Peak evidence&lt;/strong&gt;, &lt;strong&gt;Sample intensities&lt;/strong&gt;, &lt;strong&gt;Injection drift&lt;/strong&gt;, &lt;strong&gt;RT alignment&lt;/strong&gt;, &lt;strong&gt;MS2 spectra&lt;/strong&gt;, &lt;strong&gt;Annotation candidates&lt;/strong&gt; and &lt;strong&gt;MS1 spectrum&lt;/strong&gt;. An MS1 scan includes other ions recorded in that scan; it is not a purified spectrum of the selected compound. A high MS2 score does not by itself resolve all structural ambiguity.&lt;/p&gt;
+&lt;p&gt;Click &lt;strong&gt;Show peak shape&lt;/strong&gt;, then expand &lt;strong&gt;Samples and extraction settings&lt;/strong&gt; to change samples, m/z tolerance and RT window. The plot is an MS1 EIC in raw RT. Available dashed boundaries come from saved integration evidence. Initial extraction can read raw files and build a local scan cache; subsequent requests can reuse it. Missing or replaced raw files can prevent extraction.&lt;/p&gt;
+&lt;h2 id=&#34;plot-and-table-downloads&#34;&gt;Plot and table downloads&lt;/h2&gt;
+&lt;p&gt;Drag to zoom; use &lt;strong&gt;Reset view&lt;/strong&gt; or double-click to reset. &lt;strong&gt;Download plot&lt;/strong&gt; offers the supported formats, dimensions and PNG DPI. &lt;strong&gt;Download CSV&lt;/strong&gt;, where present, exports plot data. Read the adjacent information icon: some downloads regenerate the full plot instead of preserving the current zoom.&lt;/p&gt;
+&lt;p&gt;Use &lt;strong&gt;Download complete CSV&lt;/strong&gt; or &lt;strong&gt;Results &amp;amp; export&lt;/strong&gt; for complete tables. Pagination and limited previews do not define the full export scope.&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Individual analysis tools</title>
+      <link>https://www.tidymass.org/macos/analysis-tools/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/macos/analysis-tools/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;p&gt;Open &lt;strong&gt;Analysis tools&lt;/strong&gt;, then &lt;strong&gt;Open tool&lt;/strong&gt; on the relevant card. Some tools create their own projects; others save outputs from their dedicated page.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tool&lt;/th&gt;
+&lt;th&gt;Purpose&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Sample &amp;amp; file checker&lt;/td&gt;
+&lt;td&gt;Compare sample records and raw filenames&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Injection sequence designer&lt;/td&gt;
+&lt;td&gt;Randomize samples, allocate batches and insert QC/Blank injections&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Raw chromatograms&lt;/td&gt;
+&lt;td&gt;Inspect TIC, BPC, EIC and scan spectra&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Raw data processing&lt;/td&gt;
+&lt;td&gt;Run peak detection and alignment separately&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dataset builder &amp;amp; converter&lt;/td&gt;
+&lt;td&gt;Construct or convert a dataset from tables&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Data exploration&lt;/td&gt;
+&lt;td&gt;Inspect an existing dataset&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Data cleaning&lt;/td&gt;
+&lt;td&gt;Filter, impute, normalize and handle batches&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Metabolite annotation&lt;/td&gt;
+&lt;td&gt;Annotate features or individual queries&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pathway analysis&lt;/td&gt;
+&lt;td&gt;Analyze eligible compound IDs&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QC report&lt;/td&gt;
+&lt;td&gt;Report sample and feature quality&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Targeted peak extractor&lt;/td&gt;
+&lt;td&gt;Integrate predefined m/z–RT targets&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;sample--file-checker&#34;&gt;Sample &amp;amp; file checker&lt;/h2&gt;
+&lt;p&gt;Supply a sample CSV and raw folder; select the matching column. Use &lt;code&gt;sample_id&lt;/code&gt; for a typical sample sheet, or unique &lt;code&gt;file_name&lt;/code&gt; for an injection list with repeated QCs. Matching strips extensions and is case-sensitive. The checker recognizes mzML, mzXML and Thermo RAW filenames; recognition does not mean it can read or convert Thermo spectra. Resolve missing, duplicate and unexpected entries before analysis.&lt;/p&gt;
+&lt;h2 id=&#34;injection-sequence-designer&#34;&gt;Injection sequence designer&lt;/h2&gt;
+&lt;p&gt;Import a CSV with at least &lt;code&gt;sample_id&lt;/code&gt;; optional columns include &lt;code&gt;group&lt;/code&gt;, &lt;code&gt;position&lt;/code&gt; or &lt;code&gt;vial_position&lt;/code&gt;. Set batch count, randomization and seed. Configure Conditioning QC, Pooled QC, Blank, RTQC and MS2 QC as needed, inspect batch counts, then export a running list/metadata or save the plan as JSON.&lt;/p&gt;
+&lt;p&gt;Randomization shuffles all study samples before splitting batches; it is not a stratified group-balancing design. Repeated injections need unique filenames. Exported metadata uses injection filenames as &lt;code&gt;sample_id&lt;/code&gt; while retaining original identifiers. The export is a generic plan: compare its columns, methods, vial positions and volumes with the actual instrument sequence template before instrument use.&lt;/p&gt;
+&lt;h2 id=&#34;raw-chromatograms&#34;&gt;Raw chromatograms&lt;/h2&gt;
+&lt;p&gt;Select mzML/mzXML files and MS level; click &lt;strong&gt;Read TIC / BPC&lt;/strong&gt;. Choose a trace, hover for RT, or click a chromatographic position to inspect its scan and sample. After reading files, enter a target ion m/z, tolerance and unit to extract an EIC.&lt;/p&gt;
+&lt;p&gt;Enter ion m/z, not neutral molecular mass. An MS2-level EIC tracks fragment intensity in the selected MS2 scans and is not automatically a precursor-specific transition.&lt;/p&gt;
+&lt;h2 id=&#34;qc-report&#34;&gt;QC report&lt;/h2&gt;
+&lt;p&gt;Import a &lt;code&gt;mass_dataset&lt;/code&gt; RDS/RData and set QC RSD, missingness and Sample / Blank thresholds. The report evaluates and flags features; it does not delete them. &lt;strong&gt;Intensity across injection order&lt;/strong&gt; is a sum of the input matrix intensities, not raw-scan TIC. Prior normalization and imputation change its interpretation.&lt;/p&gt;
+&lt;h2 id=&#34;targeted-peak-extractor&#34;&gt;Targeted peak extractor&lt;/h2&gt;
+&lt;p&gt;Prepare a target CSV such as:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;target_id,mz,rt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_A,195.0877,180
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_B,300.1234,240
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;RT is in seconds. Choose raw files, m/z tolerance and a fixed RT integration window, then run and inspect peak shapes. The current method sums MS1 signal within the tolerance and integrates by the trapezoidal rule. It does not identify compounds or automatically separate coeluting peaks. Check the preview and export scope before interpreting areas.&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Shiny tools and the R environment</title>
+      <link>https://www.tidymass.org/macos/shiny-and-packages/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/macos/shiny-and-packages/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Shiny tools&lt;/strong&gt; installs and starts complete third-party Shiny apps. &lt;strong&gt;R environment&lt;/strong&gt; inspects R and manages additional packages. Installing a missing dependency does not require registering it as a separate app. The dedicated TidyMass R Shiny tutorial is a separate guide under &lt;strong&gt;TUTORIALS → R shiny&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;install-and-start-a-tool&#34;&gt;Install and start a tool&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;strong&gt;Shiny tools → Install a Shiny tool&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Select GitHub, CRAN or Bioconductor and enter the repository or package.&lt;/li&gt;
+&lt;li&gt;If known, enter &lt;strong&gt;R package name&lt;/strong&gt; and &lt;strong&gt;Startup function&lt;/strong&gt;; otherwise try automatic detection.&lt;/li&gt;
+&lt;li&gt;Review the source, use the interface&amp;rsquo;s trust checkbox and click &lt;strong&gt;Install tool&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Inspect &lt;strong&gt;View log&lt;/strong&gt;, then use &lt;strong&gt;Open tool&lt;/strong&gt; under Installed tools.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A repository name is not always its R package name. Do not enter a complete URL as the package name. These tools execute local R code and can have their own dependencies.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Back to installed tools&lt;/strong&gt; returns to the list without necessarily stopping the process. Use &lt;strong&gt;Stop tool&lt;/strong&gt; to release its resources.&lt;/p&gt;
+&lt;h2 id=&#34;configure-startup&#34;&gt;Configure startup&lt;/h2&gt;
+&lt;p&gt;Under &lt;strong&gt;Manage tool&lt;/strong&gt;, select &lt;strong&gt;Auto-detect&lt;/strong&gt;, &lt;strong&gt;Exported function&lt;/strong&gt;, &lt;strong&gt;Package app_ui / app_server&lt;/strong&gt;, or &lt;strong&gt;Shiny application folder&lt;/strong&gt; as appropriate. Folder mode starts an app directory using &lt;code&gt;shiny::runApp()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For an exported startup function, enter the function name alone, such as &lt;code&gt;run_featuremap&lt;/code&gt;, not a call with parentheses or a namespace. &lt;code&gt;runApp&lt;/code&gt; belongs to shiny; do not assume a third-party package exports it.&lt;/p&gt;
+&lt;h2 id=&#34;install-missing-packages&#34;&gt;Install missing packages&lt;/h2&gt;
+&lt;p&gt;Open &lt;strong&gt;R environment&lt;/strong&gt;, identify the exact missing package, select the correct source and review the installation log. For example, &lt;code&gt;org.Mm.eg.db&lt;/code&gt; is a Bioconductor package. Stop and restart the affected tool after installation.&lt;/p&gt;
+&lt;p&gt;Additional package libraries are managed separately from the app&amp;rsquo;s bundled library, and some tools have private dependency libraries. Check the actual loaded version when a package appears installed but the error persists. Installing from source can require system libraries or compilers; find the first substantive error rather than repeatedly reinstalling unrelated R packages.&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Export, save and recover</title>
+      <link>https://www.tidymass.org/macos/export-and-recovery/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/macos/export-and-recovery/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;save-a-figure&#34;&gt;Save a figure&lt;/h2&gt;
+&lt;p&gt;Click &lt;strong&gt;Download plot&lt;/strong&gt; near the figure and choose an available format. Dimensions are in inches; PNG supports DPI. Some figures also provide &lt;strong&gt;Download CSV&lt;/strong&gt;. Inspect the exported file: an R-generated export may use the full range rather than the current interactive zoom.&lt;/p&gt;
+&lt;h2 id=&#34;export-an-analysis&#34;&gt;Export an analysis&lt;/h2&gt;
+&lt;p&gt;In &lt;strong&gt;Results &amp;amp; export&lt;/strong&gt;, select &lt;strong&gt;Selected run&lt;/strong&gt; or &lt;strong&gt;All completed datasets / queries&lt;/strong&gt;. For a single run, verify the run ID. Select R objects, complete tables, code/parameters/logs/session information and available figures, then click &lt;strong&gt;Export selected content&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A full project copy includes its saved artifacts independently of other individual-content checkboxes. External raw files and databases are not automatically part of that copy. Check and back them up separately. Trials also have run IDs; do not export a small trial as if it were the full analysis.&lt;/p&gt;
+&lt;h2 id=&#34;what-the-project-preserves&#34;&gt;What the project preserves&lt;/h2&gt;
+&lt;p&gt;Runs save parameters, input relationships, logs, results and execution/reproduction records. &lt;strong&gt;Code&lt;/strong&gt; exposes these records, but a displayed record is not necessarily a self-contained script. Reproduction needs the referenced files, databases and a compatible R/package environment. Preserve &lt;code&gt;sessionInfo.txt&lt;/code&gt;, request/settings files and &lt;code&gt;reproduce.R&lt;/code&gt; where present.&lt;/p&gt;
+&lt;h2 id=&#34;reopen-a-project&#34;&gt;Reopen a project&lt;/h2&gt;
+&lt;p&gt;Choose &lt;strong&gt;Open project&lt;/strong&gt; and the folder containing &lt;code&gt;project.json&lt;/code&gt;. Saved steps remain accessible. Unfinished executions can appear as &lt;strong&gt;interrupted&lt;/strong&gt;, and results depending on changed upstream inputs as &lt;strong&gt;stale&lt;/strong&gt;. Restore missing run files or rerun the affected stage. Editing project status fields cannot create missing outputs.&lt;/p&gt;
+&lt;h2 id=&#34;move-or-clean-up&#34;&gt;Move or clean up&lt;/h2&gt;
+&lt;p&gt;Copy the entire project directory and separately account for external raw files and databases. Internal result paths can be relocated with a project; external references may need repair. Use &lt;strong&gt;Storage&lt;/strong&gt; for supported cache management and read its scope first. Removing scan caches can make the next EIC extraction slower.&lt;/p&gt;
+&lt;p&gt;Do not delete run folders during computation or open the same project for modification in multiple app instances. If a project lock is reported, close the other instance first.&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://www.tidymass.org/macos/troubleshooting/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/macos/troubleshooting/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Symptom&lt;/th&gt;
+&lt;th&gt;What to check&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A step is unavailable&lt;/td&gt;
+&lt;td&gt;Confirm its preceding formal step has a current successful result&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Downstream results are stale&lt;/td&gt;
+&lt;td&gt;Rerun stages affected by the changed upstream input&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;A trial completed but processing remains unfinished&lt;/td&gt;
+&lt;td&gt;Run &lt;strong&gt;Process raw data&lt;/strong&gt; for the formal dataset&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;A table and export have different row counts&lt;/td&gt;
+&lt;td&gt;Check filters, pagination, preview limits and selected run&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;An excluded feature remains downstream&lt;/td&gt;
+&lt;td&gt;Manual Exclude is a review label; run an actual cleaning operation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;A plot stays unchanged after editing settings&lt;/td&gt;
+&lt;td&gt;Run again; the current plot belongs to saved results&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MS2 or annotation fields show No/NA&lt;/td&gt;
+&lt;td&gt;Check spectrum association and whether annotation was run&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sample IDs do not match&lt;/td&gt;
+&lt;td&gt;Check basenames, case, leading zeros, duplicates and missing records&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Group column not found&lt;/td&gt;
+&lt;td&gt;Select the actual column name in the sample sheet&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QC filtering has no QCs&lt;/td&gt;
+&lt;td&gt;Verify quantitative QC classes or disable an inapplicable QC-dependent operation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Missing values remain before statistics&lt;/td&gt;
+&lt;td&gt;Review the input version, filtering and imputation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Paired analysis fails&lt;/td&gt;
+&lt;td&gt;Check unique subject IDs and matching observations in both groups&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;No pathway results&lt;/td&gt;
+&lt;td&gt;Inspect identifiers, input selection, database coverage and background; empty output may be valid&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Peak extraction cannot find files&lt;/td&gt;
+&lt;td&gt;Check for moved, renamed or replaced raw files&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;R busy&lt;/strong&gt; means the requested operation needs the occupied R worker. Saved summaries and cached results can be viewed where supported, but a second analysis must wait. Closing a task panel does not cancel computation. Use the cancellation control and wait for confirmation. Recovery resumes between saved steps, not within interrupted peak detection.&lt;/p&gt;
+&lt;p&gt;When memory is high, compare &lt;strong&gt;Computer used&lt;/strong&gt; with &lt;strong&gt;TidyMass used&lt;/strong&gt;, reduce worker count or trial size, and inspect other system processes. More threads do not always make analysis faster.&lt;/p&gt;
+&lt;p&gt;For &lt;strong&gt;Missing package&lt;/strong&gt;, install the package from its correct source and restart the tool. For &lt;strong&gt;Invalid R package name&lt;/strong&gt;, check whether a URL or repository name was entered instead. For &lt;strong&gt;not an exported object&lt;/strong&gt;, inspect the startup function and mode. Missing images or styles in a Shiny app can reflect static-asset paths rather than text encoding. Read the first substantive error and final installation state; a warning alone is not necessarily a failure.&lt;/p&gt;
+&lt;p&gt;When reporting an issue, include the app and OS versions, tool/stage, run ID, reproduction steps and relevant logs. A few de-identified sample-information rows can clarify input problems. Preserve the failing project and logs before clearing data, and check shared logs for private sample names and paths.&lt;/p&gt;
+</description>
+    </item>
+
+  </channel>
+</rss>

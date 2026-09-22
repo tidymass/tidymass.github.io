@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macOS 使用说明 | TidyMass</title>
+    <link>https://www.tidymass.org/zh/macos/</link>
+      <atom:link href="https://www.tidymass.org/zh/macos/index.xml" rel="self" type="application/rss+xml" />
+    <description>macOS 使用说明</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0800</lastBuildDate>
+    <image>
+      <url>https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png</url>
+      <title>macOS 使用说明</title>
+      <link>https://www.tidymass.org/zh/macos/</link>
+    </image>
+
+    <item>
+      <title>安装与快速开始</title>
+      <link>https://www.tidymass.org/zh/macos/getting-started/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/zh/macos/getting-started/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;p&gt;当前对应 &lt;strong&gt;0.1.65 Apple Silicon 预览版&lt;/strong&gt;。公开下载链接尚未核实；请使用维护者提供的 DMG，并核对应用显示的版本号。本教程不声明 Intel Mac 安装包支持。&lt;/p&gt;
+&lt;h2 id=&#34;安装-macos-版本&#34;&gt;安装 macOS 版本&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;打开所获得的 TidyMass DMG 安装包。&lt;/li&gt;
+&lt;li&gt;将 TidyMass 拖到 Applications。&lt;/li&gt;
+&lt;li&gt;从 Applications 打开 TidyMass。&lt;/li&gt;
+&lt;li&gt;等待 R environment 检查结束，再开始运行分析。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果拿到的是开发预览 &lt;code&gt;.app&lt;/code&gt;，也可以直接打开它；版本号显示在窗口顶部。Preview 安装包可能尚未签名或公证，若系统拦截，请先核实来源，再根据 macOS 的提示在“系统设置 → 隐私与安全性”中允许打开。不要关闭整个系统的安全检查。&lt;/p&gt;
+&lt;p&gt;软件包含 R 和核心依赖。第三方 Shiny 的可选依赖可能仍需另外安装，见 &lt;a href=&#34;https://www.tidymass.org/zh/macos/shiny-and-packages/&#34;&gt;R environment&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;创建第一个项目&#34;&gt;创建第一个项目&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;点击左侧 &lt;strong&gt;Workflows&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;打开非靶向代谢组学工作流，输入项目名。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Choose location &amp;amp; create&lt;/strong&gt;，选择存放项目的父目录。&lt;/li&gt;
+&lt;li&gt;在 &lt;strong&gt;Data import&lt;/strong&gt; 中选择 mzML/mzXML 和可选的 sample information。&lt;/li&gt;
+&lt;li&gt;导入完成后进入 &lt;strong&gt;Raw data processing&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;软件会创建新的项目目录；不要选择一个同名已有目录来覆盖旧项目。后续通过 &lt;strong&gt;Projects&lt;/strong&gt; 或 &lt;strong&gt;Open project&lt;/strong&gt; 打开项目目录。&lt;/p&gt;
+&lt;p&gt;正式处理大批样品前，建议先做 &lt;a href=&#34;https://www.tidymass.org/zh/macos/trials-tasks-templates/&#34;&gt;Parameter trial&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;认识界面&#34;&gt;认识界面&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;入口&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Workflows&lt;/td&gt;
+&lt;td&gt;按步骤完成完整分析&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Analysis tools&lt;/td&gt;
+&lt;td&gt;执行单个分析或准备任务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shiny tools&lt;/td&gt;
+&lt;td&gt;安装、启动第三方 Shiny 应用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;R environment&lt;/td&gt;
+&lt;td&gt;查看 R 环境与管理额外 R 包&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Code&lt;/td&gt;
+&lt;td&gt;查看相关代码和执行记录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Task center&lt;/td&gt;
+&lt;td&gt;查看当前 R 任务、日志、内存及项目任务历史&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Show settings / Hide settings&lt;/td&gt;
+&lt;td&gt;展开或收起参数面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;左下角内存分别显示 &lt;strong&gt;TidyMass used&lt;/strong&gt;、&lt;strong&gt;Computer used&lt;/strong&gt;、&lt;strong&gt;Computer total&lt;/strong&gt;。软件占用和系统总占用不是同一个指标；系统总占用较高不一定由 TidyMass 单独造成。&lt;/p&gt;
+&lt;h2 id=&#34;第一次运行后的检查&#34;&gt;第一次运行后的检查&lt;/h2&gt;
+&lt;p&gt;确认导入样品数、分组和文件匹配正确，再查看结果中的 feature 数、缺失值、峰形及警告。仅显示 completed 表示程序执行完成，不代表分析参数或生物学结论已经验证。&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>输入数据与样品信息</title>
+      <link>https://www.tidymass.org/zh/macos/input-data/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/zh/macos/input-data/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;原始数据&#34;&gt;原始数据&lt;/h2&gt;
+&lt;p&gt;非靶向工作流和 Raw chromatograms 使用 &lt;strong&gt;mzML / mzXML&lt;/strong&gt;。本版本这些入口不直接处理厂商专有 RAW 文件；请先使用适合仪器和采集方式的转换工具。&lt;/p&gt;
+&lt;p&gt;正、负离子模式建议分别建立项目。文件名去掉扩展名后必须唯一，即使文件在不同子文件夹中也不能重名。不要只用大小写区分样品名。&lt;/p&gt;
+&lt;p&gt;导入会登记文件位置，后续需要检查 EIC 或质谱时仍可能使用原始文件。因此不要在分析过程中移动、替换或重命名它们。&lt;/p&gt;
+&lt;h2 id=&#34;sample-information&#34;&gt;sample information&lt;/h2&gt;
+&lt;p&gt;原始数据导入支持 CSV、TSV、Excel 样品信息。示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sample_id,group,class,batch,injection.order,subject_id
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;S001,Control,Subject,B1,1,P01
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;S002,Treatment,Subject,B1,2,P02
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;QC001,QC,QC,B1,3,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Blank001,Blank,Blank,B1,4,
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;列&lt;/th&gt;
+&lt;th&gt;含义与要求&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;sample_id&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;与原始文件名去掉扩展名后完全一致。例如 &lt;code&gt;S001.mzXML&lt;/code&gt; 对应 &lt;code&gt;S001&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;group&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;生物学分组；如果列名不同，在 &lt;strong&gt;Group column&lt;/strong&gt; 中指定实际列名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;class&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;样品用途，例如 &lt;code&gt;Subject&lt;/code&gt;、&lt;code&gt;QC&lt;/code&gt;、&lt;code&gt;Blank&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;batch&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;分析批次，用于检查批次效应等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;injection.order&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;进样顺序，用于漂移检查及需要顺序信息的方法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;subject_id&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;配对分析中的个体标识，不配对时可以不提供&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;导入原始文件时，样品信息必须覆盖所有选中的文件，每个 sample ID 只能出现一次。不要用表格行号代替样品名。前导零应保留为文本，例如 &lt;code&gt;001&lt;/code&gt; 不能变成 &lt;code&gt;1&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;建议明确填写 &lt;code&gt;class&lt;/code&gt;，不要依赖自动推断。用于收集 MS2 的 pooled QC 不是自动等同于用于定量质量评价的 QC；只有符合定量实验设计的 QC 才应进入相应 QC 计算。&lt;/p&gt;
+&lt;h2 id=&#34;已有峰表&#34;&gt;已有峰表&lt;/h2&gt;
+&lt;p&gt;通过 &lt;strong&gt;Dataset builder &amp;amp; converter&lt;/strong&gt; 将峰表构建为 &lt;code&gt;mass_dataset&lt;/code&gt;，再用于独立分析模块。宽表格式示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;variable_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mz&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S001&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S002&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;F001&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;100.1234&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1200&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;F002&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;200.2345&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;120&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NA&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;variable_id&lt;/code&gt; 唯一。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz&lt;/code&gt; 为离子质荷比，&lt;code&gt;rt&lt;/code&gt; 的单位与所选导入选项一致；上例为秒。&lt;/li&gt;
+&lt;li&gt;强度列名与样品信息的 &lt;code&gt;sample_id&lt;/code&gt; 对应。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NA&lt;/code&gt; 表示缺失。零是实际数值，不会自动当作缺失值。&lt;/li&gt;
+&lt;li&gt;元数据中的注释名称不应被当作已确认鉴定，需保留其证据来源。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ms2-数据&#34;&gt;MS2 数据&lt;/h2&gt;
+&lt;p&gt;MS2 可在支持的导入、数据构建或注释入口附加。MS2 与 feature 的关联依赖前体 m/z 和 RT 等条件；有匹配的 MS2 不代表已确认化合物身份。&lt;/p&gt;
+&lt;p&gt;开始前用 &lt;a href=&#34;https://www.tidymass.org/zh/macos/analysis-tools/&#34;&gt;Sample &amp;amp; file checker&lt;/a&gt; 排查重复、缺失和未预期的文件，尤其适合多批次项目。&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>完整非靶向代谢组学工作流</title>
+      <link>https://www.tidymass.org/zh/macos/workflow/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/zh/macos/workflow/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;1-data-import&#34;&gt;1. Data import&lt;/h2&gt;
+&lt;p&gt;选择 mzML/mzXML 文件和样品信息，检查分组，点击 &lt;strong&gt;Import raw files&lt;/strong&gt;。这一步登记原始文件，不执行色谱峰检测。&lt;/p&gt;
+&lt;p&gt;使用目录导入时，子目录可以参与分组；使用单独文件选择时应通过样品信息确认真实分组。检查导入表，不要将文件存放方式误当作生物学设计。&lt;/p&gt;
+&lt;h2 id=&#34;2-raw-data-processing&#34;&gt;2. Raw data processing&lt;/h2&gt;
+&lt;p&gt;软件使用 massprocesser/XCMS 相关处理功能，进行峰检测、保留时间校正和跨样品特征分组；是否补峰由设置决定。&lt;/p&gt;
+&lt;p&gt;重点检查：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数类别&lt;/th&gt;
+&lt;th&gt;检查目的&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;m/z tolerance&lt;/td&gt;
+&lt;td&gt;与仪器质量精度相符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Peak width range&lt;/td&gt;
+&lt;td&gt;与实际色谱峰宽相符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Signal / noise、noise、prefilter&lt;/td&gt;
+&lt;td&gt;控制噪声和低质量信号进入峰表&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Grouping bandwidth、minimum fraction&lt;/td&gt;
+&lt;td&gt;控制跨样品分组条件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Fill peaks&lt;/td&gt;
+&lt;td&gt;决定是否执行补峰，不等同于后面的矩阵缺失值填补&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Worker processes&lt;/td&gt;
+&lt;td&gt;控制并行规模，同时考虑内存和数据量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;先运行 &lt;strong&gt;Parameter trial&lt;/strong&gt; 检查几个样品，确认后点击 &lt;strong&gt;Process raw data&lt;/strong&gt; 处理完整数据。试跑不能代替正式步骤。&lt;/p&gt;
+&lt;p&gt;结果包括 &lt;code&gt;mass_dataset&lt;/code&gt;、峰表和处理输出。需要查看生成文件时点击 &lt;strong&gt;Project folder&lt;/strong&gt;，结合该次运行 ID 定位文件。&lt;/p&gt;
+&lt;h2 id=&#34;3-data-exploration&#34;&gt;3. Data exploration&lt;/h2&gt;
+&lt;p&gt;检查 m/z–RT 分布、样品及 feature 缺失值、分组和批次信息。在联动工作台选择 feature，查看峰形、MS1/MS2、样品强度及可用的注释证据。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature filters&lt;/strong&gt; 改变当前显示范围，不删除下游数据；人工 &lt;strong&gt;Exclude&lt;/strong&gt; 标记也不是自动从分析矩阵移除。详见 &lt;a href=&#34;https://www.tidymass.org/zh/macos/feature-review/&#34;&gt;结果审查&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;4-data-cleaning&#34;&gt;4. Data cleaning&lt;/h2&gt;
+&lt;p&gt;按研究设计选择：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;缺失值过滤，包括 QC 或生物学组内条件。&lt;/li&gt;
+&lt;li&gt;异常样品检查及明确的移除选择。&lt;/li&gt;
+&lt;li&gt;缺失值填补。&lt;/li&gt;
+&lt;li&gt;归一化。&lt;/li&gt;
+&lt;li&gt;可选的批次整合。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;没有定量 QC 时，不要启用依赖 QC 的过滤或校正。异常点需要结合实验记录判断，不能仅凭 PCA 位置决定删除。&lt;/p&gt;
+&lt;p&gt;检查每一步的设置与前后结果。前后 PCA 可能是分别拟合的模型，坐标轴不能被理解为同一个固定坐标系。&lt;/p&gt;
+&lt;h2 id=&#34;5-metabolite-annotation&#34;&gt;5. Metabolite annotation&lt;/h2&gt;
+&lt;p&gt;选择 metid 支持的参考数据库，配置离子模式、色谱类型、加合物、MS1/MS2 容差和匹配阈值。只有数据库 RT 与实验条件相容时才使用 RT 匹配。&lt;/p&gt;
+&lt;p&gt;在注释表中选择候选项，检查实验与参考 MS2 镜像谱，以及质量误差、RT 和其他证据。没有 MS2 的候选不能被解释为 MS2 已验证鉴定。&lt;/p&gt;
+&lt;p&gt;若暂不做注释，可在界面允许时选择 &lt;strong&gt;Skip annotation for statistics&lt;/strong&gt;。跳过后仍可继续统计，但基于注释的 pathway analysis 需要先补做注释并更新其后步骤。&lt;/p&gt;
+&lt;h2 id=&#34;6-statistical-analysis&#34;&gt;6. Statistical analysis&lt;/h2&gt;
+&lt;p&gt;检查 PCA 和所需的差异分析设置。明确选择 Control 与 Treatment 等实际比较组。&lt;/p&gt;
+&lt;p&gt;配对分析需要正确的个体列，并保证两组中每个参与比较的个体各有一个样品且标识匹配。不能靠样品顺序自动推断配对。&lt;/p&gt;
+&lt;h2 id=&#34;7-pathway-analysis&#34;&gt;7. Pathway analysis&lt;/h2&gt;
+&lt;p&gt;确认注释 ID、候选歧义处理、输入筛选和背景集。根据研究目的选择合适的方法和多重检验设置。&lt;/p&gt;
+&lt;p&gt;没有符合要求的化合物时，空结果可能是合理结果；先检查输入筛选、注释与数据库覆盖，不要为了得到通路而随意放宽条件。&lt;/p&gt;
+&lt;h2 id=&#34;8-results--export&#34;&gt;8. Results &amp;amp; export&lt;/h2&gt;
+&lt;p&gt;选择运行范围和导出内容，保存完整表格、R 对象、代码和日志。详见 &lt;a href=&#34;https://www.tidymass.org/zh/macos/export-and-recovery/&#34;&gt;导出与恢复&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;中断继续与重跑&#34;&gt;中断、继续与重跑&lt;/h2&gt;
+&lt;p&gt;完成步骤保存在项目中。重开项目后可以从第一个尚未完成且前置条件满足的步骤继续，不必重跑已完成步骤。&lt;/p&gt;
+&lt;p&gt;重跑上游步骤成功后，依赖旧结果的下游步骤会变为过期，需要重新运行。旧结果仍在 &lt;strong&gt;Run history&lt;/strong&gt; 中。失败或取消的重试不会把之前成功的结果当作新结果覆盖掉。&lt;/p&gt;
+&lt;p&gt;这里的恢复是从已保存的步骤继续，不代表可以从某一次峰检测内部的任意扫描点恢复。&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>参数试跑、任务中心与 workflow 模板</title>
+      <link>https://www.tidymass.org/zh/macos/trials-tasks-templates/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/zh/macos/trials-tasks-templates/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;参数试跑先检查小规模数据&#34;&gt;参数试跑：先检查小规模数据&lt;/h2&gt;
+&lt;p&gt;入口：&lt;strong&gt;Workflows → Raw data processing → Analysis settings → Parameter trial&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先在 Data import 完成文件登记。&lt;/li&gt;
+&lt;li&gt;展开 Parameter trial，通过搜索或复选框选择 1–5 个样品。&lt;/li&gt;
+&lt;li&gt;默认选择列表前几个样品，最多三个；这不是自动挑选“有代表性”的样品。请根据 QC、分组和批次主动调整。&lt;/li&gt;
+&lt;li&gt;在同一个 Analysis settings 面板设置峰检测等参数。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Run parameter trial&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;完成后检查样品数、feature 数、缺失情况和警告。&lt;/li&gt;
+&lt;li&gt;在 &lt;strong&gt;Inspect trial peak&lt;/strong&gt; 中选择 feature，再点击 &lt;strong&gt;Show peak shape&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;峰形选择器使用保存的预览，最多 150 个 feature；完整峰表在该次运行目录中。峰形图展示 EIC，支持框选缩放、复位和下载。&lt;/p&gt;
+&lt;h3 id=&#34;比较参数&#34;&gt;比较参数&lt;/h3&gt;
+&lt;p&gt;调整参数后再次试跑会生成独立记录。使用 &lt;strong&gt;Compare saved results&lt;/strong&gt; 选择两次运行，比较结果和 &lt;strong&gt;Settings used for this result&lt;/strong&gt;。尽量使用相同的试跑样品，避免把样品差异当作参数差异。&lt;/p&gt;
+&lt;h3 id=&#34;将参数用于完整数据&#34;&gt;将参数用于完整数据&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;选择满意的试跑记录。&lt;/li&gt;
+&lt;li&gt;展开其设置快照，点击 &lt;strong&gt;Restore this run’s settings&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;检查当前参数。&lt;/li&gt;
+&lt;li&gt;点击正式的 &lt;strong&gt;Process raw data&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;正式处理使用完整导入清单，不沿用试跑的样品子集。&lt;/p&gt;
+&lt;p&gt;试跑不会完成正式 Raw data processing 步骤，也不会使后续步骤解锁；它不会替换已有正式结果。取消后再试跑会重新开始该次小规模计算，不支持从峰检测中途续算。&lt;/p&gt;
+&lt;h2 id=&#34;任务中心查看正在运行的任务&#34;&gt;任务中心：查看正在运行的任务&lt;/h2&gt;
+&lt;p&gt;入口：窗口顶部 &lt;strong&gt;Task center&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;显示当前 R 操作、实际耗时、日志、内存和 &lt;strong&gt;Cancel task&lt;/strong&gt;，下方列出项目任务历史。日志中可能显示处理文件、算法阶段或当前阶段进度；这些不能一概解释为整个 workflow 的完成百分比。&lt;/p&gt;
+&lt;p&gt;正式工作流运行或试跑期间，可以关闭任务中心面板，浏览同一项目的已保存步骤。参数和项目切换保持锁定。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;运行期间的操作&lt;/th&gt;
+&lt;th&gt;当前行为&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;查看已有结果摘要和运行历史&lt;/td&gt;
+&lt;td&gt;可以&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;查看已缓存的探索图和默认 feature table&lt;/td&gt;
+&lt;td&gt;可以；需要已有缓存&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;查看已保存注释表&lt;/td&gt;
+&lt;td&gt;可以&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;新提取 EIC、MS2 或生成尚未缓存的 R 结果&lt;/td&gt;
+&lt;td&gt;需要等待当前任务完成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;修改正在运行的参数或切换项目&lt;/td&gt;
+&lt;td&gt;锁定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;取消任务&lt;/td&gt;
+&lt;td&gt;使用 Cancel task，等待状态更新&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;其他短计算仍可能使用运行弹窗；任务中心并不意味着多个 R 分析可同时执行。关闭面板不会取消任务。&lt;/p&gt;
+&lt;h2 id=&#34;完整-workflow-模板&#34;&gt;完整 workflow 模板&lt;/h2&gt;
+&lt;p&gt;入口：非靶向项目分析页面上方 &lt;strong&gt;Workflow templates&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;保存&#34;&gt;保存&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;配置各步骤参数，或打开一个已有成功结果的项目。&lt;/li&gt;
+&lt;li&gt;展开 Workflow templates。&lt;/li&gt;
+&lt;li&gt;输入 &lt;strong&gt;New workflow template name&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Save workflow template&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;模板收集七个分析阶段的参数；当前步骤使用当前草稿，其他步骤使用已有草稿、保存设置或默认值。预览会记录哪些阶段已有有效成功结果。保存了模板不代表其中的默认参数已经验证。&lt;/p&gt;
+&lt;h3 id=&#34;在另一个项目应用&#34;&gt;在另一个项目应用&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;创建或打开新的非靶向项目。&lt;/li&gt;
+&lt;li&gt;在 &lt;strong&gt;Workflow template&lt;/strong&gt; 下拉框中选择模板。&lt;/li&gt;
+&lt;li&gt;展开 &lt;strong&gt;Preview settings&lt;/strong&gt; 检查内容和来源版本。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Apply workflow template&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;配置本项目的原始文件、样品信息、数据库和比较组，再逐步运行。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;模板应用到各步骤的参数草稿，并保存到项目；不会自动执行完整流程，也不会修改旧结果或跳过前置步骤。&lt;/p&gt;
+&lt;h3 id=&#34;模板包含什么&#34;&gt;模板包含什么&lt;/h3&gt;
+&lt;p&gt;保留可复用的分析参数、TidyMass 版本和来源步骤记录。排除原始文件路径、数据库路径、样品选择、试跑子集和比较组 ID。Results &amp;amp; export 的导出选择仍需单独设置。&lt;/p&gt;
+&lt;p&gt;模板保存在当前电脑的 TidyMass 用户数据目录，可供其他项目使用；它不是已经发布到云端的方法库。&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Feature 审查与交互图</title>
+      <link>https://www.tidymass.org/zh/macos/feature-review/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/zh/macos/feature-review/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;联动工作台&#34;&gt;联动工作台&lt;/h2&gt;
+&lt;p&gt;在 &lt;strong&gt;Data exploration&lt;/strong&gt; 中选择 m/z–RT distribution。宽窗口中散点图与 feature table 并排显示，中间控件调整宽度；窄窗口会改为上下布局。&lt;/p&gt;
+&lt;p&gt;点击散点或表格中的 feature 后，选择会同步，表格定位到对应页，下方显示 feature 详情。也可用 &lt;strong&gt;Find feature by ID&lt;/strong&gt; 精确查找。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Previous feature / Next feature&lt;/strong&gt; 按当前过滤与排序后的列表移动。聚焦 feature 详情区域后可用左右方向键切换；编辑文字时不会把方向键当作 feature 切换。&lt;/p&gt;
+&lt;h2 id=&#34;表格视图&#34;&gt;表格视图&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column view&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Basic&lt;/td&gt;
+&lt;td&gt;Feature ID、m/z、RT、平均强度、缺失比例&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Quality&lt;/td&gt;
+&lt;td&gt;QC RSD、Sample / Blank、缺失比例、MS2、人工审查状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Annotation&lt;/td&gt;
+&lt;td&gt;MS2、候选状态和数据中已有的相关注释字段&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;点击列标题排序。Feature ID 列固定在左侧。可按需要增加少量样品强度列，最多八列，以免大队列表格过宽。&lt;/p&gt;
+&lt;p&gt;Annotation 视图不会自动生成缺失的注释。没有可用指标时显示 NA，不应当作零或质量合格。&lt;/p&gt;
+&lt;h2 id=&#34;筛选与人工审查&#34;&gt;筛选与人工审查&lt;/h2&gt;
+&lt;p&gt;Feature filters 可按 MS2、注释状态、m/z、RT、强度、缺失率、QC RSD、Sample / Blank 等条件筛选。质量指标需要数据中有相应 QC/Blank 和有效观测；QC RSD 至少需要三个有效 QC 观测。&lt;/p&gt;
+&lt;p&gt;筛选同时影响图和表，但不改变保存的矩阵。需要实际删除或过滤数据时，应使用 Data cleaning 并生成新的结果。&lt;/p&gt;
+&lt;p&gt;人工审查可设置 Keep、Exclude、Needs confirmation、Favorite 和备注。点击 &lt;strong&gt;Save review&lt;/strong&gt; 保存，使用 &lt;strong&gt;Export reviews CSV&lt;/strong&gt; 导出。Exclude 是审查标记，不自动删除下游数据。&lt;/p&gt;
+&lt;h2 id=&#34;检查证据&#34;&gt;检查证据&lt;/h2&gt;
+&lt;p&gt;选中 feature 后可按需加载：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Peak evidence&lt;/strong&gt;：可用的检测、补峰及积分边界记录。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sample intensities&lt;/strong&gt;：各样品中的强度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Injection drift&lt;/strong&gt;：按进样顺序检查变化。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RT alignment&lt;/strong&gt;：可用的保留时间对齐信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MS2 spectra&lt;/strong&gt;：已关联的 MS2。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Annotation candidates&lt;/strong&gt;：保存结果中的候选项。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MS1 spectrum&lt;/strong&gt;：所选样品中接近该 feature RT 的扫描谱。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MS1 扫描谱包含该扫描的其他离子，不是分离后的“该化合物纯谱”。有 MS2 和高匹配分数也不能单独证明唯一结构。&lt;/p&gt;
+&lt;h2 id=&#34;峰形&#34;&gt;峰形&lt;/h2&gt;
+&lt;p&gt;点击 &lt;strong&gt;Show peak shape&lt;/strong&gt;，默认只展示少量样品。展开 &lt;strong&gt;Samples and extraction settings&lt;/strong&gt; 可修改样品、m/z 容差和 RT 窗口。&lt;/p&gt;
+&lt;p&gt;峰形是原始 RT 下的 MS1 EIC；图中可用的虚线边界来自保存的峰积分证据。首次提取可能需要读取原始数据并建立本地扫描缓存，后续复用缓存。更换或丢失原始文件仍可能导致提取失败。&lt;/p&gt;
+&lt;h2 id=&#34;图表操作与下载&#34;&gt;图表操作与下载&lt;/h2&gt;
+&lt;p&gt;图表工具栏位于各图附近：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;鼠标拖动框选区域进行放大。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reset view&lt;/strong&gt; 或双击恢复初始视图。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Download plot&lt;/strong&gt; 选择可用格式、宽高及 PNG DPI。&lt;/li&gt;
+&lt;li&gt;提供 &lt;strong&gt;Download CSV&lt;/strong&gt; 时可导出该图对应的数据。&lt;/li&gt;
+&lt;li&gt;点击 information icon 查看该图的说明。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;保存图可能使用完整范围，而不是当前缩放区域；以图旁的说明为准。表格分页和图形预览不代表完整导出被截断，应使用 &lt;strong&gt;Download complete CSV&lt;/strong&gt; 或 Results &amp;amp; export 获取完整数据。&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Analysis tools：独立分析工具</title>
+      <link>https://www.tidymass.org/zh/macos/analysis-tools/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/zh/macos/analysis-tools/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;p&gt;点击 &lt;strong&gt;Analysis tools&lt;/strong&gt;，再点击对应卡片的 &lt;strong&gt;Open tool&lt;/strong&gt;。部分工具创建独立项目，部分工具在自己的页面保存结果。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具&lt;/th&gt;
+&lt;th&gt;主要用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Sample &amp;amp; file checker&lt;/td&gt;
+&lt;td&gt;检查样品清单与原始文件是否匹配&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Injection sequence designer&lt;/td&gt;
+&lt;td&gt;随机化、分批和安排 QC/Blank 进样&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Raw chromatograms&lt;/td&gt;
+&lt;td&gt;TIC、BPC、EIC 和原始扫描谱&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Raw data processing&lt;/td&gt;
+&lt;td&gt;独立执行峰检测与对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dataset builder &amp;amp; converter&lt;/td&gt;
+&lt;td&gt;从表格构建或转换数据集&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Data exploration&lt;/td&gt;
+&lt;td&gt;探索已有数据集&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Data cleaning&lt;/td&gt;
+&lt;td&gt;清洗、填补、归一化和批次处理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Metabolite annotation&lt;/td&gt;
+&lt;td&gt;对 feature 或查询进行注释&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pathway analysis&lt;/td&gt;
+&lt;td&gt;对符合条件的化合物做通路分析&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QC report&lt;/td&gt;
+&lt;td&gt;输出样品与 feature 质量报告&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Targeted peak extractor&lt;/td&gt;
+&lt;td&gt;提取预定义 m/z–RT 目标的峰面积与峰形&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;sample--file-checker&#34;&gt;Sample &amp;amp; file checker&lt;/h2&gt;
+&lt;p&gt;提供样品 CSV 和原始文件目录，选择匹配列。普通样品清单通常用 &lt;code&gt;sample_id&lt;/code&gt;；进样计划有重复 QC 时通常用唯一的 &lt;code&gt;file_name&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;工具检查 mzML、mzXML 和 Thermo RAW 的文件名，不代表能够读取或转换 Thermo RAW 的谱图。匹配去掉扩展名后进行，并区分大小写。检查缺失、重复和未预期文件后，再进行大规模分析。&lt;/p&gt;
+&lt;h2 id=&#34;injection-sequence-designer&#34;&gt;Injection sequence designer&lt;/h2&gt;
+&lt;p&gt;最少输入：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sample_id
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;S001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;S002
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;S003
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;也可包含 &lt;code&gt;group&lt;/code&gt;、&lt;code&gt;position&lt;/code&gt; 或 &lt;code&gt;vial_position&lt;/code&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击 &lt;strong&gt;Import sample CSV&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;设定 batch 数、随机化和随机种子。&lt;/li&gt;
+&lt;li&gt;设置 Conditioning QC、Pooled QC、Blank、RTQC、MS2 QC 的启用与插入规则。&lt;/li&gt;
+&lt;li&gt;检查每批的样品数和总进样次数。&lt;/li&gt;
+&lt;li&gt;导出 running list、metadata 或保存计划 JSON。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;随机化是全体研究样品打乱后分批，不是生物学组别的分层平衡设计。加入 QC 后，总进样次数会超过研究样品数。&lt;/p&gt;
+&lt;p&gt;重复进样必须有唯一文件名。导出的 metadata 使用进样文件名作为 &lt;code&gt;sample_id&lt;/code&gt;，并保留原样品标识，有助于随后与实际原始文件匹配。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当前导出是通用进样计划，不保证可直接导入某一版本的 Xcalibur。&lt;/strong&gt; 仪器软件要求的列名、方法路径、瓶位和进样量，需要依据该仪器的实际模板确认。&lt;/p&gt;
+&lt;h2 id=&#34;raw-chromatograms&#34;&gt;Raw chromatograms&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;选择一个或多个 mzML/mzXML，设定 MS level。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Read TIC / BPC&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在结果中选择 TIC 或 BPC，默认 TIC。&lt;/li&gt;
+&lt;li&gt;hover 查看 RT；点击色谱位置检查该处的扫描谱，并选择对应样品。&lt;/li&gt;
+&lt;li&gt;读取后再输入目标离子 m/z、容差和单位，提取 EIC。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;输入的是离子 m/z，不是中性分子质量。MS2 模式下的 EIC 表示相应 MS2 扫描中碎片离子的强度随时间变化，不能自动解释为某个特定前体的靶向碎片曲线。&lt;/p&gt;
+&lt;h2 id=&#34;qc-report&#34;&gt;QC report&lt;/h2&gt;
+&lt;p&gt;输入 &lt;code&gt;mass_dataset&lt;/code&gt; 的 RDS/RData，设置 QC RSD、缺失率和 Sample / Blank 阈值。报告只评估和标记，不自动删除 feature。&lt;/p&gt;
+&lt;p&gt;Intensity across injection order 是输入强度矩阵的总强度趋势，不是从原始扫描提取的 TIC。已经归一化或填补的矩阵会影响指标含义。&lt;/p&gt;
+&lt;h2 id=&#34;targeted-peak-extractor&#34;&gt;Targeted peak extractor&lt;/h2&gt;
+&lt;p&gt;输入目标 CSV：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;target_id,mz,rt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_A,195.0877,180
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_B,300.1234,240
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;RT 单位为秒。选择原始文件、m/z 容差和 RT 积分窗口后运行。&lt;/p&gt;
+&lt;p&gt;当前方法累加容差内的 MS1 信号，并在固定 RT 窗口用梯形法积分。它不是化合物鉴定，也不会自动拆分共洗脱峰。检查峰形后再解释面积结果。预览可限制样品数，导出范围以工具说明为准。&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Shiny tools 与 R environment</title>
+      <link>https://www.tidymass.org/zh/macos/shiny-and-packages/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/zh/macos/shiny-and-packages/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;两个入口的区别&#34;&gt;两个入口的区别&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Shiny tools&lt;/strong&gt; 安装和启动一个完整的 Shiny 应用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;R environment&lt;/strong&gt; 查看当前 R 环境，并安装额外 R 包，例如工具缺失的依赖。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;给 Shiny 安装一个依赖包，不需要把它再注册为一个 Shiny 工具。&lt;/p&gt;
+&lt;h2 id=&#34;安装-shiny-应用&#34;&gt;安装 Shiny 应用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 Shiny tools → &lt;strong&gt;Install a Shiny tool&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;选择 GitHub、CRAN 或 Bioconductor。&lt;/li&gt;
+&lt;li&gt;输入仓库地址或包名。&lt;/li&gt;
+&lt;li&gt;如已知，可填写 R package name 和 Startup function；否则先留空尝试自动识别。&lt;/li&gt;
+&lt;li&gt;确认来源可信后勾选界面的信任选项，点击 &lt;strong&gt;Install tool&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;用 &lt;strong&gt;View log&lt;/strong&gt; 检查安装过程。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;GitHub 仓库名不一定等于 R 包名。例如仓库名可能含下划线，而实际包名不同。不要把整个 GitHub URL 填到 R package name 中。&lt;/p&gt;
+&lt;p&gt;工具执行的是本机 R 代码，不只是一个静态网页。第三方应用的功能和依赖由其开发者决定。&lt;/p&gt;
+&lt;h2 id=&#34;启动与管理&#34;&gt;启动与管理&lt;/h2&gt;
+&lt;p&gt;在 Installed tools 点击 &lt;strong&gt;Open tool&lt;/strong&gt;。应用占据左侧导航栏之外的主要空间，顶部保留返回、停止和日志按钮。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Back to installed tools&lt;/strong&gt; 返回列表，不等同于停止进程；需要释放该工具资源时点击 &lt;strong&gt;Stop tool&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Manage tool&lt;/strong&gt; 中可配置启动模式：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模式&lt;/th&gt;
+&lt;th&gt;使用场景&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Auto-detect&lt;/td&gt;
+&lt;td&gt;优先尝试自动识别&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Exported function&lt;/td&gt;
+&lt;td&gt;包导出了明确的启动函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Package app_ui / app_server&lt;/td&gt;
+&lt;td&gt;包提供相应 UI 和 server 接口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shiny application folder&lt;/td&gt;
+&lt;td&gt;选择含 Shiny 应用文件的目录，以 &lt;code&gt;shiny::runApp()&lt;/code&gt; 启动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;启动函数只填函数名，例如 &lt;code&gt;run_featuremap&lt;/code&gt;，不要填 &lt;code&gt;featuremapshiny::run_featuremap()&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;runApp&lt;/code&gt; 是 shiny 包中的函数，并不是每个第三方包都导出了自己的 &lt;code&gt;runApp&lt;/code&gt;。若报 “not an exported object”，检查启动模式和实际函数名。&lt;/p&gt;
+&lt;h2 id=&#34;安装缺失的-r-包&#34;&gt;安装缺失的 R 包&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;打开左下角 &lt;strong&gt;R environment&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;查看已安装包，确认报错中缺少的准确包名。&lt;/li&gt;
+&lt;li&gt;在包安装区域选择正确来源并输入包名或仓库地址。&lt;/li&gt;
+&lt;li&gt;检查安装日志。&lt;/li&gt;
+&lt;li&gt;安装成功后停止并重新启动相关 Shiny 工具。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;例如 &lt;code&gt;org.Mm.eg.db&lt;/code&gt; 属于 Bioconductor，应按其来源安装，而不是将它当作 CRAN 包。&lt;/p&gt;
+&lt;p&gt;额外包库与应用内置库分开管理。Shiny 工具还可能具有自己的私有依赖库；核心分析与第三方工具的库搜索优先级可能不同。因此“某处安装成功”不代表每个进程已经加载同一版本，重启工具后仍报错时应查看日志和实际包版本。&lt;/p&gt;
+&lt;p&gt;从源码安装的包可能需要编译器或系统依赖。遇到此类失败，安装更多 R 包不一定能解决问题，应先找到日志中的首个实际错误。&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>导出、项目保存与恢复</title>
+      <link>https://www.tidymass.org/zh/macos/export-and-recovery/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/zh/macos/export-and-recovery/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;下载单张图片&#34;&gt;下载单张图片&lt;/h2&gt;
+&lt;p&gt;在图片附近点击 &lt;strong&gt;Download plot&lt;/strong&gt;，选择提供的格式。宽高以英寸为单位，PNG 可设置 DPI。部分图还提供 &lt;strong&gt;Download CSV&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;交互图当前缩放范围不一定等于导出范围，尤其是 R 重新生成的图。需要保存特定范围时先检查图旁说明和导出结果。&lt;/p&gt;
+&lt;h2 id=&#34;导出完整分析结果&#34;&gt;导出完整分析结果&lt;/h2&gt;
+&lt;p&gt;在 &lt;strong&gt;Results &amp;amp; export&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;选择 &lt;strong&gt;Selected run&lt;/strong&gt; 或 &lt;strong&gt;All completed datasets / queries&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;如果只导出某次运行，选择对应运行 ID。&lt;/li&gt;
+&lt;li&gt;勾选 R 对象、完整表格、Code/参数/日志/会话信息，以及所需图形。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Export selected content&lt;/strong&gt;，选择目标位置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果选择完整项目副本，它会包含该项目保存的完整产物，不受其他单项内容勾选的限制。但项目之外的原始文件、数据库等不应被默认认为已经归档；仍需单独核对与备份。&lt;/p&gt;
+&lt;p&gt;表格页面可能分页或仅显示预览，完整导出应通过完整表格下载或 Results &amp;amp; export 完成。&lt;/p&gt;
+&lt;p&gt;试跑也是独立的保存记录。导出时检查运行 ID 与用途，避免把小规模试跑当作正式全样品结果。&lt;/p&gt;
+&lt;h2 id=&#34;保存的内容&#34;&gt;保存的内容&lt;/h2&gt;
+&lt;p&gt;项目保存运行状态、参数、输入关系和结果。每次运行目录通常包含请求参数、日志、执行与复现代码、R 对象及相应输出。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code&lt;/strong&gt; 用于查看代码记录。执行记录不一定是可直接复制执行的独立脚本；完整复现还需要正确的数据路径、数据库及兼容的软件环境。&lt;/p&gt;
+&lt;h2 id=&#34;重开项目&#34;&gt;重开项目&lt;/h2&gt;
+&lt;p&gt;通过 &lt;strong&gt;Open project&lt;/strong&gt; 选择含 &lt;code&gt;project.json&lt;/code&gt; 的项目目录。软件根据保存结果重建工作流状态。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已完成步骤可以继续使用。&lt;/li&gt;
+&lt;li&gt;上次未完成的执行可能标为 interrupted。&lt;/li&gt;
+&lt;li&gt;上游更新后的下游结果可能标为 stale。&lt;/li&gt;
+&lt;li&gt;丢失结果文件时需恢复对应运行目录或重新执行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不要手工修改 &lt;code&gt;project.json&lt;/code&gt; 中的状态来解锁步骤，这不会生成缺失的数据。&lt;/p&gt;
+&lt;h2 id=&#34;迁移和清理&#34;&gt;迁移和清理&lt;/h2&gt;
+&lt;p&gt;迁移前复制整个项目目录，另外核对外部原始数据和数据库。项目内部结果路径可以随项目位置恢复，但外部文件引用不保证随迁移自动修复。&lt;/p&gt;
+&lt;p&gt;通过软件的 &lt;strong&gt;Storage&lt;/strong&gt; 查看可管理的缓存，清理前阅读其说明。扫描缓存可减少重复读取；清除后再次提取峰形可能需要重新读取原始数据。&lt;/p&gt;
+&lt;p&gt;不要在分析运行中手工删除 run 文件夹。多个软件实例也不应同时修改同一个项目；遇到项目锁提示，先关闭另一个实例。&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>常见问题</title>
+      <link>https://www.tidymass.org/zh/macos/troubleshooting/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.tidymass.org/zh/macos/troubleshooting/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;处理步骤或结果&#34;&gt;处理步骤或结果&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;现象&lt;/th&gt;
+&lt;th&gt;检查与处理&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;第四步无法开始&lt;/td&gt;
+&lt;td&gt;检查第三步是否有当前有效结果；试跑不满足正式前置条件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;重跑上游后下游显示 stale&lt;/td&gt;
+&lt;td&gt;下游仍依赖旧输入，需要从受影响步骤重新运行；历史结果保留&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;取消或重开后不能从内部进度继续&lt;/td&gt;
+&lt;td&gt;当前恢复以保存步骤为单位，不支持峰检测内部续算&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;试跑完成但 Raw data processing 没有打勾&lt;/td&gt;
+&lt;td&gt;正常；检查参数后点击 Process raw data 进行正式处理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;页面显示的 feature 数与导出不同&lt;/td&gt;
+&lt;td&gt;检查当前筛选、分页和预览限制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Exclude 后下游仍有该 feature&lt;/td&gt;
+&lt;td&gt;人工 Exclude 是审查标记；实际清洗需另行运行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MS2 / 注释字段为 No 或 NA&lt;/td&gt;
+&lt;td&gt;可能未关联谱图或未做注释，不应直接判断“该物质不存在”&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;修改参数后图没有改变&lt;/td&gt;
+&lt;td&gt;参数影响下一次运行；当前图属于保存的结果&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;输入与统计&#34;&gt;输入与统计&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;报错或现象&lt;/th&gt;
+&lt;th&gt;检查与处理&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Sample IDs do not match&lt;/td&gt;
+&lt;td&gt;检查文件名去扩展名后的 ID、大小写、前导零、重复与漏行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Group column not found&lt;/td&gt;
+&lt;td&gt;将 Group column 设置为样品信息中的真实列名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QC filtering enabled but no QC samples&lt;/td&gt;
+&lt;td&gt;核对定量 QC 的 class；没有合适 QC 时关闭依赖 QC 的设置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;统计前仍存在缺失值&lt;/td&gt;
+&lt;td&gt;检查 cleaning 设置、填补方法和当前输入版本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;配对分析报错&lt;/td&gt;
+&lt;td&gt;检查 subject ID，两组应一一对应，不能按行号推断&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pathway analysis 没有结果&lt;/td&gt;
+&lt;td&gt;核对注释 ID、背景和输入筛选；空结果可能合理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;峰形提取找不到文件&lt;/td&gt;
+&lt;td&gt;检查原始文件是否移动、改名或被替换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;运行期间&#34;&gt;运行期间&lt;/h2&gt;
+&lt;p&gt;任务中心面板可以关闭，计算会继续。若提示 R busy，说明当前操作需要新计算而 R 正忙；等待任务完成后再试。浏览已保存摘要与已缓存结果不应被理解为可以并发运行多个分析。&lt;/p&gt;
+&lt;p&gt;内存接近电脑总量时，先查看 Computer used 和 TidyMass used，区分系统其他进程与当前分析；按实际情况减少 worker 数或试跑规模。不要把增加线程数当作一定更快。&lt;/p&gt;
+&lt;h2 id=&#34;shiny-与-r-包&#34;&gt;Shiny 与 R 包&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Missing package&lt;/strong&gt;：在 R environment 安装正确来源的包，之后重启工具。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Invalid R package name&lt;/strong&gt;：检查是否把仓库名或 URL 当作包名；包名应以实际包元数据为准。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;not an exported object&lt;/strong&gt;：检查 Manage tool 中的启动模式和函数名。&lt;/li&gt;
+&lt;li&gt;页面文字可读但图片丢失、样式异常：可能是静态资源路径问题，不一定是字符编码错误；保存日志和截图。&lt;/li&gt;
+&lt;li&gt;安装日志出现 warning：区分警告与导致失败的 error，查看最后状态及首个关键失败原因。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;提交问题时提供什么&#34;&gt;提交问题时提供什么&lt;/h2&gt;
+&lt;p&gt;请提供软件版本、macOS/Windows 版本、具体工具或 workflow 步骤、运行 ID、复现操作和相关日志。数据问题可附脱敏的样品信息表头与几行示例。&lt;/p&gt;
+&lt;p&gt;保留出现问题的项目和运行记录，先不要删除缓存或历史结果。日志可能包含本地路径和样品标识，分享前检查其中的敏感信息。&lt;/p&gt;
+</description>
+    </item>
+
+  </channel>
+</rss>
