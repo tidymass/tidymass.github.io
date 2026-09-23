@@ -27157,6 +27157,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/installation/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-installation-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-installation-en.svg&#34; alt=&#34;Choose a deployment route. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose a deployment route. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-installation-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;For local use, keep the R console running while the browser is open. The browser shows the interface but R performs the analysis. With Docker, select files under the mounted container path. On a hosted service, upload files and retain the JOB ID.&lt;/p&gt;
 &lt;h2 id=&#34;choose-where-to-run&#34;&gt;Choose where to run&lt;/h2&gt;
 &lt;p&gt;The &lt;a href=&#34;https://tidymassshiny.jaspershenlab.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hosted application&lt;/a&gt; runs on a remote server. The published guide describes a 512 MB upload limit and deletion of results after 24 hours; these are service settings and can change. Follow the notices shown by the running service, save the &lt;strong&gt;JOB ID&lt;/strong&gt;, and download results with &lt;strong&gt;Download All Data&lt;/strong&gt; before leaving.&lt;/p&gt;
 &lt;p&gt;A local installation runs R on your computer and provides access to your local files. Docker runs the app in a container; only mounted host folders are visible there. Choose a local or appropriately managed server installation for data that should not be uploaded to the public service.&lt;/p&gt;
@@ -27185,6 +27193,17 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;For a shared server, use a supported R/Shiny Server environment, an application service account, persistent working directories and the required R/system dependencies. Configure authorized users&amp;rsquo; file access, resource limits and the public endpoint with the administrator. A &lt;code&gt;shinyFiles&lt;/code&gt; picker sees the filesystem of the R server, not arbitrary folders on a remote browser user&amp;rsquo;s computer. Upload controls are the route for transferring browser-side files.&lt;/p&gt;
 &lt;p&gt;The older tutorial includes Ubuntu-specific deployment examples. Check their suitability for your server instead of copying obsolete OS repository keys or version-pinned installer URLs blindly.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-check-the-project-entry-after-launch&#34;&gt;Walkthrough: Check the project entry after launch&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/project_initiate.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/project_initiate.png&#34; alt=&#34;Check the project entry after launch. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Check the project entry after launch. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/project_initiate.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The appearance of the app navigation confirms that the browser has connected to the service; it does not confirm access to your data directory.&lt;/li&gt;
+&lt;li&gt;Initialize a small project in a writable location. For Docker, use the mounted path; for the hosted app, follow its upload and JOB ID workflow.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27193,6 +27212,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/macos/getting-started/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-getting-started-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-getting-started-en.svg&#34; alt=&#34;Your first project. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Your first project. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-getting-started-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Wait until the R environment is ready. Choose the untargeted workflow, enter a recognizable name, and select a writable parent folder. After importing files, compare the displayed sample count against your sample sheet before advancing to peak detection.&lt;/p&gt;
 &lt;h2 id=&#34;install-on-macos&#34;&gt;Install on macOS&lt;/h2&gt;
 &lt;p&gt;Open the TidyMass DMG, drag &lt;strong&gt;TidyMass&lt;/strong&gt; to &lt;strong&gt;Applications&lt;/strong&gt;, and open it there. Wait for the &lt;strong&gt;R environment&lt;/strong&gt; check to finish. This guide targets the &lt;strong&gt;0.1.65 Apple Silicon preview&lt;/strong&gt;. A public installer link has not yet been verified; use the preview installer supplied by the project maintainers and check the version shown in the app. An Intel Mac build is not documented here.&lt;/p&gt;
 &lt;p&gt;The app includes R and its core packages. You do not need to install R separately for the core workflow. Optional third-party Shiny tools can require additional packages or system libraries.&lt;/p&gt;
@@ -27247,6 +27274,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;/table&gt;
 &lt;p&gt;A &lt;strong&gt;project&lt;/strong&gt; holds analysis records; a &lt;strong&gt;run&lt;/strong&gt; is one execution; a &lt;strong&gt;feature&lt;/strong&gt; is a detected signal, not automatically an identified compound. Changing parameters affects a new run. Use &lt;strong&gt;Settings used for this result&lt;/strong&gt; to inspect how a saved result was produced.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;TidyMass used&lt;/strong&gt;, &lt;strong&gt;Computer used&lt;/strong&gt; and &lt;strong&gt;Computer total&lt;/strong&gt; report different memory quantities. A high system total is not necessarily caused by this app. After your first run, verify sample counts, missingness, peak shapes and warnings. A completed task confirms execution, not scientific validity.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27255,6 +27295,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/getting-started/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-getting-started-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-getting-started-en.svg&#34; alt=&#34;Your first project. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Your first project. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-getting-started-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Wait until the R environment is ready. Choose the untargeted workflow, enter a recognizable name, and select a writable parent folder. After importing files, compare the displayed sample count against your sample sheet before advancing to peak detection.&lt;/p&gt;
 &lt;h2 id=&#34;install-on-windows&#34;&gt;Install on Windows&lt;/h2&gt;
 &lt;p&gt;This guide targets the &lt;strong&gt;0.1.63 Windows x64 preview&lt;/strong&gt;. Obtain the preview ZIP from the maintainers, extract it fully, and run &lt;code&gt;TidyMass-0.1.63-windows-x64-setup.exe&lt;/code&gt;. A public download has not yet been verified; the existing CI artifact requires GitHub repository access. Do not use a macOS DMG or rename an installer to change platforms.&lt;/p&gt;
 &lt;p&gt;Follow the installer, launch TidyMass and wait for &lt;strong&gt;R environment&lt;/strong&gt; to finish checking the bundled R 4.5.2 and core packages. You do not need a separate system R for the main workflow. Prefer a local writable project folder; keep the raw data available for later peak inspection. If Windows blocks an unknown publisher, verify the supplied installer and its checksum with the maintainers before allowing this app.&lt;/p&gt;
@@ -27309,6 +27357,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;/table&gt;
 &lt;p&gt;A &lt;strong&gt;project&lt;/strong&gt; holds analysis records; a &lt;strong&gt;run&lt;/strong&gt; is one execution; a &lt;strong&gt;feature&lt;/strong&gt; is a detected signal, not automatically an identified compound. Changing parameters affects a new run. Use &lt;strong&gt;Settings used for this result&lt;/strong&gt; to inspect how a saved result was produced.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;TidyMass used&lt;/strong&gt;, &lt;strong&gt;Computer used&lt;/strong&gt; and &lt;strong&gt;Computer total&lt;/strong&gt; report different memory quantities. A high system total is not necessarily caused by this app. After your first run, verify sample counts, missingness, peak shapes and warnings. A completed task confirms execution, not scientific validity.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27316,7 +27377,15 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <link>https://www.tidymass.org/r-package/installation/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-package/installation/</guid>
-      <description>&lt;h2 id=&#34;prepare-r&#34;&gt;Prepare R&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-installation-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-installation-en.svg&#34; alt=&#34;Verify the R environment. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Verify the R environment. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-installation-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Run installation commands in the R console, one block at a time. Resolve the first dependency error before continuing. Then load tidymass and record sessionInfo(); a successful download alone does not mean the package can load.&lt;/p&gt;
+&lt;h2 id=&#34;prepare-r&#34;&gt;Prepare R&lt;/h2&gt;
 &lt;p&gt;This guide checks tidymass 2.0.10 and the current source of its companion packages. Some packages declare R 4.1 as a minimum, but current masstools requires R ≥ 4.5. Use R 4.5 or a later compatible release satisfying the full dependency set, with a writable user library and your preferred IDE.&lt;/p&gt;
 &lt;p&gt;Source compilation on Windows needs a toolchain matching R; macOS may need command-line development tools and package-specific system libraries. Diagnose the first substantive installation error before adding dependencies. Docker/ProteoWizard is an additional requirement for relevant raw-format conversion, not for reading an existing peak table.&lt;/p&gt;
 &lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
@@ -27344,6 +27413,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/inputs-and-processing/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-inputs-and-processing-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-inputs-and-processing-en.svg&#34; alt=&#34;Select the right import route. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Select the right import route. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-inputs-and-processing-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Raw files need processing; an existing peak table already contains extracted intensities; a saved mass_dataset may contain earlier processing history. Choose the matching import module. Inspect the resulting sample count, feature count and metadata before opening Overview.&lt;/p&gt;
 &lt;h2 id=&#34;initialize-a-project&#34;&gt;Initialize a project&lt;/h2&gt;
 &lt;p&gt;Choose a working directory, upload &lt;code&gt;sample_info.csv&lt;/code&gt;, map its columns when necessary, then click &lt;strong&gt;Initialize Project&lt;/strong&gt;. Inspect the resulting sample information. IDs must match the intensity columns or raw filenames exactly; distinguish biological &lt;strong&gt;group&lt;/strong&gt;, sample &lt;strong&gt;class&lt;/strong&gt;, batch and acquisition order.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sample_id,group,class,injection.order,batch
@@ -27364,29 +27441,20 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Click &lt;strong&gt;Input file summary&lt;/strong&gt; and check matching, polarity, sample counts and feature counts before &lt;strong&gt;Generate massdataset object&lt;/strong&gt;. Inspect the separate positive/negative outputs. An extra text annotation column can be mistaken for intensity input, so remove or import it through the appropriate annotation route.&lt;/p&gt;
 &lt;h2 id=&#34;start-with-an-existing-object&#34;&gt;Start with an existing object&lt;/h2&gt;
 &lt;p&gt;Choose &lt;strong&gt;Start with mass_dataset file&lt;/strong&gt;, load the positive and negative objects into their respective controls, and use &lt;strong&gt;Check input&lt;/strong&gt;. A CSV is not an R object merely because its extension is changed. Keep the original object and its package-version record.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/project_initiate.png&#34; alt=&#34;Project initialization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 &lt;p&gt;The screenshot is from the existing published Shiny tutorial; minor visual details can differ across deployments.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/upstream-data-processing.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-the-peak-table-layout&#34;&gt;Walkthrough: Read the peak-table layout&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; alt=&#34;Read the peak-table layout. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read the peak-table layout. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The highlighted columns describe each feature: variable_id, mz, rt and ion. Each remaining column contains one sample’s intensities.&lt;/li&gt;
+&lt;li&gt;Match sample-column names exactly to sample metadata. Keep missing intensities as NA; do not replace them with zero merely to make the table look complete.&lt;/li&gt;
+&lt;li&gt;In the current importer, map the four feature fields and select the correct RT unit. The historical screenshot shows one valid naming convention, not a requirement that every original file use these exact names.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27395,6 +27463,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/macos/input-data/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-input-data-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-input-data-en.svg&#34; alt=&#34;Match files to the sample sheet. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Match files to the sample sheet. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-input-data-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Make a list of raw file basenames and compare it with sample_id. Resolve duplicates, missing files and unexpected files first. Set biological groups independently of class: QC and Blank describe sample roles, while Control and Treatment describe the comparison.&lt;/p&gt;
 &lt;h2 id=&#34;raw-files&#34;&gt;Raw files&lt;/h2&gt;
 &lt;p&gt;The untargeted workflow and &lt;strong&gt;Raw chromatograms&lt;/strong&gt; read &lt;strong&gt;mzML / mzXML&lt;/strong&gt;. Convert proprietary vendor files with a suitable instrument-compatible converter first. Process positive and negative ion modes as separate projects. Keep each file&amp;rsquo;s basename unique, including across subfolders; do not distinguish samples only by letter case.&lt;/p&gt;
 &lt;p&gt;The project records the file locations. Keep raw files available and unchanged while analyzing: later EIC and spectrum inspection can need them.&lt;/p&gt;
@@ -27449,6 +27525,18 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Each feature ID must be unique; intensity columns must match the sample information. RT is in seconds in this example: match the import unit selector. &lt;code&gt;NA&lt;/code&gt; is missing; zero remains a numeric observation. Preserve the source and evidence of any annotation columns.&lt;/p&gt;
 &lt;h2 id=&#34;ms2-and-input-checks&#34;&gt;MS2 and input checks&lt;/h2&gt;
 &lt;p&gt;Attach MS2 using a supported import, builder or annotation entry. Association with a feature depends on precursor m/z and RT, and does not establish a unique structure. Use &lt;strong&gt;Sample &amp;amp; file checker&lt;/strong&gt; to detect duplicates, missing files and unexpected files before a large run. RDS/RData imports must contain the supported object type, such as a single &lt;code&gt;mass_dataset&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-understand-feature-rows-and-sample-columns&#34;&gt;Walkthrough: Understand feature rows and sample columns&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; alt=&#34;Understand feature rows and sample columns. Table example from the published Shiny tutorial, used to explain data layout; it is not a desktop import screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Understand feature rows and sample columns. Table example from the published Shiny tutorial, used to explain data layout; it is not a desktop import screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Each row is a feature with its own ID, m/z and RT. Sample columns contain intensities.&lt;/li&gt;
+&lt;li&gt;For the desktop peak-table route, follow the required fields in the template; ion handling differs from the Shiny importer. Do not paste metadata columns into the intensity matrix.&lt;/li&gt;
+&lt;li&gt;Match each intensity column to one sample-sheet row and inspect missing values before importing.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27457,6 +27545,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/input-data/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-input-data-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-input-data-en.svg&#34; alt=&#34;Match files to the sample sheet. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Match files to the sample sheet. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-input-data-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Make a list of raw file basenames and compare it with sample_id. Resolve duplicates, missing files and unexpected files first. Set biological groups independently of class: QC and Blank describe sample roles, while Control and Treatment describe the comparison.&lt;/p&gt;
 &lt;h2 id=&#34;raw-files&#34;&gt;Raw files&lt;/h2&gt;
 &lt;p&gt;The untargeted workflow and &lt;strong&gt;Raw chromatograms&lt;/strong&gt; read &lt;strong&gt;mzML / mzXML&lt;/strong&gt;. Convert proprietary vendor files with a suitable instrument-compatible converter first. Process positive and negative ion modes as separate projects. Keep each file&amp;rsquo;s basename unique, including across subfolders; do not distinguish samples only by letter case.&lt;/p&gt;
 &lt;p&gt;The project records the file locations. Keep raw files available and unchanged while analyzing: later EIC and spectrum inspection can need them.&lt;/p&gt;
@@ -27511,6 +27607,18 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Each feature ID must be unique; intensity columns must match the sample information. RT is in seconds in this example: match the import unit selector. &lt;code&gt;NA&lt;/code&gt; is missing; zero remains a numeric observation. Preserve the source and evidence of any annotation columns.&lt;/p&gt;
 &lt;h2 id=&#34;ms2-and-input-checks&#34;&gt;MS2 and input checks&lt;/h2&gt;
 &lt;p&gt;Attach MS2 using a supported import, builder or annotation entry. Association with a feature depends on precursor m/z and RT, and does not establish a unique structure. Use &lt;strong&gt;Sample &amp;amp; file checker&lt;/strong&gt; to detect duplicates, missing files and unexpected files before a large run. RDS/RData imports must contain the supported object type, such as a single &lt;code&gt;mass_dataset&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-understand-feature-rows-and-sample-columns&#34;&gt;Walkthrough: Understand feature rows and sample columns&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; alt=&#34;Understand feature rows and sample columns. Table example from the published Shiny tutorial, used to explain data layout; it is not a desktop import screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Understand feature rows and sample columns. Table example from the published Shiny tutorial, used to explain data layout; it is not a desktop import screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Each row is a feature with its own ID, m/z and RT. Sample columns contain intensities.&lt;/li&gt;
+&lt;li&gt;For the desktop peak-table route, follow the required fields in the template; ion handling differs from the Shiny importer. Do not paste metadata columns into the intensity matrix.&lt;/li&gt;
+&lt;li&gt;Match each intensity column to one sample-sheet row and inspect missing values before importing.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27521,6 +27629,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <description>&lt;p&gt;&lt;strong&gt;Version checked for this guide: 2.0.10&lt;/strong&gt; · 2026-09-23&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;tidymass&lt;/code&gt; installs and attaches a coordinated set of packages. It does not replace their individual functions. Start here to inspect the package set, detect namespace conflicts and record versions. Load extra packages such as massdatabase and massconverter explicitly when needed.&lt;/p&gt;
 &lt;p&gt;Use a fresh R session for installation or updates. Save the old project&amp;rsquo;s package versions before upgrading, restart R afterwards and rerun a representative analysis. A successful update check is not a guarantee that every remote repository was reachable.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-tidymass-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-tidymass-en.svg&#34; alt=&#34;The ecosystem entry point. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;The ecosystem entry point. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-tidymass-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Use the startup messages to see which packages are attached. If two packages provide the same function name, use package::function to make the intended implementation explicit. Keep specialist packages available even when they are not attached by the umbrella package.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;Package discovery; conflict reporting; version checks; coordinated updates.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -27547,6 +27663,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/quality-and-cleaning/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-quality-and-cleaning-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-quality-and-cleaning-en.svg&#34; alt=&#34;Keep the cleaning order explicit. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Keep the cleaning order explicit. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-quality-and-cleaning-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Generate the overview before making changes. Record the missingness criteria and any removed samples, then impute and normalize. Save intermediate objects so a later analysis can return to the correct input rather than repeat undocumented operations.&lt;/p&gt;
 &lt;h2 id=&#34;generate-an-overview&#34;&gt;Generate an overview&lt;/h2&gt;
 &lt;p&gt;Open &lt;strong&gt;Overview&lt;/strong&gt; and click &lt;strong&gt;START&lt;/strong&gt;. Review m/z–RT distribution, missingness by sample/feature, QC RSD, intensity distributions, PCA and sample correlations. Select the relevant group, batch or injection-order coloring and download plots with their settings.&lt;/p&gt;
 &lt;p&gt;QC RSD describes technical repeatability where suitable quantitative QCs exist. Matrix intensity totals are not automatically raw TIC. Investigate suspicious samples against acquisition records before excluding them.&lt;/p&gt;
@@ -27562,6 +27686,42 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Record batch handling separately from normalization. No normalization method can rescue a completely confounded biological-group/batch design. Separately fitted PCAs should not be compared as a single unchanged coordinate system.&lt;/p&gt;
 &lt;p&gt;Save cleaned objects and diagnostic outputs before proceeding to annotation or statistics.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/upstream-data-processing.html#data-cleaning&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-the-overview-panels&#34;&gt;Walkthrough: Read the overview panels&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/Overview1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/Overview1.png&#34; alt=&#34;Read the overview panels. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read the overview panels. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/Overview1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Click Start to generate the overview and select Positive or Negative consistently across panels.&lt;/li&gt;
+&lt;li&gt;Read m/z–RT density at upper left, the missing-value matrix at upper right, and sample/feature missingness below. These views answer different quality questions.&lt;/li&gt;
+&lt;li&gt;Investigate a suspicious sample against acquisition records. Download the before-cleaning plots before applying any exclusion.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-filter-noisy-features&#34;&gt;Walkthrough: Filter noisy features&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/noisy_metabolites.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/noisy_metabolites.png&#34; alt=&#34;Filter noisy features. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Filter noisy features. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/noisy_metabolites.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set the QC missingness cutoff only if suitable quantitative QCs exist, and choose the biological grouping column.&lt;/li&gt;
+&lt;li&gt;Set the group missingness threshold and click Start. The 20%/50% values pictured are tutorial examples, not universal standards.&lt;/li&gt;
+&lt;li&gt;Read the updated object dimensions in Status and use Show plot to inspect the chosen sample class. Save the retained-feature list and criteria.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-configure-missing-value-imputation&#34;&gt;Walkthrough: Configure missing-value imputation&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/imputation1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/imputation1.png&#34; alt=&#34;Configure missing-value imputation. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Configure missing-value imputation. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/imputation1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Select the method first. The picture shows kNN and its k, rowmax, colmax, maxp and random-seed controls.&lt;/li&gt;
+&lt;li&gt;Choose k with regard to the available data; rowmax/colmax control admissible missingness while maxp is a block-size control, not a missingness percentage.&lt;/li&gt;
+&lt;li&gt;After running, check the expression table and Status history. Compare missing-value counts before and after; investigate remaining NA values rather than silently discarding them.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27570,6 +27730,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/macos/workflow/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-workflow-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-workflow-en.svg&#34; alt=&#34;The eight-stage route. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;The eight-stage route. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-workflow-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;At each stage, open the settings and confirm the selected input. Run once, wait for completion, and inspect warnings plus the displayed dataset summary. Continue only after the sample/feature counts and plots make sense. Saving parameter drafts does not recompute the displayed result.&lt;/p&gt;
 &lt;h2 id=&#34;1-data-import&#34;&gt;1. Data import&lt;/h2&gt;
 &lt;p&gt;Choose mzML/mzXML files and sample information, review the groups and click &lt;strong&gt;Import raw files&lt;/strong&gt;. Import registers files; it does not detect chromatographic peaks. Folder grouping is a convenience, so check it against the biological design.&lt;/p&gt;
 &lt;h2 id=&#34;2-raw-data-processing&#34;&gt;2. Raw data processing&lt;/h2&gt;
@@ -27593,6 +27761,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;h2 id=&#34;continue-or-rerun&#34;&gt;Continue or rerun&lt;/h2&gt;
 &lt;p&gt;Reopen a saved project to continue at the first unfinished step whose prerequisites are satisfied. A successful upstream rerun makes dependent downstream results &lt;strong&gt;stale&lt;/strong&gt;; rerun the affected steps. Old results remain in &lt;strong&gt;Run history&lt;/strong&gt;. A failed or canceled retry does not replace the previous successful result.&lt;/p&gt;
 &lt;p&gt;Recovery operates between saved steps, not at an arbitrary scan inside interrupted peak detection.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27601,6 +27782,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/workflow/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-workflow-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-workflow-en.svg&#34; alt=&#34;The eight-stage route. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;The eight-stage route. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-workflow-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;At each stage, open the settings and confirm the selected input. Run once, wait for completion, and inspect warnings plus the displayed dataset summary. Continue only after the sample/feature counts and plots make sense. Saving parameter drafts does not recompute the displayed result.&lt;/p&gt;
 &lt;h2 id=&#34;1-data-import&#34;&gt;1. Data import&lt;/h2&gt;
 &lt;p&gt;Choose mzML/mzXML files and sample information, review the groups and click &lt;strong&gt;Import raw files&lt;/strong&gt;. Import registers files; it does not detect chromatographic peaks. Folder grouping is a convenience, so check it against the biological design.&lt;/p&gt;
 &lt;h2 id=&#34;2-raw-data-processing&#34;&gt;2. Raw data processing&lt;/h2&gt;
@@ -27624,6 +27813,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;h2 id=&#34;continue-or-rerun&#34;&gt;Continue or rerun&lt;/h2&gt;
 &lt;p&gt;Reopen a saved project to continue at the first unfinished step whose prerequisites are satisfied. A successful upstream rerun makes dependent downstream results &lt;strong&gt;stale&lt;/strong&gt;; rerun the affected steps. Old results remain in &lt;strong&gt;Run history&lt;/strong&gt;. A failed or canceled retry does not replace the previous successful result.&lt;/p&gt;
 &lt;p&gt;Recovery operates between saved steps, not at an arbitrary scan inside interrupted peak detection.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27635,6 +27837,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;The central &lt;code&gt;mass_dataset&lt;/code&gt; combines an expression matrix, sample information, feature information, optional MS2, annotation tables and processing history. Rows of the matrix are features; columns are samples. Its identifiers and ordering must match the metadata.&lt;/p&gt;
 &lt;p&gt;For your data, read the three tables, preserve IDs as text, place numeric intensities in the expression matrix, and align its columns/rows to sample/feature IDs before calling &lt;code&gt;create_mass_dataset()&lt;/code&gt;. The example below uses package data to demonstrate the contract. Use &lt;code&gt;activate_mass_dataset()&lt;/code&gt; before a tidy transformation to state whether sample or feature metadata is being edited.&lt;/p&gt;
 &lt;p&gt;Import MS2 with &lt;code&gt;mutate_ms2()&lt;/code&gt; after checking polarity, RT units and precursor/RT tolerances. Use extraction functions to obtain ordinary tables, &lt;code&gt;export_mass_dataset()&lt;/code&gt; for interchange and RDS to retain the full R object. Converters support documented MS-DIAL/MZmine, mzTab and SummarizedExperiment routes; inspect their input-specific requirements rather than treating every CSV as interchangeable.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massdataset-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-massdataset-en.svg&#34; alt=&#34;Three tables, one object. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Three tables, one object. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massdataset-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Read the intensity matrix by rows (features) and columns (samples). Its row names must correspond to variable_info$variable_id and column names to sample_info$sample_id, in the same order. After construction, inspect dimensions and metadata before attaching MS2 or annotation results.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;Dataset construction and validation; sample/feature editing, filtering, joins and merges; MS2 import and export; annotation and history access; missingness/RSD summaries; data-format conversion.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -27656,6 +27866,18 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;&lt;code&gt;activate_mass_dataset&lt;/code&gt;, &lt;code&gt;adjust_confounder&lt;/code&gt;, &lt;code&gt;aes&lt;/code&gt;, &lt;code&gt;arrange&lt;/code&gt;, &lt;code&gt;case_when&lt;/code&gt;, &lt;code&gt;cbind_mass_dataset&lt;/code&gt;, &lt;code&gt;check_annotation_table&lt;/code&gt;, &lt;code&gt;check_column_name&lt;/code&gt;, &lt;code&gt;check_mass_dataset&lt;/code&gt;, &lt;code&gt;check_mass_dataset_class&lt;/code&gt;, &lt;code&gt;check_object_class&lt;/code&gt;, &lt;code&gt;convert_mass_dataset2mztab&lt;/code&gt;, &lt;code&gt;convert_mass_dataset2summarizedexperiment&lt;/code&gt;, &lt;code&gt;convert_msdial2mass_dataset&lt;/code&gt;, &lt;code&gt;convert_mztab2mass_dataset&lt;/code&gt;, &lt;code&gt;convet_mzmine2mass_dataset&lt;/code&gt;, &lt;code&gt;count&lt;/code&gt;, &lt;code&gt;create_mass_dataset&lt;/code&gt;, &lt;code&gt;desc&lt;/code&gt;, &lt;code&gt;drop_na&lt;/code&gt;, &lt;code&gt;export_mass_dataset&lt;/code&gt;, &lt;code&gt;export_mass_dataset4metdna&lt;/code&gt;, &lt;code&gt;export_ms2_data&lt;/code&gt;, &lt;code&gt;extract_annotation_table&lt;/code&gt;, &lt;code&gt;extract_expression_data&lt;/code&gt;, &lt;code&gt;extract_ms2_data&lt;/code&gt;, &lt;code&gt;extract_process_info&lt;/code&gt;, &lt;code&gt;extract_sample_info&lt;/code&gt;, &lt;code&gt;extract_sample_info_note&lt;/code&gt;, &lt;code&gt;extract_variable_info&lt;/code&gt;, &lt;code&gt;extract_variable_info_note&lt;/code&gt;, &lt;code&gt;fill&lt;/code&gt;, &lt;code&gt;filter&lt;/code&gt;, &lt;code&gt;filter_samples&lt;/code&gt;, &lt;code&gt;filter_variables&lt;/code&gt;, &lt;code&gt;get_massdataset_version&lt;/code&gt;, &lt;code&gt;get_mv_number&lt;/code&gt;, &lt;code&gt;get_sample_id&lt;/code&gt;, &lt;code&gt;get_sample_number&lt;/code&gt;, &lt;code&gt;get_variable_id&lt;/code&gt;, &lt;code&gt;get_variable_number&lt;/code&gt;, &lt;code&gt;ggplot&lt;/code&gt;, &lt;code&gt;ggplot_mass_dataset&lt;/code&gt;, &lt;code&gt;glimpse&lt;/code&gt;, &lt;code&gt;group_by&lt;/code&gt;, &lt;code&gt;hello_world&lt;/code&gt;, &lt;code&gt;intensity_plot&lt;/code&gt;, &lt;code&gt;left_join&lt;/code&gt;, &lt;code&gt;left_join_mass_dataset&lt;/code&gt;, &lt;code&gt;massdataset_conflicts&lt;/code&gt;, &lt;code&gt;massdataset_logo&lt;/code&gt;, &lt;code&gt;massdataset_packages&lt;/code&gt;, &lt;code&gt;match_mz_rt&lt;/code&gt;, &lt;code&gt;merge_mass_dataset&lt;/code&gt;, &lt;code&gt;ms2_plot&lt;/code&gt;, &lt;code&gt;mutate&lt;/code&gt;, &lt;code&gt;mutate_all&lt;/code&gt;, &lt;code&gt;mutate_annotation_table&lt;/code&gt;, &lt;code&gt;mutate_at&lt;/code&gt;, &lt;code&gt;mutate_mean_intensity&lt;/code&gt;, &lt;code&gt;mutate_median_intensity&lt;/code&gt;, &lt;code&gt;mutate_ms2&lt;/code&gt;, &lt;code&gt;mutate_rsd&lt;/code&gt;, &lt;code&gt;mutate_sample_na_freq&lt;/code&gt;, &lt;code&gt;mutate_sample_na_number&lt;/code&gt;, &lt;code&gt;mutate_sample_zero_freq&lt;/code&gt;, &lt;code&gt;mutate_sample_zero_number&lt;/code&gt;, &lt;code&gt;mutate_variable_na_freq&lt;/code&gt;, &lt;code&gt;mutate_variable_na_number&lt;/code&gt;, &lt;code&gt;mutate_variable_zero_freq&lt;/code&gt;, &lt;code&gt;mutate_variable_zero_number&lt;/code&gt;, &lt;code&gt;n&lt;/code&gt;, &lt;code&gt;parse_tidymass_parameter&lt;/code&gt;, &lt;code&gt;pivot_longer&lt;/code&gt;, &lt;code&gt;plot_ms2&lt;/code&gt;, &lt;code&gt;pull&lt;/code&gt;, &lt;code&gt;rbind_mass_dataset&lt;/code&gt;, &lt;code&gt;read_mgf&lt;/code&gt;, &lt;code&gt;read_mztab&lt;/code&gt;, &lt;code&gt;read_mzxml&lt;/code&gt;, &lt;code&gt;relocate&lt;/code&gt;, &lt;code&gt;rename&lt;/code&gt;, &lt;code&gt;rename_with&lt;/code&gt;, &lt;code&gt;report_parameters&lt;/code&gt;, &lt;code&gt;select&lt;/code&gt;, &lt;code&gt;show_missing_values&lt;/code&gt;, &lt;code&gt;show_mz_rt_plot&lt;/code&gt;, &lt;code&gt;show_sample_missing_values&lt;/code&gt;, &lt;code&gt;show_variable_missing_values&lt;/code&gt;, &lt;code&gt;slice&lt;/code&gt;, &lt;code&gt;slice_head&lt;/code&gt;, &lt;code&gt;slice_max&lt;/code&gt;, &lt;code&gt;slice_min&lt;/code&gt;, &lt;code&gt;slice_sample&lt;/code&gt;, &lt;code&gt;slice_tail&lt;/code&gt;, &lt;code&gt;split_mass_dataset&lt;/code&gt;, &lt;code&gt;summarise&lt;/code&gt;, &lt;code&gt;summarise_samples&lt;/code&gt;, &lt;code&gt;summarize&lt;/code&gt;, &lt;code&gt;summarize_samples&lt;/code&gt;, &lt;code&gt;translate_tidymass_parameter&lt;/code&gt;, &lt;code&gt;transmute&lt;/code&gt;, &lt;code&gt;update_mass_dataset&lt;/code&gt;, &lt;code&gt;update_sample_info&lt;/code&gt;, &lt;code&gt;update_variable_info&lt;/code&gt;, &lt;code&gt;write_ms2_data&lt;/code&gt;&lt;/p&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/tidymass/massdataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Package source and reference documentation&lt;/a&gt; · &lt;a href=&#34;../workflow/&#34;&gt;Complete workflow&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-missingness-in-the-packaged-example&#34;&gt;Walkthrough: Read missingness in the packaged example&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/missingness.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r/missingness.png&#34; alt=&#34;Read missingness in the packaged example. Generated from massdataset expression_data: 1,000 features × 8 samples; these are tutorial data.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read missingness in the packaged example. Generated from massdataset expression_data: 1,000 features × 8 samples; these are tutorial data. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/missingness.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The left bars show missing matrix cells per sample as a percentage of 1,000 features. Compare samples before deciding whether one is problematic.&lt;/li&gt;
+&lt;li&gt;The right histogram summarizes feature-level missingness across eight samples. A feature missing in all samples contributes no quantitative evidence.&lt;/li&gt;
+&lt;li&gt;Use these diagnostics to choose and document filtering rules. The plot itself does not prescribe a universal threshold.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27664,6 +27886,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/annotation-and-statistics/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-annotation-and-statistics-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-annotation-and-statistics-en.svg&#34; alt=&#34;Connect evidence to interpretation. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Connect evidence to interpretation. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-annotation-and-statistics-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Check the selected dataset before each module. Confirm annotation evidence, comparison direction, statistical correction and pathway organism in turn. Do not copy numeric thresholds from example screenshots without checking your design and data.&lt;/p&gt;
 &lt;h2 id=&#34;attach-experimental-ms2&#34;&gt;Attach experimental MS2&lt;/h2&gt;
 &lt;p&gt;Choose &lt;strong&gt;Select MS2 folder&lt;/strong&gt; and the prepared MGF files, separated by polarity. Set chromatography and precursor m/z/RT association tolerances, then click &lt;strong&gt;Start&lt;/strong&gt;. Association tolerance links a spectrum to a feature; it is distinct from matching to a reference library.&lt;/p&gt;
 &lt;h2 id=&#34;annotate-metabolites&#34;&gt;Annotate metabolites&lt;/h2&gt;
@@ -27677,29 +27907,44 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Use only the biological samples intended for the test. Do not infer pairing from row order. If the module cannot represent the study&amp;rsquo;s repeated measures or covariates, export the object and use the appropriate R model.&lt;/p&gt;
 &lt;h2 id=&#34;pathway-enrichment&#34;&gt;Pathway enrichment&lt;/h2&gt;
 &lt;p&gt;Choose KEGG/HMDB or &lt;strong&gt;Upload custom database&lt;/strong&gt;, verify the organism and ID system, and set the adjustment method, cutoff and threads. Inspect the bar/scatter plots and mapping coverage. Review candidate ambiguity, collapse redundant compound IDs and record the background used by the method. Enrichment is a statistical association with a reference set, not direct proof of pathway activation.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/metabolite_annotation.png&#34; alt=&#34;Annotation settings&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 &lt;p&gt;Screenshot from the existing published tutorial.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/downstream-data-processing.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-configure-annotation-evidence&#34;&gt;Walkthrough: Configure annotation evidence&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/metabolite_annotation.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/metabolite_annotation.png&#34; alt=&#34;Configure annotation evidence. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Configure annotation evidence. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/metabolite_annotation.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Select the data, reference database and polarity. Confirm chromatography and adduct choices before setting mass and RT tolerances.&lt;/li&gt;
+&lt;li&gt;Run annotation and inspect candidate-level evidence. A candidate without experimental MS2 cannot be described as MS2-confirmed.&lt;/li&gt;
+&lt;li&gt;Download the full candidate table, including scores and database provenance, before proceeding to statistics.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-read-the-group-comparison-view&#34;&gt;Walkthrough: Read the group-comparison view&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/dam.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/dam.png&#34; alt=&#34;Read the group-comparison view. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read the group-comparison view. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/dam.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Check the current object and Column index, then select First group and Second group. Record the fold-change direction used by the installed module.&lt;/li&gt;
+&lt;li&gt;Set effect-size and statistical thresholds deliberately. The screenshot’s FDR value of 1 is permissive and should not be copied as a recommended discovery cutoff.&lt;/li&gt;
+&lt;li&gt;Click Start and inspect the full table, especially fc, p_value and p_value_adjust. Read PCA as descriptive structure; return to individual peak evidence before interpreting prominent volcano points.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-inspect-pathway-enrichment&#34;&gt;Walkthrough: Inspect pathway enrichment&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/enrichment.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/enrichment.png&#34; alt=&#34;Inspect pathway enrichment. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Inspect pathway enrichment. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/enrichment.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Select a database appropriate to the organism. The pictured KEGG (hsa) option is human-specific; another organism needs an appropriate resource.&lt;/li&gt;
+&lt;li&gt;Set the adjustment method, test and cutoff, then Start enrichment. Inspect mapped compounds and background assumptions alongside the reported pathway table.&lt;/li&gt;
+&lt;li&gt;Download the full results, not just the bar chart. Large visual effects or disease names in a pathway label do not establish causation in your study.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27711,6 +27956,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Use massconverter to configure a ProteoWizard/msconvert conversion workflow and convert vendor files into open formats. It is separate from chromatographic peak detection. Successful conversion depends on the vendor reader, platform, container and access to the source directory.&lt;/p&gt;
 &lt;p&gt;Choose mzML/mzXML, centroiding method, polarity and MS levels deliberately. Preserve MS2 when later annotation needs it. Keep the original acquisition files. First convert one file, then inspect scan counts, RT range, polarity and TIC before batching. Vendor centroiding is only available where the reader supports it; a container does not make every vendor format universally compatible.&lt;/p&gt;
 &lt;p&gt;The example builds a parameter object; the commented call performs file conversion after you configure Docker/ProteoWizard and replace paths.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massconverter-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-massconverter-en.svg&#34; alt=&#34;Convert before peak detection. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Convert before peak detection. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massconverter-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Work on a copy of the raw files. After conversion, open a representative file and verify polarity, scan count, retention-time range and MS levels. A file extension change is not a conversion; peak detection starts only after readable mass-spectrometry data exist.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;Conversion parameter creation and validation; command generation; container preparation; batch file conversion.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -27740,6 +27993,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/macos/trials-tasks-templates/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-trials-tasks-templates-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-trials-tasks-templates-en.svg&#34; alt=&#34;Trial settings before a full run. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Trial settings before a full run. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-trials-tasks-templates-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In macOS 0.1.65, select representative trial samples and inspect the trial result. The trial label distinguishes this from a formal workflow result. Restore the desired settings before the full run. Templates transfer parameter drafts, so reselect input paths, databases and comparison groups in the new project.&lt;/p&gt;
 &lt;h2 id=&#34;try-parameters-on-a-small-subset&#34;&gt;Try parameters on a small subset&lt;/h2&gt;
 &lt;p&gt;Open &lt;strong&gt;Workflows → Raw data processing → Analysis settings → Parameter trial&lt;/strong&gt; after importing files.&lt;/p&gt;
 &lt;ol&gt;
@@ -27759,6 +28020,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Above the analysis panels, expand &lt;strong&gt;Workflow templates&lt;/strong&gt;, enter &lt;strong&gt;New workflow template name&lt;/strong&gt;, then click &lt;strong&gt;Save workflow template&lt;/strong&gt;. A template collects parameters for seven analysis stages. It uses current drafts, saved settings or defaults, and records which stages had current successful results. Defaults saved in a template are not a validated method.&lt;/p&gt;
 &lt;p&gt;In another project, select the &lt;strong&gt;Workflow template&lt;/strong&gt;, inspect &lt;strong&gt;Preview settings&lt;/strong&gt; and its source version, and click &lt;strong&gt;Apply workflow template&lt;/strong&gt;. Configure this project&amp;rsquo;s files, databases, sample choices and comparison groups before running each step.&lt;/p&gt;
 &lt;p&gt;Templates retain reusable parameters, software version and source-stage records. They omit raw/database paths, sample choices, trial subsets and comparison-group IDs. Export choices are separate. Applying a template changes parameter drafts; it does not execute the workflow, change historical results or bypass prerequisites. Templates are local to this computer&amp;rsquo;s TidyMass user-data directory.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-inspect-a-parameter-trial-and-template&#34;&gt;Walkthrough: Inspect a parameter trial and template&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/parameter-trial.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/parameter-trial.png&#34; alt=&#34;Inspect a parameter trial and template. Actual macOS preview 0.1.65 screenshot with a synthetic raw-data fixture; it is not a biological result.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Inspect a parameter trial and template. Actual macOS preview 0.1.65 screenshot with a synthetic raw-data fixture; it is not a biological result. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/parameter-trial.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In Workflow templates, preview a saved template before Apply workflow template. The banner asks you to recheck input files, databases and comparison groups.&lt;/li&gt;
+&lt;li&gt;The result badge starts with Trial. This distinguishes the one-sample/two-feature example from a full formal run. A trial does not unlock all downstream stages.&lt;/li&gt;
+&lt;li&gt;Expand Settings used for this result. Draft differs means current parameter drafts differ from those that produced this saved result.&lt;/li&gt;
+&lt;li&gt;Choose a peak in Inspect trial peak and click Show peak shape. Inspect its apex, baseline and extraction boundaries. Restore suitable settings and process the complete imported dataset when satisfied.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27767,6 +28041,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/tasks-and-reruns/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-tasks-and-reruns-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-tasks-and-reruns-en.svg&#34; alt=&#34;Understand saved and stale results. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Understand saved and stale results. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-tasks-and-reruns-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Wait for the current R task to finish before submitting a new one. Read the saved run settings when comparing two results. After a successful upstream rerun, follow the workflow order through stale downstream steps; a previous result remaining visible does not make it current.&lt;/p&gt;
 &lt;h2 id=&#34;monitor-and-cancel&#34;&gt;Monitor and cancel&lt;/h2&gt;
 &lt;p&gt;Inspect the running operation and its logs. To stop it, use the interface&amp;rsquo;s cancellation button and wait for the status update. Do not delete project files to stop computation. Reducing worker count can reduce parallel memory requirements.&lt;/p&gt;
 &lt;h2 id=&#34;check-parameters-on-a-small-dataset&#34;&gt;Check parameters on a small dataset&lt;/h2&gt;
@@ -27775,6 +28057,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Reopen a project and continue from the first unfinished step with satisfied prerequisites. A successful upstream rerun makes affected downstream results stale. Rerun those stages; Run history retains previous records. Canceled peak detection must be started again, without scan-level resume.&lt;/p&gt;
 &lt;h2 id=&#34;differences-from-macos-0165&#34;&gt;Differences from macOS 0.1.65&lt;/h2&gt;
 &lt;p&gt;Windows 0.1.63 does not include the newer Parameter trial, Task center, Workflow templates, resizable plot/table workspace or Basic / Quality / Annotation column views. Follow this Windows guide for the shared analysis steps. After upgrading, use the documentation matching the actual installed version.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27783,6 +28078,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/macos/feature-review/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-feature-review-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-feature-review-en.svg&#34; alt=&#34;Review one feature at a time. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Review one feature at a time. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-feature-review-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Begin with Clear filters if the table unexpectedly becomes empty. Select a feature, load its evidence, and check peak shape across representative samples. Save a review note with a reason. Exclude is a review label; use the cleaning/filtering operation when you intend to remove data from subsequent analysis.&lt;/p&gt;
 &lt;h2 id=&#34;browse-features&#34;&gt;Browse features&lt;/h2&gt;
 &lt;p&gt;In &lt;strong&gt;Data exploration&lt;/strong&gt;, open &lt;strong&gt;m/z–RT distribution&lt;/strong&gt;. On macOS 0.1.65, the plot and feature table share a resizable workspace; narrow windows stack them. Selecting a point or row synchronizes the selection and reveals feature details. Use &lt;strong&gt;Find feature by ID&lt;/strong&gt; for an exact lookup.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Previous feature / Next feature&lt;/strong&gt; follow the filtered, sorted feature list. Left/right arrow keys work when the detail area is focused, without intercepting normal text editing.&lt;/p&gt;
@@ -27797,6 +28100,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;h2 id=&#34;plot-and-table-downloads&#34;&gt;Plot and table downloads&lt;/h2&gt;
 &lt;p&gt;Drag to zoom; use &lt;strong&gt;Reset view&lt;/strong&gt; or double-click to reset. &lt;strong&gt;Download plot&lt;/strong&gt; offers the supported formats, dimensions and PNG DPI. &lt;strong&gt;Download CSV&lt;/strong&gt;, where present, exports plot data. Read the adjacent information icon: some downloads regenerate the full plot instead of preserving the current zoom.&lt;/p&gt;
 &lt;p&gt;Use &lt;strong&gt;Download complete CSV&lt;/strong&gt; or &lt;strong&gt;Results &amp;amp; export&lt;/strong&gt; for complete tables. Pagination and limited previews do not define the full export scope.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-filter-select-and-record-a-feature-review&#34;&gt;Walkthrough: Filter, select, and record a feature review&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/feature-browser.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/feature-browser.png&#34; alt=&#34;Filter, select, and record a feature review. Real component-test screenshot from the 0.1.65 source checkout; all 1,200 features and quality values are synthetic test fixtures.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Filter, select, and record a feature review. Real component-test screenshot from the 0.1.65 source checkout; all 1,200 features and quality values are synthetic test fixtures. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/feature-browser.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set Feature filters to narrow the visible rows. Clear filters restores the available features; filters do not rewrite the analysis matrix.&lt;/li&gt;
+&lt;li&gt;Click a feature ID in the table. The plot and detail panel follow the selected feature; the example highlights feature_5. Column view changes visible columns rather than the underlying values.&lt;/li&gt;
+&lt;li&gt;Click Load intensities, MS2 &amp;amp; candidates, then inspect the evidence tabs. Expand Samples and extraction settings before Show peak shape to choose samples and extraction windows.&lt;/li&gt;
+&lt;li&gt;Write a reason in Review note, choose Review status, and click Save review. Export reviews CSV to preserve the audit trail. Synthetic QC values in this test image must not be interpreted as real assay performance.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27805,6 +28121,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/feature-review/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-feature-review-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-feature-review-en.svg&#34; alt=&#34;Review one feature at a time. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Review one feature at a time. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-feature-review-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Begin with Clear filters if the table unexpectedly becomes empty. Select a feature, load its evidence, and check peak shape across representative samples. Save a review note with a reason. Exclude is a review label; use the cleaning/filtering operation when you intend to remove data from subsequent analysis.&lt;/p&gt;
 &lt;h2 id=&#34;browse-features&#34;&gt;Browse features&lt;/h2&gt;
 &lt;p&gt;Open &lt;strong&gt;m/z–RT distribution&lt;/strong&gt; in Data exploration and select a point or table row to inspect a feature. Use &lt;strong&gt;Find feature by ID&lt;/strong&gt; for exact lookup and &lt;strong&gt;Previous feature / Next feature&lt;/strong&gt; to move through the filtered, sorted list. Sort table columns and add a few sample-intensity columns as needed.&lt;/p&gt;
 &lt;p&gt;Windows 0.1.63 uses the earlier plot/table layout. The resizable workspace and column-view selector belong to macOS 0.1.65.&lt;/p&gt;
@@ -27817,6 +28141,18 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;h2 id=&#34;plot-and-table-downloads&#34;&gt;Plot and table downloads&lt;/h2&gt;
 &lt;p&gt;Drag to zoom; use &lt;strong&gt;Reset view&lt;/strong&gt; or double-click to reset. &lt;strong&gt;Download plot&lt;/strong&gt; offers the supported formats, dimensions and PNG DPI. &lt;strong&gt;Download CSV&lt;/strong&gt;, where present, exports plot data. Read the adjacent information icon: some downloads regenerate the full plot instead of preserving the current zoom.&lt;/p&gt;
 &lt;p&gt;Use &lt;strong&gt;Download complete CSV&lt;/strong&gt; or &lt;strong&gt;Results &amp;amp; export&lt;/strong&gt; for complete tables. Pagination and limited previews do not define the full export scope.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-locate-the-feature-dataset-before-reviewing&#34;&gt;Walkthrough: Locate the feature dataset before reviewing&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Locate the feature dataset before reviewing. macOS preview 0.1.59 shared-workflow screenshot, not a Windows capture.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Locate the feature dataset before reviewing. macOS preview 0.1.59 shared-workflow screenshot, not a Windows capture. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Select Data exploration and verify the displayed run and feature count.&lt;/li&gt;
+&lt;li&gt;Open Data table or the feature exploration plot to select an ID, then inspect the available intensities, MS2 and chromatographic evidence.&lt;/li&gt;
+&lt;li&gt;When saving a review, retain the run ID and feature ID together. Do not assume a review label removes that feature from downstream calculations.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27825,6 +28161,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/toolkits/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-toolkits-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-toolkits-en.svg&#34; alt=&#34;Toolkits are separate analysis routes. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Toolkits are separate analysis routes. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-toolkits-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Read the input panel for the chosen toolkit. fMSEA uses feature-level inputs and module analysis, while compound-based pathway enrichment uses mapped compound IDs. Save the chosen parameters and mapping outputs; an optional language-model explanation is not experimental evidence.&lt;/p&gt;
 &lt;h2 id=&#34;fmsea&#34;&gt;fMSEA&lt;/h2&gt;
 &lt;p&gt;Open &lt;strong&gt;Tidymass shiny toolkits → fMSEA Analysis&lt;/strong&gt;. Load the required R data files: a processed &lt;strong&gt;Feature Table&lt;/strong&gt;, an &lt;strong&gt;MS1 Database&lt;/strong&gt; (KEGG/HMDB as supported) and a &lt;strong&gt;Pathway Database&lt;/strong&gt;. The published module lists KEGG, HMDB, IMETPD, Reactome and WikiPathways resources. Use the module&amp;rsquo;s demo/file schema, not an arbitrary renamed CSV.&lt;/p&gt;
 &lt;ol&gt;
@@ -27844,29 +28188,20 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Find the intended organism code, for example hsa or mmu, from KEGG&amp;rsquo;s organism list. Open &lt;strong&gt;KEGG Pathway Database Construction&lt;/strong&gt;, use &lt;strong&gt;Set working directory&lt;/strong&gt;, enter the code and a request interval (the tutorial uses at least one second), then &lt;strong&gt;Download pathway&lt;/strong&gt;. Monitor network errors and resulting file paths. Verify that pathway IDs carry the intended species prefix before enrichment; preserve retrieval date and organism code.&lt;/p&gt;
 &lt;h2 id=&#34;convert-metabolite-ids&#34;&gt;Convert metabolite IDs&lt;/h2&gt;
 &lt;p&gt;Select the provider under &lt;strong&gt;Convert Parameters&lt;/strong&gt;, choose &lt;strong&gt;Source ID Type&lt;/strong&gt; and &lt;strong&gt;Target ID Type&lt;/strong&gt;, enter queries in &lt;strong&gt;Conversion Input&lt;/strong&gt; and click &lt;strong&gt;Convert ID&lt;/strong&gt;. Inspect failed and one-to-many mappings instead of silently dropping them. API-based services require their credentials. The experimental LLM conversion route may produce incorrect identifiers; verify structures/identifiers independently before using them in a database or pathway analysis.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/fmsea_visulization.png&#34; alt=&#34;fMSEA results&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 &lt;p&gt;Screenshot from the existing published tutorial.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/tidymass-shiny-toolkits.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-inspect-a-functional-module&#34;&gt;Walkthrough: Inspect a functional module&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/fmsea_visulization.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/fmsea_visulization.png&#34; alt=&#34;Inspect a functional module. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Inspect a functional module. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/fmsea_visulization.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Complete the required fMSEA input and analysis steps before opening module visualization.&lt;/li&gt;
+&lt;li&gt;Inspect the features and relationships in a module, then compare their statistics and candidate annotations. A cluster in the graph is not automatic structural confirmation.&lt;/li&gt;
+&lt;li&gt;Save the module tables and visualization settings. Keep optional generated interpretations separate from measured evidence.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -27878,6 +28213,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Start with converted mzML/mzXML files in a dedicated processing directory, normally grouped into sample-type subdirectories such as QC and Subject. Run positive and negative modes separately. &lt;code&gt;process_data()&lt;/code&gt; performs raw-data processing and writes outputs under &lt;code&gt;Result&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Set ppm from instrument performance, peakwidth in seconds from chromatography, and signal/noise, prefilter and noise using representative files. &lt;code&gt;bw&lt;/code&gt; and &lt;code&gt;min_fraction&lt;/code&gt; affect across-sample grouping. &lt;code&gt;fill_peaks&lt;/code&gt; controls chromatographic gap filling, not statistical imputation. Reduce threads when memory is limiting.&lt;/p&gt;
 &lt;p&gt;Review TIC/BPC, RT correction, the peak table and extracted EICs. Preserve intermediate files if later inspection requires them. The parameter values below are an example, not a validated method for your instrument. Inspect output files after the call; do not assume its return value is the final dataset.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massprocesser-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-massprocesser-en.svg&#34; alt=&#34;From scans to feature intensities. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;From scans to feature intensities. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massprocesser-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Begin with representative files spanning your batches. Adjust ppm to mass accuracy and peakwidth to observed peak duration. After processing, inspect EIC shapes and RT alignment, then check sample and feature counts. More detected rows alone do not establish better parameters.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;Raw processing; EIC extraction; chromatogram visualization; adjusted-RT visualization; targeted-table validation.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -27959,6 +28302,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-analysis-tools-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-analysis-tools-en.svg&#34; alt=&#34;Choose the smallest relevant tool. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose the smallest relevant tool. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-analysis-tools-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Read the tool card before opening it. For raw chromatograms supply raw files; for quality reports supply a compatible dataset. A standalone tool does not automatically rerun the full workflow. Check its own input, parameters and output directory.&lt;/p&gt;
 &lt;h2 id=&#34;sample--file-checker&#34;&gt;Sample &amp;amp; file checker&lt;/h2&gt;
 &lt;p&gt;Supply a sample CSV and raw folder; select the matching column. Use &lt;code&gt;sample_id&lt;/code&gt; for a typical sample sheet, or unique &lt;code&gt;file_name&lt;/code&gt; for an injection list with repeated QCs. Matching strips extensions and is case-sensitive. The checker recognizes mzML, mzXML and Thermo RAW filenames; recognition does not mean it can read or convert Thermo spectra. Resolve missing, duplicate and unexpected entries before analysis.&lt;/p&gt;
 &lt;h2 id=&#34;injection-sequence-designer&#34;&gt;Injection sequence designer&lt;/h2&gt;
@@ -27975,6 +28326,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_A,195.0877,180
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_B,300.1234,240
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;RT is in seconds. Choose raw files, m/z tolerance and a fixed RT integration window, then run and inspect peak shapes. The current method sums MS1 signal within the tolerance and integrates by the trapezoidal rule. It does not identify compounds or automatically separate coeluting peaks. Check the preview and export scope before interpreting areas.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-choose-an-independent-tool&#34;&gt;Walkthrough: Choose an independent tool&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; alt=&#34;Choose an independent tool. Actual macOS preview 0.1.56 screenshot; card layout may vary in later builds.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose an independent tool. Actual macOS preview 0.1.56 screenshot; card layout may vary in later builds. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open Analysis tools in the left navigation, then read the card title and input description.&lt;/li&gt;
+&lt;li&gt;Use Sample &amp;amp; file checker before processing to investigate unmatched files. Use Raw chromatograms to inspect acquisition signals without first completing a full feature workflow.&lt;/li&gt;
+&lt;li&gt;Click Open tool on the intended card and create its project. Provide its required files or dataset, inspect settings, then run.&lt;/li&gt;
+&lt;li&gt;For Targeted peak extractor, inspect the requested m/z and RT windows plus the extracted EIC. A fixed-window integral is not automatically a validated quantitative assay.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28038,6 +28402,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-analysis-tools-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-analysis-tools-en.svg&#34; alt=&#34;Choose the smallest relevant tool. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose the smallest relevant tool. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-analysis-tools-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Read the tool card before opening it. For raw chromatograms supply raw files; for quality reports supply a compatible dataset. A standalone tool does not automatically rerun the full workflow. Check its own input, parameters and output directory.&lt;/p&gt;
 &lt;h2 id=&#34;sample--file-checker&#34;&gt;Sample &amp;amp; file checker&lt;/h2&gt;
 &lt;p&gt;Supply a sample CSV and raw folder; select the matching column. Use &lt;code&gt;sample_id&lt;/code&gt; for a typical sample sheet, or unique &lt;code&gt;file_name&lt;/code&gt; for an injection list with repeated QCs. Matching strips extensions and is case-sensitive. The checker recognizes mzML, mzXML and Thermo RAW filenames; recognition does not mean it can read or convert Thermo spectra. Resolve missing, duplicate and unexpected entries before analysis.&lt;/p&gt;
 &lt;h2 id=&#34;injection-sequence-designer&#34;&gt;Injection sequence designer&lt;/h2&gt;
@@ -28054,6 +28426,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_A,195.0877,180
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_B,300.1234,240
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;RT is in seconds. Choose raw files, m/z tolerance and a fixed RT integration window, then run and inspect peak shapes. The current method sums MS1 signal within the tolerance and integrates by the trapezoidal rule. It does not identify compounds or automatically separate coeluting peaks. Check the preview and export scope before interpreting areas.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-choose-an-independent-tool&#34;&gt;Walkthrough: Choose an independent tool&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; alt=&#34;Choose an independent tool. Actual macOS preview 0.1.56 screenshot; card layout may vary in later builds. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose an independent tool. Actual macOS preview 0.1.56 screenshot; card layout may vary in later builds. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open Analysis tools in the left navigation, then read the card title and input description.&lt;/li&gt;
+&lt;li&gt;Use Sample &amp;amp; file checker before processing to investigate unmatched files. Use Raw chromatograms to inspect acquisition signals without first completing a full feature workflow.&lt;/li&gt;
+&lt;li&gt;Click Open tool on the intended card and create its project. Provide its required files or dataset, inspect settings, then run.&lt;/li&gt;
+&lt;li&gt;For Targeted peak extractor, inspect the requested m/z and RT windows plus the extracted EIC. A fixed-window integral is not automatically a validated quantitative assay.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28065,6 +28450,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Begin with a validated &lt;code&gt;mass_dataset&lt;/code&gt; and sample classes, batches and injection order. Filter excessive missingness before imputation. Review outlier candidates with experimental records, rather than automatically deleting every unusual PCA sample.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;impute_mv()&lt;/code&gt; offers kNN, random forest, simple-value and model-based methods. Choose the method and sample subset based on the missingness mechanism and data size. &lt;code&gt;normalize_data()&lt;/code&gt; provides sample-wise total, mean, median and PQN methods and QC-based SVR/LOESS. QC correction needs suitable QC coverage and acquisition metadata. &lt;code&gt;integrate_data()&lt;/code&gt; and &lt;code&gt;align_batch()&lt;/code&gt; address supported cross-batch tasks; they do not resolve a design in which batch and biological group are completely confounded.&lt;/p&gt;
 &lt;p&gt;Preserve the input object, inspect missingness and QC metrics afterwards and compare before/after plots. For predictive modeling, fit preprocessing within each training fold to avoid leakage. The example uses median imputation and median normalization only to illustrate the API.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-masscleaner-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-masscleaner-en.svg&#34; alt=&#34;Keep each cleaning checkpoint. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Keep each cleaning checkpoint. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-masscleaner-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Save the unmodified object first. Inspect which rows fail your missingness rule, then impute only the retained data. Compare intensity distributions and QC behavior after normalization. Document the method and excluded IDs; never treat imputed values as independently observed peaks.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;Outlier detection and reporting; missing-value imputation; sample-wise/QC-based normalization; LOESS optimization; batch alignment and integration.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -28083,6 +28476,18 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;&lt;code&gt;align_batch&lt;/code&gt;, &lt;code&gt;check_for_data_integration&lt;/code&gt;, &lt;code&gt;check_for_qc_normalization&lt;/code&gt;, &lt;code&gt;detect_outlier&lt;/code&gt;, &lt;code&gt;extract_outlier_table&lt;/code&gt;, &lt;code&gt;get_masscleaner_version&lt;/code&gt;, &lt;code&gt;impute_mv&lt;/code&gt;, &lt;code&gt;integrate_data&lt;/code&gt;, &lt;code&gt;masscleaner_conflicts&lt;/code&gt;, &lt;code&gt;masscleaner_logo&lt;/code&gt;, &lt;code&gt;masscleaner_packages&lt;/code&gt;, &lt;code&gt;normalize_data&lt;/code&gt;, &lt;code&gt;normalize_data_pqn&lt;/code&gt;, &lt;code&gt;optimize_loess_span&lt;/code&gt;&lt;/p&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/tidymass/masscleaner&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Package source and reference documentation&lt;/a&gt; · &lt;a href=&#34;../workflow/&#34;&gt;Complete workflow&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-compare-intensity-distributions&#34;&gt;Walkthrough: Compare intensity distributions&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/normalization.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r/normalization.png&#34; alt=&#34;Compare intensity distributions. Actual output from the four Subject samples after retaining features observed in at least two samples, median imputation, then median normalization.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Compare intensity distributions. Actual output from the four Subject samples after retaining features observed in at least two samples, median imputation, then median normalization. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/normalization.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Both panels plot log10(intensity + 1) for display; the left input is already filtered and imputed.&lt;/li&gt;
+&lt;li&gt;The right panel follows median normalization. Similar medians are an expected consequence of this method, not independent proof that technical bias is removed.&lt;/li&gt;
+&lt;li&gt;Check study design and quantitative QCs where available before choosing normalization for real data.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28091,6 +28496,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/export-and-troubleshooting/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-export-and-troubleshooting-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-export-and-troubleshooting-en.svg&#34; alt=&#34;Download before ending the session. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Download before ending the session. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-export-and-troubleshooting-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A success message confirms that one operation finished; it does not mean files are saved on your computer. Download the object and full results, inspect the archive, and retain the JOB ID and settings. Resolve the first error in the relevant module if an expected file is absent.&lt;/p&gt;
 &lt;h2 id=&#34;save-a-complete-analysis&#34;&gt;Save a complete analysis&lt;/h2&gt;
 &lt;p&gt;Keep the initialized sample sheet, raw-file references, intermediate &lt;code&gt;mass_dataset&lt;/code&gt; objects, cleaned and annotated objects, complete statistical/enrichment tables, figures and parameters. For local use, inspect the output directories reported by the app. For hosted use, record the JOB ID and &lt;strong&gt;Download All Data&lt;/strong&gt; before the service retention window expires. Confirm the archive opens and contains the results you intended to keep.&lt;/p&gt;
 &lt;p&gt;When reopening compatible objects or fMSEA results, confirm which steps they represent. Changing a parameter does not retroactively regenerate a saved result. Preserve software/package versions and database provenance alongside the outputs.&lt;/p&gt;
@@ -28147,6 +28560,18 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;/table&gt;
 &lt;p&gt;For a report, include app/package versions, local/Docker/hosted deployment, module, steps to reproduce, logs and a de-identified input example. Do not share API keys or private sample identifiers.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-save-results-after-a-successful-step&#34;&gt;Walkthrough: Save results after a successful step&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/online_success.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/online_success.png&#34; alt=&#34;Save results after a successful step. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Save results after a successful step. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/online_success.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Dismiss Success and check which operation completed. In this historical image the message concerns negative-mode parameter optimization, not an entire study.&lt;/li&gt;
+&lt;li&gt;Use Download mass_dataset for the object and Download All Data for the broader result bundle where provided.&lt;/li&gt;
+&lt;li&gt;Open the downloads and confirm expected files are present. Record the JOB ID and current service retention notice before leaving the hosted session.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28158,6 +28583,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Quality assessment is useful before and after cleaning. Give massqc a &lt;code&gt;mass_dataset&lt;/code&gt; with correct sample classes, batches and injection order. Generate a report into a new output directory and retain the object used to create it.&lt;/p&gt;
 &lt;p&gt;Review missingness by sample and feature, intensity distributions, QC RSD, correlations and PCA. A QC RSD needs actual quantitative QC replicates. A low RSD does not establish metabolite identity, and an unusual PCA point may represent biology. Report which input state was assessed: imputation and normalization affect the metrics.&lt;/p&gt;
 &lt;p&gt;HTML reporting requires the report-rendering dependencies available in your R environment; PDF adds its document toolchain. If rendering fails, inspect the log and produce individual diagnostic plots while resolving the missing renderer.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massqc-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-massqc-en.svg&#34; alt=&#34;Read quality at two levels. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read quality at two levels. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massqc-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A sample with much more missing data may have an acquisition problem; a feature missing from many samples may be unsuitable for the planned analysis. Review these separately. Generate before/after reports from explicitly saved objects, so that any improvement can be traced to a processing step.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;HTML/PDF reports; sample and feature missingness; m/z–RT distributions; RSD curves; intensity boxplots; PCA and sample correlations.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -28172,6 +28605,18 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;&lt;code&gt;extract_expression_data&lt;/code&gt;, &lt;code&gt;extract_process_info&lt;/code&gt;, &lt;code&gt;extract_sample_info&lt;/code&gt;, &lt;code&gt;extract_variable_info&lt;/code&gt;, &lt;code&gt;get_mv_number&lt;/code&gt;, &lt;code&gt;massqc_conflicts&lt;/code&gt;, &lt;code&gt;massqc_cumulative_rsd_plot&lt;/code&gt;, &lt;code&gt;massqc_logo&lt;/code&gt;, &lt;code&gt;massqc_packages&lt;/code&gt;, &lt;code&gt;massqc_pca&lt;/code&gt;, &lt;code&gt;massqc_pca_pc1&lt;/code&gt;, &lt;code&gt;massqc_report&lt;/code&gt;, &lt;code&gt;massqc_rsd_plot&lt;/code&gt;, &lt;code&gt;massqc_sample_boxplot&lt;/code&gt;, &lt;code&gt;massqc_sample_correlation&lt;/code&gt;, &lt;code&gt;show_missing_values&lt;/code&gt;, &lt;code&gt;show_mz_rt_plot&lt;/code&gt;, &lt;code&gt;show_sample_missing_values&lt;/code&gt;, &lt;code&gt;show_variable_missing_values&lt;/code&gt;&lt;/p&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/tidymass/massqc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Package source and reference documentation&lt;/a&gt; · &lt;a href=&#34;../workflow/&#34;&gt;Complete workflow&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-missingness-in-the-packaged-example&#34;&gt;Walkthrough: Read missingness in the packaged example&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/missingness.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r/missingness.png&#34; alt=&#34;Read missingness in the packaged example. Generated from massdataset expression_data: 1,000 features × 8 samples; these are tutorial data.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read missingness in the packaged example. Generated from massdataset expression_data: 1,000 features × 8 samples; these are tutorial data. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/missingness.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The left bars show missing matrix cells per sample as a percentage of 1,000 features. Compare samples before deciding whether one is problematic.&lt;/li&gt;
+&lt;li&gt;The right histogram summarizes feature-level missingness across eight samples. A feature missing in all samples contributes no quantitative evidence.&lt;/li&gt;
+&lt;li&gt;Use these diagnostics to choose and document filtering rules. The plot itself does not prescribe a universal threshold.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28181,6 +28626,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <guid>https://www.tidymass.org/macos/shiny-and-packages/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Shiny tools&lt;/strong&gt; installs and starts complete third-party Shiny apps. &lt;strong&gt;R environment&lt;/strong&gt; inspects R and manages additional packages. Installing a missing dependency does not require registering it as a separate app. The dedicated TidyMass R Shiny tutorial is a separate guide under &lt;strong&gt;TUTORIALS → R shiny&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-shiny-and-packages-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-shiny-and-packages-en.svg&#34; alt=&#34;Manage optional R applications. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Manage optional R applications. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-shiny-and-packages-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Use R environment to inspect installed packages and Shiny tools to manage application launchers. Check the package name and startup function. If launch fails, read the tool log and identify a missing package, system library or startup error before retrying.&lt;/p&gt;
 &lt;h2 id=&#34;install-and-start-a-tool&#34;&gt;Install and start a tool&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Open &lt;strong&gt;Shiny tools → Install a Shiny tool&lt;/strong&gt;.&lt;/li&gt;
@@ -28197,6 +28650,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;h2 id=&#34;install-missing-packages&#34;&gt;Install missing packages&lt;/h2&gt;
 &lt;p&gt;Open &lt;strong&gt;R environment&lt;/strong&gt;, identify the exact missing package, select the correct source and review the installation log. For example, &lt;code&gt;org.Mm.eg.db&lt;/code&gt; is a Bioconductor package. Stop and restart the affected tool after installation.&lt;/p&gt;
 &lt;p&gt;Additional package libraries are managed separately from the app&amp;rsquo;s bundled library, and some tools have private dependency libraries. Check the actual loaded version when a package appears installed but the error persists. Installing from source can require system libraries or compilers; find the first substantive error rather than repeatedly reinstalling unrelated R packages.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-launch-an-installed-shiny-tool&#34;&gt;Walkthrough: Launch an installed Shiny tool&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; alt=&#34;Launch an installed Shiny tool. Actual macOS preview 0.1.39 screenshot with the MAPA example.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Launch an installed Shiny tool. Actual macOS preview 0.1.39 screenshot with the MAPA example. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In Installed tools, read the package name, version and startup function before launching. The stopped badge means the application process is not running.&lt;/li&gt;
+&lt;li&gt;Click Launch once and wait for startup. If startup fails, open View log and use the first error to identify the dependency or function that failed.&lt;/li&gt;
+&lt;li&gt;For another tool, choose the correct package source and repository/package name in the installation form. An installed R package needs a valid Shiny startup function to become a launchable tool.&lt;/li&gt;
+&lt;li&gt;Save results inside the launched application before stopping it. Third-party apps have their own input formats and export controls.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28206,6 +28672,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <guid>https://www.tidymass.org/windows/shiny-and-packages/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Shiny tools&lt;/strong&gt; installs and starts complete third-party Shiny apps. &lt;strong&gt;R environment&lt;/strong&gt; inspects R and manages additional packages. Installing a missing dependency does not require registering it as a separate app. The dedicated TidyMass R Shiny tutorial is a separate guide under &lt;strong&gt;TUTORIALS → R shiny&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-shiny-and-packages-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-shiny-and-packages-en.svg&#34; alt=&#34;Manage optional R applications. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Manage optional R applications. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-shiny-and-packages-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Use R environment to inspect installed packages and Shiny tools to manage application launchers. Check the package name and startup function. If launch fails, read the tool log and identify a missing package, system library or startup error before retrying.&lt;/p&gt;
 &lt;h2 id=&#34;install-and-start-a-tool&#34;&gt;Install and start a tool&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Open &lt;strong&gt;Shiny tools → Install a Shiny tool&lt;/strong&gt;.&lt;/li&gt;
@@ -28222,6 +28696,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;h2 id=&#34;install-missing-packages&#34;&gt;Install missing packages&lt;/h2&gt;
 &lt;p&gt;Open &lt;strong&gt;R environment&lt;/strong&gt;, identify the exact missing package, select the correct source and review the installation log. For example, &lt;code&gt;org.Mm.eg.db&lt;/code&gt; is a Bioconductor package. Stop and restart the affected tool after installation.&lt;/p&gt;
 &lt;p&gt;Additional package libraries are managed separately from the app&amp;rsquo;s bundled library, and some tools have private dependency libraries. Check the actual loaded version when a package appears installed but the error persists. Installing from source can require system libraries or compilers; find the first substantive error rather than repeatedly reinstalling unrelated R packages.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-launch-an-installed-shiny-tool&#34;&gt;Walkthrough: Launch an installed Shiny tool&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; alt=&#34;Launch an installed Shiny tool. Actual macOS preview 0.1.39 screenshot with the MAPA example. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Launch an installed Shiny tool. Actual macOS preview 0.1.39 screenshot with the MAPA example. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In Installed tools, read the package name, version and startup function before launching. The stopped badge means the application process is not running.&lt;/li&gt;
+&lt;li&gt;Click Launch once and wait for startup. If startup fails, open View log and use the first error to identify the dependency or function that failed.&lt;/li&gt;
+&lt;li&gt;For another tool, choose the correct package source and repository/package name in the installation form. An installed R package needs a valid Shiny startup function to become a launchable tool.&lt;/li&gt;
+&lt;li&gt;Save results inside the launched application before stopping it. Third-party apps have their own input formats and export controls.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28230,6 +28717,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/macos/export-and-recovery/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/macos/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-export-and-recovery-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-export-and-recovery-en.svg&#34; alt=&#34;Export the run you actually reviewed. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Export the run you actually reviewed. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-export-and-recovery-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Select the intended runs before choosing file types. Export full tables, R objects, settings, code and logs where needed. Open one exported table and object to verify the IDs and dimensions. Keep separately referenced raw files and databases with the backup.&lt;/p&gt;
 &lt;h2 id=&#34;save-a-figure&#34;&gt;Save a figure&lt;/h2&gt;
 &lt;p&gt;Click &lt;strong&gt;Download plot&lt;/strong&gt; near the figure and choose an available format. Dimensions are in inches; PNG supports DPI. Some figures also provide &lt;strong&gt;Download CSV&lt;/strong&gt;. Inspect the exported file: an R-generated export may use the full range rather than the current interactive zoom.&lt;/p&gt;
 &lt;h2 id=&#34;export-an-analysis&#34;&gt;Export an analysis&lt;/h2&gt;
@@ -28242,6 +28737,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;h2 id=&#34;move-or-clean-up&#34;&gt;Move or clean up&lt;/h2&gt;
 &lt;p&gt;Copy the entire project directory and separately account for external raw files and databases. Internal result paths can be relocated with a project; external references may need repair. Use &lt;strong&gt;Storage&lt;/strong&gt; for supported cache management and read its scope first. Removing scan caches can make the next EIC extraction slower.&lt;/p&gt;
 &lt;p&gt;Do not delete run folders during computation or open the same project for modification in multiple app instances. If a project lock is reported, close the other instance first.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-choose-export-scope-and-contents&#34;&gt;Walkthrough: Choose export scope and contents&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; alt=&#34;Choose export scope and contents. Actual macOS preview 0.1.43 example screenshot; controls shown remain useful for understanding export.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose export scope and contents. Actual macOS preview 0.1.43 example screenshot; controls shown remain useful for understanding export. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set Run scope to the execution or collection of executions you intend to preserve. Do this before choosing individual output types.&lt;/li&gt;
+&lt;li&gt;Keep R objects for reanalysis, Complete tables for full numeric results, and code/parameters/logs/session information for provenance. Plot formats and dimensions affect figures, not the full table contents.&lt;/li&gt;
+&lt;li&gt;Select a complete project copy if you need saved project artifacts as well. External raw files and databases must still be backed up separately.&lt;/li&gt;
+&lt;li&gt;Click Export selected content. Open the destination and verify a table, object, and log. A visible paginated table is only a preview; the complete-table export is the reproducible record.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28250,6 +28758,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/export-and-recovery/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-export-and-recovery-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-export-and-recovery-en.svg&#34; alt=&#34;Export the run you actually reviewed. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Export the run you actually reviewed. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-export-and-recovery-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Select the intended runs before choosing file types. Export full tables, R objects, settings, code and logs where needed. Open one exported table and object to verify the IDs and dimensions. Keep separately referenced raw files and databases with the backup.&lt;/p&gt;
 &lt;h2 id=&#34;save-a-figure&#34;&gt;Save a figure&lt;/h2&gt;
 &lt;p&gt;Click &lt;strong&gt;Download plot&lt;/strong&gt; near the figure and choose an available format. Dimensions are in inches; PNG supports DPI. Some figures also provide &lt;strong&gt;Download CSV&lt;/strong&gt;. Inspect the exported file: an R-generated export may use the full range rather than the current interactive zoom.&lt;/p&gt;
 &lt;h2 id=&#34;export-an-analysis&#34;&gt;Export an analysis&lt;/h2&gt;
@@ -28262,6 +28778,19 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;h2 id=&#34;move-or-clean-up&#34;&gt;Move or clean up&lt;/h2&gt;
 &lt;p&gt;Copy the entire project directory and separately account for external raw files and databases. Internal result paths can be relocated with a project; external references may need repair. Use &lt;strong&gt;Storage&lt;/strong&gt; for supported cache management and read its scope first. Removing scan caches can make the next EIC extraction slower.&lt;/p&gt;
 &lt;p&gt;Do not delete run folders during computation or open the same project for modification in multiple app instances. If a project lock is reported, close the other instance first.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-choose-export-scope-and-contents&#34;&gt;Walkthrough: Choose export scope and contents&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; alt=&#34;Choose export scope and contents. Actual macOS preview 0.1.43 example screenshot; controls shown remain useful for understanding export. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose export scope and contents. Actual macOS preview 0.1.43 example screenshot; controls shown remain useful for understanding export. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set Run scope to the execution or collection of executions you intend to preserve. Do this before choosing individual output types.&lt;/li&gt;
+&lt;li&gt;Keep R objects for reanalysis, Complete tables for full numeric results, and code/parameters/logs/session information for provenance. Plot formats and dimensions affect figures, not the full table contents.&lt;/li&gt;
+&lt;li&gt;Select a complete project copy if you need saved project artifacts as well. External raw files and databases must still be backed up separately.&lt;/li&gt;
+&lt;li&gt;Click Export selected content. Open the destination and verify a table, object, and log. A visible paginated table is only a preview; the complete-table export is the reproducible record.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28273,6 +28802,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;massdatabase retrieves, parses and converts compound, spectrum and pathway resources. It is not itself one universal metabolite database. Choose the source and the identifier system needed by your next analysis.&lt;/p&gt;
 &lt;p&gt;A typical spectral route downloads a source library, reads its documented MSP/XML/SDF format and converts it into a metid database. A pathway route downloads organism-specific KEGG or another supported resource, reads it and converts it into a metpath object. Preserve the original resource, retrieval date, organism, conversion parameters and source version.&lt;/p&gt;
 &lt;p&gt;The exported API includes KEGG, HMDB, MassBank, MoNA, GNPS, PubChem, ChEBI, LipidMaps, FooDB, BiGG, SMPDB, Reactome and WikiPathways-related tasks; different sources provide different combinations of download/read/request/convert functions. Network services and file schemas can change. A failed request is not evidence that a metabolite is absent. Inspect source terms and database coverage before redistributing a derived database.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massdatabase-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-massdatabase-en.svg&#34; alt=&#34;Trace reference data. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Trace reference data. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massdatabase-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Choose the database by the task: compound metadata, spectral annotation and pathway analysis need different resources. Check identifier namespaces and coverage after parsing. Save source URLs, release dates and retrieval dates with the result; a mapped ID is not proof of an experimental identification.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;Source-specific web requests and downloads; spectrum/compound/pathway parsers; conversion to metid and metpath; identifier and source utilities.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -28299,6 +28836,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;metid matches precursor masses, compatible RT and available MS2 against a &lt;code&gt;databaseClass&lt;/code&gt;. Import or construct the reference database and attach experimental MS2 to your &lt;code&gt;mass_dataset&lt;/code&gt; first. Check ion polarity, chromatography and adduct settings.&lt;/p&gt;
 &lt;p&gt;The current API includes &lt;code&gt;annotate_metabolites_mass_dataset()&lt;/code&gt; alongside established &lt;code&gt;metIdentify*&lt;/code&gt; and &lt;code&gt;mzIdentify*&lt;/code&gt; interfaces. Do not mix argument names from different interfaces. The example explicitly disables RT evidence for a reference whose chromatography is not comparable. Review tolerances against your instrument; these values are illustrative.&lt;/p&gt;
 &lt;p&gt;Inspect all candidate evidence, not just a top score. An MS1 candidate is not a confirmed structure. An in-house database can support stronger identification when standards and measurements meet the actual evidence criteria; the database&amp;rsquo;s name alone does not establish confidence. Retain ambiguous candidates and record any filtering or adduct de-duplication. Origin annotations report database associations, not direct evidence of synthesis in your sample.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-metid-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-metid-en.svg&#34; alt=&#34;Build an annotation evidence chain. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Build an annotation evidence chain. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-metid-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Inspect a candidate by starting with mass error, then compatible RT evidence, then matched and unmatched MS2 fragments. Check the adduct and polarity. Keep alternatives when the evidence cannot distinguish them; the top score ranks candidates under the chosen settings, not absolute certainty.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;Database construction and validation; MS1/MS2 annotation; single-peak queries; matching scores and mirror spectra; confidence/candidate/adduct filtering; origin summaries.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -28397,6 +28942,27 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;When memory is high, compare &lt;strong&gt;Computer used&lt;/strong&gt; with &lt;strong&gt;TidyMass used&lt;/strong&gt;, reduce worker count or trial size, and inspect other system processes. More threads do not always make analysis faster.&lt;/p&gt;
 &lt;p&gt;For &lt;strong&gt;Missing package&lt;/strong&gt;, install the package from its correct source and restart the tool. For &lt;strong&gt;Invalid R package name&lt;/strong&gt;, check whether a URL or repository name was entered instead. For &lt;strong&gt;not an exported object&lt;/strong&gt;, inspect the startup function and mode. Missing images or styles in a Shiny app can reflect static-asset paths rather than text encoding. Read the first substantive error and final installation state; a warning alone is not necessarily a failure.&lt;/p&gt;
 &lt;p&gt;When reporting an issue, include the app and OS versions, tool/stage, run ID, reproduction steps and relevant logs. A few de-identified sample-information rows can clarify input problems. Preserve the failing project and logs before clearing data, and check shared logs for private sample names and paths.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-troubleshooting-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-troubleshooting-en.svg&#34; alt=&#34;Find the first failing step. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Find the first failing step. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-troubleshooting-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Record the version, project stage and first error message. Check file existence and permissions, then R readiness and package availability. If an upstream result changes, rerun dependent stale stages. Avoid repeatedly launching the same failing job without changing its cause.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28470,6 +29036,27 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;&lt;strong&gt;R busy&lt;/strong&gt; means the requested operation needs the occupied R worker. Saved summaries and cached results can be viewed where supported, but a second analysis must wait. Closing a task panel does not cancel computation. Use the cancellation control and wait for confirmation. Recovery resumes between saved steps, not within interrupted peak detection.&lt;/p&gt;
 &lt;p&gt;For &lt;strong&gt;Missing package&lt;/strong&gt;, install the package from its correct source and restart the tool. For &lt;strong&gt;Invalid R package name&lt;/strong&gt;, check whether a URL or repository name was entered instead. For &lt;strong&gt;not an exported object&lt;/strong&gt;, inspect the startup function and mode. Missing images or styles in a Shiny app can reflect static-asset paths rather than text encoding. Read the first substantive error and final installation state; a warning alone is not necessarily a failure.&lt;/p&gt;
 &lt;p&gt;When reporting an issue, include the app and OS versions, tool/stage, run ID, reproduction steps and relevant logs. A few de-identified sample-information rows can clarify input problems. Preserve the failing project and logs before clearing data, and check shared logs for private sample names and paths.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-troubleshooting-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-troubleshooting-en.svg&#34; alt=&#34;Find the first failing step. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Find the first failing step. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-troubleshooting-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Record the version, project stage and first error message. Check file existence and permissions, then R readiness and package availability. If an upstream result changes, rerun dependent stale stages. Avoid repeatedly launching the same failing job without changing its cause.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28481,6 +29068,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;Use an appropriately cleaned dataset and a prespecified comparison. Keep QC/Blank samples out of biological hypothesis tests. Use transformations and scaling for the purpose at hand: PCA scaling does not mean fold changes should be calculated from scaled values.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;run_pca()&lt;/code&gt; returns a PCA model; &lt;code&gt;pca_score_plot()&lt;/code&gt; visualizes scores. &lt;code&gt;mutate_fc()&lt;/code&gt; calculates case/control fold change using a mean or median summary. &lt;code&gt;mutate_p_value()&lt;/code&gt; supports t and Wilcoxon tests and adds multiple-testing adjusted results. Match paired samples explicitly before a paired test. The example is an independent-group comparison and takes its group labels from sample metadata. These massstat interfaces require at least three samples per comparison group.&lt;/p&gt;
 &lt;p&gt;Additional functions cover heatmaps, correlations, distances, graph conversion, PLS and PLS-DA. Supervised separation on training data is not predictive validation: use appropriate held-out or nested validation and avoid selecting features before splitting the data.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massstat-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-massstat-en.svg&#34; alt=&#34;From study design to statistics. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;From study design to statistics. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-massstat-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Before testing, write down which group is numerator and which is denominator. Inspect sample counts, pairing and transformation. Read effect size together with adjusted P values, then return to peak evidence for important features. PCA separation alone is not a hypothesis test.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;PCA and scaling; fold change and hypothesis tests; volcano plots and heatmaps; correlations, distances and graphs; PLS/PLS-DA.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -28503,6 +29098,18 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;&lt;code&gt;Heatmap&lt;/code&gt;, &lt;code&gt;convert_dummy_variable&lt;/code&gt;, &lt;code&gt;convert_mass_dataset2graph&lt;/code&gt;, &lt;code&gt;cor_mass_dataset&lt;/code&gt;, &lt;code&gt;dist_mass_dataset&lt;/code&gt;, &lt;code&gt;massstat_conflicts&lt;/code&gt;, &lt;code&gt;massstat_logo&lt;/code&gt;, &lt;code&gt;massstat_packages&lt;/code&gt;, &lt;code&gt;mutate_fc&lt;/code&gt;, &lt;code&gt;mutate_p_value&lt;/code&gt;, &lt;code&gt;pca_score_plot&lt;/code&gt;, &lt;code&gt;pls&lt;/code&gt;, &lt;code&gt;plsda&lt;/code&gt;, &lt;code&gt;run_pca&lt;/code&gt;, &lt;code&gt;scale_data&lt;/code&gt;, &lt;code&gt;scale_data1&lt;/code&gt;, &lt;code&gt;scale_data2&lt;/code&gt;, &lt;code&gt;volcano_plot&lt;/code&gt;&lt;/p&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/tidymass/massstat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Package source and reference documentation&lt;/a&gt; · &lt;a href=&#34;../workflow/&#34;&gt;Complete workflow&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-an-explicitly-scaled-pca&#34;&gt;Walkthrough: Read an explicitly scaled PCA&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/pca.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r/pca.png&#34; alt=&#34;Read an explicitly scaled PCA. Actual example output using four Subject samples; no two-group biological comparison is implied.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read an explicitly scaled PCA. Actual example output using four Subject samples; no two-group biological comparison is implied. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/pca.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Each point is a sample; axis percentages describe variance captured by each principal component.&lt;/li&gt;
+&lt;li&gt;The example uses prcomp with center = TRUE and scale. = TRUE after preprocessing, retaining finite, nonconstant features.&lt;/li&gt;
+&lt;li&gt;Do not call a cluster significant from this plot. Use a valid experimental design and the appropriate inferential test for a group comparison.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
 <item>
@@ -28514,6 +29121,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;For compound-level enrichment, prepare de-duplicated compound IDs, a pathway database for the organism and an explicit selection rule. Match KEGG IDs to KEGG resources and HMDB IDs to compatible resources; human-readable names are not a substitute for these identifiers.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;enrich_kegg()&lt;/code&gt;, &lt;code&gt;enrich_hmdb()&lt;/code&gt; and &lt;code&gt;enrich_pathways()&lt;/code&gt; support the documented pathway enrichment interfaces. Specify the adjustment method instead of silently accepting a default. In &lt;code&gt;enrich_kegg()&lt;/code&gt;, the background derives from the supplied pathway database; the interface does not expose a separate &lt;code&gt;background&lt;/code&gt; argument. If your experiment requires a measured-compound universe, construct and verify an appropriately restricted database or use a method with an explicit universe. Do not silently report the full database as the measured background.&lt;/p&gt;
 &lt;p&gt;Feature-based functionality includes isotope annotation, RT grouping, candidate assignment, activity scoring, null distributions and &lt;code&gt;perform_fpa()&lt;/code&gt;. It extends analysis beyond confidently annotated compounds while retaining annotation uncertainty. Such modules are hypotheses, not confirmation of every compound or pathway activity. Bar, scatter and network displays summarize supported results.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-metpath-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-metpath-en.svg&#34; alt=&#34;From compound IDs to pathways. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;From compound IDs to pathways. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-metpath-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Count mapped compounds before interpreting pathways. Deduplicate multiple ion features representing one compound and retain the original mapping table. Read enrichment with its background definition, multiple-testing correction and unmatched IDs; an empty result may simply reflect limited annotation coverage.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;Pathway data access/filtering; over-representation tests; enrichment plots/networks; isotope/feature grouping and functional module analysis.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -28543,6 +29158,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;masstools supplies utilities shared by other packages: formula checks and masses, adduct handling, m/z–RT matching, spectrum input/conversion, noise removal and matching scores. Call with the package namespace when names overlap.&lt;/p&gt;
 &lt;p&gt;A calculated neutral exact mass is not the measured precursor m/z. Choose the correct ion/adduct conversion and check charge. Spectrum similarity depends on tolerance, intensity treatment and the available fragments; a score alone is not identification.&lt;/p&gt;
 &lt;p&gt;ID-conversion helpers depend on their upstream providers. Preserve input, output, service and failures, and verify one-to-many mappings against structure identifiers. Functions that use an LLM or another remote service are optional and require configuration; generated IDs need independent verification before annotation or enrichment.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-masstools-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-masstools-en.svg&#34; alt=&#34;Make small calculations explicit. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Make small calculations explicit. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-masstools-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Check units before using a utility result downstream: seconds and minutes are not interchangeable, nor are neutral exact mass and adduct m/z. Try a known formula first and record the requested output type. Use the installed help page to confirm each argument.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;Formula and adduct operations; mass conversion; spectrum parsing, conversion and similarity; m/z–RT matching; ID services and compound-class lookup.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -28568,6 +29191,14 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;p&gt;MetNormalizer is the standalone QC-based normalization package linked from the TidyMass package catalogue. Its file-based &lt;code&gt;metNor()&lt;/code&gt; interface is different from &lt;code&gt;masscleaner::normalize_data()&lt;/code&gt; and should not be substituted into a &lt;code&gt;mass_dataset&lt;/code&gt; pipeline without preparing its input format.&lt;/p&gt;
 &lt;p&gt;Prepare the MS1 table and sample-information CSV according to the package example, including the required QC and acquisition metadata. Work in a dedicated directory, review filtering fractions and optimization settings, then inspect the saved normalized data and diagnostics. Preserve the input and method settings.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;multiple = 1&lt;/code&gt; uses injection-order-based SVR in the documented interface; larger values use correlated peaks. Choose according to acquisition and study design, not simply because a larger value looks more powerful. For a new object-based TidyMass workflow, masscleaner usually provides the direct integration point.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-metnormalizer-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-metnormalizer-en.svg&#34; alt=&#34;A separate file-based route. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;A separate file-based route. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-metnormalizer-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Prepare the two CSV files in the documented MetNormalizer format, including QCs and acquisition metadata. Run in a separate output directory. Check the saved diagnostics and feature retention before reusing normalized values in another pipeline; do not assume its file format equals a mass_dataset.&lt;/p&gt;
 &lt;h2 id=&#34;functional-scope&#34;&gt;Functional scope&lt;/h2&gt;
 &lt;p&gt;Input checks and a standalone QC/SVR normalization workflow.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
@@ -28600,7 +29231,15 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# This script does not contain study data or claim validated instrument parameters.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tidymass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dplyr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;1-prepare-inputs-and-process-raw-files&#34;&gt;1. Prepare inputs and process raw files&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-workflow-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-package-workflow-en.svg&#34; alt=&#34;Checkpoints across the full workflow. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Checkpoints across the full workflow. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-package-workflow-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Run the downloadable script section by section rather than submitting it unchanged. Replace paths and groups, verify each intermediate object, and save it before moving on. Raw-data, annotation and pathway sections require your own files or databases. The small example below demonstrates mechanics, not a biological discovery.&lt;/p&gt;
+&lt;h2 id=&#34;1-prepare-inputs-and-process-raw-files&#34;&gt;1. Prepare inputs and process raw files&lt;/h2&gt;
 &lt;p&gt;The example starts with positive-mode mzML/mzXML; analyze negative mode separately. The sample sheet needs sample_id, group and class; use Subject for biological samples and QC only for quantitative QCs. Basenames in the QC/Subject directories must be unique. Validate example processing parameters on representative files first.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. Inputs and raw processing -------------------------------------------------&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;raw_dir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;analysis/MS1&amp;#34;&lt;/span&gt;                 &lt;span class=&#34;c1&#34;&gt;# mzML/mzXML in QC/Subject subdirectories&lt;/span&gt;
@@ -28742,7 +29381,32 @@ open-source principles of reproducibility, traceability, and transparency.&lt;/p
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 7. Archive -----------------------------------------------------------------&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;writeLines&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;capture.output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;sessionInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;file.path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;output_dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;sessionInfo.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Back up this script, parameter choices, all inputs/reference versions and all results.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;walkthrough-read-missingness-in-the-packaged-example&#34;&gt;Walkthrough: Read missingness in the packaged example&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/missingness.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r/missingness.png&#34; alt=&#34;Read missingness in the packaged example. Generated from massdataset expression_data: 1,000 features × 8 samples; these are tutorial data.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read missingness in the packaged example. Generated from massdataset expression_data: 1,000 features × 8 samples; these are tutorial data. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/missingness.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The left bars show missing matrix cells per sample as a percentage of 1,000 features. Compare samples before deciding whether one is problematic.&lt;/li&gt;
+&lt;li&gt;The right histogram summarizes feature-level missingness across eight samples. A feature missing in all samples contributes no quantitative evidence.&lt;/li&gt;
+&lt;li&gt;Use these diagnostics to choose and document filtering rules. The plot itself does not prescribe a universal threshold.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-compare-intensity-distributions&#34;&gt;Walkthrough: Compare intensity distributions&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/normalization.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r/normalization.png&#34; alt=&#34;Compare intensity distributions. Actual output from the four Subject samples after retaining features observed in at least two samples, median imputation, then median normalization.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Compare intensity distributions. Actual output from the four Subject samples after retaining features observed in at least two samples, median imputation, then median normalization. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r/normalization.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Both panels plot log10(intensity + 1) for display; the left input is already filtered and imputed.&lt;/li&gt;
+&lt;li&gt;The right panel follows median normalization. Similar medians are an expected consequence of this method, not independent proof that technical bias is removed.&lt;/li&gt;
+&lt;li&gt;Check study design and quantitative QCs where available before choosing normalization for real data.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tutorial-files/make-tutorial-figures.R&#34;&gt;Download the reproducible R script for these diagnostic figures&lt;/a&gt;. Replace the output directory with your own writable directory.&lt;/p&gt;
+</description>
     </item>
 </channel>
 </rss>

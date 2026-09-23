@@ -7,10 +7,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-
-
+  
+  
+  
     <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
 
 
 
@@ -23,6 +27,8 @@
 
 
 
+  
+  
 
 
 
@@ -33,6 +39,7 @@
 
 
 
+  
 
 
 
@@ -40,193 +47,190 @@
 
 
 
-
-
-
-
-
-
-
-
-
+  
+  
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
 
-
-
-
-
-
-
+  
+  
+  
+    
+      
       <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
 
+  
+  
 
+  
+  
 
-
-
-
-
-
-
-
+  
 
   <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
   <link rel="stylesheet" href="/css/wowchemy.4b7280f12f476311af2218ec632c93a2.css" />
 
+  
+  
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
+    
+    
     <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-light" media="print" onload="this.media='all'" >
     <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
 
 
 
@@ -253,13 +257,9 @@
 
 
 
-
-
-
-
-
-
-
+  
+  
+  
 
 
 
@@ -272,12 +272,13 @@
 
 
 
-
+  
 
 <meta name="description" content="文档核对版本: 0.99.1 · 2026-09-23
 masstools 提供其他包共用的辅助工具：分子式校验与质量计算、加合物处理、m/z–RT 匹配、谱图读取转换、去噪及匹配分数。存在同名函数时使用包命名空间。
 中性精确质量不是实测前体 m/z，应按离子/加合物和电荷正确转换。谱图相似度受容差、强度处理和碎片覆盖影响，分数本身不等于鉴定。
 ID 转换依赖上游服务，保留输入、输出、服务及失败记录，使用结构标识核验一对多映射。LLM 或其他远程服务接口为可选功能，需要配置；生成的 ID 必须独立核验后才能用于注释或富集。
+图解：本章操作路线 明确辅助计算的含义。步骤编号表示阅读顺序；此图为流程示意。 查看原图 ↗ 使用辅助计算结果前检查单位和约定：秒与分钟不可混用，中性分子精确质量也不等于加合离子 m/z。先用已知分子式核对，并记录输出类型；各参数以安装版本帮助页为准。
 功能范围 分子式与加合物操作、质量转换、谱图解析转换与相似度、m/z–RT 匹配、ID 服务及化合物分类查询。
 使用示例 masstools::calculate_mass(&#34;C6H12O6&#34;, which = &#34;exact_mass&#34;) help(&#34;convert_precursor_mz2accurate_mass&#34;, package = &#34;masstools&#34;) help(&#34;read_mgf&#34;, package = &#34;masstools&#34;) help(&#34;calculate_spectra_match_score&#34;, package = &#34;masstools&#34;) 函数查询 下面列出已核对源码中导出的 API，包括兼容接口与辅助函数。具体参数以安装版本的 R 帮助为准；例如运行 help(&quot;函数名&quot;, package = &quot;masstools&quot;)。" />
 
@@ -308,8 +309,8 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 
 
-
-
+  
+  
 
 
 
@@ -328,17 +329,19 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 masstools 提供其他包共用的辅助工具：分子式校验与质量计算、加合物处理、m/z–RT 匹配、谱图读取转换、去噪及匹配分数。存在同名函数时使用包命名空间。
 中性精确质量不是实测前体 m/z，应按离子/加合物和电荷正确转换。谱图相似度受容差、强度处理和碎片覆盖影响，分数本身不等于鉴定。
 ID 转换依赖上游服务，保留输入、输出、服务及失败记录，使用结构标识核验一对多映射。LLM 或其他远程服务接口为可选功能，需要配置；生成的 ID 必须独立核验后才能用于注释或富集。
+图解：本章操作路线 明确辅助计算的含义。步骤编号表示阅读顺序；此图为流程示意。 查看原图 ↗ 使用辅助计算结果前检查单位和约定：秒与分钟不可混用，中性分子精确质量也不等于加合离子 m/z。先用已知分子式核对，并记录输出类型；各参数以安装版本帮助页为准。
 功能范围 分子式与加合物操作、质量转换、谱图解析转换与相似度、m/z–RT 匹配、ID 服务及化合物分类查询。
 使用示例 masstools::calculate_mass(&#34;C6H12O6&#34;, which = &#34;exact_mass&#34;) help(&#34;convert_precursor_mz2accurate_mass&#34;, package = &#34;masstools&#34;) help(&#34;read_mgf&#34;, package = &#34;masstools&#34;) help(&#34;calculate_spectra_match_score&#34;, package = &#34;masstools&#34;) 函数查询 下面列出已核对源码中导出的 API，包括兼容接口与辅助函数。具体参数以安装版本的 R 帮助为准；例如运行 help(&quot;函数名&quot;, package = &quot;masstools&quot;)。" /><meta property="og:image" content="https://www.tidymass.org/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_300x300_fit_lanczos_3.png" /><meta property="og:locale" content="zh-Hans" />
 
-
+  
     <meta
       property="article:published_time"
       content="2026-09-23T00:00:00&#43;08:00"
     />
-
-
+  
+  
     <meta property="article:modified_time" content="2026-09-23T00:00:00&#43;08:00">
+  
 
 
 
@@ -346,29 +349,28 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 
 
+  
 
 
 
 
+  
+  
+  
+
+  
+  
+
+  
 
 
-
-
-
-
-
-
-
-
-
-
-
+  
   <title>masstools — 分子式、谱图与 ID 工具 | TidyMass</title>
 
-
-
-
-
+  
+  
+  
+  
 
 
 
@@ -385,18 +387,18 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="552a248a6833398b9baa1d5e12710e28" >
 
-
-
-
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <script src="/js/wowchemy-init.min.bc584d8639f6412fc553d13c23e02e8a.js"></script>
 
-
+  
 
 
 <aside class="search-modal" id="search">
@@ -413,23 +415,23 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
       </div>
 
       <div id="search-box">
-
+        
         <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
         autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
         aria-label="搜索...">
-
+        
       </div>
 
+      
+      
 
-
-
-
+      
 
     </section>
     <section class="section-search-results">
 
       <div id="search-hits">
-
+        
       </div>
 
     </section>
@@ -439,6 +441,11 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 
   <div class="page-header header--fixed">
+  
+  
+  
+  
+  
 
 
 
@@ -450,278 +457,273 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 
 
-
-
-
-
-
-
+  
 
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
     <div class="container-xl">
 
-
+      
       <div class="d-none d-lg-inline-flex">
         <a class="navbar-brand" href="/zh/"><img src="/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_0x70_resize_lanczos_3.png" alt="TidyMass"
-
+            
             ></a>
       </div>
+      
 
-
-
+      
       <button type="button" class="navbar-toggler" data-toggle="collapse"
               data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="切换导航">
       <span><i class="fas fa-bars"></i></span>
       </button>
+      
 
-
-
+      
       <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
         <a class="navbar-brand" href="/zh/"><img src="/media/logo_hu5606885a69ebc720faad867579aa5b55_46386_0x70_resize_lanczos_3.png" alt="TidyMass"
-
+          
           ></a>
       </div>
+      
 
-
-
-
+      
+      
       <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
 
-
+        
         <ul class="navbar-nav d-md-inline-flex">
+          
 
+          
 
+          
+          
+          
+            
+          
 
+          
 
+          
+          
+          
+          
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
 
           <li class="nav-item">
             <a class="nav-link " href="/zh/#hero"><span>主页</span></a>
           </li>
 
+          
+          
 
+          
 
+          
+          
+          
+            
+          
 
+          
 
+          
+          
+          
+          
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
 
           <li class="nav-item">
             <a class="nav-link " href="/zh/#packages"><span>R包</span></a>
           </li>
 
+          
+          
 
+          
 
+          
+          
+          
+            
+          
 
+          
 
+          
+          
+          
+          
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
 
           <li class="nav-item">
             <a class="nav-link " href="/zh/#team"><span>团队</span></a>
           </li>
 
+          
+          
 
+          
 
+          
+          
+          
+            
+          
 
+          
 
+          
+          
+          
+          
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
 
           <li class="nav-item">
             <a class="nav-link " href="/zh/#contact"><span>联系</span></a>
           </li>
 
+          
+          
 
+          
 
+          
+          
+          
+            
+          
 
+          
 
+          
+          
+          
+          
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
 
           <li class="nav-item">
             <a class="nav-link " href="/zh/#contribution"><span>贡献</span></a>
           </li>
 
+          
+          
 
-
-
-
+          
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>教程</span><span class="caret"></span>
             </a>
             <div class="dropdown-menu">
-
+              
                 <a class="dropdown-item" href="/zh/r-package/"><span>R package</span></a>
-
+              
                 <a class="dropdown-item" href="/zh/macos/"><span>MacOS</span></a>
-
+              
                 <a class="dropdown-item" href="/zh/windows/"><span>Windows</span></a>
-
+              
                 <a class="dropdown-item" href="/zh/r-shiny/"><span>R shiny</span></a>
-
+              
             </div>
           </li>
 
+          
+          
 
+        
 
-
-
-
-
+          
         </ul>
       </div>
 
       <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
 
+        
+        
+          
+        
 
-
-
-
-
-
-
-
+        
+        
+        
         <li class="nav-item">
           <a class="nav-link js-search" href="#" aria-label="搜索"><i class="fas fa-search" aria-hidden="true"></i></a>
         </li>
+        
 
-
-
-
-
+        
+        
+        
         <li class="nav-item dropdown theme-dropdown">
           <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
             <i class="fas fa-moon" aria-hidden="true"></i>
@@ -738,10 +740,10 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
             </a>
           </div>
         </li>
+        
 
-
-
-
+        
+        
         <li class="nav-item dropdown i18n-dropdown">
           <a href="#" class="nav-link " data-toggle="dropdown"
              aria-haspopup="true" aria-label="语言">
@@ -750,14 +752,14 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
             <div class="dropdown-item dropdown-item-active">
               <span>中文 (简体)</span>
             </div>
-
+            
             <a class="dropdown-item" href="https://www.tidymass.org/r-package/masstools/">
               <span>English</span>
             </a>
-
+            
           </div>
         </li>
-
+        
 
       </ul>
 
@@ -769,11 +771,11 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
   </div>
 
   <div class="page-body">
+    
+    
+    
 
-
-
-
-
+    
 
 
 
@@ -785,56 +787,56 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
   <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
-
-
+        
+        
           R package 使用说明
-
+        
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
     </div>
   </button>
 
-
+  
   <button class="form-control sidebar-search js-search d-none d-md-flex">
     <i class="fas fa-search pr-2"></i>
     <span class="sidebar-search-text">搜索...</span>
     <span class="sidebar-search-shortcut">/</span>
   </button>
-
+  
 </form>
 
 <nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      
 
 
+  
+    
+    
+    
+    
+      
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
       <ul class="nav docs-sidenav">
         <li class=""><a href="/zh/r-package/">R package 使用说明</a></li>
-
-
+    
+      
 
 
   <li class=""><a href="/zh/r-package/installation/">安装与版本管理</a></li>
@@ -891,22 +893,22 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
   <li class=""><a href="/zh/r-package/workflow/">完整 LC-MS 分析工作流</a></li>
 
+      
+    
 
-
-
-
+    
       </ul>
+    
 
-
-
+  
 </nav>
 
     </div>
 
-
-
+    
+    
     <div class="d-none d-xl-block col-xl-2 docs-toc">
-
+      
 
 
 
@@ -925,13 +927,14 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
       <nav id="TableOfContents">
   <ul>
+    <li><a href="#图解本章操作路线">图解：本章操作路线</a></li>
     <li><a href="#功能范围">功能范围</a></li>
     <li><a href="#使用示例">使用示例</a></li>
     <li><a href="#函数查询">函数查询</a></li>
   </ul>
 </nav>
 
-
+      
 
 
 
@@ -944,31 +947,39 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 
     </div>
-
+    
 
     <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
 
       <div class="docs-article-container">
-
+        
       </div>
 
-
-
-
+      
+      
+      
 
       <div class="docs-article-container">
-
+        
         <h1>masstools — 分子式、谱图与 ID 工具</h1>
 
         <article class="article-style">
 
-
-
+          
+          
 
           <p><strong>文档核对版本: 0.99.1</strong> · 2026-09-23</p>
 <p>masstools 提供其他包共用的辅助工具：分子式校验与质量计算、加合物处理、m/z–RT 匹配、谱图读取转换、去噪及匹配分数。存在同名函数时使用包命名空间。</p>
 <p>中性精确质量不是实测前体 m/z，应按离子/加合物和电荷正确转换。谱图相似度受容差、强度处理和碎片覆盖影响，分数本身不等于鉴定。</p>
 <p>ID 转换依赖上游服务，保留输入、输出、服务及失败记录，使用结构标识核验一对多映射。LLM 或其他远程服务接口为可选功能，需要配置；生成的 ID 必须独立核验后才能用于注释或富集。</p>
+<h2 id="图解本章操作路线">图解：本章操作路线</h2>
+<figure class="tutorial-figure" style="margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;">
+<a href="/tutorial-images/r-package-masstools-zh.svg" target="_blank" rel="noopener" aria-label="查看原尺寸图片">
+<img src="/tutorial-images/r-package-masstools-zh.svg" alt="明确辅助计算的含义。步骤编号表示阅读顺序；此图为流程示意。" loading="lazy" style="display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;" />
+</a><figcaption style="font-size:0.88rem;line-height:1.6;margin-top:0.6rem;">明确辅助计算的含义。步骤编号表示阅读顺序；此图为流程示意。 <a href="/tutorial-images/r-package-masstools-zh.svg" target="_blank" rel="noopener">查看原图 ↗</a></figcaption>
+</figure>
+
+<p>使用辅助计算结果前检查单位和约定：秒与分钟不可混用，中性分子精确质量也不等于加合离子 m/z。先用已知分子式核对，并记录输出类型；各参数以安装版本帮助页为准。</p>
 <h2 id="功能范围">功能范围</h2>
 <p>分子式与加合物操作、质量转换、谱图解析转换与相似度、m/z–RT 匹配、ID 服务及化合物分类查询。</p>
 <h2 id="使用示例">使用示例</h2>
@@ -987,64 +998,64 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
         </article>
 
+        
 
 
 
 
 
+        
 
 
 
-
-
-
-
+        
+        
         <div class="article-widget">
-
+          
 <div class="post-nav">
-
-
-
+  
+  
+  
   <div class="post-nav-item">
     <div class="meta-nav">上一页</div>
     <a href="/zh/r-package/metpath/" rel="next">metpath — 通路与 feature 模块分析</a>
   </div>
-
-
-
+  
+  
+  
   <div class="post-nav-item">
     <div class="meta-nav">下一页</div>
     <a href="/zh/r-package/metnormalizer/" rel="prev">MetNormalizer — 使用独立归一化流程</a>
   </div>
-
+  
 </div>
 
         </div>
-
+        
       </div>
 
       <div class="body-footer">
         <p>最近更新于 9月 23, 2026</p>
 
+        
 
 
 
 
+        
+
+
+  
+  
+  
+
+  
+
+  
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
 
       </div>
@@ -1053,23 +1064,23 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
   <hr>
 
     <div style="display: flex; justify-content: space-between; padding: 20px;">
-
+          
  <div style="flex: 2;">
-
+   
    <p style="text-align:left; font-weight: bold">
    Developed by Shen lab @ NTU Singapore
     </p>
-
-
+    
+    
     <a href="https://www.ntu.edu.sg/" target="_blank"><img src="https://jaspershen-lab.github.io/image/ntu_logo.png" alt="logo" class="center" width="50%" height="100"></a>
     <hr style="margin: 10px 0; width: 50%; border-top: 1px solid #ddd;">
     <a href="https://www.ntu.edu.sg/medicine" target="_blank"><img src="https://jaspershen-lab.github.io/image/lkcmedicine.png" alt="logo" class="center" width="50%" height="100"></a>
     <hr style="margin: 10px 0; width: 50%; border-top: 1px solid #ddd;">
     <a href="https://www.shen-lab.org/" target="_blank"><img src="https://jaspershen-lab.github.io/image/shen_lab_logo8.png" alt="logo" class="center" width="50%" height="100"></a>
-
+   
             </div>
-
-
+            
+    
             <div style="flex: 2;">
   <p style="text-align:left; font-weight: bold">
     Find us here:
@@ -1080,33 +1091,50 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
     <br>
         <i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/xiaotaoshen1990" target="_blank" rel="noopener">Twitter</a>
-
+        
    <br>
-        <i class="fa-solid fa-envelope"></i> <a href="https://jaspershen.github.io/#contact" target="_blank" rel="noopener">Email</a>
-
+        <i class="fa-solid fa-envelope"></i> <a href="https://jaspershen.github.io/#contact" target="_blank" rel="noopener">Email</a>  
+        
         <br>
 <i class="fa-solid fa-location-dot"></i> Address: <a href="https://maps.app.goo.gl/hfCpoqgzX7zmuh3h6" target="_blank" rel="noopener">59 Nanyang Dr, Singapore 636921</a>
-
+   
     </p>
             </div>
-
-
+            
+    
             <div style="flex: 1;">
             </div>
-
-
+            
+    
             <div style="flex: 1;">
 <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=e43qUF1sR8y0B12BqEm-gDwkYxSmbro-n8KEiBINpdY"></script>
             </div>
-
-
+            
+    
             <div style="flex: 1;">
             </div>
-
+    
         </div>
-
+        
       <hr>
 
+      
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
 
 
 
@@ -1120,34 +1148,17 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
   <p class="powered-by copyright-license-text">
     © 2022-2025 Shen Lab
   </p>
+  
 
 
 
 
-
-
-
+  
+  
 </footer>
 
     </main>
@@ -1157,11 +1168,11 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
   </div>
 
   <div class="page-footer">
-
-
+    
+    
   </div>
 
-
+  
 
 
 <script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
@@ -1169,12 +1180,12 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 
 
+  
 
+  
+  
 
-
-
-
-
+  
 
 
 
@@ -1193,7 +1204,7 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 
 
-
+  
   <script id="search-hit-fuse-template" type="text/x-template">
     <div class="search-hit" id="summary-{{key}}">
       <div class="search-hit-content">
@@ -1205,10 +1216,10 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
       </div>
     </div>
   </script>
-
+  
     <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
-
+  
 
 
 
@@ -1223,13 +1234,13 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 
 
-
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
 
 
 
@@ -1259,8 +1270,8 @@ ID 转换依赖上游服务，保留输入、输出、服务及失败记录，�
 
 
 
-
-
+  
+  
 
 
 <script src="/zh/js/wowchemy.min.a019a8d0a4e912d4764e429825411dad.js"></script>

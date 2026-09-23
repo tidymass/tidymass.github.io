@@ -11,13 +11,21 @@
       <title>Windows user guide</title>
       <link>https://www.tidymass.org/windows/</link>
     </image>
-
+    
     <item>
       <title>Installation and quick start</title>
       <link>https://www.tidymass.org/windows/getting-started/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/getting-started/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-getting-started-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-getting-started-en.svg&#34; alt=&#34;Your first project. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Your first project. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-getting-started-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Wait until the R environment is ready. Choose the untargeted workflow, enter a recognizable name, and select a writable parent folder. After importing files, compare the displayed sample count against your sample sheet before advancing to peak detection.&lt;/p&gt;
 &lt;h2 id=&#34;install-on-windows&#34;&gt;Install on Windows&lt;/h2&gt;
 &lt;p&gt;This guide targets the &lt;strong&gt;0.1.63 Windows x64 preview&lt;/strong&gt;. Obtain the preview ZIP from the maintainers, extract it fully, and run &lt;code&gt;TidyMass-0.1.63-windows-x64-setup.exe&lt;/code&gt;. A public download has not yet been verified; the existing CI artifact requires GitHub repository access. Do not use a macOS DMG or rename an installer to change platforms.&lt;/p&gt;
 &lt;p&gt;Follow the installer, launch TidyMass and wait for &lt;strong&gt;R environment&lt;/strong&gt; to finish checking the bundled R 4.5.2 and core packages. You do not need a separate system R for the main workflow. Prefer a local writable project folder; keep the raw data available for later peak inspection. If Windows blocks an unknown publisher, verify the supplied installer and its checksum with the maintainers before allowing this app.&lt;/p&gt;
@@ -72,15 +80,36 @@
 &lt;/table&gt;
 &lt;p&gt;A &lt;strong&gt;project&lt;/strong&gt; holds analysis records; a &lt;strong&gt;run&lt;/strong&gt; is one execution; a &lt;strong&gt;feature&lt;/strong&gt; is a detected signal, not automatically an identified compound. Changing parameters affects a new run. Use &lt;strong&gt;Settings used for this result&lt;/strong&gt; to inspect how a saved result was produced.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;TidyMass used&lt;/strong&gt;, &lt;strong&gt;Computer used&lt;/strong&gt; and &lt;strong&gt;Computer total&lt;/strong&gt; report different memory quantities. A high system total is not necessarily caused by this app. After your first run, verify sample counts, missingness, peak shapes and warnings. A completed task confirms execution, not scientific validity.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Input data and sample information</title>
       <link>https://www.tidymass.org/windows/input-data/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/input-data/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-input-data-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-input-data-en.svg&#34; alt=&#34;Match files to the sample sheet. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Match files to the sample sheet. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-input-data-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Make a list of raw file basenames and compare it with sample_id. Resolve duplicates, missing files and unexpected files first. Set biological groups independently of class: QC and Blank describe sample roles, while Control and Treatment describe the comparison.&lt;/p&gt;
 &lt;h2 id=&#34;raw-files&#34;&gt;Raw files&lt;/h2&gt;
 &lt;p&gt;The untargeted workflow and &lt;strong&gt;Raw chromatograms&lt;/strong&gt; read &lt;strong&gt;mzML / mzXML&lt;/strong&gt;. Convert proprietary vendor files with a suitable instrument-compatible converter first. Process positive and negative ion modes as separate projects. Keep each file&amp;rsquo;s basename unique, including across subfolders; do not distinguish samples only by letter case.&lt;/p&gt;
 &lt;p&gt;The project records the file locations. Keep raw files available and unchanged while analyzing: later EIC and spectrum inspection can need them.&lt;/p&gt;
@@ -135,15 +164,35 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Each feature ID must be unique; intensity columns must match the sample information. RT is in seconds in this example: match the import unit selector. &lt;code&gt;NA&lt;/code&gt; is missing; zero remains a numeric observation. Preserve the source and evidence of any annotation columns.&lt;/p&gt;
 &lt;h2 id=&#34;ms2-and-input-checks&#34;&gt;MS2 and input checks&lt;/h2&gt;
 &lt;p&gt;Attach MS2 using a supported import, builder or annotation entry. Association with a feature depends on precursor m/z and RT, and does not establish a unique structure. Use &lt;strong&gt;Sample &amp;amp; file checker&lt;/strong&gt; to detect duplicates, missing files and unexpected files before a large run. RDS/RData imports must contain the supported object type, such as a single &lt;code&gt;mass_dataset&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-understand-feature-rows-and-sample-columns&#34;&gt;Walkthrough: Understand feature rows and sample columns&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; alt=&#34;Understand feature rows and sample columns. Table example from the published Shiny tutorial, used to explain data layout; it is not a desktop import screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Understand feature rows and sample columns. Table example from the published Shiny tutorial, used to explain data layout; it is not a desktop import screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Each row is a feature with its own ID, m/z and RT. Sample columns contain intensities.&lt;/li&gt;
+&lt;li&gt;For the desktop peak-table route, follow the required fields in the template; ion handling differs from the Shiny importer. Do not paste metadata columns into the intensity matrix.&lt;/li&gt;
+&lt;li&gt;Match each intensity column to one sample-sheet row and inspect missing values before importing.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Complete untargeted workflow</title>
       <link>https://www.tidymass.org/windows/workflow/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/workflow/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-workflow-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-workflow-en.svg&#34; alt=&#34;The eight-stage route. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;The eight-stage route. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-workflow-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;At each stage, open the settings and confirm the selected input. Run once, wait for completion, and inspect warnings plus the displayed dataset summary. Continue only after the sample/feature counts and plots make sense. Saving parameter drafts does not recompute the displayed result.&lt;/p&gt;
 &lt;h2 id=&#34;1-data-import&#34;&gt;1. Data import&lt;/h2&gt;
 &lt;p&gt;Choose mzML/mzXML files and sample information, review the groups and click &lt;strong&gt;Import raw files&lt;/strong&gt;. Import registers files; it does not detect chromatographic peaks. Folder grouping is a convenience, so check it against the biological design.&lt;/p&gt;
 &lt;h2 id=&#34;2-raw-data-processing&#34;&gt;2. Raw data processing&lt;/h2&gt;
@@ -167,15 +216,36 @@
 &lt;h2 id=&#34;continue-or-rerun&#34;&gt;Continue or rerun&lt;/h2&gt;
 &lt;p&gt;Reopen a saved project to continue at the first unfinished step whose prerequisites are satisfied. A successful upstream rerun makes dependent downstream results &lt;strong&gt;stale&lt;/strong&gt;; rerun the affected steps. Old results remain in &lt;strong&gt;Run history&lt;/strong&gt;. A failed or canceled retry does not replace the previous successful result.&lt;/p&gt;
 &lt;p&gt;Recovery operates between saved steps, not at an arbitrary scan inside interrupted peak detection.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Tasks, reruns and version differences</title>
       <link>https://www.tidymass.org/windows/tasks-and-reruns/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/tasks-and-reruns/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-tasks-and-reruns-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-tasks-and-reruns-en.svg&#34; alt=&#34;Understand saved and stale results. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Understand saved and stale results. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-tasks-and-reruns-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Wait for the current R task to finish before submitting a new one. Read the saved run settings when comparing two results. After a successful upstream rerun, follow the workflow order through stale downstream steps; a previous result remaining visible does not make it current.&lt;/p&gt;
 &lt;h2 id=&#34;monitor-and-cancel&#34;&gt;Monitor and cancel&lt;/h2&gt;
 &lt;p&gt;Inspect the running operation and its logs. To stop it, use the interface&amp;rsquo;s cancellation button and wait for the status update. Do not delete project files to stop computation. Reducing worker count can reduce parallel memory requirements.&lt;/p&gt;
 &lt;h2 id=&#34;check-parameters-on-a-small-dataset&#34;&gt;Check parameters on a small dataset&lt;/h2&gt;
@@ -184,15 +254,36 @@
 &lt;p&gt;Reopen a project and continue from the first unfinished step with satisfied prerequisites. A successful upstream rerun makes affected downstream results stale. Rerun those stages; Run history retains previous records. Canceled peak detection must be started again, without scan-level resume.&lt;/p&gt;
 &lt;h2 id=&#34;differences-from-macos-0165&#34;&gt;Differences from macOS 0.1.65&lt;/h2&gt;
 &lt;p&gt;Windows 0.1.63 does not include the newer Parameter trial, Task center, Workflow templates, resizable plot/table workspace or Basic / Quality / Annotation column views. Follow this Windows guide for the shared analysis steps. After upgrading, use the documentation matching the actual installed version.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Feature review and interactive plots</title>
       <link>https://www.tidymass.org/windows/feature-review/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/feature-review/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-feature-review-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-feature-review-en.svg&#34; alt=&#34;Review one feature at a time. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Review one feature at a time. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-feature-review-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Begin with Clear filters if the table unexpectedly becomes empty. Select a feature, load its evidence, and check peak shape across representative samples. Save a review note with a reason. Exclude is a review label; use the cleaning/filtering operation when you intend to remove data from subsequent analysis.&lt;/p&gt;
 &lt;h2 id=&#34;browse-features&#34;&gt;Browse features&lt;/h2&gt;
 &lt;p&gt;Open &lt;strong&gt;m/z–RT distribution&lt;/strong&gt; in Data exploration and select a point or table row to inspect a feature. Use &lt;strong&gt;Find feature by ID&lt;/strong&gt; for exact lookup and &lt;strong&gt;Previous feature / Next feature&lt;/strong&gt; to move through the filtered, sorted list. Sort table columns and add a few sample-intensity columns as needed.&lt;/p&gt;
 &lt;p&gt;Windows 0.1.63 uses the earlier plot/table layout. The resizable workspace and column-view selector belong to macOS 0.1.65.&lt;/p&gt;
@@ -205,9 +296,21 @@
 &lt;h2 id=&#34;plot-and-table-downloads&#34;&gt;Plot and table downloads&lt;/h2&gt;
 &lt;p&gt;Drag to zoom; use &lt;strong&gt;Reset view&lt;/strong&gt; or double-click to reset. &lt;strong&gt;Download plot&lt;/strong&gt; offers the supported formats, dimensions and PNG DPI. &lt;strong&gt;Download CSV&lt;/strong&gt;, where present, exports plot data. Read the adjacent information icon: some downloads regenerate the full plot instead of preserving the current zoom.&lt;/p&gt;
 &lt;p&gt;Use &lt;strong&gt;Download complete CSV&lt;/strong&gt; or &lt;strong&gt;Results &amp;amp; export&lt;/strong&gt; for complete tables. Pagination and limited previews do not define the full export scope.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-locate-the-feature-dataset-before-reviewing&#34;&gt;Walkthrough: Locate the feature dataset before reviewing&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Locate the feature dataset before reviewing. macOS preview 0.1.59 shared-workflow screenshot, not a Windows capture.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Locate the feature dataset before reviewing. macOS preview 0.1.59 shared-workflow screenshot, not a Windows capture. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Select Data exploration and verify the displayed run and feature count.&lt;/li&gt;
+&lt;li&gt;Open Data table or the feature exploration plot to select an ID, then inspect the available intensities, MS2 and chromatographic evidence.&lt;/li&gt;
+&lt;li&gt;When saving a review, retain the run ID and feature ID together. Do not assume a review label removes that feature from downstream calculations.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Individual analysis tools</title>
       <link>https://www.tidymass.org/windows/analysis-tools/</link>
@@ -269,6 +372,14 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-analysis-tools-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-analysis-tools-en.svg&#34; alt=&#34;Choose the smallest relevant tool. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose the smallest relevant tool. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-analysis-tools-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Read the tool card before opening it. For raw chromatograms supply raw files; for quality reports supply a compatible dataset. A standalone tool does not automatically rerun the full workflow. Check its own input, parameters and output directory.&lt;/p&gt;
 &lt;h2 id=&#34;sample--file-checker&#34;&gt;Sample &amp;amp; file checker&lt;/h2&gt;
 &lt;p&gt;Supply a sample CSV and raw folder; select the matching column. Use &lt;code&gt;sample_id&lt;/code&gt; for a typical sample sheet, or unique &lt;code&gt;file_name&lt;/code&gt; for an injection list with repeated QCs. Matching strips extensions and is case-sensitive. The checker recognizes mzML, mzXML and Thermo RAW filenames; recognition does not mean it can read or convert Thermo spectra. Resolve missing, duplicate and unexpected entries before analysis.&lt;/p&gt;
 &lt;h2 id=&#34;injection-sequence-designer&#34;&gt;Injection sequence designer&lt;/h2&gt;
@@ -285,9 +396,22 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_A,195.0877,180
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_B,300.1234,240
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;RT is in seconds. Choose raw files, m/z tolerance and a fixed RT integration window, then run and inspect peak shapes. The current method sums MS1 signal within the tolerance and integrates by the trapezoidal rule. It does not identify compounds or automatically separate coeluting peaks. Check the preview and export scope before interpreting areas.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-choose-an-independent-tool&#34;&gt;Walkthrough: Choose an independent tool&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; alt=&#34;Choose an independent tool. Actual macOS preview 0.1.56 screenshot; card layout may vary in later builds. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose an independent tool. Actual macOS preview 0.1.56 screenshot; card layout may vary in later builds. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open Analysis tools in the left navigation, then read the card title and input description.&lt;/li&gt;
+&lt;li&gt;Use Sample &amp;amp; file checker before processing to investigate unmatched files. Use Raw chromatograms to inspect acquisition signals without first completing a full feature workflow.&lt;/li&gt;
+&lt;li&gt;Click Open tool on the intended card and create its project. Provide its required files or dataset, inspect settings, then run.&lt;/li&gt;
+&lt;li&gt;For Targeted peak extractor, inspect the requested m/z and RT windows plus the extracted EIC. A fixed-window integral is not automatically a validated quantitative assay.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Shiny tools and the R environment</title>
       <link>https://www.tidymass.org/windows/shiny-and-packages/</link>
@@ -295,6 +419,14 @@
       <guid>https://www.tidymass.org/windows/shiny-and-packages/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Shiny tools&lt;/strong&gt; installs and starts complete third-party Shiny apps. &lt;strong&gt;R environment&lt;/strong&gt; inspects R and manages additional packages. Installing a missing dependency does not require registering it as a separate app. The dedicated TidyMass R Shiny tutorial is a separate guide under &lt;strong&gt;TUTORIALS → R shiny&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-shiny-and-packages-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-shiny-and-packages-en.svg&#34; alt=&#34;Manage optional R applications. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Manage optional R applications. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-shiny-and-packages-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Use R environment to inspect installed packages and Shiny tools to manage application launchers. Check the package name and startup function. If launch fails, read the tool log and identify a missing package, system library or startup error before retrying.&lt;/p&gt;
 &lt;h2 id=&#34;install-and-start-a-tool&#34;&gt;Install and start a tool&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Open &lt;strong&gt;Shiny tools → Install a Shiny tool&lt;/strong&gt;.&lt;/li&gt;
@@ -311,15 +443,36 @@
 &lt;h2 id=&#34;install-missing-packages&#34;&gt;Install missing packages&lt;/h2&gt;
 &lt;p&gt;Open &lt;strong&gt;R environment&lt;/strong&gt;, identify the exact missing package, select the correct source and review the installation log. For example, &lt;code&gt;org.Mm.eg.db&lt;/code&gt; is a Bioconductor package. Stop and restart the affected tool after installation.&lt;/p&gt;
 &lt;p&gt;Additional package libraries are managed separately from the app&amp;rsquo;s bundled library, and some tools have private dependency libraries. Check the actual loaded version when a package appears installed but the error persists. Installing from source can require system libraries or compilers; find the first substantive error rather than repeatedly reinstalling unrelated R packages.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-launch-an-installed-shiny-tool&#34;&gt;Walkthrough: Launch an installed Shiny tool&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; alt=&#34;Launch an installed Shiny tool. Actual macOS preview 0.1.39 screenshot with the MAPA example. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Launch an installed Shiny tool. Actual macOS preview 0.1.39 screenshot with the MAPA example. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In Installed tools, read the package name, version and startup function before launching. The stopped badge means the application process is not running.&lt;/li&gt;
+&lt;li&gt;Click Launch once and wait for startup. If startup fails, open View log and use the first error to identify the dependency or function that failed.&lt;/li&gt;
+&lt;li&gt;For another tool, choose the correct package source and repository/package name in the installation form. An installed R package needs a valid Shiny startup function to become a launchable tool.&lt;/li&gt;
+&lt;li&gt;Save results inside the launched application before stopping it. Third-party apps have their own input formats and export controls.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Export, save and recover</title>
       <link>https://www.tidymass.org/windows/export-and-recovery/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/windows/export-and-recovery/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/windows/&#34;&gt;Tutorial contents&lt;/a&gt; · Applies to: 0.1.63&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-export-and-recovery-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-export-and-recovery-en.svg&#34; alt=&#34;Export the run you actually reviewed. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Export the run you actually reviewed. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-export-and-recovery-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Select the intended runs before choosing file types. Export full tables, R objects, settings, code and logs where needed. Open one exported table and object to verify the IDs and dimensions. Keep separately referenced raw files and databases with the backup.&lt;/p&gt;
 &lt;h2 id=&#34;save-a-figure&#34;&gt;Save a figure&lt;/h2&gt;
 &lt;p&gt;Click &lt;strong&gt;Download plot&lt;/strong&gt; near the figure and choose an available format. Dimensions are in inches; PNG supports DPI. Some figures also provide &lt;strong&gt;Download CSV&lt;/strong&gt;. Inspect the exported file: an R-generated export may use the full range rather than the current interactive zoom.&lt;/p&gt;
 &lt;h2 id=&#34;export-an-analysis&#34;&gt;Export an analysis&lt;/h2&gt;
@@ -332,9 +485,22 @@
 &lt;h2 id=&#34;move-or-clean-up&#34;&gt;Move or clean up&lt;/h2&gt;
 &lt;p&gt;Copy the entire project directory and separately account for external raw files and databases. Internal result paths can be relocated with a project; external references may need repair. Use &lt;strong&gt;Storage&lt;/strong&gt; for supported cache management and read its scope first. Removing scan caches can make the next EIC extraction slower.&lt;/p&gt;
 &lt;p&gt;Do not delete run folders during computation or open the same project for modification in multiple app instances. If a project lock is reported, close the other instance first.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-choose-export-scope-and-contents&#34;&gt;Walkthrough: Choose export scope and contents&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; alt=&#34;Choose export scope and contents. Actual macOS preview 0.1.43 example screenshot; controls shown remain useful for understanding export. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose export scope and contents. Actual macOS preview 0.1.43 example screenshot; controls shown remain useful for understanding export. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set Run scope to the execution or collection of executions you intend to preserve. Do this before choosing individual output types.&lt;/li&gt;
+&lt;li&gt;Keep R objects for reanalysis, Complete tables for full numeric results, and code/parameters/logs/session information for provenance. Plot formats and dimensions affect figures, not the full table contents.&lt;/li&gt;
+&lt;li&gt;Select a complete project copy if you need saved project artifacts as well. External raw files and databases must still be backed up separately.&lt;/li&gt;
+&lt;li&gt;Click Export selected content. Open the destination and verify a table, object, and log. A visible paginated table is only a preview; the complete-table export is the reproducible record.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Troubleshooting</title>
       <link>https://www.tidymass.org/windows/troubleshooting/</link>
@@ -406,8 +572,29 @@
 &lt;p&gt;&lt;strong&gt;R busy&lt;/strong&gt; means the requested operation needs the occupied R worker. Saved summaries and cached results can be viewed where supported, but a second analysis must wait. Closing a task panel does not cancel computation. Use the cancellation control and wait for confirmation. Recovery resumes between saved steps, not within interrupted peak detection.&lt;/p&gt;
 &lt;p&gt;For &lt;strong&gt;Missing package&lt;/strong&gt;, install the package from its correct source and restart the tool. For &lt;strong&gt;Invalid R package name&lt;/strong&gt;, check whether a URL or repository name was entered instead. For &lt;strong&gt;not an exported object&lt;/strong&gt;, inspect the startup function and mode. Missing images or styles in a Shiny app can reflect static-asset paths rather than text encoding. Read the first substantive error and final installation state; a warning alone is not necessarily a failure.&lt;/p&gt;
 &lt;p&gt;When reporting an issue, include the app and OS versions, tool/stage, run ID, reproduction steps and relevant logs. A few de-identified sample-information rows can clarify input problems. Preserve the failing project and logs before clearing data, and check shared logs for private sample names and paths.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-troubleshooting-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/windows-troubleshooting-en.svg&#34; alt=&#34;Find the first failing step. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Find the first failing step. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/windows-troubleshooting-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Record the version, project stage and first error message. Check file existence and permissions, then R readiness and package availability. If an upstream result changes, rerun dependent stale stages. Avoid repeatedly launching the same failing job without changing its cause.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-a-saved-workflow-result&#34;&gt;Walkthrough: Read a saved workflow result&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read a saved workflow result. Actual macOS preview 0.1.59 regression-test screenshot; example counts are test data. Captured on macOS; shared controls are illustrated, not a Windows installation screen. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read the left-hand stage list first. The selected stage is Data exploration; Data cleaning is marked Stale because its upstream input changed. Blocked stages still lack an eligible input.&lt;/li&gt;
+&lt;li&gt;In Displayed dataset, check the run identifier, Samples, Features and Missing values. Here 7 of 24 cells are missing, giving 29.17%; this is a matrix-cell percentage, not the percentage of completely missing samples.&lt;/li&gt;
+&lt;li&gt;Select a saved run and expand Settings used for this result. Compare saved results only after checking that their input and parameters answer the same question.&lt;/li&gt;
+&lt;li&gt;After checking the result, rerun stale dependent stages in order. If a stage fails, inspect its first error before changing parameters or repeating the task.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
   </channel>
 </rss>

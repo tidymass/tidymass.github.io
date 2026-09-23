@@ -11,13 +11,21 @@
       <title>R shiny user guide</title>
       <link>https://www.tidymass.org/r-shiny/</link>
     </image>
-
+    
     <item>
       <title>Install or access R Shiny</title>
       <link>https://www.tidymass.org/r-shiny/installation/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/installation/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-installation-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-installation-en.svg&#34; alt=&#34;Choose a deployment route. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Choose a deployment route. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-installation-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;For local use, keep the R console running while the browser is open. The browser shows the interface but R performs the analysis. With Docker, select files under the mounted container path. On a hosted service, upload files and retain the JOB ID.&lt;/p&gt;
 &lt;h2 id=&#34;choose-where-to-run&#34;&gt;Choose where to run&lt;/h2&gt;
 &lt;p&gt;The &lt;a href=&#34;https://tidymassshiny.jaspershenlab.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hosted application&lt;/a&gt; runs on a remote server. The published guide describes a 512 MB upload limit and deletion of results after 24 hours; these are service settings and can change. Follow the notices shown by the running service, save the &lt;strong&gt;JOB ID&lt;/strong&gt;, and download results with &lt;strong&gt;Download All Data&lt;/strong&gt; before leaving.&lt;/p&gt;
 &lt;p&gt;A local installation runs R on your computer and provides access to your local files. Docker runs the app in a container; only mounted host folders are visible there. Choose a local or appropriately managed server installation for data that should not be uploaded to the public service.&lt;/p&gt;
@@ -46,15 +54,34 @@
 &lt;p&gt;For a shared server, use a supported R/Shiny Server environment, an application service account, persistent working directories and the required R/system dependencies. Configure authorized users&amp;rsquo; file access, resource limits and the public endpoint with the administrator. A &lt;code&gt;shinyFiles&lt;/code&gt; picker sees the filesystem of the R server, not arbitrary folders on a remote browser user&amp;rsquo;s computer. Upload controls are the route for transferring browser-side files.&lt;/p&gt;
 &lt;p&gt;The older tutorial includes Ubuntu-specific deployment examples. Check their suitability for your server instead of copying obsolete OS repository keys or version-pinned installer URLs blindly.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-check-the-project-entry-after-launch&#34;&gt;Walkthrough: Check the project entry after launch&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/project_initiate.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/project_initiate.png&#34; alt=&#34;Check the project entry after launch. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Check the project entry after launch. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/project_initiate.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The appearance of the app navigation confirms that the browser has connected to the service; it does not confirm access to your data directory.&lt;/li&gt;
+&lt;li&gt;Initialize a small project in a writable location. For Docker, use the mounted path; for the hosted app, follow its upload and JOB ID workflow.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Create a project and import data</title>
       <link>https://www.tidymass.org/r-shiny/inputs-and-processing/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/inputs-and-processing/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-inputs-and-processing-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-inputs-and-processing-en.svg&#34; alt=&#34;Select the right import route. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Select the right import route. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-inputs-and-processing-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Raw files need processing; an existing peak table already contains extracted intensities; a saved mass_dataset may contain earlier processing history. Choose the matching import module. Inspect the resulting sample count, feature count and metadata before opening Overview.&lt;/p&gt;
 &lt;h2 id=&#34;initialize-a-project&#34;&gt;Initialize a project&lt;/h2&gt;
 &lt;p&gt;Choose a working directory, upload &lt;code&gt;sample_info.csv&lt;/code&gt;, map its columns when necessary, then click &lt;strong&gt;Initialize Project&lt;/strong&gt;. Inspect the resulting sample information. IDs must match the intensity columns or raw filenames exactly; distinguish biological &lt;strong&gt;group&lt;/strong&gt;, sample &lt;strong&gt;class&lt;/strong&gt;, batch and acquisition order.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sample_id,group,class,injection.order,batch
@@ -75,38 +102,37 @@
 &lt;p&gt;Click &lt;strong&gt;Input file summary&lt;/strong&gt; and check matching, polarity, sample counts and feature counts before &lt;strong&gt;Generate massdataset object&lt;/strong&gt;. Inspect the separate positive/negative outputs. An extra text annotation column can be mistaken for intensity input, so remove or import it through the appropriate annotation route.&lt;/p&gt;
 &lt;h2 id=&#34;start-with-an-existing-object&#34;&gt;Start with an existing object&lt;/h2&gt;
 &lt;p&gt;Choose &lt;strong&gt;Start with mass_dataset file&lt;/strong&gt;, load the positive and negative objects into their respective controls, and use &lt;strong&gt;Check input&lt;/strong&gt;. A CSV is not an R object merely because its extension is changed. Keep the original object and its package-version record.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/project_initiate.png&#34; alt=&#34;Project initialization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 &lt;p&gt;The screenshot is from the existing published Shiny tutorial; minor visual details can differ across deployments.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/upstream-data-processing.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-the-peak-table-layout&#34;&gt;Walkthrough: Read the peak-table layout&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; alt=&#34;Read the peak-table layout. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read the peak-table layout. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The highlighted columns describe each feature: variable_id, mz, rt and ion. Each remaining column contains one sample’s intensities.&lt;/li&gt;
+&lt;li&gt;Match sample-column names exactly to sample metadata. Keep missing intensities as NA; do not replace them with zero merely to make the table look complete.&lt;/li&gt;
+&lt;li&gt;In the current importer, map the four feature fields and select the correct RT unit. The historical screenshot shows one valid naming convention, not a requirement that every original file use these exact names.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Assess quality and clean data</title>
       <link>https://www.tidymass.org/r-shiny/quality-and-cleaning/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/quality-and-cleaning/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-quality-and-cleaning-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-quality-and-cleaning-en.svg&#34; alt=&#34;Keep the cleaning order explicit. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Keep the cleaning order explicit. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-quality-and-cleaning-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Generate the overview before making changes. Record the missingness criteria and any removed samples, then impute and normalize. Save intermediate objects so a later analysis can return to the correct input rather than repeat undocumented operations.&lt;/p&gt;
 &lt;h2 id=&#34;generate-an-overview&#34;&gt;Generate an overview&lt;/h2&gt;
 &lt;p&gt;Open &lt;strong&gt;Overview&lt;/strong&gt; and click &lt;strong&gt;START&lt;/strong&gt;. Review m/z–RT distribution, missingness by sample/feature, QC RSD, intensity distributions, PCA and sample correlations. Select the relevant group, batch or injection-order coloring and download plots with their settings.&lt;/p&gt;
 &lt;p&gt;QC RSD describes technical repeatability where suitable quantitative QCs exist. Matrix intensity totals are not automatically raw TIC. Investigate suspicious samples against acquisition records before excluding them.&lt;/p&gt;
@@ -122,15 +148,59 @@
 &lt;p&gt;Record batch handling separately from normalization. No normalization method can rescue a completely confounded biological-group/batch design. Separately fitted PCAs should not be compared as a single unchanged coordinate system.&lt;/p&gt;
 &lt;p&gt;Save cleaned objects and diagnostic outputs before proceeding to annotation or statistics.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/upstream-data-processing.html#data-cleaning&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-read-the-overview-panels&#34;&gt;Walkthrough: Read the overview panels&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/Overview1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/Overview1.png&#34; alt=&#34;Read the overview panels. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read the overview panels. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/Overview1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Click Start to generate the overview and select Positive or Negative consistently across panels.&lt;/li&gt;
+&lt;li&gt;Read m/z–RT density at upper left, the missing-value matrix at upper right, and sample/feature missingness below. These views answer different quality questions.&lt;/li&gt;
+&lt;li&gt;Investigate a suspicious sample against acquisition records. Download the before-cleaning plots before applying any exclusion.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-filter-noisy-features&#34;&gt;Walkthrough: Filter noisy features&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/noisy_metabolites.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/noisy_metabolites.png&#34; alt=&#34;Filter noisy features. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Filter noisy features. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/noisy_metabolites.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set the QC missingness cutoff only if suitable quantitative QCs exist, and choose the biological grouping column.&lt;/li&gt;
+&lt;li&gt;Set the group missingness threshold and click Start. The 20%/50% values pictured are tutorial examples, not universal standards.&lt;/li&gt;
+&lt;li&gt;Read the updated object dimensions in Status and use Show plot to inspect the chosen sample class. Save the retained-feature list and criteria.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-configure-missing-value-imputation&#34;&gt;Walkthrough: Configure missing-value imputation&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/imputation1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/imputation1.png&#34; alt=&#34;Configure missing-value imputation. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Configure missing-value imputation. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/imputation1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Select the method first. The picture shows kNN and its k, rowmax, colmax, maxp and random-seed controls.&lt;/li&gt;
+&lt;li&gt;Choose k with regard to the available data; rowmax/colmax control admissible missingness while maxp is a block-size control, not a missingness percentage.&lt;/li&gt;
+&lt;li&gt;After running, check the expression table and Status history. Compare missing-value counts before and after; investigate remaining NA values rather than silently discarding them.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Annotation, statistics and enrichment</title>
       <link>https://www.tidymass.org/r-shiny/annotation-and-statistics/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/annotation-and-statistics/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-annotation-and-statistics-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-annotation-and-statistics-en.svg&#34; alt=&#34;Connect evidence to interpretation. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Connect evidence to interpretation. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-annotation-and-statistics-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Check the selected dataset before each module. Confirm annotation evidence, comparison direction, statistical correction and pathway organism in turn. Do not copy numeric thresholds from example screenshots without checking your design and data.&lt;/p&gt;
 &lt;h2 id=&#34;attach-experimental-ms2&#34;&gt;Attach experimental MS2&lt;/h2&gt;
 &lt;p&gt;Choose &lt;strong&gt;Select MS2 folder&lt;/strong&gt; and the prepared MGF files, separated by polarity. Set chromatography and precursor m/z/RT association tolerances, then click &lt;strong&gt;Start&lt;/strong&gt;. Association tolerance links a spectrum to a feature; it is distinct from matching to a reference library.&lt;/p&gt;
 &lt;h2 id=&#34;annotate-metabolites&#34;&gt;Annotate metabolites&lt;/h2&gt;
@@ -144,38 +214,61 @@
 &lt;p&gt;Use only the biological samples intended for the test. Do not infer pairing from row order. If the module cannot represent the study&amp;rsquo;s repeated measures or covariates, export the object and use the appropriate R model.&lt;/p&gt;
 &lt;h2 id=&#34;pathway-enrichment&#34;&gt;Pathway enrichment&lt;/h2&gt;
 &lt;p&gt;Choose KEGG/HMDB or &lt;strong&gt;Upload custom database&lt;/strong&gt;, verify the organism and ID system, and set the adjustment method, cutoff and threads. Inspect the bar/scatter plots and mapping coverage. Review candidate ambiguity, collapse redundant compound IDs and record the background used by the method. Enrichment is a statistical association with a reference set, not direct proof of pathway activation.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/metabolite_annotation.png&#34; alt=&#34;Annotation settings&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 &lt;p&gt;Screenshot from the existing published tutorial.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/downstream-data-processing.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-configure-annotation-evidence&#34;&gt;Walkthrough: Configure annotation evidence&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/metabolite_annotation.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/metabolite_annotation.png&#34; alt=&#34;Configure annotation evidence. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Configure annotation evidence. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/metabolite_annotation.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Select the data, reference database and polarity. Confirm chromatography and adduct choices before setting mass and RT tolerances.&lt;/li&gt;
+&lt;li&gt;Run annotation and inspect candidate-level evidence. A candidate without experimental MS2 cannot be described as MS2-confirmed.&lt;/li&gt;
+&lt;li&gt;Download the full candidate table, including scores and database provenance, before proceeding to statistics.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-read-the-group-comparison-view&#34;&gt;Walkthrough: Read the group-comparison view&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/dam.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/dam.png&#34; alt=&#34;Read the group-comparison view. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Read the group-comparison view. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/dam.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Check the current object and Column index, then select First group and Second group. Record the fold-change direction used by the installed module.&lt;/li&gt;
+&lt;li&gt;Set effect-size and statistical thresholds deliberately. The screenshot’s FDR value of 1 is permissive and should not be copied as a recommended discovery cutoff.&lt;/li&gt;
+&lt;li&gt;Click Start and inspect the full table, especially fc, p_value and p_value_adjust. Read PCA as descriptive structure; return to individual peak evidence before interpreting prominent volcano points.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-inspect-pathway-enrichment&#34;&gt;Walkthrough: Inspect pathway enrichment&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/enrichment.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/enrichment.png&#34; alt=&#34;Inspect pathway enrichment. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Inspect pathway enrichment. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/enrichment.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Select a database appropriate to the organism. The pictured KEGG (hsa) option is human-specific; another organism needs an appropriate resource.&lt;/li&gt;
+&lt;li&gt;Set the adjustment method, test and cutoff, then Start enrichment. Inspect mapped compounds and background assumptions alongside the reported pathway table.&lt;/li&gt;
+&lt;li&gt;Download the full results, not just the bar chart. Large visual effects or disease names in a pathway label do not establish causation in your study.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>fMSEA, FPA and database toolkits</title>
       <link>https://www.tidymass.org/r-shiny/toolkits/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/toolkits/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-toolkits-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-toolkits-en.svg&#34; alt=&#34;Toolkits are separate analysis routes. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Toolkits are separate analysis routes. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-toolkits-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Read the input panel for the chosen toolkit. fMSEA uses feature-level inputs and module analysis, while compound-based pathway enrichment uses mapped compound IDs. Save the chosen parameters and mapping outputs; an optional language-model explanation is not experimental evidence.&lt;/p&gt;
 &lt;h2 id=&#34;fmsea&#34;&gt;fMSEA&lt;/h2&gt;
 &lt;p&gt;Open &lt;strong&gt;Tidymass shiny toolkits → fMSEA Analysis&lt;/strong&gt;. Load the required R data files: a processed &lt;strong&gt;Feature Table&lt;/strong&gt;, an &lt;strong&gt;MS1 Database&lt;/strong&gt; (KEGG/HMDB as supported) and a &lt;strong&gt;Pathway Database&lt;/strong&gt;. The published module lists KEGG, HMDB, IMETPD, Reactome and WikiPathways resources. Use the module&amp;rsquo;s demo/file schema, not an arbitrary renamed CSV.&lt;/p&gt;
 &lt;ol&gt;
@@ -195,38 +288,37 @@
 &lt;p&gt;Find the intended organism code, for example hsa or mmu, from KEGG&amp;rsquo;s organism list. Open &lt;strong&gt;KEGG Pathway Database Construction&lt;/strong&gt;, use &lt;strong&gt;Set working directory&lt;/strong&gt;, enter the code and a request interval (the tutorial uses at least one second), then &lt;strong&gt;Download pathway&lt;/strong&gt;. Monitor network errors and resulting file paths. Verify that pathway IDs carry the intended species prefix before enrichment; preserve retrieval date and organism code.&lt;/p&gt;
 &lt;h2 id=&#34;convert-metabolite-ids&#34;&gt;Convert metabolite IDs&lt;/h2&gt;
 &lt;p&gt;Select the provider under &lt;strong&gt;Convert Parameters&lt;/strong&gt;, choose &lt;strong&gt;Source ID Type&lt;/strong&gt; and &lt;strong&gt;Target ID Type&lt;/strong&gt;, enter queries in &lt;strong&gt;Conversion Input&lt;/strong&gt; and click &lt;strong&gt;Convert ID&lt;/strong&gt;. Inspect failed and one-to-many mappings instead of silently dropping them. API-based services require their credentials. The experimental LLM conversion route may produce incorrect identifiers; verify structures/identifiers independently before using them in a database or pathway analysis.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/fmsea_visulization.png&#34; alt=&#34;fMSEA results&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 &lt;p&gt;Screenshot from the existing published tutorial.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/tidymass-shiny-toolkits.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-inspect-a-functional-module&#34;&gt;Walkthrough: Inspect a functional module&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/fmsea_visulization.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/fmsea_visulization.png&#34; alt=&#34;Inspect a functional module. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Inspect a functional module. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/fmsea_visulization.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Complete the required fMSEA input and analysis steps before opening module visualization.&lt;/li&gt;
+&lt;li&gt;Inspect the features and relationships in a module, then compare their statistics and candidate annotations. A cluster in the graph is not automatic structural confirmation.&lt;/li&gt;
+&lt;li&gt;Save the module tables and visualization settings. Keep optional generated interpretations separate from measured evidence.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Save results and solve problems</title>
       <link>https://www.tidymass.org/r-shiny/export-and-troubleshooting/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/r-shiny/export-and-troubleshooting/</guid>
       <description>&lt;p&gt;Based on the current published tutorial and the public tidymassshiny 1.0.0 source; checked September 23, 2026.&lt;/p&gt;
+&lt;h2 id=&#34;visual-guide-the-route-through-this-chapter&#34;&gt;Visual guide: the route through this chapter&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-export-and-troubleshooting-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-export-and-troubleshooting-en.svg&#34; alt=&#34;Download before ending the session. Numbers show the reading order; this is a schematic.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Download before ending the session. Numbers show the reading order; this is a schematic. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-export-and-troubleshooting-en.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A success message confirms that one operation finished; it does not mean files are saved on your computer. Download the object and full results, inspect the archive, and retain the JOB ID and settings. Resolve the first error in the relevant module if an expected file is absent.&lt;/p&gt;
 &lt;h2 id=&#34;save-a-complete-analysis&#34;&gt;Save a complete analysis&lt;/h2&gt;
 &lt;p&gt;Keep the initialized sample sheet, raw-file references, intermediate &lt;code&gt;mass_dataset&lt;/code&gt; objects, cleaned and annotated objects, complete statistical/enrichment tables, figures and parameters. For local use, inspect the output directories reported by the app. For hosted use, record the JOB ID and &lt;strong&gt;Download All Data&lt;/strong&gt; before the service retention window expires. Confirm the archive opens and contains the results you intended to keep.&lt;/p&gt;
 &lt;p&gt;When reopening compatible objects or fMSEA results, confirm which steps they represent. Changing a parameter does not retroactively regenerate a saved result. Preserve software/package versions and database provenance alongside the outputs.&lt;/p&gt;
@@ -283,8 +375,20 @@
 &lt;/table&gt;
 &lt;p&gt;For a report, include app/package versions, local/Docker/hosted deployment, module, steps to reproduce, logs and a de-identified input example. Do not share API keys or private sample identifiers.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Original tutorial and screenshots&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-save-results-after-a-successful-step&#34;&gt;Walkthrough: Save results after a successful step&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/online_success.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;Open full-size image&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/online_success.png&#34; alt=&#34;Save results after a successful step. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment.&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;Save results after a successful step. Reproduced from the published TidyMassShiny tutorial; interface details can differ by deployment. &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/online_success.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open full-size ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Dismiss Success and check which operation completed. In this historical image the message concerns negative-mode parameter optimization, not an entire study.&lt;/li&gt;
+&lt;li&gt;Use Download mass_dataset for the object and Download All Data for the broader result bundle where provided.&lt;/li&gt;
+&lt;li&gt;Open the downloads and confirm expected files are present. Record the JOB ID and current service retention notice before leaving the hosted session.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
   </channel>
 </rss>

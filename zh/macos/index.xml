@@ -11,7 +11,7 @@
       <title>macOS 使用说明</title>
       <link>https://www.tidymass.org/zh/macos/</link>
     </image>
-
+    
     <item>
       <title>安装与快速开始</title>
       <link>https://www.tidymass.org/zh/macos/getting-started/</link>
@@ -19,6 +19,14 @@
       <guid>https://www.tidymass.org/zh/macos/getting-started/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
 &lt;p&gt;当前对应 &lt;strong&gt;0.1.65 Apple Silicon 预览版&lt;/strong&gt;。公开下载链接尚未核实；请使用维护者提供的 DMG，并核对应用显示的版本号。本教程不声明 Intel Mac 安装包支持。&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-getting-started-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-getting-started-zh.svg&#34; alt=&#34;第一个项目。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;第一个项目。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-getting-started-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;等待 R 环境就绪。选择非靶向流程，填写易辨认的项目名称并选择可写的上级目录。导入后先把界面样本数与样本表核对，再进入峰检测。&lt;/p&gt;
 &lt;h2 id=&#34;安装-macos-版本&#34;&gt;安装 macOS 版本&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;打开所获得的 TidyMass DMG 安装包。&lt;/li&gt;
@@ -80,15 +88,36 @@
 &lt;p&gt;左下角内存分别显示 &lt;strong&gt;TidyMass used&lt;/strong&gt;、&lt;strong&gt;Computer used&lt;/strong&gt;、&lt;strong&gt;Computer total&lt;/strong&gt;。软件占用和系统总占用不是同一个指标；系统总占用较高不一定由 TidyMass 单独造成。&lt;/p&gt;
 &lt;h2 id=&#34;第一次运行后的检查&#34;&gt;第一次运行后的检查&lt;/h2&gt;
 &lt;p&gt;确认导入样品数、分组和文件匹配正确，再查看结果中的 feature 数、缺失值、峰形及警告。仅显示 completed 表示程序执行完成，不代表分析参数或生物学结论已经验证。&lt;/p&gt;
+&lt;h2 id=&#34;看图操作阅读已保存的流程结果&#34;&gt;看图操作：阅读已保存的流程结果&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;阅读已保存的流程结果。真实 macOS 0.1.59 预览版回归测试截图；计数来自测试数据。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;阅读已保存的流程结果。真实 macOS 0.1.59 预览版回归测试截图；计数来自测试数据。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;先看左侧阶段列表：当前选中 Data exploration；Data cleaning 标记为 Stale，表示上游输入已改变。Blocked 阶段尚无可用的前置输入。&lt;/li&gt;
+&lt;li&gt;在 Displayed dataset 核对运行标识、Samples、Features 和 Missing values。图中 24 个矩阵单元中有 7 个缺失，即 29.17%；这不是整份缺失样本的比例。&lt;/li&gt;
+&lt;li&gt;选择已保存运行，展开 Settings used for this result。比较两份结果前确认它们的输入和参数能够回答同一问题。&lt;/li&gt;
+&lt;li&gt;复核后按顺序重跑过期的下游阶段；若失败，先检查第一条错误再调整参数或重试。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>输入数据与样品信息</title>
       <link>https://www.tidymass.org/zh/macos/input-data/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/macos/input-data/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-input-data-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-input-data-zh.svg&#34; alt=&#34;原始文件与样本表对应。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;原始文件与样本表对应。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-input-data-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;把原始文件基本名列出来，与 sample_id 对照，先解决重复、缺失及意外文件。生物学分组与 class 分开填写：QC、Blank 描述样本用途，Control、Treatment 描述比较分组。&lt;/p&gt;
 &lt;h2 id=&#34;原始数据&#34;&gt;原始数据&lt;/h2&gt;
 &lt;p&gt;非靶向工作流和 Raw chromatograms 使用 &lt;strong&gt;mzML / mzXML&lt;/strong&gt;。本版本这些入口不直接处理厂商专有 RAW 文件；请先使用适合仪器和采集方式的转换工具。&lt;/p&gt;
 &lt;p&gt;正、负离子模式建议分别建立项目。文件名去掉扩展名后必须唯一，即使文件在不同子文件夹中也不能重名。不要只用大小写区分样品名。&lt;/p&gt;
@@ -151,15 +180,35 @@
 &lt;h2 id=&#34;ms2-数据&#34;&gt;MS2 数据&lt;/h2&gt;
 &lt;p&gt;MS2 可在支持的导入、数据构建或注释入口附加。MS2 与 feature 的关联依赖前体 m/z 和 RT 等条件；有匹配的 MS2 不代表已确认化合物身份。&lt;/p&gt;
 &lt;p&gt;开始前用 &lt;a href=&#34;https://www.tidymass.org/zh/macos/analysis-tools/&#34;&gt;Sample &amp;amp; file checker&lt;/a&gt; 排查重复、缺失和未预期的文件，尤其适合多批次项目。&lt;/p&gt;
+&lt;h2 id=&#34;看图操作理解特征行与样本列&#34;&gt;看图操作：理解特征行与样本列&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; alt=&#34;理解特征行与样本列。表格示例来自已发布的 Shiny 教程，用于解释数据布局，并非桌面导入界面。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;理解特征行与样本列。表格示例来自已发布的 Shiny 教程，用于解释数据布局，并非桌面导入界面。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;每行代表一个具有 ID、m/z 和 RT 的特征，样本列保存强度。&lt;/li&gt;
+&lt;li&gt;桌面峰表导入应遵循相应模板字段；ion 的处理与 Shiny 导入器不同。不要把元数据列当成强度列。&lt;/li&gt;
+&lt;li&gt;让每个强度列对应样本表的一行，导入前检查缺失值。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>完整非靶向代谢组学工作流</title>
       <link>https://www.tidymass.org/zh/macos/workflow/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/macos/workflow/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-workflow-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-workflow-zh.svg&#34; alt=&#34;八阶段分析路线。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;八阶段分析路线。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-workflow-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;每一阶段先展开设置并核对输入，再运行、等待完成、查看警告和数据摘要。确认样本/特征数量与图形合理后继续。保存参数草稿不会重新计算当前显示的结果。&lt;/p&gt;
 &lt;h2 id=&#34;1-data-import&#34;&gt;1. Data import&lt;/h2&gt;
 &lt;p&gt;选择 mzML/mzXML 文件和样品信息，检查分组，点击 &lt;strong&gt;Import raw files&lt;/strong&gt;。这一步登记原始文件，不执行色谱峰检测。&lt;/p&gt;
 &lt;p&gt;使用目录导入时，子目录可以参与分组；使用单独文件选择时应通过样品信息确认真实分组。检查导入表，不要将文件存放方式误当作生物学设计。&lt;/p&gt;
@@ -232,15 +281,36 @@
 &lt;p&gt;完成步骤保存在项目中。重开项目后可以从第一个尚未完成且前置条件满足的步骤继续，不必重跑已完成步骤。&lt;/p&gt;
 &lt;p&gt;重跑上游步骤成功后，依赖旧结果的下游步骤会变为过期，需要重新运行。旧结果仍在 &lt;strong&gt;Run history&lt;/strong&gt; 中。失败或取消的重试不会把之前成功的结果当作新结果覆盖掉。&lt;/p&gt;
 &lt;p&gt;这里的恢复是从已保存的步骤继续，不代表可以从某一次峰检测内部的任意扫描点恢复。&lt;/p&gt;
+&lt;h2 id=&#34;看图操作阅读已保存的流程结果&#34;&gt;看图操作：阅读已保存的流程结果&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;阅读已保存的流程结果。真实 macOS 0.1.59 预览版回归测试截图；计数来自测试数据。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;阅读已保存的流程结果。真实 macOS 0.1.59 预览版回归测试截图；计数来自测试数据。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;先看左侧阶段列表：当前选中 Data exploration；Data cleaning 标记为 Stale，表示上游输入已改变。Blocked 阶段尚无可用的前置输入。&lt;/li&gt;
+&lt;li&gt;在 Displayed dataset 核对运行标识、Samples、Features 和 Missing values。图中 24 个矩阵单元中有 7 个缺失，即 29.17%；这不是整份缺失样本的比例。&lt;/li&gt;
+&lt;li&gt;选择已保存运行，展开 Settings used for this result。比较两份结果前确认它们的输入和参数能够回答同一问题。&lt;/li&gt;
+&lt;li&gt;复核后按顺序重跑过期的下游阶段；若失败，先检查第一条错误再调整参数或重试。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>参数试跑、任务中心与 workflow 模板</title>
       <link>https://www.tidymass.org/zh/macos/trials-tasks-templates/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/macos/trials-tasks-templates/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-trials-tasks-templates-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-trials-tasks-templates-zh.svg&#34; alt=&#34;完整运行前试验参数。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;完整运行前试验参数。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-trials-tasks-templates-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;在 macOS 0.1.65 选择代表性试验样本并检查试验结果。Trial 标签将它与正式流程结果区分。完整运行前恢复所需参数；模板只传递参数草稿，因此新项目仍需重新选择输入路径、数据库和比较分组。&lt;/p&gt;
 &lt;h2 id=&#34;参数试跑先检查小规模数据&#34;&gt;参数试跑：先检查小规模数据&lt;/h2&gt;
 &lt;p&gt;入口：&lt;strong&gt;Workflows → Raw data processing → Analysis settings → Parameter trial&lt;/strong&gt;。&lt;/p&gt;
 &lt;ol&gt;
@@ -325,15 +395,36 @@
 &lt;h3 id=&#34;模板包含什么&#34;&gt;模板包含什么&lt;/h3&gt;
 &lt;p&gt;保留可复用的分析参数、TidyMass 版本和来源步骤记录。排除原始文件路径、数据库路径、样品选择、试跑子集和比较组 ID。Results &amp;amp; export 的导出选择仍需单独设置。&lt;/p&gt;
 &lt;p&gt;模板保存在当前电脑的 TidyMass 用户数据目录，可供其他项目使用；它不是已经发布到云端的方法库。&lt;/p&gt;
+&lt;h2 id=&#34;看图操作检查参数试验与模板&#34;&gt;看图操作：检查参数试验与模板&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/parameter-trial.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/parameter-trial.png&#34; alt=&#34;检查参数试验与模板。真实 macOS 0.1.65 截图，使用合成原始数据测试样本，不代表生物学结果。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;检查参数试验与模板。真实 macOS 0.1.65 截图，使用合成原始数据测试样本，不代表生物学结果。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/parameter-trial.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;在 Workflow templates 先预览模板再 Apply workflow template；顶部提示要求重新核对输入文件、数据库与比较分组。&lt;/li&gt;
+&lt;li&gt;结果标签以 Trial 开头。图中单样本、两个特征属于试验运行，不是正式全量分析，也不会解锁所有下游阶段。&lt;/li&gt;
+&lt;li&gt;展开 Settings used for this result。Draft differs 表示当前参数草稿与生成这份结果的参数不同。&lt;/li&gt;
+&lt;li&gt;在 Inspect trial peak 选择峰，点击 Show peak shape，检查峰顶、基线与提取边界。确认后恢复合适参数，再处理全部导入样本。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Feature 审查与交互图</title>
       <link>https://www.tidymass.org/zh/macos/feature-review/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/macos/feature-review/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-feature-review-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-feature-review-zh.svg&#34; alt=&#34;逐个复核特征。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;逐个复核特征。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-feature-review-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;若表格意外变空，先 Clear filters。选中特征并加载证据，比较代表性样本中的峰形，保存包含理由的复核备注。Exclude 只是复核标签；若要从后续分析中移除数据，应使用实际清洗或过滤操作。&lt;/p&gt;
 &lt;h2 id=&#34;联动工作台&#34;&gt;联动工作台&lt;/h2&gt;
 &lt;p&gt;在 &lt;strong&gt;Data exploration&lt;/strong&gt; 中选择 m/z–RT distribution。宽窗口中散点图与 feature table 并排显示，中间控件调整宽度；窄窗口会改为上下布局。&lt;/p&gt;
 &lt;p&gt;点击散点或表格中的 feature 后，选择会同步，表格定位到对应页，下方显示 feature 详情。也可用 &lt;strong&gt;Find feature by ID&lt;/strong&gt; 精确查找。&lt;/p&gt;
@@ -392,9 +483,22 @@
 &lt;li&gt;点击 information icon 查看该图的说明。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;保存图可能使用完整范围，而不是当前缩放区域；以图旁的说明为准。表格分页和图形预览不代表完整导出被截断，应使用 &lt;strong&gt;Download complete CSV&lt;/strong&gt; 或 Results &amp;amp; export 获取完整数据。&lt;/p&gt;
+&lt;h2 id=&#34;看图操作筛选选择并记录特征复核&#34;&gt;看图操作：筛选、选择并记录特征复核&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/feature-browser.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/feature-browser.png&#34; alt=&#34;筛选、选择并记录特征复核。来自 0.1.65 源码工作区的真实组件测试截图；1,200 个特征及质量数值均为合成测试数据。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;筛选、选择并记录特征复核。来自 0.1.65 源码工作区的真实组件测试截图；1,200 个特征及质量数值均为合成测试数据。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/feature-browser.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;通过 Feature filters 缩小显示范围；Clear filters 恢复可用特征。显示筛选不会改写分析矩阵。&lt;/li&gt;
+&lt;li&gt;点击表格中的特征 ID，图与详情面板同步选中它；图中为 feature_5。Column view 仅改变显示列，不改变数值。&lt;/li&gt;
+&lt;li&gt;点击 Load intensities, MS2 &amp;amp; candidates，再查看证据标签。Show peak shape 前展开 Samples and extraction settings，核对样本及提取窗口。&lt;/li&gt;
+&lt;li&gt;在 Review note 记录理由，选择 Review status，再点击 Save review。Export reviews CSV 可保存复核轨迹。测试图中的合成 QC 数值不能用于判断真实实验性能。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Analysis tools：独立分析工具</title>
       <link>https://www.tidymass.org/zh/macos/analysis-tools/</link>
@@ -456,6 +560,14 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-analysis-tools-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-analysis-tools-zh.svg&#34; alt=&#34;选择对应的独立工具。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;选择对应的独立工具。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-analysis-tools-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;打开前阅读工具卡片：原始色谱工具需要原始文件，质控报告需要兼容数据对象。独立工具不会自动重跑完整流程；应单独核对它的输入、参数和输出目录。&lt;/p&gt;
 &lt;h2 id=&#34;sample--file-checker&#34;&gt;Sample &amp;amp; file checker&lt;/h2&gt;
 &lt;p&gt;提供样品 CSV 和原始文件目录，选择匹配列。普通样品清单通常用 &lt;code&gt;sample_id&lt;/code&gt;；进样计划有重复 QC 时通常用唯一的 &lt;code&gt;file_name&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;工具检查 mzML、mzXML 和 Thermo RAW 的文件名，不代表能够读取或转换 Thermo RAW 的谱图。匹配去掉扩展名后进行，并区分大小写。检查缺失、重复和未预期文件后，再进行大规模分析。&lt;/p&gt;
@@ -495,15 +607,36 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Target_B,300.1234,240
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;RT 单位为秒。选择原始文件、m/z 容差和 RT 积分窗口后运行。&lt;/p&gt;
 &lt;p&gt;当前方法累加容差内的 MS1 信号，并在固定 RT 窗口用梯形法积分。它不是化合物鉴定，也不会自动拆分共洗脱峰。检查峰形后再解释面积结果。预览可限制样品数，导出范围以工具说明为准。&lt;/p&gt;
+&lt;h2 id=&#34;看图操作选择独立工具&#34;&gt;看图操作：选择独立工具&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; alt=&#34;选择独立工具。真实 macOS 0.1.56 预览版截图；后续构建的卡片布局可能变化。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;选择独立工具。真实 macOS 0.1.56 预览版截图；后续构建的卡片布局可能变化。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/analysis-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;点击左侧 Analysis tools，先阅读工具标题和输入说明。&lt;/li&gt;
+&lt;li&gt;正式处理前可用 Sample &amp;amp; file checker 调查文件不匹配；Raw chromatograms 可在完整特征流程之前检查采集信号。&lt;/li&gt;
+&lt;li&gt;点击目标卡片的 Open tool，创建项目，提供相应文件或对象，核对设置后运行。&lt;/li&gt;
+&lt;li&gt;使用 Targeted peak extractor 时检查 m/z、RT 窗口和提取的 EIC。固定窗口积分不自动等同于经过验证的定量方法。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Shiny tools 与 R environment</title>
       <link>https://www.tidymass.org/zh/macos/shiny-and-packages/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/macos/shiny-and-packages/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-shiny-and-packages-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-shiny-and-packages-zh.svg&#34; alt=&#34;管理可选 R 应用。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;管理可选 R 应用。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-shiny-and-packages-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;在 R environment 检查安装的包，在 Shiny tools 管理应用启动入口。核对包名称和启动函数；启动失败时先查看工具日志，区分缺包、系统库缺失和启动错误再重试。&lt;/p&gt;
 &lt;h2 id=&#34;两个入口的区别&#34;&gt;两个入口的区别&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Shiny tools&lt;/strong&gt; 安装和启动一个完整的 Shiny 应用。&lt;/li&gt;
@@ -564,15 +697,36 @@
 &lt;p&gt;例如 &lt;code&gt;org.Mm.eg.db&lt;/code&gt; 属于 Bioconductor，应按其来源安装，而不是将它当作 CRAN 包。&lt;/p&gt;
 &lt;p&gt;额外包库与应用内置库分开管理。Shiny 工具还可能具有自己的私有依赖库；核心分析与第三方工具的库搜索优先级可能不同。因此“某处安装成功”不代表每个进程已经加载同一版本，重启工具后仍报错时应查看日志和实际包版本。&lt;/p&gt;
 &lt;p&gt;从源码安装的包可能需要编译器或系统依赖。遇到此类失败，安装更多 R 包不一定能解决问题，应先找到日志中的首个实际错误。&lt;/p&gt;
+&lt;h2 id=&#34;看图操作启动已安装-shiny-工具&#34;&gt;看图操作：启动已安装 Shiny 工具&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; alt=&#34;启动已安装 Shiny 工具。真实 macOS 0.1.39 截图，使用 MAPA 示例。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;启动已安装 Shiny 工具。真实 macOS 0.1.39 截图，使用 MAPA 示例。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/shiny-tools.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;在 Installed tools 核对包名称、版本和启动函数。stopped 表示应用进程未运行。&lt;/li&gt;
+&lt;li&gt;点击一次 Launch 并等待；若启动失败，打开 View log，从第一条错误定位依赖或函数问题。&lt;/li&gt;
+&lt;li&gt;安装其他工具时正确选择包来源及仓库/包名称；安装成功的 R 包还需要有效的 Shiny 启动函数才能作为应用打开。&lt;/li&gt;
+&lt;li&gt;停止前在应用内部保存结果。第三方应用拥有自己的输入格式与导出控件。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>导出、项目保存与恢复</title>
       <link>https://www.tidymass.org/zh/macos/export-and-recovery/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/macos/export-and-recovery/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-export-and-recovery-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-export-and-recovery-zh.svg&#34; alt=&#34;导出实际复核过的运行。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;导出实际复核过的运行。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-export-and-recovery-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;先选定运行范围，再选择文件类型。按需要导出完整表、R 对象、设置、代码与日志。打开一份导出表和对象核对 ID 与维度；外部引用的原始文件及数据库也应随备份保存。&lt;/p&gt;
 &lt;h2 id=&#34;下载单张图片&#34;&gt;下载单张图片&lt;/h2&gt;
 &lt;p&gt;在图片附近点击 &lt;strong&gt;Download plot&lt;/strong&gt;，选择提供的格式。宽高以英寸为单位，PNG 可设置 DPI。部分图还提供 &lt;strong&gt;Download CSV&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;交互图当前缩放范围不一定等于导出范围，尤其是 R 重新生成的图。需要保存特定范围时先检查图旁说明和导出结果。&lt;/p&gt;
@@ -603,15 +757,36 @@
 &lt;p&gt;迁移前复制整个项目目录，另外核对外部原始数据和数据库。项目内部结果路径可以随项目位置恢复，但外部文件引用不保证随迁移自动修复。&lt;/p&gt;
 &lt;p&gt;通过软件的 &lt;strong&gt;Storage&lt;/strong&gt; 查看可管理的缓存，清理前阅读其说明。扫描缓存可减少重复读取；清除后再次提取峰形可能需要重新读取原始数据。&lt;/p&gt;
 &lt;p&gt;不要在分析运行中手工删除 run 文件夹。多个软件实例也不应同时修改同一个项目；遇到项目锁提示，先关闭另一个实例。&lt;/p&gt;
+&lt;h2 id=&#34;看图操作选择导出范围与内容&#34;&gt;看图操作：选择导出范围与内容&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; alt=&#34;选择导出范围与内容。真实 macOS 0.1.43 示例截图，用于说明导出控件。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;选择导出范围与内容。真实 macOS 0.1.43 示例截图，用于说明导出控件。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/export.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;先用 Run scope 选择需要保留的单次或多次运行，再选择输出类型。&lt;/li&gt;
+&lt;li&gt;R objects 便于重新分析，Complete tables 保存完整数值结果，代码/参数/日志/会话信息用于追溯。图形格式和尺寸影响图文件，不影响完整表格内容。&lt;/li&gt;
+&lt;li&gt;若需要保存项目内工件，可选择完整项目副本；外部原始文件和数据库仍需另行备份。&lt;/li&gt;
+&lt;li&gt;点击 Export selected content，打开目标目录并核对表、对象和日志。界面分页表只是预览，完整表格导出才保留全部结果。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>常见问题</title>
       <link>https://www.tidymass.org/zh/macos/troubleshooting/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/macos/troubleshooting/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/zh/macos/&#34;&gt;返回教程目录&lt;/a&gt; · 适用版本：0.1.65&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-troubleshooting-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/macos-troubleshooting-zh.svg&#34; alt=&#34;定位第一个失败环节。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;定位第一个失败环节。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/macos-troubleshooting-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;记录版本、项目阶段和第一条错误。先检查文件是否存在及权限，再检查 R 就绪状态与包是否可用。上游结果改变后，重跑依赖它的过期阶段，不要在未改变原因时反复提交同一失败任务。&lt;/p&gt;
 &lt;h2 id=&#34;处理步骤或结果&#34;&gt;处理步骤或结果&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -708,8 +883,21 @@
 &lt;h2 id=&#34;提交问题时提供什么&#34;&gt;提交问题时提供什么&lt;/h2&gt;
 &lt;p&gt;请提供软件版本、macOS/Windows 版本、具体工具或 workflow 步骤、运行 ID、复现操作和相关日志。数据问题可附脱敏的样品信息表头与几行示例。&lt;/p&gt;
 &lt;p&gt;保留出现问题的项目和运行记录，先不要删除缓存或历史结果。日志可能包含本地路径和样品标识，分享前检查其中的敏感信息。&lt;/p&gt;
+&lt;h2 id=&#34;看图操作阅读已保存的流程结果&#34;&gt;看图操作：阅读已保存的流程结果&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; alt=&#34;阅读已保存的流程结果。真实 macOS 0.1.59 预览版回归测试截图；计数来自测试数据。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;阅读已保存的流程结果。真实 macOS 0.1.59 预览版回归测试截图；计数来自测试数据。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/desktop/workflow-saved.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;先看左侧阶段列表：当前选中 Data exploration；Data cleaning 标记为 Stale，表示上游输入已改变。Blocked 阶段尚无可用的前置输入。&lt;/li&gt;
+&lt;li&gt;在 Displayed dataset 核对运行标识、Samples、Features 和 Missing values。图中 24 个矩阵单元中有 7 个缺失，即 29.17%；这不是整份缺失样本的比例。&lt;/li&gt;
+&lt;li&gt;选择已保存运行，展开 Settings used for this result。比较两份结果前确认它们的输入和参数能够回答同一问题。&lt;/li&gt;
+&lt;li&gt;复核后按顺序重跑过期的下游阶段；若失败，先检查第一条错误再调整参数或重试。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
   </channel>
 </rss>

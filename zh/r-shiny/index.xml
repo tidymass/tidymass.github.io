@@ -11,13 +11,21 @@
       <title>R shiny 使用说明</title>
       <link>https://www.tidymass.org/zh/r-shiny/</link>
     </image>
-
+    
     <item>
       <title>安装与访问 R Shiny</title>
       <link>https://www.tidymass.org/zh/r-shiny/installation/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/r-shiny/installation/</guid>
       <description>&lt;p&gt;依据现有公开教程和 tidymassshiny 1.0.0 公开源码整理，核对日期：2026-09-23。&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-installation-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-installation-zh.svg&#34; alt=&#34;选择运行方式。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;选择运行方式。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-installation-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;本地使用时，浏览器打开期间保持 R 控制台运行：浏览器展示界面，R 执行分析。Docker 内应从挂载路径选择文件；在线服务需要上传文件并保存 JOB ID。&lt;/p&gt;
 &lt;h2 id=&#34;选择运行位置&#34;&gt;选择运行位置&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://tidymassshiny.jaspershenlab.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;在线应用&lt;/a&gt;在服务器上运行。现有公开教程说明上传限制为 512 MB、结果在 24 小时后删除；这些属于可变的服务配置，应以实际服务提示为准。记下 &lt;strong&gt;JOB ID&lt;/strong&gt;，离开前使用 &lt;strong&gt;Download All Data&lt;/strong&gt; 下载结果。&lt;/p&gt;
 &lt;p&gt;本地 R 版本使用本机计算和文件；Docker 版本只能访问挂载到容器中的目录。不适合上传到公共服务的数据，应在本地或经过管理的服务器环境分析。&lt;/p&gt;
@@ -46,15 +54,34 @@
 &lt;p&gt;管理员应准备受支持的 R/Shiny Server 环境、服务账号、持久工作目录和所需 R/系统依赖，并配置用户文件访问、资源限制和外部入口。&lt;code&gt;shinyFiles&lt;/code&gt; 选择器看到的是 R 所在服务器的文件系统，不会直接读取远程浏览器所在电脑的任意文件夹；浏览器本地文件应通过上传入口传输。&lt;/p&gt;
 &lt;p&gt;旧教程包含 Ubuntu 部署示例，使用前先核对系统适用性，不要直接复制已过时的仓库密钥命令或固定版本安装器。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;原教程及操作截图&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;看图操作启动后检查项目入口&#34;&gt;看图操作：启动后检查项目入口&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/project_initiate.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/project_initiate.png&#34; alt=&#34;启动后检查项目入口。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;启动后检查项目入口。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/project_initiate.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;看到应用导航说明浏览器已连接服务，不代表服务已能访问数据目录。&lt;/li&gt;
+&lt;li&gt;先在可写位置初始化小项目；Docker 使用挂载路径，在线版遵循上传与 JOB ID 流程。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>创建项目与导入数据</title>
       <link>https://www.tidymass.org/zh/r-shiny/inputs-and-processing/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/r-shiny/inputs-and-processing/</guid>
       <description>&lt;p&gt;依据现有公开教程和 tidymassshiny 1.0.0 公开源码整理，核对日期：2026-09-23。&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-inputs-and-processing-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-inputs-and-processing-zh.svg&#34; alt=&#34;选择正确的导入路线。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;选择正确的导入路线。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-inputs-and-processing-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;原始文件需要峰处理；已有峰表包含提取后的强度；保存的 mass_dataset 可能包含历史处理记录。选择对应导入模块，检查样本数、特征数和元数据后再进入 Overview。&lt;/p&gt;
 &lt;h2 id=&#34;初始化项目&#34;&gt;初始化项目&lt;/h2&gt;
 &lt;p&gt;设置工作目录，上传 &lt;code&gt;sample_info.csv&lt;/code&gt;，必要时映射列名，再点击 &lt;strong&gt;Initialize Project&lt;/strong&gt; 并检查样品信息。样品 ID 必须与强度列或原始文件名准确匹配；区分生物学 group、用途 class、批次和进样顺序。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sample_id,group,class,injection.order,batch
@@ -75,38 +102,37 @@
 &lt;p&gt;先点击 &lt;strong&gt;Input file summary&lt;/strong&gt; 核对匹配、模式、样品数和 feature 数，再点击 &lt;strong&gt;Generate massdataset object&lt;/strong&gt;，查看正负模式输出。额外文本注释列可能被当作强度，因此应先移除或通过合适的注释入口导入。&lt;/p&gt;
 &lt;h2 id=&#34;从已有对象开始&#34;&gt;从已有对象开始&lt;/h2&gt;
 &lt;p&gt;选择 &lt;strong&gt;Start with mass_dataset file&lt;/strong&gt;，分别在正负模式入口加载对应对象，再点击 &lt;strong&gt;Check input&lt;/strong&gt;。修改扩展名不能把 CSV 变成 R 对象；保留原对象和包版本记录。&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/project_initiate.png&#34; alt=&#34;项目初始化&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 &lt;p&gt;截图沿用现有公开 Shiny 教程，不同部署的界面细节可能不同。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/upstream-data-processing.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;原教程及操作截图&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;看图操作阅读峰表结构&#34;&gt;看图操作：阅读峰表结构&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; alt=&#34;阅读峰表结构。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;阅读峰表结构。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/table_upload.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;黄色列描述每个特征：variable_id、mz、rt 和 ion，其余列各代表一个样本的强度。&lt;/li&gt;
+&lt;li&gt;样本列名称必须与样本元数据完全匹配。缺失强度保留 NA，不要仅为让表格完整而改成零。&lt;/li&gt;
+&lt;li&gt;当前导入器可映射四个特征字段，并选择正确 RT 单位。旧截图展示一种有效命名，不要求所有原始文件都使用同样的列名。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>质量评估与数据清洗</title>
       <link>https://www.tidymass.org/zh/r-shiny/quality-and-cleaning/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/r-shiny/quality-and-cleaning/</guid>
       <description>&lt;p&gt;依据现有公开教程和 tidymassshiny 1.0.0 公开源码整理，核对日期：2026-09-23。&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-quality-and-cleaning-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-quality-and-cleaning-zh.svg&#34; alt=&#34;明确清洗顺序。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;明确清洗顺序。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-quality-and-cleaning-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;任何修改前先生成概览，记录缺失率条件和排除样本，再进行填补和标准化。保存中间对象，使后续分析能够返回正确输入，避免重复不明来源的操作。&lt;/p&gt;
 &lt;h2 id=&#34;生成概览&#34;&gt;生成概览&lt;/h2&gt;
 &lt;p&gt;进入 &lt;strong&gt;Overview&lt;/strong&gt;，点击 &lt;strong&gt;START&lt;/strong&gt;。检查 m/z–RT 分布、按样品/feature 的缺失值、QC RSD、强度分布、PCA 和样品相关性，按分组、批次或进样顺序着色，并保存图与设置。&lt;/p&gt;
 &lt;p&gt;QC RSD 描述合适定量 QC 中的技术重复性；矩阵总强度不自动等于原始 TIC。发现可疑样品后，结合采集记录调查再决定是否删除。&lt;/p&gt;
@@ -122,15 +148,59 @@
 &lt;p&gt;批次处理与归一化分别记录。任何归一化都不能挽救生物学组与批次完全混杂的设计。分别拟合的 PCA 也不能当成同一个固定坐标系比较。&lt;/p&gt;
 &lt;p&gt;保存清洗对象和诊断图，再进入注释或统计。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/upstream-data-processing.html#data-cleaning&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;原教程及操作截图&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;看图操作阅读概览面板&#34;&gt;看图操作：阅读概览面板&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/Overview1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/Overview1.png&#34; alt=&#34;阅读概览面板。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;阅读概览面板。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/Overview1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;点击 Start 生成概览，各面板保持一致的 Positive 或 Negative 模式。&lt;/li&gt;
+&lt;li&gt;左上为 m/z–RT 密度，右上为缺失矩阵，下方为样本和特征缺失情况；各图回答不同的质量问题。&lt;/li&gt;
+&lt;li&gt;结合采集记录调查异常样本，实施排除前先下载清洗前图形。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;看图操作过滤噪声特征&#34;&gt;看图操作：过滤噪声特征&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/noisy_metabolites.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/noisy_metabolites.png&#34; alt=&#34;过滤噪声特征。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;过滤噪声特征。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/noisy_metabolites.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;仅在有合适定量 QC 时设置 QC 缺失率阈值，并选择生物学分组列。&lt;/li&gt;
+&lt;li&gt;设置组内缺失率阈值后点击 Start。图中 20%/50% 是示例，并非统一标准。&lt;/li&gt;
+&lt;li&gt;在 Status 检查更新后的对象维度，用 Show plot 查看所选样本类型，保存保留特征列表及条件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;看图操作设置缺失值填补&#34;&gt;看图操作：设置缺失值填补&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/imputation1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/imputation1.png&#34; alt=&#34;设置缺失值填补。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;设置缺失值填补。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/imputation1.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;先选择方法。图中为 kNN，并展示 k、rowmax、colmax、maxp 与随机种子。&lt;/li&gt;
+&lt;li&gt;k 应结合可用数据选择；rowmax/colmax 控制允许的缺失情况，maxp 是块大小参数，不是缺失比例。&lt;/li&gt;
+&lt;li&gt;运行后查看强度表和 Status 历史，对比前后缺失数；仍有 NA 时应调查原因，而不是静默丢弃。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>注释、统计与富集</title>
       <link>https://www.tidymass.org/zh/r-shiny/annotation-and-statistics/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/r-shiny/annotation-and-statistics/</guid>
       <description>&lt;p&gt;依据现有公开教程和 tidymassshiny 1.0.0 公开源码整理，核对日期：2026-09-23。&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-annotation-and-statistics-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-annotation-and-statistics-zh.svg&#34; alt=&#34;从证据走向解释。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;从证据走向解释。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-annotation-and-statistics-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;进入每个模块前核对当前对象，依次确认注释证据、比较方向、统计校正和通路物种。示例截图中的数值阈值不能脱离实验设计与数据直接照搬。&lt;/p&gt;
 &lt;h2 id=&#34;关联实验-ms2&#34;&gt;关联实验 MS2&lt;/h2&gt;
 &lt;p&gt;通过 &lt;strong&gt;Select MS2 folder&lt;/strong&gt; 选择准备好的 MGF，正负模式分开存放。设置色谱类型、前体 m/z 和 RT 关联容差，再点击 &lt;strong&gt;Start&lt;/strong&gt;。将谱图关联到 feature 的容差，与参考库匹配容差是不同参数。&lt;/p&gt;
 &lt;h2 id=&#34;代谢物注释&#34;&gt;代谢物注释&lt;/h2&gt;
@@ -144,38 +214,61 @@
 &lt;p&gt;只让目标生物学样品进入检验，不按表格顺序推断配对。如果界面不能表示研究所需的重复测量或协变量，导出对象后使用适当 R 模型。&lt;/p&gt;
 &lt;h2 id=&#34;通路富集&#34;&gt;通路富集&lt;/h2&gt;
 &lt;p&gt;选择 KEGG/HMDB，或用 &lt;strong&gt;Upload custom database&lt;/strong&gt; 加载自己的通路库；检查物种、ID 类型、校正方法、阈值和线程。查看柱状/散点图和 ID 映射覆盖，审查候选歧义、去重化合物 ID 并记录方法使用的背景。富集表示相对参考集合的统计关联，不直接证明通路激活。&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/metabolite_annotation.png&#34; alt=&#34;注释设置&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 &lt;p&gt;截图来自现有公开教程。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/downstream-data-processing.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;原教程及操作截图&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;看图操作配置注释证据&#34;&gt;看图操作：配置注释证据&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/metabolite_annotation.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/metabolite_annotation.png&#34; alt=&#34;配置注释证据。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;配置注释证据。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/metabolite_annotation.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;选择数据、参考数据库和极性；设置质量与 RT 容差前先确认色谱条件和加合物。&lt;/li&gt;
+&lt;li&gt;运行注释后检查候选层证据。没有实验 MS2 的候选不能描述为 MS2 确认。&lt;/li&gt;
+&lt;li&gt;进入统计前下载包含评分和数据库来源的完整候选表。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;看图操作阅读组间比较视图&#34;&gt;看图操作：阅读组间比较视图&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/dam.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/dam.png&#34; alt=&#34;阅读组间比较视图。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;阅读组间比较视图。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/dam.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;核对当前对象和 Column index，再选择 First group 与 Second group，记录当前模块使用的倍数变化方向。&lt;/li&gt;
+&lt;li&gt;根据研究目的设定效应量和统计阈值。截图的 FDR=1 很宽松，不应照搬为推荐发现阈值。&lt;/li&gt;
+&lt;li&gt;点击 Start 后查看完整表，尤其是 fc、p_value 与 p_value_adjust。PCA 用于描述结构；解释火山图突出点前先复核单个峰证据。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;看图操作检查通路富集&#34;&gt;看图操作：检查通路富集&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/enrichment.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/enrichment.png&#34; alt=&#34;检查通路富集。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;检查通路富集。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/enrichment.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;选择适合物种的数据库。图中的 KEGG (hsa) 对应人类，其他物种应使用相应资源。&lt;/li&gt;
+&lt;li&gt;设置校正方法、检验和阈值，再 Start enrichment。阅读通路表时同步核对已映射化合物和背景假设。&lt;/li&gt;
+&lt;li&gt;下载完整结果，不只保存条形图。视觉效果较大或通路名称中含疾病，并不能证明研究中的因果关系。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>fMSEA、FPA 与数据库工具</title>
       <link>https://www.tidymass.org/zh/r-shiny/toolkits/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/r-shiny/toolkits/</guid>
       <description>&lt;p&gt;依据现有公开教程和 tidymassshiny 1.0.0 公开源码整理，核对日期：2026-09-23。&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-toolkits-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-toolkits-zh.svg&#34; alt=&#34;工具箱具有独立分析路线。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;工具箱具有独立分析路线。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-toolkits-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;先阅读对应工具的输入面板。fMSEA 使用特征层输入进行模块分析，化合物通路富集使用映射后的化合物 ID。保存参数与映射输出；可选语言模型解读不能替代实验证据。&lt;/p&gt;
 &lt;h2 id=&#34;fmsea&#34;&gt;fMSEA&lt;/h2&gt;
 &lt;p&gt;进入 &lt;strong&gt;Tidymass shiny toolkits → fMSEA Analysis&lt;/strong&gt;。加载要求的 R 数据文件：处理后的 &lt;strong&gt;Feature Table&lt;/strong&gt;、支持的 KEGG/HMDB &lt;strong&gt;MS1 Database&lt;/strong&gt; 和 &lt;strong&gt;Pathway Database&lt;/strong&gt;。公开模块列出 KEGG、HMDB、IMETPD、Reactome、WikiPathways 资源。按模块 demo 的对象结构准备，不能给任意 CSV 改扩展名后上传。&lt;/p&gt;
 &lt;ol&gt;
@@ -195,38 +288,37 @@
 &lt;p&gt;从 KEGG 物种列表确认代码，例如 hsa、mmu。进入 &lt;strong&gt;KEGG Pathway Database Construction&lt;/strong&gt;，通过 &lt;strong&gt;Set working directory&lt;/strong&gt; 指定工作目录，填写代码和请求间隔（现有教程使用至少一秒），再点击 &lt;strong&gt;Download pathway&lt;/strong&gt;。观察网络错误和输出路径；富集前检查通路 ID 的物种前缀，保存获取日期与物种代码。&lt;/p&gt;
 &lt;h2 id=&#34;代谢物-id-转换&#34;&gt;代谢物 ID 转换&lt;/h2&gt;
 &lt;p&gt;在 &lt;strong&gt;Convert Parameters&lt;/strong&gt; 选择服务，配置 &lt;strong&gt;Source ID Type&lt;/strong&gt;、&lt;strong&gt;Target ID Type&lt;/strong&gt;，在 &lt;strong&gt;Conversion Input&lt;/strong&gt; 输入查询，再点击 &lt;strong&gt;Convert ID&lt;/strong&gt;。检查失败与一对多映射，不要悄悄删除失败条目。API 服务需要配置凭据。实验性 LLM 转换可能产生错误 ID，进入数据库或通路分析前应独立核对结构和标识。&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.tidymass.org/tidymassshiny-tutorial/figures/fmsea_visulization.png&#34; alt=&#34;fMSEA 结果&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 &lt;p&gt;截图来自现有公开教程。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/tidymass-shiny-toolkits.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;原教程及操作截图&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;看图操作检查功能模块&#34;&gt;看图操作：检查功能模块&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/fmsea_visulization.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/fmsea_visulization.png&#34; alt=&#34;检查功能模块。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;检查功能模块。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/fmsea_visulization.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;完成 fMSEA 所需输入和分析步骤后再打开模块可视化。&lt;/li&gt;
+&lt;li&gt;检查模块中的特征与关系，并比较其统计量和候选注释。图中聚类不自动等于结构确认。&lt;/li&gt;
+&lt;li&gt;保存模块表和可视化设置；可选的自动生成解释应与实测证据区分记录。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
     <item>
       <title>保存结果与常见问题</title>
       <link>https://www.tidymass.org/zh/r-shiny/export-and-troubleshooting/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
       <guid>https://www.tidymass.org/zh/r-shiny/export-and-troubleshooting/</guid>
       <description>&lt;p&gt;依据现有公开教程和 tidymassshiny 1.0.0 公开源码整理，核对日期：2026-09-23。&lt;/p&gt;
+&lt;h2 id=&#34;图解本章操作路线&#34;&gt;图解：本章操作路线&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-export-and-troubleshooting-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/r-shiny-export-and-troubleshooting-zh.svg&#34; alt=&#34;结束会话前下载。步骤编号表示阅读顺序；此图为流程示意。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;结束会话前下载。步骤编号表示阅读顺序；此图为流程示意。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/r-shiny-export-and-troubleshooting-zh.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Success 提示只说明某项操作完成，不代表文件已保存到你的电脑。下载对象与完整结果，检查压缩包，并保留 JOB ID 和设置；预期文件缺失时回到对应模块检查第一条错误。&lt;/p&gt;
 &lt;h2 id=&#34;保存完整分析&#34;&gt;保存完整分析&lt;/h2&gt;
 &lt;p&gt;保留初始化样品表、原始文件引用、中间 &lt;code&gt;mass_dataset&lt;/code&gt;、清洗和注释对象、完整统计/富集表、图片及参数。本地版查看界面报告的输出目录；在线版记下 JOB ID，在服务保留时间内 &lt;strong&gt;Download All Data&lt;/strong&gt;，并确认压缩包能打开且包含需要的结果。&lt;/p&gt;
 &lt;p&gt;重新载入相容对象或 fMSEA 结果时，确认它对应哪个分析步骤。修改参数不会自动重建已经保存的结果，软件/包版本与数据库来源也应一起保存。&lt;/p&gt;
@@ -283,8 +375,20 @@
 &lt;/table&gt;
 &lt;p&gt;反馈问题时提供应用/包版本、本地/Docker/在线运行方式、模块、复现步骤、日志与脱敏输入示例，不分享 API key 或私人样品标识。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tidymass.org/tidymassshiny-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;原教程及操作截图&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;看图操作成功运行后保存结果&#34;&gt;看图操作：成功运行后保存结果&lt;/h2&gt;
+&lt;figure class=&#34;tutorial-figure&#34; style=&#34;margin:1.5rem 0;padding:0.75rem;border:1px solid #aab3c355;border-radius:12px;&#34;&gt;
+&lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/online_success.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; aria-label=&#34;查看原尺寸图片&#34;&gt;
+&lt;img src=&#34;https://www.tidymass.org/tutorial-images/shiny/online_success.png&#34; alt=&#34;成功运行后保存结果。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。&#34; loading=&#34;lazy&#34; style=&#34;display:block;width:100%;height:auto;object-fit:contain;margin:0 auto;&#34; /&gt;
+&lt;/a&gt;&lt;figcaption style=&#34;font-size:0.88rem;line-height:1.6;margin-top:0.6rem;&#34;&gt;成功运行后保存结果。图片来自已发布的 TidyMassShiny 教程；不同部署的界面细节可能有差异。 &lt;a href=&#34;https://www.tidymass.org/tutorial-images/shiny/online_success.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;查看原图 ↗&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;关闭 Success 提示并核对完成的是哪项操作。历史图中提示指负离子模式参数优化，而非整个研究完成。&lt;/li&gt;
+&lt;li&gt;使用 Download mass_dataset 下载对象，使用提供的 Download All Data 保存更完整的结果集合。&lt;/li&gt;
+&lt;li&gt;打开下载内容确认预期文件存在，退出在线会话前记录 JOB ID 和当前服务的保留期限提示。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
-
+    
   </channel>
 </rss>
